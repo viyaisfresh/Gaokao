@@ -1,0 +1,710 @@
+{
+  "_meta": {
+    "week": 1,
+    "generatedAt": "2026-11-02",
+    "studentBaseline": 358.77,
+    "vocabDesign": "5 天 × 20 词 = 100 词。每词三栏：识别(英→中) + 拼写(中→英) + 造句(产出)。",
+    "classicalDesign": "5 篇/周。每篇四件套：默写 + 翻译 + 改写 + 费曼提问。",
+    "difficultyNote": "词汇按字母顺序，A 字头 100 词。古诗文难度递进：3 篇诗词曲 + 2 篇文言文。",
+    "source": "高考高频词 + 教育部 60 篇必背清单"
+  },
+  "vocab": {
+    "day1": {
+      "theme": "A 字头基础动词与形容词",
+      "words": [
+        {
+          "en": "abandon",
+          "zh": "放弃；遗弃",
+          "example": "He abandoned his plan to study abroad.",
+          "tip": "及物动词，不加 in"
+        },
+        {
+          "en": "ability",
+          "zh": "能力；才能",
+          "example": "She has the ability to solve complex problems.",
+          "tip": "可数/不可数均可"
+        },
+        {
+          "en": "able",
+          "zh": "能够的；有能力的",
+          "example": "He is able to swim across the river.",
+          "tip": "be able to do"
+        },
+        {
+          "en": "abnormal",
+          "zh": "反常的；不正常的",
+          "example": "The abnormal weather worried the farmers.",
+          "tip": "ab- 前缀表偏离"
+        },
+        {
+          "en": "abroad",
+          "zh": "在国外；到国外",
+          "example": "She plans to study abroad next year.",
+          "tip": "副词，不加 to"
+        },
+        {
+          "en": "absence",
+          "zh": "缺席；缺乏",
+          "example": "His absence from school was due to illness.",
+          "tip": "from 表缺席场合"
+        },
+        {
+          "en": "absolute",
+          "zh": "绝对的；完全的",
+          "example": "I have absolute confidence in her.",
+          "tip": "形容词，勿与 absorb 混淆"
+        },
+        {
+          "en": "absorb",
+          "zh": "吸收；吸引",
+          "example": "Plants absorb sunlight for energy.",
+          "tip": "及物，be absorbed in"
+        },
+        {
+          "en": "abstract",
+          "zh": "抽象的",
+          "example": "Beauty is an abstract concept.",
+          "tip": "形容词/名词/动词"
+        },
+        {
+          "en": "absurd",
+          "zh": "荒谬的",
+          "example": "His suggestion was completely absurd.",
+          "tip": "形容词，反义词 rational"
+        },
+        {
+          "en": "abundant",
+          "zh": "丰富的；大量的",
+          "example": "The region has abundant natural resources.",
+          "tip": "常接 in"
+        },
+        {
+          "en": "abuse",
+          "zh": "滥用；虐待",
+          "example": "He abused his power as a manager.",
+          "tip": "名词/动词"
+        },
+        {
+          "en": "academic",
+          "zh": "学术的；学院的",
+          "example": "She has an academic background in physics.",
+          "tip": "重音第三音节"
+        },
+        {
+          "en": "accelerate",
+          "zh": "加速",
+          "example": "The car accelerated to overtake the truck.",
+          "tip": "反义词 decelerate"
+        },
+        {
+          "en": "accent",
+          "zh": "口音；重音",
+          "example": "She speaks English with a French accent.",
+          "tip": "名词"
+        },
+        {
+          "en": "accept",
+          "zh": "接受；认可",
+          "example": "I accept your apology.",
+          "tip": "及物，反义词 refuse"
+        },
+        {
+          "en": "access",
+          "zh": "接近；进入；访问",
+          "example": "Students have access to the library.",
+          "tip": "have access to"
+        },
+        {
+          "en": "accident",
+          "zh": "事故；意外",
+          "example": "He was injured in a car accident.",
+          "tip": "by accident 偶然"
+        },
+        {
+          "en": "accommodation",
+          "zh": "住处；膳宿",
+          "example": "We found cheap accommodation near the school.",
+          "tip": "英式不可数，美式可数"
+        },
+        {
+          "en": "accompany",
+          "zh": "陪伴；伴随",
+          "example": "She accompanied her friend to the hospital.",
+          "tip": "及物，常接 to"
+        }
+      ]
+    },
+    "day2": {
+      "theme": "A 字头达成类动词与抽象名词",
+      "words": [
+        {
+          "en": "accomplish",
+          "zh": "完成；实现",
+          "example": "We accomplished the task ahead of schedule.",
+          "tip": "双 c 双 p"
+        },
+        {
+          "en": "account",
+          "zh": "账户；叙述",
+          "example": "He gave a detailed account of the event.",
+          "tip": "account for 解释"
+        },
+        {
+          "en": "accurate",
+          "zh": "准确的",
+          "example": "The report is accurate in every detail.",
+          "tip": "双 c 双 r"
+        },
+        {
+          "en": "accuse",
+          "zh": "指控；指责",
+          "example": "He was accused of theft.",
+          "tip": "accuse sb of sth"
+        },
+        {
+          "en": "accustomed",
+          "zh": "习惯的",
+          "example": "She is accustomed to getting up early.",
+          "tip": "be accustomed to doing"
+        },
+        {
+          "en": "achieve",
+          "zh": "实现；达到",
+          "example": "He achieved his goal through hard work.",
+          "tip": "ie 顺序"
+        },
+        {
+          "en": "achievement",
+          "zh": "成就；成绩",
+          "example": "Winning the prize was her greatest achievement.",
+          "tip": "名词"
+        },
+        {
+          "en": "acid",
+          "zh": "酸；酸的",
+          "example": "Lemons contain citric acid.",
+          "tip": "名词/形容词"
+        },
+        {
+          "en": "acknowledge",
+          "zh": "承认；答谢",
+          "example": "He acknowledged his mistake publicly.",
+          "tip": "及物动词"
+        },
+        {
+          "en": "acquire",
+          "zh": "获得；学到",
+          "example": "She acquired fluent Spanish in two years.",
+          "tip": "及物动词"
+        },
+        {
+          "en": "acre",
+          "zh": "英亩",
+          "example": "The farm covers 50 acres.",
+          "tip": "面积单位"
+        },
+        {
+          "en": "across",
+          "zh": "横过；在对面",
+          "example": "She walked across the street.",
+          "tip": "介词，区别 cross"
+        },
+        {
+          "en": "act",
+          "zh": "行动；扮演",
+          "example": "He acted quickly in the emergency.",
+          "tip": "名词/动词"
+        },
+        {
+          "en": "action",
+          "zh": "行动；动作",
+          "example": "We need immediate action.",
+          "tip": "take action"
+        },
+        {
+          "en": "active",
+          "zh": "积极的；活跃的",
+          "example": "She is active in community work.",
+          "tip": "be active in"
+        },
+        {
+          "en": "activity",
+          "zh": "活动",
+          "example": "Reading is my favorite activity.",
+          "tip": "可数名词"
+        },
+        {
+          "en": "actual",
+          "zh": "实际的；真实的",
+          "example": "The actual cost was higher than expected.",
+          "tip": "actually 实际上"
+        },
+        {
+          "en": "adapt",
+          "zh": "适应；改编",
+          "example": "She adapted quickly to the new environment.",
+          "tip": "adapt to"
+        },
+        {
+          "en": "add",
+          "zh": "增加；加上",
+          "example": "Please add some sugar to my coffee.",
+          "tip": "add to"
+        },
+        {
+          "en": "addition",
+          "zh": "加法；增加物",
+          "example": "In addition to reading, she also writes.",
+          "tip": "in addition to"
+        }
+      ]
+    },
+    "day3": {
+      "theme": "A 字头充分/适当/调整类",
+      "words": [
+        {
+          "en": "additional",
+          "zh": "附加的；额外的",
+          "example": "We need additional information.",
+          "tip": "形容词"
+        },
+        {
+          "en": "address",
+          "zh": "地址；演讲",
+          "example": "What is your home address?",
+          "tip": "名词/动词"
+        },
+        {
+          "en": "adequate",
+          "zh": "足够的；胜任的",
+          "example": "The food supply is adequate for the winter.",
+          "tip": "常接 for/to"
+        },
+        {
+          "en": "adjust",
+          "zh": "调整；适应",
+          "example": "She adjusted the chair to a comfortable height.",
+          "tip": "常接 to + 名词"
+        },
+        {
+          "en": "administration",
+          "zh": "管理；行政",
+          "example": "The new administration took office in January.",
+          "tip": "长词，重音第四音节"
+        },
+        {
+          "en": "admire",
+          "zh": "钦佩；赞赏",
+          "example": "I admire her courage in speaking out.",
+          "tip": "及物，常接 for"
+        },
+        {
+          "en": "admit",
+          "zh": "承认；准许进入",
+          "example": "He admitted making a mistake.",
+          "tip": "双 t → admitted；接 doing"
+        },
+        {
+          "en": "adolescent",
+          "zh": "青少年",
+          "example": "Adolescents often face identity issues.",
+          "tip": "名词/形容词"
+        },
+        {
+          "en": "adopt",
+          "zh": "采取；收养",
+          "example": "The school adopted a new teaching method.",
+          "tip": "及物，不接 to"
+        },
+        {
+          "en": "adult",
+          "zh": "成年人",
+          "example": "This movie is for adults only.",
+          "tip": "名词/形容词"
+        },
+        {
+          "en": "advance",
+          "zh": "前进；提前",
+          "example": "The army advanced toward the city.",
+          "tip": "in advance 提前"
+        },
+        {
+          "en": "advanced",
+          "zh": "先进的；高级的",
+          "example": "She takes an advanced math class.",
+          "tip": "形容词，-ed 形式"
+        },
+        {
+          "en": "advantage",
+          "zh": "优势；好处",
+          "example": "Speaking English is an advantage in job hunting.",
+          "tip": "take advantage of"
+        },
+        {
+          "en": "adventure",
+          "zh": "冒险",
+          "example": "He loves reading adventure stories.",
+          "tip": "名词"
+        },
+        {
+          "en": "advertise",
+          "zh": "做广告",
+          "example": "They advertised their product on TV.",
+          "tip": "动词"
+        },
+        {
+          "en": "advice",
+          "zh": "建议",
+          "example": "She gave me good advice.",
+          "tip": "不可数名词"
+        },
+        {
+          "en": "advise",
+          "zh": "建议；劝告",
+          "example": "I advise you to rest.",
+          "tip": "advise doing / advise sb to do"
+        },
+        {
+          "en": "affair",
+          "zh": "事务；事件",
+          "example": "Foreign affairs are handled by the ministry.",
+          "tip": "current affairs 时事"
+        },
+        {
+          "en": "affect",
+          "zh": "影响",
+          "example": "The weather affects my mood.",
+          "tip": "及物动词，勿与 effect 混"
+        },
+        {
+          "en": "afford",
+          "zh": "买得起；承担得起",
+          "example": "I can't afford a new car.",
+          "tip": "常接 can/can't"
+        }
+      ]
+    },
+    "day4": {
+      "theme": "A 字头年龄/同意/前进类",
+      "words": [
+        {
+          "en": "afraid",
+          "zh": "害怕的；担心的",
+          "example": "She is afraid of spiders.",
+          "tip": "be afraid of"
+        },
+        {
+          "en": "after",
+          "zh": "在…之后",
+          "example": "I'll call you after lunch.",
+          "tip": "介词/连词"
+        },
+        {
+          "en": "afternoon",
+          "zh": "下午",
+          "example": "We met in the afternoon.",
+          "tip": "名词"
+        },
+        {
+          "en": "afterward",
+          "zh": "以后；后来",
+          "example": "We had dinner and went home afterward.",
+          "tip": "副词"
+        },
+        {
+          "en": "again",
+          "zh": "又；再",
+          "example": "Please say it again.",
+          "tip": "again and again"
+        },
+        {
+          "en": "against",
+          "zh": "反对；逆",
+          "example": "She leaned against the wall.",
+          "tip": "介词"
+        },
+        {
+          "en": "age",
+          "zh": "年龄；时代",
+          "example": "What is your age?",
+          "tip": "at the age of"
+        },
+        {
+          "en": "agency",
+          "zh": "代理处；机构",
+          "example": "She works at an advertising agency.",
+          "tip": "可数名词"
+        },
+        {
+          "en": "agent",
+          "zh": "代理人；间谍",
+          "example": "Our agent in Paris handled the deal.",
+          "tip": "名词"
+        },
+        {
+          "en": "aggressive",
+          "zh": "好斗的；有进取心的",
+          "example": "He is an aggressive salesman.",
+          "tip": "形容词，可褒可贬"
+        },
+        {
+          "en": "ago",
+          "zh": "以前",
+          "example": "I saw him two days ago.",
+          "tip": "用于过去时"
+        },
+        {
+          "en": "agree",
+          "zh": "同意",
+          "example": "I agree with you.",
+          "tip": "agree with sb / agree on sth"
+        },
+        {
+          "en": "agreement",
+          "zh": "同意；协议",
+          "example": "They reached an agreement.",
+          "tip": "reach an agreement"
+        },
+        {
+          "en": "agricultural",
+          "zh": "农业的",
+          "example": "Agricultural exports increased.",
+          "tip": "形容词"
+        },
+        {
+          "en": "ahead",
+          "zh": "在前；向前",
+          "example": "The road ahead is clear.",
+          "tip": "ahead of"
+        },
+        {
+          "en": "aid",
+          "zh": "帮助；援助",
+          "example": "She came to my aid.",
+          "tip": "first aid 急救"
+        },
+        {
+          "en": "AIDS",
+          "zh": "艾滋病",
+          "example": "AIDS research has made progress.",
+          "tip": "专有名词"
+        },
+        {
+          "en": "aim",
+          "zh": "瞄准；目标",
+          "example": "He aimed the gun carefully.",
+          "tip": "aim at / aim to"
+        },
+        {
+          "en": "air",
+          "zh": "空气；外貌",
+          "example": "Open the window for fresh air.",
+          "tip": "by air 乘飞机"
+        },
+        {
+          "en": "aircraft",
+          "zh": "飞行器",
+          "example": "The aircraft landed safely.",
+          "tip": "单复数同形"
+        }
+      ]
+    },
+    "day5": {
+      "theme": "A 字头 alarm–approach 类",
+      "words": [
+        {
+          "en": "alarm",
+          "zh": "警报；闹钟",
+          "example": "The fire alarm rang.",
+          "tip": "名词/动词"
+        },
+        {
+          "en": "album",
+          "zh": "相册；专辑",
+          "example": "She showed me her photo album.",
+          "tip": "名词"
+        },
+        {
+          "en": "alcohol",
+          "zh": "酒精",
+          "example": "He doesn't drink alcohol.",
+          "tip": "不可数名词"
+        },
+        {
+          "en": "alike",
+          "zh": "相似的；同样地",
+          "example": "The twins look alike.",
+          "tip": "形容词/副词"
+        },
+        {
+          "en": "alive",
+          "zh": "活着的",
+          "example": "The fish is still alive.",
+          "tip": "表语形容词"
+        },
+        {
+          "en": "all",
+          "zh": "全部的",
+          "example": "All students must attend.",
+          "tip": "all over"
+        },
+        {
+          "en": "allow",
+          "zh": "允许",
+          "example": "Smoking is not allowed here.",
+          "tip": "allow doing / allow sb to do"
+        },
+        {
+          "en": "almost",
+          "zh": "几乎",
+          "example": "I almost missed the bus.",
+          "tip": "副词"
+        },
+        {
+          "en": "alone",
+          "zh": "独自的",
+          "example": "She lives alone.",
+          "tip": "let alone 更不用说"
+        },
+        {
+          "en": "along",
+          "zh": "沿着",
+          "example": "We walked along the river.",
+          "tip": "along with"
+        },
+        {
+          "en": "aloud",
+          "zh": "出声地",
+          "example": "Please read aloud.",
+          "tip": "区别 loud/loudly"
+        },
+        {
+          "en": "already",
+          "zh": "已经",
+          "example": "I have already finished.",
+          "tip": "用于完成时"
+        },
+        {
+          "en": "also",
+          "zh": "也",
+          "example": "She also speaks French.",
+          "tip": "副词"
+        },
+        {
+          "en": "alternative",
+          "zh": "替代的；选择",
+          "example": "We have no alternative.",
+          "tip": "名词/形容词"
+        },
+        {
+          "en": "although",
+          "zh": "虽然",
+          "example": "Although it rained, we went out.",
+          "tip": "不与 but 连用"
+        },
+        {
+          "en": "altogether",
+          "zh": "完全；总共",
+          "example": "That's altogether wrong.",
+          "tip": "副词"
+        },
+        {
+          "en": "amaze",
+          "zh": "使惊奇",
+          "example": "Her progress amazed us.",
+          "tip": "及物动词"
+        },
+        {
+          "en": "ambition",
+          "zh": "雄心；野心",
+          "example": "He has great ambition.",
+          "tip": "名词"
+        },
+        {
+          "en": "ambulance",
+          "zh": "救护车",
+          "example": "Call an ambulance!",
+          "tip": "名词"
+        },
+        {
+          "en": "analyze",
+          "zh": "分析",
+          "example": "Scientists analyzed the data carefully.",
+          "tip": "美式 -yze / 英式 -yse"
+        }
+      ]
+    }
+  },
+  "classical": [
+    {
+      "id": "p1",
+      "title": "《静女》",
+      "author": "《诗经·邶风》",
+      "category": "诗词曲 #1",
+      "difficulty": "★☆☆",
+      "original": "静女其姝，俟我于城隅。爱而不见，搔首踟蹰。\n静女其娈，贻我彤管。彤管有炜，说怿女美。\n自牧归荑，洵美且异。匪女之为美，美人之贻。",
+      "translation": "第一章：姑娘美丽文静，约我在城墙角见面。她藏起来看不见，我急得挠头徘徊。\n第二章：姑娘美好，送我一支红管。红管闪闪发光，我喜爱它的美丽（「女」通「汝」，指彤管）。\n第三章：从郊外采来茅草芽送我，确实美得奇特。不是你这草本身美（「女」通「汝」指荑），是因为美人送的。",
+      "easyErrors": "姝（不是「姝」写成「株」）、踟蹰（双足字旁）、贻（贝字旁，不是「怡」）、彤（丹字旁）、炜（火字旁）、说怿（「说」通「悦」）、归荑（「归」通「馈」，荑是茅草芽）、匪（通「非」）。",
+      "rewritePrompt": "用 100 字以内，把这首诗改写成一段现代白话散文。保留「等不到人时的焦躁」和「收到礼物的欢喜」两层情绪。",
+      "rewriteReference": "我在城墙根下等她。她躲在角楼里不露面，我急得直挠头，来回踱步。等她终于跳出来，递给我一根亮闪闪的红管子，我又乐坏了，翻来覆去地看，觉得它好看得不得了。后来她又从郊外带回来一把茅草嫩芽，我捧在手心里，心想：这草算什么呀，可这是她亲手采的，那就是天底下最金贵的东西。",
+      "feynmanQuestion": "为什么第三章突然写到「荑」（茅草芽）？彤管和荑哪个更重要？为什么？",
+      "feynmanAnswer": "第三章突然写「荑」（茅草芽）是为了层层递进——第一章见面焦躁（情绪未定），第二章得彤管欢喜（贵物），第三章得荑更欢喜（贱物但情重）。彤管贵而荑贱，但诗人说「匪女之为美，美人之贽」——重要的不是礼物本身的价值，是送礼物的人。这是「以物写情、以贱衬贵」的手法。学生能讲到「彤管和荑哪个不重要——美人之贽才重要」就算通过。"
+    },
+    {
+      "id": "p2",
+      "title": "《登高》",
+      "author": "杜甫",
+      "category": "诗词曲 #16",
+      "difficulty": "★★☆",
+      "original": "风急天高猿啸哀，渚清沙白鸟飞回。\n无边落木萧萧下，不尽长江滚滚来。\n万里悲秋常作客，百年多病独登台。\n艰难苦恨繁霜鬓，潦倒新停浊酒杯。",
+      "translation": "首联：风急天高，猿啸声悲凉；水清沙白，鸟儿盘旋飞回。\n颔联：无边落叶萧萧而下，不尽长江滚滚奔来。\n颈联：离家万里，又逢悲秋，常年漂泊作客他乡；一生多病，独自登临高台。\n尾联：艰难苦恨让双鬓添了白发，潦倒中又新近停了浊酒（因病不能饮）。",
+      "easyErrors": "渚（三点水，不是「者」）、萧（草字头）、鬓（髟字头）、潦倒（「潦」三点水）。萧萧（形容落叶声）、滚滚（形容水势）。",
+      "rewritePrompt": "假设你是杜甫本人，站在登高台上。用第一人称写一段 150 字的内心独白，要包含诗中至少 4 个意象。",
+      "rewriteReference": "风从高处灌下来，又急又冷，吹得天都高了，连猿猴的叫声都带哭腔。我站在江边高台上，看清水白沙之间鸟儿来回飞，飞不出个去处。叶子一片片落，江水一滚滚来，没有尽头——像我这一辈子。万里之外是家，秋深时节是客，活了快六十岁，一身病，独自站在这里。霜已经把头发染白了，杯里的浊酒也不能再喝。我能做什么？看江水东去。",
+      "feynmanQuestion": "这首诗的「对仗」为什么被后人称「古今七律第一」？你能指出至少 3 处对仗吗？",
+      "feynmanAnswer": "本诗被称「古今七律第一」主要因为八句皆对仗。一般律诗只颔联、颈联对仗，本诗连首联、尾联都对仗。三处对仗示例：① 首联「风急天高」对「渚清沙白」（景物对）；② 颔联「无边落木」对「不尽长江」（时空对）；③ 颈联「万里悲秋常作客」对「百年多病独登台」（情境对）。学生能指出任意 3 处对仗 + 解释一处为什么对得工整就算通过。"
+    },
+    {
+      "id": "p3",
+      "title": "《念奴娇·赤壁怀古》",
+      "author": "苏轼",
+      "category": "诗词曲 #26",
+      "difficulty": "★★★",
+      "original": "大江东去，浪淘尽，千古风流人物。\n故垒西边，人道是，三国周郎赤壁。\n乱石穿空，惊涛拍岸，卷起千堆雪。\n江山如画，一时多少豪杰。\n\n遥想公瑾当年，小乔初嫁了，雄姿英发。\n羽扇纶巾，谈笑间，樯橹灰飞烟灭。\n故国神游，多情应笑我，早生华发。\n人生如梦，一尊还酹江月。",
+      "translation": "上阕：长江向东奔流，浪花淘尽千古风流人物。故垒西边，人们说就是三国周瑜破曹的赤壁。乱石刺穿天空，惊涛拍打岸边，卷起千堆雪白的浪花。江山美如画，当年曾有多少豪杰在此争雄。\n下阕：遥想当年的周瑜，小乔刚嫁给他，英姿勃发。手持羽扇头戴纶巾，谈笑之间，曹军的战船就化为灰烬消散。我的神思飞回故国战场，多情该笑我自己，头发早就白了。人生如梦一场，还是倒一杯酒洒向江上的明月吧。",
+      "easyErrors": "淘（水字旁，不是「陶」）、垒（上下结构）、樯橹（「樯」木字旁桅杆，「橹」木字旁桨）、酹（酉字旁，把酒洒地）。一尊（「尊」通「樽」，酒器）。",
+      "rewritePrompt": "把下阕「遥想公瑾当年...一尊还酹江月」改写成一段 200 字的电影镜头脚本：谁出场、做什么动作、什么表情、最后镜头落在哪？",
+      "rewriteReference": "远景：江面，晨雾。镜头缓缓推近——岸边孤舟一叶，苏轼（47 岁，鬓发斑白）立于船头，手持羽扇，望向对岸赤壁。\n中景：他眼神恍惚。画面切——同一位置，三十岁的周瑜（英姿飒爽，小乔立于身后）正谈笑指挥。\n特写：周瑜嘴角微扬，扇子轻轻一挥。镜头切回——对岸火光冲天，曹军战船化为火海，灰烬飘落江面。\n切回苏轼：镜头从他的眼睛拉出。他低头看自己鬓角白发，苦笑。\n尾镜：他举起酒杯，缓缓将酒洒向江面。镜头跟随酒液落入水中，水面映出一轮明月。镜头定格在江月，淡出。",
+      "feynmanQuestion": "苏轼写这首词时被贬黄州，周瑜 34 岁破曹，苏轼当时 47 岁一事无成。词里「早生华发」四个字藏着什么情绪？为什么最后又能「一尊还酹江月」释怀？",
+      "feynmanAnswer": "苏轼写这首词时 47 岁，被贬黄州，无权无职；周瑜 34 岁破曹，功业鼎盛。「早生华发」四个字藏的是壮志未酬身先老的悲愤——本应像周瑜一样建功立业，却一事无成头发先白了。但最后能「一尊还酹江月」释怀，是因为他想通了：周瑜再伟大，他的功业也被「浪淘尽」了，自己也终将被淘尽。既然一切都是梦，不必执念，敬江月一杯就好。这是苏轼特有的「旷达」——不是不悲，是悲完之后能放下。学生能讲到「周瑜和苏轼的对比」+「释怀不是因为不痛，是因为想通了」就算通过。"
+    },
+    {
+      "id": "p4",
+      "title": "《劝学》（节选）",
+      "author": "荀子",
+      "category": "文言文·必修 #2",
+      "difficulty": "★★☆",
+      "original": "君子曰：学不可以已。\n青，取之于蓝，而青于蓝；冰，水为之，而寒于水。\n木直中绳，輮以为轮，其曲中规。虽有槁暴，不复挺者，輮使之然也。\n故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。",
+      "translation": "君子说：学习不可以停止。\n靛青（染料），是从蓝草中提取的，却比蓝草颜色更深；冰，是水凝结成的，却比水更冷。\n木材直得合乎墨线，（用火烤）把它弯成车轮，它的弯曲度合乎圆规。即使又晒干了，也不再挺直，是火烤使它这样。\n所以木材经墨线量过就能取直，金属刀剑拿到磨刀石上磨就能锋利，君子广泛地学习并且每天检验反省自己，那么就智慧明达并且行为没有过错了。",
+      "easyErrors": "已（停止，不是「已经」）、中（zhòng，合乎）、輮（火字旁通「煣」）、槁暴（「暴」通「曝」，晒）、参省（「参」通「三」，反省）、知（通「智」）。",
+      "rewritePrompt": "荀子用青/蓝、冰/水、木/绳、金/砺四个比喻论证学习。把这四个比喻改写成 200 字的现代类比，主题换成「练习篮球/弹琴/编程任选其一」，要保留「通过外力改造才能突破本能」的逻辑。",
+      "rewriteReference": "你想打好篮球，光靠天赋不行。强如科比，也得每天在篮下投 1000 次——肌肉记不住的动作，比赛中根本做不出来。这就像荀子说的：青取之于蓝而青于蓝，冰水为之而寒于水——你能比教会你的人更强，前提是你真的被「练」过。你的运球姿势本来挺丑的，被教练纠正 100 次之后，那丑姿势就定型了，再想改回简单都不行了——「虽有槁暴，不复挺者，輮使之然也」。练琴、编程都是一回事：你的肌肉记忆、思维路径，是被反复训练「煣」出来的，不是天生的。",
+      "feynmanQuestion": "荀子说「学不可以已」，为什么非要「不可以已」（不能停下来）？停一会再学不行吗？用他自己的比喻解释。",
+      "feynmanAnswer": "荀子的逻辑是：学习是「改造本性」的过程，本性改造不能停。木被輮成轮子之后「虽有槁暴不复挺」，前提是被反复烤反复煣，没煣透就停手，木头会弹回原状。学习同理：今天学明天不学，本性就把今天那点改造弹回去。「不可以已」不是说不能休息，是说改造过程必须连续到本性被定型为止。学生能讲到「学习是改造本性，改造必须到定型才能停」就算通过。"
+    },
+    {
+      "id": "p5",
+      "title": "《师说》（节选）",
+      "author": "韩愈",
+      "category": "文言文·必修 #5",
+      "difficulty": "★★★",
+      "original": "古之学者必有师。师者，所以传道受业解惑也。\n人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。\n生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾后，其闻道也亦先乎吾，吾从而师之。\n吾师道也，夫庸知其年之先后生于吾乎？是故无贵无贱，无长无少，道之所存，师之所存也。",
+      "translation": "古代求学的人一定有老师。老师，是用来传授道理、教授学业、解答疑惑的人。\n人不是生下来就懂得道理的，谁能没有疑惑？有疑惑却不跟从老师学习，那些疑惑，最终都不会解开。\n生在我前面的人，他懂得道理本来就比我早，我跟从他拜他为师；生在我后面的人，他懂得道理如果也比我早，我也跟从他拜他为师。\n我学习的是道理，哪里管他比我年长还是年少？所以无论地位高低、无论年纪大小，道理存在的地方，就是老师存在的地方。",
+      "easyErrors": "受（通「授」，传授）、孰（谁）、庸（岂、哪里，反问）、师之（意动用法，「以…为师」）。乎（介词，相当于「于」）。「师」在文中多次出现，名词/动词/意动用法三种身份都有。",
+      "rewritePrompt": "韩愈这篇《师说》写于中唐，当时士大夫阶层耻于学师（觉得拜师丢人）。把这段论证改写成 200 字的「对当代家长的辩护词」——假设今天有家长质疑「我孩子自学不行吗，为什么要找老师？」，用韩愈的逻辑回答。",
+      "rewriteReference": "您说孩子自学就行，这话听着独立自主，但请您想想：孩子是「生而知之者」吗？——一生下来就懂数学、物理、英语吗？如果不懂，那他就是有「惑」。有惑不从师，您指望他怎么解开？自己悟？韩愈一千多年前就说过这个理：惑而不从师，终不解矣。您看您孩子自学了三年，进步有多少？那些他卡住没解开的题，是不是三年了还卡着？这就是「其为惑也终不解矣」的实证。再说现在这个时代，知识更新比唐朝快多了，孩子不靠老师能跟上？找老师不丢人，道之所存，师之所存也——有真学问的地方就该有老师带孩子学。",
+      "feynmanQuestion": "韩愈说「道之所存，师之所存也」——只要谁懂道谁就是老师。但他自己又是当朝大官、文坛领袖，他拜师吗？这篇《师说》到底是为谁写的？",
+      "feynmanAnswer": "韩愈写《师说》不是说自己要拜师，是为学生李蟠写的——李蟠 17 岁，拜韩愈为师学古文，被当时士大夫嘲笑（觉得韩愈「好为人师」丢份）。韩愈写这篇是替学生撑腰、也是替自己辩护：士大夫耻于学师是因为他们把「师」看作身份标签，而不是「闻道先后」的功能关系。韩愈的论证核心是把「师」从身份变成功能——谁懂道谁是师，无贵无贱无长无少。学生能讲到「师不是身份是功能」+「这篇是韩愈为自己的学生李蟠辩护写的」就算通过。"
+    }
+  ]
+}
