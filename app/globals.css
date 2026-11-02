@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #f7f5f0;
+  color: #242321;
+  line-height: 1.55;
+}
+
+@layer components {
+  .card {
+    @apply bg-paper border border-line rounded-2xl p-5 shadow-sm;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#fff2dc] text-[#875b1d] text-[11px] font-bold;
+  }
+  .pill-green { @apply bg-[#eaf2eb] text-[#50745b]; }
+  .pill-red { @apply bg-[#f7ebe6] text-[#a35e49]; }
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-orange text-white font-semibold text-sm hover:bg-[#c47e26] transition-colors disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-paper border border-line text-ink font-semibold text-sm hover:bg-[#f3f0e9] transition-colors;
+  }
+  .input {
+    @apply w-full px-3 py-2 rounded-lg border border-line bg-paper text-ink text-sm focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange;
+  }
+  .label { @apply block text-xs text-muted mb-1 font-medium; }
+  .tag {
+    @apply inline-block rounded-md px-1.5 py-0.5 text-[10px] bg-[#f4eee2] text-[#80612f] whitespace-nowrap;
+  }
+  .tag-green { @apply bg-[#eaf2eb] text-[#50745b]; }
+  .tag-red { @apply bg-[#f7ebe6] text-[#a35e49]; }
+  .callout {
+    @apply border-l-[3px] border-brand-orange px-3 py-2.5 bg-[#fff8eb] rounded-r-xl text-[13px];
+  }
+  .section-head {
+    @apply flex items-end justify-between gap-3 mx-0.5 mb-3;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "_comment": "评分权重锁定。结构可调，权重不可改。默认值即 handoff 确认值：执行20/学习效果30/进步50。",
+  "execution": { "weight": 20 },
+  "learningEffect": {
+    "weight": 30,
+    "subWeights": { "retest": 40, "feynman": 20, "transfer": 40 }
+  },
+  "progress": {
+    "weight": 50,
+    "subWeights": { "examImprovement": 60, "knowledgeMastery": 40 }
+  },
+  "_learningEffectStageScoring": {
+    "first_pass": 1.0,
+    "after_hint": 0.6,
+    "after_key_step": 0.3,
+    "two_failures": 0,
+    "delayed_retest_recovery": 0.5
+  },
+  "_examImprovementRule": {
+    "baseline": 358.77,
+    "rule": "按相对基线的实际百分比变化计算，不封顶不设底",
+    "archivedScoreNote": "324 那次为 archived，不参与计算"
+  }
+}
