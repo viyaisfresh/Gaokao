@@ -30,22 +30,27 @@ h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0
 .answer-box.tall{min-height:120px}
 .answer-box.short{min-height:32px}
 .label-sm{font-size:11px;color:var(--muted);margin-bottom:4px;display:block}
-.classify{display:flex;gap:6px;margin-top:6px}
+.classify{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
 .classify span{display:inline-block;padding:3px 8px;border:1px solid var(--line);border-radius:3px;font-size:11px;cursor:pointer;background:#fff}
 .classify span.checked{background:var(--orange);color:#fff;border-color:var(--orange)}
 table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:12px}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
-.vocab-row td:nth-child(2){width:14%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:20%}
-.vocab-row td:nth-child(4){width:20%}
-.vocab-row td:nth-child(5){width:21%}
-.vocab-row td:nth-child(6){width:21%}
-.cloze-body{font-size:14px;line-height:2;white-space:pre-wrap;border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:#fafafa;margin:10px 0}
-.cloze-body .blank{display:inline-block;min-width:80px;border-bottom:2px solid var(--orange);text-align:center;color:var(--orange);font-weight:bold;margin:0 2px}
-.option-list{font-size:12px;color:#555;margin:6px 0 14px;padding-left:8px}
-.option-list b{color:var(--blue)}
+.vocab-row td:nth-child(2){width:12%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.vocab-row td:nth-child(3){width:18%}
+.vocab-row td:nth-child(4){width:18%}
+.vocab-row td:nth-child(5){width:20%}
+.vocab-row td:nth-child(6){width:28%}
+.cloze-passage{font-size:14px;line-height:2.2;white-space:pre-wrap;border:1px solid var(--line);border-radius:8px;padding:16px 18px;background:#fafafa;margin:10px 0}
+.cloze-blank{display:inline-block;border-bottom:1px solid var(--ink);min-width:120px;text-align:center;color:var(--muted);font-weight:bold;letter-spacing:.05em}
+.cloze-options{margin:14px 0 6px;font-size:12px;color:#555}
+.cloze-options .opt-line{margin:4px 0;line-height:1.7}
+.cloze-options .opt-num{display:inline-block;width:28px;font-weight:bold;color:var(--orange)}
+.cloze-options .opt{display:inline-block;margin-right:14px;padding:1px 6px;border:1px solid var(--line);border-radius:3px;background:#fff}
+.feynman-prompt{font-style:italic;color:var(--muted);font-size:12px;line-height:1.6}
+.error-hint{background:#fff5f0;border-left:3px solid var(--red);padding:8px 12px;font-size:12px;border-radius:0 6px 6px 0;margin-top:8px}
+.error-hint b{color:var(--red)}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 .feynman-checklist{background:#fff8eb;border:1px solid var(--orange);border-radius:8px;padding:12px;margin:14px 0}
 .feynman-checklist h4{margin:0 0 8px;font-size:13px;color:var(--orange)}
@@ -62,7 +67,7 @@ th{background:#f8f5ee;font-weight:600;font-size:12px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 04 · v3 · Cloze + 4-Stage</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 04 · v4</div>
   <h1>第1周 Day 4 · 费曼训练包 · 学生作答版</h1>
   <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
   <div class="sub" style="margin-top:6px">Day 4 主题：Day 4 · 语法填空核心词（围棋展览文本）</div>
@@ -70,17 +75,18 @@ th{background:#f8f5ee;font-weight:600;font-size:12px}
 </header>
 
 <div class="method">
-  <b>今日方法</b>（五次回忆 + 四阶梯）：<br>
-  <b>① 完形填空</b>——20 空四选一，每空 1 个正确 + 3 个干扰项。先做题，再对答案，标出「选错的原因是词义混 / 词形混 / 语境误判」。<br>
-  <b>② 四阶梯单测</b>——每词 5 次回忆：① 英→中（识别）；② 中→英（主动提取+拼写）；③ 造句（产出）；④ 迁移改写（换场景再用）。前 3 栏对、第 4 栏写不出，仍标 <b>M</b>。<br>
-  <b>③ 古诗文四件套</b>——默写 + 翻译 + 改写 + 费曼提问（《劝学》节选）。<br>
-  <b>④ 五级分类</b>——N 完全未接触 / F 见过遗忘 / S 拼写错 / M 词义或用法错（含造不出句）/ C 完全正确。仅 C 不入 MVP。
+  <b>今日方法</b>（v4 四件套，每词 4 次提取）：<br>
+  <b>① 完形填空</b>——先在语境中盲填 20 空（第 1 次提取：语境识别）。不查词表，凭语感选。<br>
+  <b>② 四阶梯单测</b>——每词「英→中 / 中→英 / 造句 / 费曼讲解」四栏（第 2-4 次提取：识别 + 拼写 + 产出 + 讲解）。前 3 栏对、第 4 栏讲不出，仍标 <b>M</b>。<br>
+  <b>③ 古诗文两件套</b>——默写 + 翻译（《劝学》节选，荀子，含易错字提示）。<br>
+  <b>④ 自评反思</b>——抓「以为自己会其实不会」的盲区。<br>
+  <b>五级分类</b>：N 完全未接触 / F 见过遗忘 / S 拼写错 / M 词义或用法错（含造不出句、讲不明白）/ C 完全正确。仅 C 不入 MVP。
 </div>
 
 <div class="feynman-checklist">
   <h4>Day 4 费曼流程（学生侧）</h4>
   <ul>
-    <li><b>第一步 · 主动回忆</b>：不查资料、不看答案版，独立完成完形 + 四阶梯 + 古诗文四件套。卡住超过 2 分钟就跳过，标「卡壳」。</li>
+    <li><b>第一步 · 主动回忆</b>：不查资料、不看答案版，先做完形 20 空，再做四阶梯单测，最后做古诗文两件套。卡住超过 2 分钟就跳过，标「卡壳」。</li>
     <li><b>第二步 · 自批</b>：对照答案版（<code>day-04-answers.html</code>）逐空逐词逐篇标 N/F/S/M/C。</li>
     <li><b>第三步 · 讲给姐姐听</b>：周末姐姐抽查 3 个标错的/卡壳的，你用<b>自己的话</b>讲一遍。讲不明白 = 没真懂，回 MVP 标「概念混淆」。</li>
     <li><b>第四步 · 录入 MVP</b>：非 C 的词和篇录入触发 D1/D3/D7 复测。</li>
@@ -88,119 +94,145 @@ th{background:#f8f5ee;font-weight:600;font-size:12px}
 </div>
 
 <section>
-  <h2>一、完形填空（20 空 · 四选一）</h2>
+  <h2>一、完形填空 · 语境盲填（20 空）</h2>
   <div class="method">
-    <b>做题方法</b>：先通读全文把握大意（围棋展览 + 东方哲学 + 当代艺术），再逐空作答。每空 4 个选项，只有 1 个正确。干扰项分三类——<b>词义近</b>（如同义词）、<b>词形近</b>（如 -tion / -sion）、<b>语境误判</b>（语法对但语境不对）。选错后必须标出错在哪一类。
+    <b>测试方法</b>：阅读下面短文，在 20 个空格处填入恰当的词。每空 4 个选项，选出最佳答案。<br>
+    <b>注意</b>：本题改编自 2025 全国一卷英语语法填空原文（围棋展览）。先盲填，再对照答案版自批。盲填时不要查词表——这一步测的是<b>语境中能不能识别词</b>，是高考语法填空的真考点。
   </div>
-  <div class="task">
-    <div class="task-head">
-      <div class="task-title">Go: An Exhibition of Art and Philosophy</div>
-      <div class="task-meta">改编自 2025 全国一卷语法填空 · 20 空</div>
-    </div>
-    <div class="cloze-body">An <span class="blank">_______(1)</span> at the Jiushi Art Museum in Shanghai <span class="blank">_______(2)</span> artwork inspired by Go, or weiqi in Chinese, which <span class="blank">_______(3)</span> in China more than 4,000 years ago.
 
-Go is one of the earliest <span class="blank">_______(4)</span>-based games. The movements of the black and white pieces <span class="blank">_______(5)</span> the basic ideas of Eastern <span class="blank">_______(6)</span>, according to Tu Ningning, who is in charge of the <span class="blank">_______(7)</span> art display.
-
-「We hope to present the rather <span class="blank">_______(8)</span> Go game and AI in a <span class="blank">_______(9)</span> context, and initiate dialogues with <span class="blank">_______(10)</span> art, <span class="blank">_______(11)</span> art and <span class="blank">_______(12)</span>,」 says Tu.
-
-In a Go game, each move should serve a long-term <span class="blank">_______(13)</span>. You try to lead the <span class="blank">_______(14)</span> into your trap. The players' personalities are <span class="blank">_______(15)</span> during the game, and one's <span class="blank">_______(16)</span> is exposed.
-
-A <span class="blank">_______(17)</span> winner always tries to beat the opponent by no more than one or two points as a <span class="blank">_______(18)</span> of respect. The beauty in the <span class="blank">_______(19)</span> of pieces inspired artists to create oil paintings and <span class="blank">_______(20)</span> for the show.</div>
-
-    <div class="option-list">
-      <b>1.</b> A. exhibition  B. collection  C. gallery  D. museum<br>
-      <b>2.</b> A. features  B. presents  C. displays  D. shows<br>
-      <b>3.</b> A. originated  B. invented  C. created  D. started<br>
-      <b>4.</b> A. binary  B. dual  C. double  D. pair<br>
-      <b>5.</b> A. reflect  B. express  C. show  D. indicate<br>
-      <b>6.</b> A. philosophy  B. religion  C. culture  D. thought<br>
-      <b>7.</b> A. contemporary  B. modern  C. current  D. present<br>
-      <b>8.</b> A. abstract  B. complex  C. simple  D. plain<br>
-      <b>9.</b> A. visual  B. visible  C. vivid  D. graphic<br>
-      <b>10.</b> A. minimalist  B. minimum  C. minimal  D. miniature<br>
-      <b>11.</b> A. conceptual  B. ideal  C. theoretical  D. mental<br>
-      <b>12.</b> A. expressionism  B. impressionism  C. realism  D. romanticism<br>
-      <b>13.</b> A. strategy  B. plan  C. tactic  D. method<br>
-      <b>14.</b> A. opponent  B. enemy  C. rival  D. competitor<br>
-      <b>15.</b> A. revealed  B. exposed  C. shown  D. disclosed<br>
-      <b>16.</b> A. weakness  B. shortcoming  C. fault  D. flaw<br>
-      <b>17.</b> A. decent  B. polite  C. kind  D. gentle<br>
-      <b>18.</b> A. gesture  B. sign  C. symbol  D. mark<br>
-      <b>19.</b> A. placement  B. position  C. location  D. arrangement<br>
-      <b>20.</b> A. sculptures  B. statues  C. carvings  D. models
-    </div>
+  <div class="task-head">
+    <div class="task-title">Go: An Exhibition of Art and Philosophy</div>
+    <div class="task-meta">改编自 2025 全国一卷英语语法填空 · 20 空 · Day 4 词汇 20 词</div>
   </div>
-</section>
 
-<section>
-  <h2>二、四阶梯单测（20 词 · 每词 5 次回忆）</h2>
-  <div class="method">
-    <b>四阶梯为什么是这四个</b>：<br>
-    <b>① 英→中</b>测识别（最低门槛）；<b>② 中→英</b>测主动提取 + 拼写（很多人能认不能写）；<b>③ 造句</b>测产出（会用才算掌握）；<b>④ 迁移改写</b>测换场景能用（脱离原文语境仍能用 = 真内化）。<br>
-    前 3 栏对、第 4 栏写不出，仍标 <b>M</b>——「认得但不会用」是最危险的盲区。
+  <div class="cloze-passage">An <span class="cloze-blank">_______(1)</span> at the Jiushi Art Museum in Shanghai <span class="cloze-blank">_______(2)</span> artwork inspired by Go, or weiqi in Chinese, which <span class="cloze-blank">_______(3)</span> in China more than 4,000 years ago.
+
+Go is one of the earliest <span class="cloze-blank">_______(4)</span>-based games. The movements of the black and white pieces <span class="cloze-blank">_______(5)</span> the basic ideas of Eastern <span class="cloze-blank">_______(6)</span>, according to Tu Ningning, who is in charge of the <span class="cloze-blank">_______(7)</span> art display.
+
+「We hope to present the rather <span class="cloze-blank">_______(8)</span> Go game and AI in a <span class="cloze-blank">_______(9)</span> context, and initiate dialogues with <span class="cloze-blank">_______(10)</span> art, <span class="cloze-blank">_______(11)</span> art and <span class="cloze-blank">_______(12)</span>,」 says Tu.
+
+In a Go game, each move should serve a long-term <span class="cloze-blank">_______(13)</span>. You try to lead the <span class="cloze-blank">_______(14)</span> into your trap. The players' personalities are <span class="cloze-blank">_______(15)</span> during the game, and one's <span class="cloze-blank">_______(16)</span> is exposed.
+
+A <span class="cloze-blank">_______(17)</span> winner always tries to beat the opponent by no more than one or two points as a <span class="cloze-blank">_______(18)</span> of respect. The beauty in the <span class="cloze-blank">_______(19)</span> of pieces inspired artists to create oil paintings and <span class="cloze-blank">_______(20)</span> for the show.</div>
+
+  <div class="cloze-options">
+    <div class="opt-line"><span class="opt-num">1.</span><span class="opt">A. exhibition</span><span class="opt">B. collection</span><span class="opt">C. gallery</span><span class="opt">D. museum</span></div>
+    <div class="opt-line"><span class="opt-num">2.</span><span class="opt">A. features</span><span class="opt">B. presents</span><span class="opt">C. displays</span><span class="opt">D. shows</span></div>
+    <div class="opt-line"><span class="opt-num">3.</span><span class="opt">A. originated</span><span class="opt">B. invented</span><span class="opt">C. created</span><span class="opt">D. started</span></div>
+    <div class="opt-line"><span class="opt-num">4.</span><span class="opt">A. binary</span><span class="opt">B. dual</span><span class="opt">C. double</span><span class="opt">D. pair</span></div>
+    <div class="opt-line"><span class="opt-num">5.</span><span class="opt">A. reflect</span><span class="opt">B. express</span><span class="opt">C. show</span><span class="opt">D. indicate</span></div>
+    <div class="opt-line"><span class="opt-num">6.</span><span class="opt">A. philosophy</span><span class="opt">B. religion</span><span class="opt">C. culture</span><span class="opt">D. thought</span></div>
+    <div class="opt-line"><span class="opt-num">7.</span><span class="opt">A. contemporary</span><span class="opt">B. modern</span><span class="opt">C. current</span><span class="opt">D. present</span></div>
+    <div class="opt-line"><span class="opt-num">8.</span><span class="opt">A. abstract</span><span class="opt">B. complex</span><span class="opt">C. simple</span><span class="opt">D. plain</span></div>
+    <div class="opt-line"><span class="opt-num">9.</span><span class="opt">A. visual</span><span class="opt">B. visible</span><span class="opt">C. vivid</span><span class="opt">D. graphic</span></div>
+    <div class="opt-line"><span class="opt-num">10.</span><span class="opt">A. minimalist</span><span class="opt">B. minimum</span><span class="opt">C. minimal</span><span class="opt">D. miniature</span></div>
+    <div class="opt-line"><span class="opt-num">11.</span><span class="opt">A. conceptual</span><span class="opt">B. ideal</span><span class="opt">C. theoretical</span><span class="opt">D. mental</span></div>
+    <div class="opt-line"><span class="opt-num">12.</span><span class="opt">A. expressionism</span><span class="opt">B. impressionism</span><span class="opt">C. realism</span><span class="opt">D. romanticism</span></div>
+    <div class="opt-line"><span class="opt-num">13.</span><span class="opt">A. strategy</span><span class="opt">B. plan</span><span class="opt">C. tactic</span><span class="opt">D. method</span></div>
+    <div class="opt-line"><span class="opt-num">14.</span><span class="opt">A. opponent</span><span class="opt">B. enemy</span><span class="opt">C. rival</span><span class="opt">D. competitor</span></div>
+    <div class="opt-line"><span class="opt-num">15.</span><span class="opt">A. revealed</span><span class="opt">B. exposed</span><span class="opt">C. shown</span><span class="opt">D. disclosed</span></div>
+    <div class="opt-line"><span class="opt-num">16.</span><span class="opt">A. weakness</span><span class="opt">B. shortcoming</span><span class="opt">C. fault</span><span class="opt">D. flaw</span></div>
+    <div class="opt-line"><span class="opt-num">17.</span><span class="opt">A. decent</span><span class="opt">B. polite</span><span class="opt">C. kind</span><span class="opt">D. gentle</span></div>
+    <div class="opt-line"><span class="opt-num">18.</span><span class="opt">A. gesture</span><span class="opt">B. sign</span><span class="opt">C. symbol</span><span class="opt">D. mark</span></div>
+    <div class="opt-line"><span class="opt-num">19.</span><span class="opt">A. placement</span><span class="opt">B. position</span><span class="opt">C. location</span><span class="opt">D. arrangement</span></div>
+    <div class="opt-line"><span class="opt-num">20.</span><span class="opt">A. sculptures</span><span class="opt">B. statues</span><span class="opt">C. carvings</span><span class="opt">D. models</span></div>
   </div>
-  <table>
-    <thead>
-      <tr><th>#</th><th>Word</th><th>① 英→中</th><th>② 中→英</th><th>③ 造句</th><th>④ 迁移改写（换场景）</th></tr>
-    </thead>
-    <tbody>
-      <tr class="vocab-row"><td>1</td><td>exhibition</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>2</td><td>feature</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>3</td><td>origin</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>4</td><td>binary</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>5</td><td>reflect</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>6</td><td>philosophy</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>7</td><td>contemporary</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>8</td><td>abstract</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>9</td><td>visual</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>10</td><td>minimalist</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>11</td><td>conceptual</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>12</td><td>expressionism</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>13</td><td>opponent</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>14</td><td>strategy</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>15</td><td>placement</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>16</td><td>reveal</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>17</td><td>weakness</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>18</td><td>decent</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>19</td><td>gesture</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>20</td><td>sculpture</td><td></td><td></td><td></td><td></td></tr>
-    </tbody>
-  </table>
-  <p class="sub" style="margin-top:10px">本栏结束后，按以下规则给每词标分类：</p>
+
+  <p class="sub" style="margin-top:10px">盲填结束后，按以下规则给每空标分类：</p>
   <div class="classify">
     <span>N · 完全未接触</span>
     <span>F · 见过遗忘</span>
     <span>S · 拼写错</span>
-    <span>M · 词义/用法错（含造不出句）</span>
+    <span>M · 词义/用法错（含选错选项）</span>
     <span>C · 完全正确</span>
   </div>
 </section>
 
 <section>
-  <h2>三、古诗文四件套 · 《劝学》（节选）· 荀子</h2>
+  <h2>二、四阶梯单测 · 主动回忆（20 词 × 4 栏）</h2>
   <div class="method">
-    <b>四件套为什么是这四个</b>：<br>
-    <b>默写</b>测记忆；<b>翻译</b>测理解（能翻译 = 真读懂每个字）；<b>改写</b>测迁移（能换成自己语言重新表达 = 真内化）；<b>费曼提问</b>测讲明白（能用自己的话讲给姐姐听 = 真懂论证逻辑）。<br>
-    四项全对才算掌握。任一项卡壳，标「曾对再错」或「未稳定掌握」录入 MVP。
+    <b>四阶梯为什么是这四个</b>：<br>
+    <b>① 英→中</b>测识别（看见就懂）；<b>② 中→英</b>测主动提取 + 拼写（能主动写出才算真记住）；<b>③ 造句</b>测产出（会用才算掌握）；<b>④ 费曼讲解</b>测讲明白（能用自己的话讲给姐姐听 = 真懂用法辨析）。<br>
+    四栏全对才算 C。前三栏对、第 4 栏讲不出，仍标 <b>M</b>——「认得但讲不明白」是最危险的盲区。
+  </div>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Word</th><th>① 英→中（你的释义）</th><th>② 中→英（你的拼写）</th><th>③ 造句（你的句子）</th><th>④ 费曼讲解（用自己的话回答）</th></tr>
+    </thead>
+    <tbody>
+      <tr class="vocab-row"><td>1</td><td>exhibition</td><td></td><td></td><td></td><td><span class="feynman-prompt">exhibition 和 exhibit 区别？动词形式？</span></td></tr>
+      <tr class="vocab-row"><td>2</td><td>feature</td><td></td><td></td><td></td><td><span class="feynman-prompt">feature 作名词和动词各怎么用？和 characteristic 区别？</span></td></tr>
+      <tr class="vocab-row"><td>3</td><td>origin</td><td></td><td></td><td></td><td><span class="feynman-prompt">origin 和 source 区别？动词 originate ___</span></td></tr>
+      <tr class="vocab-row"><td>4</td><td>binary</td><td></td><td></td><td></td><td><span class="feynman-prompt">binary 是什么意思？binary number 中文？</span></td></tr>
+      <tr class="vocab-row"><td>5</td><td>reflect</td><td></td><td></td><td></td><td><span class="feynman-prompt">reflect 后接什么介词？名词形式？reflection on sth</span></td></tr>
+      <tr class="vocab-row"><td>6</td><td>philosophy</td><td></td><td></td><td></td><td><span class="feynman-prompt">philosophy 的形容词形式？ph 发音如何？</span></td></tr>
+      <tr class="vocab-row"><td>7</td><td>contemporary</td><td></td><td></td><td></td><td><span class="feynman-prompt">contemporary 和 modern 区别？前缀 con- 表什么？</span></td></tr>
+      <tr class="vocab-row"><td>8</td><td>abstract</td><td></td><td></td><td></td><td><span class="feynman-prompt">abstract 作名词和形容词各怎么用？动词形式？</span></td></tr>
+      <tr class="vocab-row"><td>9</td><td>visual</td><td></td><td></td><td></td><td><span class="feynman-prompt">visual 和 visible 区别？名词形式？</span></td></tr>
+      <tr class="vocab-row"><td>10</td><td>minimalist</td><td></td><td></td><td></td><td><span class="feynman-prompt">minimalist 的名词形式（主义）？minimum 和 minimal 区别？</span></td></tr>
+      <tr class="vocab-row"><td>11</td><td>conceptual</td><td></td><td></td><td></td><td><span class="feynman-prompt">conceptual 和 concrete 是反义词吗？名词 concept 后接？</span></td></tr>
+      <tr class="vocab-row"><td>12</td><td>expressionism</td><td></td><td></td><td></td><td><span class="feynman-prompt">expressionism 和 impressionism 区别？动词形式？</span></td></tr>
+      <tr class="vocab-row"><td>13</td><td>opponent</td><td></td><td></td><td></td><td><span class="feynman-prompt">opponent 和 enemy 区别？op- 前缀表什么？</span></td></tr>
+      <tr class="vocab-row"><td>14</td><td>strategy</td><td></td><td></td><td></td><td><span class="feynman-prompt">strategy 和 tactic 区别？形容词形式？</span></td></tr>
+      <tr class="vocab-row"><td>15</td><td>placement</td><td></td><td></td><td></td><td><span class="feynman-prompt">placement 和 position 区别？动词 place 后接？</span></td></tr>
+      <tr class="vocab-row"><td>16</td><td>reveal</td><td></td><td></td><td></td><td><span class="feynman-prompt">reveal 和 disclose 区别？名词形式？</span></td></tr>
+      <tr class="vocab-row"><td>17</td><td>weakness</td><td></td><td></td><td></td><td><span class="feynman-prompt">weakness 的形容词？a weakness ___ sth</span></td></tr>
+      <tr class="vocab-row"><td>18</td><td>decent</td><td></td><td></td><td></td><td><span class="feynman-prompt">decent 和 descent、dissent 三个形近词怎么区分？</span></td></tr>
+      <tr class="vocab-row"><td>19</td><td>gesture</td><td></td><td></td><td></td><td><span class="feynman-prompt">gesture 作名词和动词各怎么用？make a gesture 中文？</span></td></tr>
+      <tr class="vocab-row"><td>20</td><td>sculpture</td><td></td><td></td><td></td><td><span class="feynman-prompt">sculpture 和 statue 区别？动词形式？</span></td></tr>
+    </tbody>
+  </table>
+  <p class="sub" style="margin-top:10px">单测结束后，给每词标分类（与完形填空分类独立，可不同）：</p>
+  <div class="classify">
+    <span>N · 完全未接触</span>
+    <span>F · 见过遗忘</span>
+    <span>S · 拼写错</span>
+    <span>M · 词义/用法错（含造不出句、讲不明白）</span>
+    <span>C · 完全正确</span>
+  </div>
+</section>
+
+<section>
+  <h2>三、古诗文两件套 · 《劝学》（节选）· 荀子</h2>
+  <div class="method">
+    <b>两件套为什么是这两个</b>：<br>
+    <b>默写</b>测记忆（字形 + 字音 + 篇章结构）；<b>翻译</b>测理解（能逐字逐句翻译成现代汉语 = 真读懂每个字 + 每个虚词 + 每个活用）。<br>
+    两项全对才算掌握。任一项卡壳，标「曾对再错」或「未稳定掌握」录入 MVP。下方已附<b>易错字提示</b>，默写/翻译时对照检查，把易错字圈出来。
   </div>
 
   <div class="task">
     <div class="task-head">
       <div class="task-title">《劝学》（节选） · 荀子</div>
-      <div class="task-meta">文言文·必修 #2 · 难度 ★★☆</div>
+      <div class="task-meta">文言文·必修 #2 · 难度 ★★☆ · 高频篇</div>
     </div>
 
     <div class="prompt"><em>任务 1 · 默写</em> · 不看原文，凭记忆默写全文（含「……」处可省略，但首尾三段必须完整）。</div>
     <div class="answer-box tall"></div>
+    <div class="error-hint">
+      <b>默写易错字提示</b>（对照检查，每写一字都核一遍）：<br>
+      · 学不可以「已」：已是「停止」，不是「已经」<br>
+      · 「青」取之于蓝：青是靛青，不是颜色形容词<br>
+      · 「輮」以为轮：輮通「煣」，火烤使弯<br>
+      · 虽有「槁暴」：槁暴＝晒干；暴通「曝」<br>
+      · 「参省」乎己：参省＝检验反省<br>
+      · 不积「跬」步：跬读 kuǐ，半步<br>
+      · 驽马「十驾」：十驾＝十天的路程<br>
+      · 「锲」而不舍：锲读 qiè，刻
+    </div>
 
-    <div class="prompt" style="margin-top:10px"><em>任务 2 · 翻译</em> · 逐句翻译成现代汉语。重点解释：「学不可以已」的「已」是「已经」还是「停止」？「青取之于蓝而青于蓝」两个「青」分别指什么？「虽有槁暴」的「暴」通哪个字？「锲而不舍」的「锲」读什么、是什么意思？</div>
-    <div class="answer-box tall"></div>
-
-    <div class="prompt" style="margin-top:10px"><em>任务 3 · 改写</em> · 用 150 字改写「骐骥一跃，不能十步；驽马十驾，功在不舍」一段，写成给一个高三学生的劝告。要用「天赋」和「坚持」两个现代词，但不能丢掉「劣马走十天也能到千里」的意象。</div>
-    <div class="answer-box tall"></div>
-
-    <div class="prompt" style="margin-top:10px"><em>任务 4 · 费曼提问</em>（周末姐姐抽查）· 「锲而舍之，朽木不折；锲而不舍，金石可镂」用了什么论证手法？为什么荀子要举「朽木」和「金石」这一组对比，而不是举别的对比（比如「木头」和「铁」）？</div>
-    <div class="answer-box" style="min-height:40px"></div>
+    <div class="prompt" style="margin-top:14px"><em>任务 2 · 翻译</em> · 逐句翻译成现代汉语。重点解释：「学不可以已」的「已」是「已经」还是「停止」？「青取之于蓝而青于蓝」两个「青」分别指什么、两个「于」意思一样吗？「虽有槁暴」的「暴」通哪个字？「君子博学而日参省乎己」的「参省」是什么意思？「锲而不舍」的「锲」读什么、是什么意思？</div>
+    <div class="answer-box tall" style="min-height:160px"></div>
+    <div class="error-hint">
+      <b>翻译易错字提示</b>（关键词义必须翻译准确）：<br>
+      · 学不可以「已」：已是「停止」，不是「已经」<br>
+      · 「青」取之于蓝：青是靛青（名词），不是形容词「青色」<br>
+      · 「輮」以为轮：輮通「煣」，火烤使弯，不是「揉」<br>
+      · 虽有「槁暴」：槁暴＝晒干；暴通「曝」，不译为「暴露」<br>
+      · 「参省」乎己：参省＝检验反省，不是「参考」<br>
+      · 不积「跬」步：跬读 kuǐ，半步，不是「步」<br>
+      · 驽马「十驾」：十驾＝十天的路程，不是「十匹马」<br>
+      · 「锲」而不舍：锲读 qiè，刻，不是「契」或「弃」
+    </div>
   </div>
 </section>
 
@@ -214,17 +246,17 @@ A <span class="blank">_______(17)</span> winner always tries to beat the opponen
       <tr><th>反思项</th><th>回答</th></tr>
     </thead>
     <tbody>
-      <tr><td>今天完形填空我选错的是哪几空？错因是词义混 / 词形混 / 语境误判？</td><td style="min-height:50px"></td></tr>
-      <tr><td>今天哪些词我以为会、其实造不出句或迁移改写不出？</td><td></td></tr>
-      <tr><td>《劝学》我能默写，但翻译卡壳的是哪一句？</td><td></td></tr>
-      <tr><td>讲给姐姐听「锲而不舍」对比论证时，我讲到一半讲不下去了？</td><td></td></tr>
+      <tr><td>今天完形填空哪几空我以为会、其实选错了？（列出空号）</td><td style="min-height:50px"></td></tr>
+      <tr><td>今天哪些词四阶梯前三栏对、第四栏「费曼讲解」讲不明白？</td><td></td></tr>
+      <tr><td>《劝学》我能默写，但翻译卡壳的是哪一句？易错字写错了哪几个？</td><td></td></tr>
+      <tr><td>讲给姐姐听「origin 和 source 区别」或「decent/descent/dissent 三词区分」时，我讲到一半讲不下去了？</td><td></td></tr>
       <tr><td>明天 Day 5 要重点攻克哪 1 个知识点？（不是 3 个，就 1 个）</td><td></td></tr>
     </tbody>
   </table>
 </section>
 
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 4 · 学生作答版 · v3 完形+四阶梯+对齐2025真题 · 2026-11-03
+  Gaokao Coach 2027 · 第1周 Day 4 · 学生作答版 · v4 完形+四阶梯+古诗文两件套 · 2026-11-03
 </div>
 
 </div>

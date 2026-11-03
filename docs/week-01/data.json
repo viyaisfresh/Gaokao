@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "version": "v3-cloze-2025-aligned",
+    "version": "v4-trimmed-feynman-on-vocab",
     "generated": "2026-11-03",
     "alignment": "基于 2025 全国一卷真题调整：词汇来自 2025 英语试卷文本核心词；古诗文 3/5 命中 2025 默写真题（师说/鹊桥仙/苏幕遮），2/5 为历史高频篇（劝学/念奴娇）",
     "sources": [
       "https://jhcee.cn/pc/gk_information/consultation_detail-d6278da9-0614-42f2-b955-956d684bd64c.html",
       "https://zhuanlan.zhihu.com/p/1916248728714588524"
     ],
-    "structure": "完形填空（20 空，2025 真题改编）+ 四阶梯单测（识别/拼写/造句/迁移）+ 古诗文四件套 + 自评反思"
+    "structure": "完形填空（20 空，2025 真题改编）+ 四阶梯单测（识别/拼写/造句/费曼讲解）+ 古诗文两件套（默写/翻译+易错字）+ 自评反思"
   },
   "vocab": {
     "day1": {
@@ -17,121 +17,141 @@
           "en": "emission",
           "zh": "排放；排放物",
           "example": "Transportation accounts for a large part of global CO2 emissions.",
-          "tip": "可数名词，常复；动词 emit"
+          "tip": "可数名词，常复；动词 emit",
+          "feynman": "emission 和 emissions 何时用单数、何时用复数？动词 emit 怎么变化？"
         },
         {
           "en": "decarbonize",
           "zh": "脱碳；低碳化",
           "example": "The world races to decarbonize everything.",
-          "tip": "前缀 de- + carbon"
+          "tip": "前缀 de- + carbon",
+          "feynman": "decarbonize 的前缀 de- 表什么？举一个同前缀的词。"
         },
         {
           "en": "renewable",
           "zh": "可再生的；可更新的",
           "example": "Renewable energy will be up to the task.",
-          "tip": "形容词，常修饰 energy"
+          "tip": "形容词，常修饰 energy",
+          "feynman": "renewable 和 new 有什么关系？为什么常修饰 energy？"
         },
         {
           "en": "transition",
           "zh": "过渡；转变",
           "example": "This energy transition is global.",
-          "tip": "名词；transit 是另一种词"
+          "tip": "名词；transit 是另一种词",
+          "feynman": "transition 和 transit 是同一个词吗？意思差在哪？"
         },
         {
           "en": "responsible",
           "zh": "负责的；是…的原因",
           "example": "Moving goods is responsible for a large part of emissions.",
-          "tip": "be responsible for"
+          "tip": "be responsible for",
+          "feynman": "be responsible for 后接什么？和 the cause of 有什么区别？"
         },
         {
           "en": "specific",
           "zh": "特定的；具体的",
           "example": "Each mode of transport has its specific fuel needs.",
-          "tip": "勿与 special 混"
+          "tip": "勿与 special 混",
+          "feynman": "specific 和 special 都翻成「特别的」，用法差在哪？"
         },
         {
           "en": "estimate",
           "zh": "估计；估算",
           "example": "It's estimated that electricity demand could double by 2050.",
-          "tip": "动词/名词同形"
+          "tip": "动词/名词同形",
+          "feynman": "estimate 可作动词也可作名词，读音和搭配有何不同？"
         },
         {
           "en": "demand",
           "zh": "需求；要求",
           "example": "The global demand for electricity could more than double.",
-          "tip": "可数/不可数均可"
+          "tip": "可数/不可数均可",
+          "feynman": "demand 作名词和动词时用法分别是什么？可以说 demand of sth 吗？"
         },
         {
           "en": "carbonate",
           "zh": "碳酸盐",
           "example": "Crucially, this process relies on water containing enough calcium carbonate.",
-          "tip": "名词；钙化合物"
+          "tip": "名词；钙化合物",
+          "feynman": "carbonate 是什么离子？钙的碳酸盐英文怎么说？"
         },
         {
           "en": "consumption",
           "zh": "消耗；消费",
           "example": "Limiting fuel consumption is not enough.",
-          "tip": "名词；动词 consume"
+          "tip": "名词；动词 consume",
+          "feynman": "consumption 和 consume 词性分别是什么？fuel consumption 怎么理解？"
         },
         {
           "en": "efficiency",
           "zh": "效率",
           "example": "Improving energy efficiency is one solution.",
-          "tip": "形容词 efficient"
+          "tip": "形容词 efficient",
+          "feynman": "efficiency 和 efficient 词性？efficient 的反义词？"
         },
         {
           "en": "affordable",
           "zh": "负担得起的",
           "example": "Making electricity more affordable helps transition.",
-          "tip": "前缀 af- + ford"
+          "tip": "前缀 af- + ford",
+          "feynman": "affordable 的动词原形？为什么有 af- 前缀？"
         },
         {
           "en": "automobile",
           "zh": "汽车",
           "example": "The greening of planes, trains and automobiles.",
-          "tip": "美式汽车总称"
+          "tip": "美式汽车总称",
+          "feynman": "automobile 和 car、vehicle 有什么区别？auto- 前缀表什么？"
         },
         {
           "en": "vehicle",
           "zh": "车辆；交通工具",
           "example": "Road vehicles accounted for 74.5% of emissions.",
-          "tip": "h 不发音"
+          "tip": "h 不发音",
+          "feynman": "vehicle 的 h 发音吗？和 car 在语体上有何差别？"
         },
         {
           "en": "freight",
           "zh": "货物；货运",
           "example": "Much freight is moved by truck.",
-          "tip": "名词；weight 同结构"
+          "tip": "名词；weight 同结构",
+          "feynman": "freight 和 goods、cargo 有什么区别？"
         },
         {
           "en": "alternative",
           "zh": "替代的；可供选择的",
           "example": "We need alternative fuel sources.",
-          "tip": "勿与 alternate 混"
+          "tip": "勿与 alternate 混",
+          "feynman": "alternative 和 alternate 长得像，意思差在哪？"
         },
         {
           "en": "sustainable",
           "zh": "可持续的",
           "example": "Sustainable transport is the goal.",
-          "tip": "前缀 sustain + able"
+          "tip": "前缀 sustain + able",
+          "feynman": "sustainable 的动词原形？sustainable development 中文怎么说？"
         },
         {
           "en": "generate",
           "zh": "产生；发电",
           "example": "Renewables can generate enough electricity.",
-          "tip": "动词；名词 generation"
+          "tip": "动词；名词 generation",
+          "feynman": "generate 和 produce、create 有什么区别？generation 是什么意思？"
         },
         {
           "en": "efficient",
           "zh": "高效的",
           "example": "Improving energy efficiency is one solution.",
-          "tip": "名词 efficiency"
+          "tip": "名词 efficiency",
+          "feynman": "efficient 和 effective 有什么区别？各举一例。"
         },
         {
           "en": "solution",
           "zh": "解决方案；溶液",
           "example": "Here are some solutions to get us going green.",
-          "tip": "常接 to + 名词"
+          "tip": "常接 to + 名词",
+          "feynman": "solution 后接什么介词？a solution ___ the problem"
         }
       ],
       "cloze": {
@@ -147,121 +167,141 @@
           "en": "persuasive",
           "zh": "有说服力的",
           "example": "I asked everyone to write a persuasive piece.",
-          "tip": "动词 persuade"
+          "tip": "动词 persuade",
+          "feynman": "persuasive 的动词是？persuade sb ___ doing / to do 哪个对？"
         },
         {
           "en": "narrative",
           "zh": "叙事；叙述",
           "example": "A personal-narrative unit followed.",
-          "tip": "可数名词；形容词"
+          "tip": "可数名词；形容词",
+          "feynman": "narrative 作名词和形容词各是什么意思？和 story 区别？"
         },
         {
           "en": "genre",
           "zh": "体裁；流派",
           "example": "The piece must meet the specifications of its genre.",
-          "tip": "法语借词，g 弱读"
+          "tip": "法语借词，g 弱读",
+          "feynman": "genre 是哪国语言借词？g 发音如何？举一个 genre 的例子。"
         },
         {
           "en": "thesis",
           "zh": "论点；论文",
           "example": "Few contained a thesis statement.",
-          "tip": "复数 theses"
+          "tip": "复数 theses",
+          "feynman": "thesis 复数怎么写？thesis statement 在文章里指什么？"
         },
         {
           "en": "fictional",
           "zh": "虚构的；小说的",
           "example": "The cowboy was a fictional character.",
-          "tip": "名词 fiction"
+          "tip": "名词 fiction",
+          "feynman": "fictional 和 fictitious 都翻「虚构的」，用法差在哪？"
         },
         {
           "en": "demonstrate",
           "zh": "证明；展示",
           "example": "They demonstrated how microplastics were trapped.",
-          "tip": "动词；名词 demonstration"
+          "tip": "动词；名词 demonstration",
+          "feynman": "demonstrate 和 show、prove 有什么区别？名词形式？"
         },
         {
           "en": "interpret",
           "zh": "解释；诠释",
           "example": "Few sentences could be interpreted as a thesis.",
-          "tip": "勿与 translate 混"
+          "tip": "勿与 translate 混",
+          "feynman": "interpret 和 translate 都翻「翻译」，区别在哪？"
         },
         {
           "en": "communicate",
           "zh": "交流；传达",
           "example": "Writing is important as a means of communication.",
-          "tip": "名词 communication"
+          "tip": "名词 communication",
+          "feynman": "communicate 后接什么介词？名词形式怎么拼？"
         },
         {
           "en": "specification",
           "zh": "规格；具体要求",
           "example": "The piece must meet the specifications of its genre.",
-          "tip": "常复数"
+          "tip": "常复数",
+          "feynman": "specification 为什么常复数？动词形式？"
         },
         {
           "en": "staggering",
           "zh": "令人惊叹的",
           "example": "The results were staggering.",
-          "tip": "动词 stagger + ing"
+          "tip": "动词 stagger + ing",
+          "feynman": "staggering 和 surprising 有什么区别？动词 stagger 的本意？"
         },
         {
           "en": "workshop",
           "zh": "研讨班；工作坊",
           "example": "A creative-writing workshop followed.",
-          "tip": "合成词"
+          "tip": "合成词",
+          "feynman": "workshop 是合成词，两部分是什么？和 seminar 区别？"
         },
         {
           "en": "broaden",
           "zh": "拓宽；开阔",
           "example": "Characters that broadened my view.",
-          "tip": "形容词 broad + en"
+          "tip": "形容词 broad + en",
+          "feynman": "broaden 的形容词？broaden one's horizons 中文？"
         },
         {
           "en": "communication",
           "zh": "交流；沟通",
           "example": "Writing is important as a means of communication.",
-          "tip": "动词 communicate"
+          "tip": "动词 communicate",
+          "feynman": "communication 和 communicate 的关系？means of communication 指？"
         },
         {
           "en": "significant",
           "zh": "重要的；显著的",
           "example": "A simple measure may significantly reduce microplastics.",
-          "tip": "名词 significance"
+          "tip": "名词 significance",
+          "feynman": "significant 和 important 区别？名词形式？"
         },
         {
           "en": "controversial",
           "zh": "有争议的",
           "example": "Reality shows remain controversial.",
-          "tip": "名词 controversy"
+          "tip": "名词 controversy",
+          "feynman": "controversial 的名词？a controversial issue 中文？"
         },
         {
           "en": "critical",
           "zh": "批判的；关键的",
           "example": "The man is critical of reality shows.",
-          "tip": "名词 critic"
+          "tip": "名词 critic",
+          "feynman": "critical 的两个意思分别是什么？be critical ___ sth"
         },
         {
           "en": "favorable",
           "zh": "赞成的；有利的",
           "example": "His attitude toward reality shows is favorable.",
-          "tip": "名词 favor"
+          "tip": "名词 favor",
+          "feynman": "favorable 和 favorite 区别？favorable 后接什么介词？"
         },
         {
           "en": "diverse",
           "zh": "多样的；不同的",
           "example": "The woman expects TV programs to be diverse.",
-          "tip": "名词 diversity"
+          "tip": "名词 diversity",
+          "feynman": "diverse 和 different 区别？名词形式？"
         },
         {
           "en": "educational",
           "zh": "教育的；有教育意义的",
           "example": "She expects programs to be educational.",
-          "tip": "名词 education"
+          "tip": "名词 education",
+          "feynman": "educational 和 educative 区别？an educational program 指？"
         },
         {
           "en": "entertaining",
           "zh": "有趣的；娱乐的",
           "example": "Some programs are merely entertaining.",
-          "tip": "动词 entertain"
+          "tip": "动词 entertain",
+          "feynman": "entertaining 和 amused 区别（修饰人还是物）？动词 entertain 后接？"
         }
       ],
       "cloze": {
@@ -277,121 +317,141 @@
           "en": "encourage",
           "zh": "鼓励",
           "example": "Encouraged, I posted more items online.",
-          "tip": "名词 encouragement"
+          "tip": "名词 encouragement",
+          "feynman": "encourage sb ___ doing / to do 哪个对？名词形式？"
         },
         {
           "en": "appreciate",
           "zh": "欣赏；感激",
           "example": "Someone is appreciating something that couldn't come with us.",
-          "tip": "及物动词"
+          "tip": "及物动词",
+          "feynman": "appreciate doing 还是 to do？I would appreciate ___ if ..."
         },
         {
           "en": "anticipate",
           "zh": "期待；预期",
           "example": "I wasn't anticipating such a reply.",
-          "tip": "前缀 anti- 提前"
+          "tip": "前缀 anti- 提前",
+          "feynman": "anticipate 和 expect 区别？anticipate 后接？"
         },
         {
           "en": "encounter",
           "zh": "遇见；邂逅",
           "example": "Each exchange was a chance to please a person I might not otherwise have encountered.",
-          "tip": "名词/动词同形"
+          "tip": "名词/动词同形",
+          "feynman": "encounter 作名词和动词各怎么用？和 meet 区别？"
         },
         {
           "en": "recognize",
           "zh": "认出；识别",
           "example": "I might not otherwise have recognized them.",
-          "tip": "名词 recognition"
+          "tip": "名词 recognition",
+          "feynman": "recognize 和 identify、acknowledge 区别？名词形式？"
         },
         {
           "en": "investigate",
           "zh": "调查",
           "example": "I investigated the buyer's background.",
-          "tip": "名词 investigation"
+          "tip": "名词 investigation",
+          "feynman": "investigate 后接什么？名词形式？和 look into 区别？"
         },
         {
           "en": "recommend",
           "zh": "推荐",
           "example": "A friend recommended the vase to me.",
-          "tip": "双 m；名词 recommendation"
+          "tip": "双 m；名词 recommendation",
+          "feynman": "recommend 后接 doing 还是 to do？名词形式双 m 怎么解释？"
         },
         {
           "en": "confused",
           "zh": "困惑的",
           "example": "Confused, I read the message again.",
-          "tip": "修饰人；-ing 修饰物"
+          "tip": "修饰人；-ing 修饰物",
+          "feynman": "confused 和 confusing 区别（修饰人还是物）？各举一句。"
         },
         {
           "en": "disappointed",
           "zh": "失望的",
           "example": "Disappointed, she left without buying.",
-          "tip": "动词 disappoint"
+          "tip": "动词 disappoint",
+          "feynman": "disappointed 和 disappointing 区别？be disappointed ___ sth"
         },
         {
           "en": "valuable",
           "zh": "有价值的",
           "example": "Some objects weren't particularly valuable.",
-          "tip": "名词 value"
+          "tip": "名词 value",
+          "feynman": "valuable 和 precious 区别？名词形式？"
         },
         {
           "en": "conventional",
           "zh": "常规的；传统的",
           "example": "These weren't conventional objects.",
-          "tip": "名词 convention"
+          "tip": "名词 convention",
+          "feynman": "conventional 和 traditional 区别？名词形式？"
         },
         {
           "en": "complicated",
           "zh": "复杂的",
           "example": "The situation was more complicated than expected.",
-          "tip": "动词 complicate"
+          "tip": "动词 complicate",
+          "feynman": "complicated 和 complex 区别？动词形式？"
         },
         {
           "en": "tolerable",
           "zh": "可容忍的",
           "example": "The noise was barely tolerable.",
-          "tip": "动词 tolerate"
+          "tip": "动词 tolerate",
+          "feynman": "tolerable 和 tolerant 区别？动词 tolerate 怎么用？"
         },
         {
           "en": "display",
           "zh": "展示；陈列",
           "example": "She wanted to display the vase.",
-          "tip": "名词/动词同形"
+          "tip": "名词/动词同形",
+          "feynman": "display 作名词和动词各怎么用？on display 中文？"
         },
         {
           "en": "contribution",
           "zh": "贡献；捐赠",
           "example": "Each exchange was a contribution to the community.",
-          "tip": "动词 contribute"
+          "tip": "动词 contribute",
+          "feynman": "contribution 后接什么介词？动词 contribute ___"
         },
         {
           "en": "belongings",
           "zh": "物品；所有物",
           "example": "I sit in my apartment today, loving each of the belongings.",
-          "tip": "必复数"
+          "tip": "必复数",
+          "feynman": "belongings 为什么必复数？动词 belong ___"
         },
         {
           "en": "delivery",
           "zh": "交付；递送",
           "example": "I arranged delivery for the next day.",
-          "tip": "动词 deliver"
+          "tip": "动词 deliver",
+          "feynman": "delivery 和 deliver 的关系？take delivery ___ sth"
         },
         {
           "en": "withdraw",
           "zh": "撤回；提取",
           "example": "She was withdrawing her offer.",
-          "tip": "过去式 withdrew"
+          "tip": "过去式 withdrew",
+          "feynman": "withdraw 的过去式？名词形式？withdraw ___ sth"
         },
         {
           "en": "genuine",
           "zh": "真诚的；真正的",
           "example": "Her smile was genuine, not forced.",
-          "tip": "副词 genuinely"
+          "tip": "副词 genuinely",
+          "feynman": "genuine 和 authentic 区别？副词形式怎么拼？"
         },
         {
           "en": "chaos",
           "zh": "混乱",
           "example": "Posts became a ray of light in the chaos of my house.",
-          "tip": "形容词 chaotic"
+          "tip": "形容词 chaotic",
+          "feynman": "chaos 是可数还是不可数？形容词形式？"
         }
       ],
       "cloze": {
@@ -407,121 +467,141 @@
           "en": "exhibition",
           "zh": "展览",
           "example": "An exhibition at the museum features Go-inspired artwork.",
-          "tip": "动词 exhibit"
+          "tip": "动词 exhibit",
+          "feynman": "exhibition 和 exhibit 区别？动词形式？"
         },
         {
           "en": "feature",
           "zh": "以…为特色；特色",
           "example": "The exhibition features artwork inspired by Go.",
-          "tip": "动词/名词同形"
+          "tip": "动词/名词同形",
+          "feynman": "feature 作名词和动词各怎么用？和 characteristic 区别？"
         },
         {
           "en": "origin",
           "zh": "起源",
           "example": "Go originated in China over 4,000 years ago.",
-          "tip": "动词 originate"
+          "tip": "动词 originate",
+          "feynman": "origin 和 source 区别？动词 originate ___"
         },
         {
           "en": "binary",
           "zh": "二元的；二进制的",
           "example": "Go is one of the earliest binary-based games.",
-          "tip": "名词/形容词"
+          "tip": "名词/形容词",
+          "feynman": "binary 是什么意思？binary number 中文？"
         },
         {
           "en": "reflect",
           "zh": "反映；反射",
           "example": "The movements reflect the basic ideas of Eastern philosophy.",
-          "tip": "名词 reflection"
+          "tip": "名词 reflection",
+          "feynman": "reflect 后接什么介词？名词形式？reflection on sth"
         },
         {
           "en": "philosophy",
           "zh": "哲学",
           "example": "Eastern philosophy emphasizes balance.",
-          "tip": "形容词 philosophical"
+          "tip": "形容词 philosophical",
+          "feynman": "philosophy 的形容词形式？ph 发音如何？"
         },
         {
           "en": "contemporary",
           "zh": "当代的；同时代的",
           "example": "It brings together Go culture and contemporary art.",
-          "tip": "前缀 con- + temporary"
+          "tip": "前缀 con- + temporary",
+          "feynman": "contemporary 和 modern 区别？前缀 con- 表什么？"
         },
         {
           "en": "abstract",
           "zh": "抽象的",
           "example": "We hope to present the abstract Go game visually.",
-          "tip": "名词 abstraction"
+          "tip": "名词 abstraction",
+          "feynman": "abstract 作名词和形容词各怎么用？动词形式？"
         },
         {
           "en": "visual",
           "zh": "视觉的",
           "example": "Present it in a visual context.",
-          "tip": "名词 visuals"
+          "tip": "名词 visuals",
+          "feynman": "visual 和 visible 区别？名词形式？"
         },
         {
           "en": "minimalist",
           "zh": "极简主义的",
           "example": "Dialogues with minimalist art.",
-          "tip": "名词 minimalism"
+          "tip": "名词 minimalism",
+          "feynman": "minimalist 的名词形式（主义）？minimum 和 minimal 区别？"
         },
         {
           "en": "conceptual",
           "zh": "概念的",
           "example": "Conceptual art challenges viewers.",
-          "tip": "名词 concept"
+          "tip": "名词 concept",
+          "feynman": "conceptual 和 concrete 是反义词吗？名词 concept 后接？"
         },
         {
           "en": "expressionism",
           "zh": "表现主义",
           "example": "Expressionism emphasizes emotion over form.",
-          "tip": "动词 express"
+          "tip": "动词 express",
+          "feynman": "expressionism 和 impressionism 区别？动词形式？"
         },
         {
           "en": "opponent",
           "zh": "对手",
           "example": "Lead the opponent into your trap.",
-          "tip": "op- 反方"
+          "tip": "op- 反方",
+          "feynman": "opponent 和 enemy 区别？op- 前缀表什么？"
         },
         {
           "en": "strategy",
           "zh": "策略",
           "example": "The beauty in the strategic placement.",
-          "tip": "形容词 strategic"
+          "tip": "形容词 strategic",
+          "feynman": "strategy 和 tactic 区别？形容词形式？"
         },
         {
           "en": "placement",
           "zh": "放置；布置",
           "example": "Strategic placement of the pieces.",
-          "tip": "动词 place"
+          "tip": "动词 place",
+          "feynman": "placement 和 position 区别？动词 place 后接？"
         },
         {
           "en": "reveal",
           "zh": "揭示；暴露",
           "example": "The players' personalities are revealed during the game.",
-          "tip": "名词 revelation"
+          "tip": "名词 revelation",
+          "feynman": "reveal 和 disclose 区别？名词形式？"
         },
         {
           "en": "weakness",
           "zh": "弱点",
           "example": "One's weaknesses are exposed.",
-          "tip": "形容词 weak + ness"
+          "tip": "形容词 weak + ness",
+          "feynman": "weakness 的形容词？a weakness ___ sth"
         },
         {
           "en": "decent",
           "zh": "体面的；正派的",
           "example": "A decent winner respects the opponent.",
-          "tip": "勿与 descent 混"
+          "tip": "勿与 descent 混",
+          "feynman": "decent 和 descent、dissent 三个形近词怎么区分？"
         },
         {
           "en": "gesture",
           "zh": "姿态；手势",
           "example": "Beating by one or two points is a gesture of respect.",
-          "tip": "名词/动词同形"
+          "tip": "名词/动词同形",
+          "feynman": "gesture 作名词和动词各怎么用？make a gesture 中文？"
         },
         {
           "en": "sculpture",
           "zh": "雕塑",
           "example": "Artists created oil paintings, sculptures, silk-screen prints.",
-          "tip": "动词 sculpt"
+          "tip": "动词 sculpt",
+          "feynman": "sculpture 和 statue 区别？动词形式？"
         }
       ],
       "cloze": {
@@ -537,121 +617,141 @@
           "en": "column",
           "zh": "栏目",
           "example": "I really like the idea of adding a new column.",
-          "tip": "名词；列"
+          "tip": "名词；列",
+          "feynman": "column 在新闻里指什么？columnist 是什么职业？"
         },
         {
           "en": "suggest",
           "zh": "建议；暗示",
           "example": "My wife suggested I get in touch with my brother.",
-          "tip": "后接 doing"
+          "tip": "后接 doing",
+          "feynman": "suggest 后接什么？suggest doing / to do / that 从句哪个对？"
         },
         {
           "en": "appreciate",
           "zh": "感激；欣赏",
           "example": "I appreciate your help.",
-          "tip": "后接 doing"
+          "tip": "后接 doing",
+          "feynman": "appreciate doing 还是 to do？I would appreciate ___ if ..."
         },
         {
           "en": "gather",
           "zh": "聚集；收集",
           "example": "Hosting a small gathering in early summer.",
-          "tip": "名词 gathering"
+          "tip": "名词 gathering",
+          "feynman": "gather 作及物和不及物各怎么用？gathering 是什么？"
         },
         {
           "en": "host",
           "zh": "主办；主人",
           "example": "We wanted to host a small gathering.",
-          "tip": "名词/动词同形"
+          "tip": "名词/动词同形",
+          "feynman": "host 作名词和动词各怎么用？a host ___ sth"
         },
         {
           "en": "unexpected",
           "zh": "出乎意料的",
           "example": "Unexpectedly, the weather changed.",
-          "tip": "前缀 un- + expected"
+          "tip": "前缀 un- + expected",
+          "feynman": "unexpected 的反义词？副词形式怎么拼？"
         },
         {
           "en": "unexpectedly",
           "zh": "出乎意料地",
           "example": "Unexpectedly, after supper, the weather changed.",
-          "tip": "副词"
+          "tip": "副词",
+          "feynman": "unexpectedly 和 suddenly 区别？形容词形式？"
         },
         {
           "en": "awkward",
           "zh": "尴尬的",
           "example": "It was an awkward moment.",
-          "tip": "副词 awkwardly"
+          "tip": "副词 awkwardly",
+          "feynman": "awkward 的副词形式？awkward 和 embarrassed 区别？"
         },
         {
           "en": "companion",
           "zh": "同伴；陪伴",
           "example": "Toby was his constant companion.",
-          "tip": "勿与 company 混"
+          "tip": "勿与 company 混",
+          "feynman": "companion 和 company 区别？a companion ___ sb"
         },
         {
           "en": "conscience",
           "zh": "良心",
           "example": "My conscience kept bothering me.",
-          "tip": "形容词 conscientious"
+          "tip": "形容词 conscientious",
+          "feynman": "conscience 和 conscious 区别（发音+意思）？"
         },
         {
           "en": "bother",
           "zh": "打扰；使烦恼",
           "example": "My conscience kept bothering me.",
-          "tip": "名词 bother"
+          "tip": "名词 bother",
+          "feynman": "bother 作及物和不及物各怎么用？bother ___ sth"
         },
         {
           "en": "resist",
           "zh": "抗拒",
           "example": "I resisted, thinking he should call first.",
-          "tip": "名词 resistance"
+          "tip": "名词 resistance",
+          "feynman": "resist 后接什么？can't resist ___ sth"
         },
         {
           "en": "fault",
           "zh": "过错",
           "example": "I realized it was me who was at fault.",
-          "tip": "形容词 faulty"
+          "tip": "形容词 faulty",
+          "feynman": "fault 和 mistake、error 区别？be at fault 中文？"
         },
         {
           "en": "part",
           "zh": "分手；分开",
           "example": "He was unhappy over the way we had parted.",
-          "tip": "动词 part"
+          "tip": "动词 part",
+          "feynman": "part 作动词怎么用？part with sth 中文？"
         },
         {
           "en": "expression",
           "zh": "表达；表情",
           "example": "His expression showed his unhappiness.",
-          "tip": "动词 express"
+          "tip": "动词 express",
+          "feynman": "expression 和 phrase 区别？facial expression 中文？"
         },
         {
           "en": "tone",
           "zh": "语气；音调",
           "example": "Her tone was warm.",
-          "tip": "名词"
+          "tip": "名词",
+          "feynman": "tone 在写作里指什么？in a ... tone 中文？"
         },
         {
           "en": "strike",
           "zh": "打动；突然想到",
           "example": "It struck me that I should apologize.",
-          "tip": "过去式 struck"
+          "tip": "过去式 struck",
+          "feynman": "strike 的过去式？It strikes me that ... 中文？"
         },
         {
           "en": "insight",
           "zh": "洞察；见解",
           "example": "The experience gave me new insight.",
-          "tip": "名词；形容词 insightful"
+          "tip": "名词；形容词 insightful",
+          "feynman": "insight 后接什么介词？形容词形式？"
         },
         {
           "en": "comfort",
           "zh": "安慰",
           "example": "I wanted to comfort my brother.",
-          "tip": "形容词 comfortable"
+          "tip": "形容词 comfortable",
+          "feynman": "comfort 作名词和动词各怎么用？comfortable 和 comforting 区别？"
         },
         {
           "en": "reunite",
           "zh": "重聚",
           "example": "We reunited after two months of silence.",
-          "tip": "前缀 re- + unite"
+          "tip": "前缀 re- + unite",
+          "feynman": "reunite 的前缀 re- 表什么？reunite sb ___ sth"
         }
       ],
       "cloze": {
@@ -677,11 +777,7 @@
         "从而「师」之：师是意动用法「以…为师」",
         "弟子不必「不如」师：不必＝不一定，不是「不需要」",
         "术业有专攻：攻是「学习、研究」"
-      ],
-      "rewritePrompt": "假设你是韩愈，给李蟠写一封短信（150 字），讲清楚为什么「道之所存，师之所存」——你为何不在乎老师的年龄和身份？",
-      "rewriteReference": "李蟠，你问我为何求师不计较年龄贵贱，我答你一句：我所求的是道，不是人。道在哪里，老师就在哪里。二十岁的人若先闻道，我拜他为师；五十岁的人若未闻道，他拜我为师。我学的是道理，不是身份。世人耻于学师，是因他们分不清「求道」和「求名」。道比年龄长一岁、地位高一阶，都重要得多。你既好古文、通六艺，便该懂这一层。",
-      "feynmanQuestion": "2025 全国一卷语文默写第 (1) 题考了「弟子不必不如师，师不必贤于弟子」。韩愈为什么必须说这句话？整篇文章如果不写这一句，逻辑上少掉了什么？",
-      "feynmanAnswer": "「弟子不必不如师，师不必贤于弟子」是《师说》的论证终点，也是韩愈反击世俗「耻学于师」的最后武器。前文已说「闻道有先后」——先闻道者为师，与身份年龄无关。但世俗反驳会是：「老师怎能不如学生？」韩愈用这句话封死反驳：老师确实可能不如学生，因为「术业有专攻」——每个人专攻方向不同，学生在他专攻的方向上超过老师是正常的。这句话一立，逻辑闭环：师非因贤而为师，因闻道先而为师；学生非因落后而为生，因闻道后而为生。师生关系被还原为「闻道先后」这一单一变量。删掉这一句，文章能立论但反不掉「老师必须比学生强」的世俗偏见，论证不闭环。"
+      ]
     },
     {
       "id": "queqiaoxian",
@@ -698,11 +794,7 @@
         "「金风」玉露：金风＝秋风（五行秋属金）",
         "「忍」顾鹊桥归路：忍＝「怎忍」反问",
         "又岂在「朝朝暮暮」：朝读 zhāo 不读 cháo"
-      ],
-      "rewritePrompt": "假设你是织女，相会结束、踏上鹊桥归路的那一刻，用第一人称写 120 字的内心独白。必须包含「金风玉露」「胜却人间」「朝朝暮暮」三个意象。",
-      "rewriteReference": "金风又起，玉露沾衣。他站在桥的另一头看着我，我知道他也在算：明年还要等三百六十四天。可我不怨。人间那些夫妻日日同榻、夜夜共语，有几对真懂「相念」二字？他们因为常见，所以不见；因为不离，所以不思。我与他隔着银河，每年只见一面，可这一面盛过他们一年。两情若是久长时，又岂在朝朝暮暮——这话我对自己说了千万遍，今夜再说一遍，便也能笑着走下桥去。",
-      "feynmanQuestion": "2025 全国一卷语文默写第 (2) 题考了「两情若是久长时，又岂在朝朝暮暮」。秦观为什么用「金风玉露一相逢，便胜却人间无数」作上阕结尾？这两句和最后两句是什么关系？",
-      "feynmanAnswer": "「金风玉露一相逢，便胜却人间无数」是铺垫，「两情若是久长时，又岂在朝朝暮暮」是收束。前者给出结论：一次高质量的相逢胜过无数低质量的相伴。后者把这个结论推广为普遍命题：感情的「质」决定感情的「值」，不是「量」。前者是经验观察（牛郎织女的一年一见），后者是哲学提炼（普适的爱情观）。没有上阕的铺垫，下阕就成了空喊口号；没有下阕的收束，上阕只是一个浪漫感叹。秦观的高明在于：他用一个神话故事（一年一见）颠覆了世俗的常识（天天在一起才好），并且把这种颠覆推广为爱情的普遍标准。"
+      ]
     },
     {
       "id": "sumuzhe",
@@ -721,11 +813,7 @@
         "一一「风荷举」：举是「挺立、托起」",
         "小「楫」轻舟：楫读 jí，船桨",
         "芙蓉「浦」：浦是水滨"
-      ],
-      "rewritePrompt": "2025 全国一卷语文默写第 (3) 题给一幅莲花图，要求写与之契合的古诗文名句，标答是「水面清圆，一一风荷举」。请用 150 字描述：周邦彦写这句时，他眼前是一个什么样的清晨？要有「初阳」「宿雨」「风」三个元素。",
-      "rewriteReference": "天刚亮，昨夜一场雨还没干透。他推开窗，院子里鸟雀在檐下叫——是雨后初晴那种清亮的叫声。阳光斜斜地照到池面上，荷叶上还滚着昨夜的雨珠，被阳光一照，亮得像珠子。风一来，荷叶轻轻一摇，雨珠滑下去，叶面却挺得更高——一朵一朵，从水面举起来，干净、圆润、精神。这不是盛夏荷花的浓艳，是雨后清晨的荷花的清气。他看了一会儿，想起家乡苏州的荷塘，写下「水面清圆，一一风荷举」。",
-      "feynmanQuestion": "2025 全国一卷语文默写第 (3) 题要求「为莲花图配古诗文名句」，标答是「水面清圆，一一风荷举」。周邦彦这一句为什么比「接天莲叶无穷碧，映日荷花别样红」更适合作为标答？两者在写荷上有何根本区别？",
-      "feynmanAnswer": "「水面清圆，一一风荷举」写的是荷的「态」——叶面上的雨珠在初阳下滚落，风一来，荷叶一朵一朵从水面挺举起来，是一个动态、有方向的画面。「接天莲叶无穷碧，映日荷花别样红」写的是荷的「势」——连天接日的碧色、映日浓烈的红色，是一个铺满整幅画面的色彩场面。前者是工笔画，单朵特写，时间精确到「雨后初晴」；后者是泼墨写意，远镜头全景，时间是盛夏正午。2025 真题给的是「以莲花为主题的图画」，标答选前者，因为画面是静态的、特写式的——若图画是远景大场面，标答就可能选后者。这也提示学生：默写题不是死记，是先看题干给的画面气质，再匹配诗的气质。"
+      ]
     },
     {
       "id": "quanxue",
@@ -744,11 +832,7 @@
         "不积「跬」步：跬读 kuǐ，半步",
         "驽马「十驾」：十驾＝十天的路程",
         "「锲」而不舍：锲读 qiè，刻"
-      ],
-      "rewritePrompt": "用 150 字改写「骐骥一跃，不能十步；驽马十驾，功在不舍」一段，写成给一个高三学生的劝告。要用「天赋」和「坚持」两个现代词，但不能丢掉「劣马走十天也能到千里」的意象。",
-      "rewriteReference": "你天赋好，跳一步能跳出别人三步——但只跳一步，永远到不了千里之外。你天赋差，一步只走半米——但你天天走、月月走、年年走，十天后你已经走出了别人的视野。高考这场长跑，从不奖励跳得高的人，只奖励走得久的人。骐骥的悲剧是一跃之后疲倦，驽马的胜利是十驾之后不停。你是哪种，由你自己决定。",
-      "feynmanQuestion": "「锲而舍之，朽木不折；锲而不舍，金石可镂」用了什么论证手法？为什么荀子要举「朽木」和「金石」这一组对比，而不是举别的对比（比如「木头」和「铁」）？",
-      "feynmanAnswer": "这是对比论证，但荀子选的对比物有讲究。「朽木」是最容易刻的材质，「金石」是最难刻的材质。逻辑链是：如果你「舍」（半途而废），连最容易的事（刻朽木）也做不成；如果你「不舍」（坚持），连最难的事（刻金石）也能做成。这两个极端一立，中间所有难度都被覆盖——不存在「太难所以做不到」的借口，也不存在「太简单所以不需要坚持」的轻视。如果换成「木头」和「铁」这种中间材质对比，论证力会下降：木头没那么软，铁没那么硬，对比的张力就弱了。荀子选材质的极致化，是为了把「坚持与否」从变量里独立出来——成败只取决于坚持，不取决于难度。"
+      ]
     },
     {
       "id": "chibi",
@@ -767,11 +851,7 @@
         "「樯橹」灰飞烟灭：樯橹借代「曹军战船」",
         "故国「神游」：神游＝思绪飞驰",
         "「酹」江月：酹读 lèi，洒酒祭奠"
-      ],
-      "rewritePrompt": "把下阕「遥想公瑾当年……一尊还酹江月」改写成 200 字的电影镜头脚本。要有：远景→中景→特写镜头切换；周瑜与苏轼的对比；最后镜头落在「江月」上。",
-      "rewriteReference": "远景：江面晨雾。镜头缓缓推近——岸边孤舟一叶，苏轼（47 岁，鬓发斑白）立于船头，望向对岸赤壁。\n中景：他眼神恍惚。画面切——同一位置，三十岁的周瑜（英姿飒爽，小乔立于身后）正谈笑指挥。\n特写：周瑜嘴角微扬，羽扇轻挥。镜头切回——对岸火光冲天，曹军战船化为火海，灰烬飘落江面。\n切回苏轼：镜头从他的眼睛拉出。他低头看自己鬓角白发，苦笑。\n尾镜：他举杯，缓缓将酒洒向江面。镜头跟随酒液落入水中，水面映出一轮明月。镜头定格在江月，淡出。",
-      "feynmanQuestion": "苏轼写这首词时被贬黄州、47 岁、一事无成；周瑜 34 岁破曹、功业鼎盛。词里「早生华发」四个字藏着什么情绪？为什么最后又能「一尊还酹江月」释怀？",
-      "feynmanAnswer": "「早生华发」藏的是壮志未酬身先老的悲愤——本应像周瑜一样建功立业，却一事无成头发先白了。但最后能释怀，是因为苏轼想通了：周瑜再伟大，他的功业也被「浪淘尽」了，自己也终将被淘尽。既然一切都是梦，不必执念，敬江月一杯就好。这是苏轼特有的「旷达」——不是不悲，是悲完之后能放下。学生讲到「周瑜和苏轼的对比」+「释怀不是因为不痛，是因为想通了」就算通过。"
+      ]
     }
   ]
 }

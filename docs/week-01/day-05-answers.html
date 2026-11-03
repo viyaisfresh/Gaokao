@@ -18,6 +18,7 @@ h1{font-size:24px;margin:6px 0 4px}
 .sub{color:var(--muted);font-size:13px}
 section{margin:28px 0;page-break-inside:avoid}
 h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0 0 6px}
+h3{font-size:15px;margin:14px 0 6px;color:var(--ink)}
 .method{background:#eaf2eb;border-left:3px solid var(--green);padding:10px 13px;font-size:13px;border-radius:0 8px 8px 0;margin-bottom:14px}
 .method b{color:var(--green)}
 .answer-block{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:14px}
@@ -29,19 +30,24 @@ table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
 th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:11px}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
-.vocab-row td:nth-child(2){width:12%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:16%}
-.vocab-row td:nth-child(4){width:24%;font-style:italic;color:#555}
-.vocab-row td:nth-child(5){width:24%}
-.vocab-row td:nth-child(6){width:20%}
-.cloze-passage{font-size:14px;line-height:2;border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:#fafafa;margin:10px 0;white-space:pre-wrap}
-.cloze-fill{color:var(--orange);font-weight:bold}
+.vocab-row td:nth-child(2){width:11%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.vocab-row td:nth-child(3){width:14%}
+.vocab-row td:nth-child(4){width:22%}
+.vocab-row td:nth-child(5){width:33%}
+.vocab-row td:nth-child(6){width:16%}
+.vocab-row td:nth-child(5) .feynman-prompt{font-style:italic;color:var(--muted);font-size:11px;display:block;margin-bottom:4px;line-height:1.5}
+.key-row td:nth-child(1){width:5%;font-weight:bold;background:#f8f5ee;text-align:center}
+.key-row td:nth-child(2){width:16%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.key-row td:nth-child(3){width:16%;font-family:"SF Mono",Consolas,monospace;color:var(--orange);font-weight:bold}
+.key-row td:nth-child(4){width:30%}
+.key-row td:nth-child(5){width:33%}
 .piece-body{font-size:14px;white-space:pre-wrap;line-height:2;border:1px solid var(--line);border-radius:6px;padding:12px;background:#fafafa;margin:8px 0}
 .piece-title{font-size:15px;font-weight:bold;margin:18px 0 4px}
 .piece-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
-.error-list{margin:8px 0 0;padding-left:18px;font-size:12px}
-.error-list li{margin:3px 0}
-.error-list b{color:var(--red)}
+.cloze-body{font-size:14px;line-height:2.1;border:1px solid var(--line);border-radius:6px;padding:14px 16px;background:#fafafa;margin:10px 0}
+.cloze-body p{margin:0 0 12px}
+.cloze-body p:last-child{margin-bottom:0}
+.label-sm{font-size:11px;color:var(--muted);margin-bottom:4px;display:block}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 @media print{body{padding:0;font-size:11pt}section{page-break-inside:avoid}}
 </style>
@@ -50,114 +56,101 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 05 · Answers · v3 · Cloze + 4-Stage</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 05 · v4 · Answers</div>
   <h1>第1周 Day 5 · 费曼训练包 · 答案版</h1>
   <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
-  <div class="sub" style="margin-top:6px">Day 5 主题：Day 5 · 高考写作高频功能词（应用文 + 续写） · 仅用于自批 + 姐姐抽查参考</div>
-  <div class="sub" style="font-size:11px;margin-top:2px">词源：2025 英语应用文写作 + 续写高频功能词</div>
+  <div class="sub" style="margin-top:6px">Day 5 主题：高考写作高频功能词（应用文 + 续写） <span style="color:var(--muted)">· 词源：2025 英语应用文写作 + 续写高频功能词</span></div>
 </header>
 
 <div class="method">
-  <b>用法</b>：作答版完成后对照本页自批。<b>第三栏造句没有标准答案</b>——只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子就标 <b>M</b>。<b>第四栏迁移改写</b>同理，看换语境后词用得对不对，不看字句是否雷同。<br>
-  <b>费曼提问</b>的参考答案只是「姐姐抽查时的判断依据」，不是学生的标准答案。学生用自己的话讲明白即可，不必背参考答案。
+  <b>自批顺序</b>：<br>
+  <b>① 完形先对答案</b>：错题对应的词进四阶梯<b>重测</b>——完形错说明语境里用不出，单测里大概率也写不出。<br>
+  <b>② 四阶梯造句判定</b>：第三栏造句只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子标 <b>M</b>。<br>
+  <b>③ 四阶梯费曼讲解判定</b>：第四栏最严——必须能用自己的话回答 prompt 里的问号才算 C。只抄 prompt 不答 = 半会，标 <b>M</b>。判定看「讲解有没有命中 prompt 的核心难点」，不要求措辞雷同参考答案。<br>
+  <b>④ 古诗文两件套</b>：默写看字（含易错字）、翻译看字字理解——任一项卡壳录 MVP。
 </div>
 
 <section>
-  <h2>一、完形填空 · 答案（A Letter to Jenny and a Brother's Visit）</h2>
-  <div class="method">
-    <b>用法</b>：下文填空处用<b>橙色加粗</b>标出正确答案。20 空全部来自本日 20 词，每空 1 分。下方答案表给出每空的 Base（词根）、Answer（语境形式）、中文释义、错误提示。
+  <h2>一、完形填空答案（20 空）</h2>
+  <h3>《A Letter to Jenny and a Brother's Visit》<span class="piece-meta">（改编自 2025 全国一卷写作第一节 + 续写）</span></h3>
+  <div class="cloze-body">
+    <p>Dear Jenny,</p>
+    <p>I really like the idea of adding a new <b style="color:var(--orange)">column</b> to our English newspaper. Between the two options, I would choose 「Fun at my school」. The <b style="color:var(--orange)">tone</b> of our paper has been too serious lately, and students will <b style="color:var(--orange)">appreciate</b> a lighter section.</p>
+    <p>Now, a different story. My wife and I wanted to <b style="color:var(--orange)">host</b> a small <b style="color:var(--orange)">gathering</b> in early summer. My brother brought his dog Toby. Though friendly, he could easily knock over my granddaughter, so I asked my brother to keep him outside.</p>
+    <p><b style="color:var(--orange)">Unexpectedly</b>, after supper, the weather changed. It started to rain and everyone went indoors. It was an <b style="color:var(--orange)">awkward</b> moment. My brother decided to leave rather than force the issue. His reply came as a surprise: 「Not a chance.」</p>
+    <p>Two months passed. My wife <b style="color:var(--orange)">suggested</b> I get in touch, but I <b style="color:var(--orange)">resisted</b>. However, my <b style="color:var(--orange)">conscience</b> kept bothering me. I tried to put myself in my brother's shoes. Toby was his constant <b style="color:var(--orange)">companion</b>, the one who kept him going after his wife's passing.</p>
+    <p>I realized it was me who was at <b style="color:var(--orange)">fault</b>. With the biscuits my wife had made, I arrived at my brother's door. His <b style="color:var(--orange)">expression</b> softened. I wanted to <b style="color:var(--orange)">comfort</b> him, not to <b style="color:var(--orange)">bother</b> him with excuses. The <b style="color:var(--orange)">insight</b> came suddenly: family doesn't <b style="color:var(--orange)">part</b> over small things. We <b style="color:var(--orange)">reunited</b> that afternoon. It <b style="color:var(--orange)">strikes</b> me now that pride is the cheapest thing to lose. <b style="color:var(--orange)">Unexpectedly</b>, my brother smiled first.</p>
   </div>
 
-  <div class="task" style="border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:12px;background:#fff">
-    <div class="task-title" style="font-weight:bold;font-size:14px;margin-bottom:6px">A Letter to Jenny and a Brother's Visit</div>
-    <div class="task-meta" style="font-size:11px;color:var(--muted);margin-bottom:8px">改编自 2025 全国一卷写作第一节 + 续写 · 20 空</div>
-
-    <div class="cloze-passage">Dear Jenny,
-
-I really like the idea of adding a new <span class="cloze-fill">column</span> to our English newspaper. Between the two options, I would choose 「Fun at my school」. The <span class="cloze-fill">tone</span> of our paper has been too serious lately, and students will <span class="cloze-fill">appreciate</span> a lighter section.
-
-Now, a different story. My wife and I wanted to <span class="cloze-fill">host</span> a small <span class="cloze-fill">gathering</span> in early summer. My brother brought his dog Toby. Though friendly, he could easily knock over my granddaughter, so I asked my brother to keep him outside.
-
-<span class="cloze-fill">Unexpectedly</span>, after supper, the weather changed. It started to rain and everyone went indoors. It was an <span class="cloze-fill">awkward</span> moment. My brother decided to leave rather than force the issue. His reply came as a surprise: 「Not a chance.」
-
-Two months passed. My wife <span class="cloze-fill">suggested</span> I get in touch, but I <span class="cloze-fill">resisted</span>. However, my <span class="cloze-fill">conscience</span> kept bothering me. I tried to put myself in my brother's shoes. Toby was his constant <span class="cloze-fill">companion</span>, the one who kept him going after his wife's passing.
-
-I realized it was me who was at <span class="cloze-fill">fault</span>. With the biscuits my wife had made, I arrived at my brother's door. His <span class="cloze-fill">expression</span> softened. I wanted to <span class="cloze-fill">comfort</span> him, not to <span class="cloze-fill">bother</span> him with excuses. The <span class="cloze-fill">insight</span> came suddenly: family doesn't <span class="cloze-fill">part</span> over small things. We <span class="cloze-fill">reunited</span> that afternoon. It <span class="cloze-fill">strikes</span> me now that pride is the cheapest thing to lose. <span class="cloze-fill">Unexpectedly</span>, my brother smiled first.</div>
-  </div>
-
+  <div class="label-sm" style="margin-top:14px;font-size:11px;color:var(--muted);display:block"><b>答案速查表</b></div>
   <table>
     <thead>
-      <tr><th>#</th><th>Base</th><th>Answer</th><th>中文释义</th><th>错误提示</th></tr>
+      <tr><th>#</th><th>Base（词表原形）</th><th>Answer（填空形式）</th><th>中文释义</th><th>错误提示</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>column</td><td>column</td><td>栏目</td><td>名词；勿与 colon 混</td></tr>
-      <tr class="vocab-row"><td>2</td><td>tone</td><td>tone</td><td>语气；基调</td><td>名词，无复数变化</td></tr>
-      <tr class="vocab-row"><td>3</td><td>appreciate</td><td>appreciate</td><td>感激；欣赏</td><td>后接 doing，不接 to do</td></tr>
-      <tr class="vocab-row"><td>4</td><td>host</td><td>host</td><td>主办；做东</td><td>名词/动词同形</td></tr>
-      <tr class="vocab-row"><td>5</td><td>gather</td><td>gathering</td><td>聚集；收集</td><td>此处需 -ing 名词形式</td></tr>
-      <tr class="vocab-row"><td>6</td><td>unexpectedly</td><td>Unexpectedly</td><td>出乎意料地</td><td>句首副词，首字母大写</td></tr>
-      <tr class="vocab-row"><td>7</td><td>awkward</td><td>awkward</td><td>尴尬的</td><td>修饰 moment；-ward 后缀</td></tr>
-      <tr class="vocab-row"><td>8</td><td>suggest</td><td>suggested</td><td>建议；暗示</td><td>过去式；后接 doing / that 从句</td></tr>
-      <tr class="vocab-row"><td>9</td><td>resist</td><td>resisted</td><td>抗拒</td><td>过去式；后接 doing</td></tr>
-      <tr class="vocab-row"><td>10</td><td>conscience</td><td>conscience</td><td>良心</td><td>拼写：sci 中间</td></tr>
-      <tr class="vocab-row"><td>11</td><td>companion</td><td>companion</td><td>同伴；陪伴</td><td>勿与 company 混</td></tr>
-      <tr class="vocab-row"><td>12</td><td>fault</td><td>fault</td><td>过错</td><td>at fault 是固定搭配</td></tr>
-      <tr class="vocab-row"><td>13</td><td>expression</td><td>expression</td><td>表情；表达</td><td>动词 express</td></tr>
-      <tr class="vocab-row"><td>14</td><td>comfort</td><td>comfort</td><td>安慰</td><td>动词/名词同形</td></tr>
-      <tr class="vocab-row"><td>15</td><td>bother</td><td>bother</td><td>打扰；使烦恼</td><td>bother sb with sth</td></tr>
-      <tr class="vocab-row"><td>16</td><td>insight</td><td>insight</td><td>洞察；见解</td><td>名词；形容词 insightful</td></tr>
-      <tr class="vocab-row"><td>17</td><td>part</td><td>part</td><td>分手；分开</td><td>动词用法；part over sth</td></tr>
-      <tr class="vocab-row"><td>18</td><td>reunite</td><td>reunited</td><td>重聚</td><td>过去式；前缀 re- + unite</td></tr>
-      <tr class="vocab-row"><td>19</td><td>strike</td><td>strikes</td><td>打动；突然想到</td><td>一般现在时；it strikes me that</td></tr>
-      <tr class="vocab-row"><td>20</td><td>unexpectedly</td><td>Unexpectedly</td><td>出乎意料地</td><td>句首副词，首字母大写</td></tr>
+      <tr class="key-row"><td>1</td><td>column</td><td>column</td><td>栏目</td><td>add a new column 名词宾语</td></tr>
+      <tr class="key-row"><td>2</td><td>tone</td><td>tone</td><td>语气；音调</td><td>the tone of our paper 名词</td></tr>
+      <tr class="key-row"><td>3</td><td>appreciate</td><td>appreciate</td><td>感激；欣赏</td><td>will + 动词原形</td></tr>
+      <tr class="key-row"><td>4</td><td>host</td><td>host</td><td>主办；主人</td><td>wanted to + 动词原形</td></tr>
+      <tr class="key-row"><td>5</td><td>gather</td><td>gathering</td><td>聚集；收集</td><td>a small gathering 名词形式</td></tr>
+      <tr class="key-row"><td>6</td><td>unexpectedly</td><td>Unexpectedly</td><td>出乎意料地</td><td>句首大写；副词修饰全句</td></tr>
+      <tr class="key-row"><td>7</td><td>awkward</td><td>awkward</td><td>尴尬的</td><td>an awkward moment 形容词修饰名词</td></tr>
+      <tr class="key-row"><td>8</td><td>suggest</td><td>suggested</td><td>建议；暗示</td><td>过去时；suggest sb do sth</td></tr>
+      <tr class="key-row"><td>9</td><td>resist</td><td>resisted</td><td>抗拒</td><td>过去时；but 转折</td></tr>
+      <tr class="key-row"><td>10</td><td>conscience</td><td>conscience</td><td>良心</td><td>my conscience kept bothering 抽象名词</td></tr>
+      <tr class="key-row"><td>11</td><td>companion</td><td>companion</td><td>同伴；陪伴</td><td>his constant companion 单数名词</td></tr>
+      <tr class="key-row"><td>12</td><td>fault</td><td>fault</td><td>过错</td><td>be at fault 固定搭配</td></tr>
+      <tr class="key-row"><td>13</td><td>expression</td><td>expression</td><td>表达；表情</td><td>his expression softened 名词主语</td></tr>
+      <tr class="key-row"><td>14</td><td>comfort</td><td>comfort</td><td>安慰</td><td>wanted to + 动词原形</td></tr>
+      <tr class="key-row"><td>15</td><td>bother</td><td>bother</td><td>打扰；使烦恼</td><td>not to + 动词原形</td></tr>
+      <tr class="key-row"><td>16</td><td>insight</td><td>insight</td><td>洞察；见解</td><td>the insight came suddenly 名词主语</td></tr>
+      <tr class="key-row"><td>17</td><td>part</td><td>part</td><td>分手；分开</td><td>doesn't + 动词原形</td></tr>
+      <tr class="key-row"><td>18</td><td>reunite</td><td>reunited</td><td>重聚</td><td>过去时</td></tr>
+      <tr class="key-row"><td>19</td><td>strike</td><td>strikes</td><td>打动；突然想到</td><td>It strikes me that... 一般现在时</td></tr>
+      <tr class="key-row"><td>20</td><td>unexpectedly</td><td>Unexpectedly</td><td>出乎意料地</td><td>句首大写；副词修饰全句</td></tr>
     </tbody>
   </table>
+</section>
 
+<section>
+  <h2>二、四阶梯单测参考答案（20 词）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏「造句参考」用词表原 example；第五栏「费曼讲解参考」先抄 prompt，再给一段参考讲解。学生讲解只要命中 prompt 的核心难点就算通过，不必措辞雷同。</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（example）</th><th>费曼讲解参考（prompt + 参考答案）</th><th>常见错误</th></tr>
+    </thead>
+    <tbody>
+      <tr class="vocab-row"><td>1</td><td>column</td><td>栏目</td><td>I really like the idea of adding a new column.</td><td><span class="feynman-prompt">column 在新闻里指什么？columnist 是什么职业？</span>column 指报纸或杂志的「栏目」或「专栏」，是固定位置、固定作者写的板块。columnist 是专栏作家——长期为某个 column 写稿的人。</td><td>名词；列</td></tr>
+      <tr class="vocab-row"><td>2</td><td>suggest</td><td>建议；暗示</td><td>My wife suggested I get in touch with my brother.</td><td><span class="feynman-prompt">suggest 后接什么？suggest doing / to do / that 从句哪个对？</span>三种都对：suggest doing（suggest going）、suggest that + 主语 + (should) do（虚拟语气）、suggest to do 较少见但现代英语可接受。最常考的是 suggest (should) do 虚拟语气，that 从句里的 should 可省。</td><td>后接 doing</td></tr>
+      <tr class="vocab-row"><td>3</td><td>appreciate</td><td>感激；欣赏</td><td>I appreciate your help.</td><td><span class="feynman-prompt">appreciate doing 还是 to do？I would appreciate ___ if ...</span>appreciate 后接 doing（动名词），不接 to do。常见句型 I would appreciate it if ...，必须保留 it 形式宾语——不能说 I would appreciate if。</td><td>后接 doing</td></tr>
+      <tr class="vocab-row"><td>4</td><td>gather</td><td>聚集；收集</td><td>Hosting a small gathering in early summer.</td><td><span class="feynman-prompt">gather 作及物和不及物各怎么用？gathering 是什么？</span>不及物：People gathered in the square（人聚集）；及物：gather information / gather flowers（收集/采集）。gathering 是名词形式，指「聚会、集会」，a small gathering = 小型聚会。</td><td>名词 gathering</td></tr>
+      <tr class="vocab-row"><td>5</td><td>host</td><td>主办；主人</td><td>We wanted to host a small gathering.</td><td><span class="feynman-prompt">host 作名词和动词各怎么用？a host ___ sth</span>名词：a host = 主人、主持人、东道主；动词：host an event = 主办活动。a host of sth = 「一大群、许多」，如 a host of problems。</td><td>名词/动词同形</td></tr>
+      <tr class="vocab-row"><td>6</td><td>unexpected</td><td>出乎意料的</td><td>Unexpectedly, the weather changed.</td><td><span class="feynman-prompt">unexpected 的反义词？副词形式怎么拼？</span>反义词 expected（意料之中的）。副词形式 unexpectedly——加 -ly。注意 unexpected 是 -ed 结尾的形容词（被动含义：被未料到的）。</td><td>前缀 un- + expected</td></tr>
+      <tr class="vocab-row"><td>7</td><td>unexpectedly</td><td>出乎意料地</td><td>Unexpectedly, after supper, the weather changed.</td><td><span class="feynman-prompt">unexpectedly 和 suddenly 区别？形容词形式？</span>unexpectedly 强调「未预料到」，重结果出乎意料；suddenly 强调「动作快、突然」，重时间短。可同时发生但不能互换——一件事可以 suddenly 但意料之中（早料到会立刻发生）。形容词形式 unexpected。</td><td>副词</td></tr>
+      <tr class="vocab-row"><td>8</td><td>awkward</td><td>尴尬的</td><td>It was an awkward moment.</td><td><span class="feynman-prompt">awkward 的副词形式？awkward 和 embarrassed 区别？</span>副词 awkwardly（注意 -ward 不双写）。awkward 修饰情境或动作「不灵巧、别扭、令人尴尬」；embarrassed 修饰人「感到窘迫、害羞」，主语通常是人。an awkward moment = 让人尴尬的场面；I felt embarrassed = 我感到窘迫。</td><td>副词 awkwardly</td></tr>
+      <tr class="vocab-row"><td>9</td><td>companion</td><td>同伴；陪伴</td><td>Toby was his constant companion.</td><td><span class="feynman-prompt">companion 和 company 区别？a companion ___ sb</span>companion 是可数名词，指具体的「同伴、伙伴」（a companion）；company 是不可数名词，指抽象的「陪伴、公司」。lonely without company = 没人陪伴而孤独；a companion to sb = 某人的同伴。</td><td>勿与 company 混</td></tr>
+      <tr class="vocab-row"><td>10</td><td>conscience</td><td>良心</td><td>My conscience kept bothering me.</td><td><span class="feynman-prompt">conscience 和 conscious 区别（发音+意思）？</span>conscience /ˈkɒnʃəns/ 名词「良心」；conscious /ˈkɒnʃəs/ 形容词「有意识的、意识到的」。拼写差一个 n，发音相同。my conscience = 我的良心；I am conscious of = 我意识到。</td><td>形容词 conscientious</td></tr>
+      <tr class="vocab-row"><td>11</td><td>bother</td><td>打扰；使烦恼</td><td>My conscience kept bothering me.</td><td><span class="feynman-prompt">bother 作及物和不及物各怎么用？bother ___ sth</span>及物：bother sb = 打扰某人（don't bother me）；不及物：bother about/with sth = 为某事费心（don't bother about it）。bother to do = 费心去做（he didn't bother to reply）。</td><td>名词 bother</td></tr>
+      <tr class="vocab-row"><td>12</td><td>resist</td><td>抗拒</td><td>I resisted, thinking he should call first.</td><td><span class="feynman-prompt">resist 后接什么？can't resist ___ sth</span>resist 后接 doing（动名词）。can't resist doing sth = 忍不住做某事。resist temptation = 抵制诱惑。注意不是 to do。</td><td>名词 resistance</td></tr>
+      <tr class="vocab-row"><td>13</td><td>fault</td><td>过错</td><td>I realized it was me who was at fault.</td><td><span class="feynman-prompt">fault 和 mistake、error 区别？be at fault 中文？</span>fault 强调「责任归属」——谁该为错负责；mistake 强调「判断或行为错误」可大可小；error 偏正式、技术性。be at fault = 「有过错、该负责」。my fault = 我的错（责任在我）。</td><td>形容词 faulty</td></tr>
+      <tr class="vocab-row"><td>14</td><td>part</td><td>分手；分开</td><td>He was unhappy over the way we had parted.</td><td><span class="feynman-prompt">part 作动词怎么用？part with sth 中文？</span>part 作动词：不及物 part = 「分开、分手」（we parted at the corner）；及物 part sth = 「使分开」。part with sth = 「割爱、舍弃某物」（不舍得给出）。</td><td>动词 part</td></tr>
+      <tr class="vocab-row"><td>15</td><td>expression</td><td>表达；表情</td><td>His expression showed his unhappiness.</td><td><span class="feynman-prompt">expression 和 phrase 区别？facial expression 中文？</span>expression 是「表达」或「表情、词组」；phrase 是「短语、词组」（语法单位）。facial expression = 面部表情。a fixed expression = 不可更改的措辞（表达层面的「词组」）。</td><td>动词 express</td></tr>
+      <tr class="vocab-row"><td>16</td><td>tone</td><td>语气；音调</td><td>Her tone was warm.</td><td><span class="feynman-prompt">tone 在写作里指什么？in a ... tone 中文？</span>tone 在写作里指「语气、基调」——严肃、轻松、讽刺、温暖等。in a ... tone = 「以……的语气」，如 in a warm tone = 以温暖的语气。也指声音的音调。</td><td>名词</td></tr>
+      <tr class="vocab-row"><td>17</td><td>strike</td><td>打动；突然想到</td><td>It struck me that I should apologize.</td><td><span class="feynman-prompt">strike 的过去式？It strikes me that ... 中文？</span>过去式 struck（不是 striked）。It strikes me that ... = 「我突然想到……」，主语是 it，that 从句是想到的内容。这是写作高频句型。</td><td>过去式 struck</td></tr>
+      <tr class="vocab-row"><td>18</td><td>insight</td><td>洞察；见解</td><td>The experience gave me new insight.</td><td><span class="feynman-prompt">insight 后接什么介词？形容词形式？</span>insight into sth = 「对……的洞察」（an insight into human nature）。形容词形式 insightful = 「有洞察力的」。give sb an insight = 让人看透某事。</td><td>名词；形容词 insightful</td></tr>
+      <tr class="vocab-row"><td>19</td><td>comfort</td><td>安慰</td><td>I wanted to comfort my brother.</td><td><span class="feynman-prompt">comfort 作名词和动词各怎么用？comfortable 和 comforting 区别？</span>名词：find comfort in sth（在……中找到安慰）；动词：comfort sb = 安慰某人。comfortable = 「舒适的」（修饰环境或感受）；comforting = 「令人宽慰的」（修饰事物或话语，a comforting thought）。</td><td>形容词 comfortable</td></tr>
+      <tr class="vocab-row"><td>20</td><td>reunite</td><td>重聚</td><td>We reunited after two months of silence.</td><td><span class="feynman-prompt">reunite 的前缀 re- 表什么？reunite sb ___ sth</span>re- 前缀表「再次」——unite（联合）+ re = 再次联合、重聚。reunite sb with sth = 「使某人与某物（或某人）重聚」——如 reunite him with his family。</td><td>前缀 re- + unite</td></tr>
+    </tbody>
+  </table>
   <div class="feynman-tip">
-    <b>姐姐抽查话术</b>：完形不止是「填对词」，是「为什么这个词对、其他三个为什么错」。抽查时随机指一空，让学生讲：① 词义为什么贴语境；② 三个干扰项为什么不对（词义偏 / 词形错 / 时态错）。讲不清的标 M。
+    <b>姐姐抽查话术</b>：完形错题对应的词，不要问「X 是什么意思」——这是识别题。要问 prompt 里那个具体问号——比如 suggest 后接 doing 还是 to do？讲不清搭配的，标 M。第四栏费曼讲解只抄 prompt 不答 = 半会，进 D1 复测。
   </div>
 </section>
 
 <section>
-  <h2>二、四阶梯单测 · 参考答案（20 词）</h2>
-  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏造句参考取自 2025 写作语境；第四栏迁移改写参考为不同语境下的 8-15 词短句，证明该词能跨场景用出来。学生造的句子只要符合该词用法即可。</p>
-  <table>
-    <thead>
-      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考</th><th>迁移改写参考（不同语境）</th><th>常见错误</th></tr>
-    </thead>
-    <tbody>
-      <tr class="vocab-row"><td>1</td><td>column</td><td>栏目</td><td>I really like the idea of adding a new column.</td><td>The advice column gets the most letters.</td><td>名词；勿与 colon 混</td></tr>
-      <tr class="vocab-row"><td>2</td><td>suggest</td><td>建议；暗示</td><td>My wife suggested I get in touch with my brother.</td><td>The data suggests a clear trend upward.</td><td>后接 doing / that 从句；不接 to do</td></tr>
-      <tr class="vocab-row"><td>3</td><td>appreciate</td><td>感激；欣赏</td><td>I appreciate your help.</td><td>We appreciate you coming on short notice.</td><td>后接 doing；勿接 to do</td></tr>
-      <tr class="vocab-row"><td>4</td><td>gather</td><td>聚集；收集</td><td>Hosting a small gathering in early summer.</td><td>Clouds gathered before the storm broke.</td><td>名词 gathering；动词 gather</td></tr>
-      <tr class="vocab-row"><td>5</td><td>host</td><td>主办；主人</td><td>We wanted to host a small gathering.</td><td>She hosted three exchange students last year.</td><td>名词/动词同形</td></tr>
-      <tr class="vocab-row"><td>6</td><td>unexpected</td><td>出乎意料的</td><td>Unexpectedly, the weather changed.</td><td>An unexpected guest arrived at midnight.</td><td>前缀 un- + expected</td></tr>
-      <tr class="vocab-row"><td>7</td><td>unexpectedly</td><td>出乎意料地</td><td>Unexpectedly, after supper, the weather changed.</td><td>Unexpectedly, the test was canceled.</td><td>副词；常置句首</td></tr>
-      <tr class="vocab-row"><td>8</td><td>awkward</td><td>尴尬的</td><td>It was an awkward moment.</td><td>The silence after his joke felt awkward.</td><td>副词 awkwardly</td></tr>
-      <tr class="vocab-row"><td>9</td><td>companion</td><td>同伴；陪伴</td><td>Toby was his constant companion.</td><td>A good book is a faithful companion.</td><td>勿与 company 混</td></tr>
-      <tr class="vocab-row"><td>10</td><td>conscience</td><td>良心</td><td>My conscience kept bothering me.</td><td>A clear conscience sleeps through thunder.</td><td>拼写：sci 中间；形容词 conscientious</td></tr>
-      <tr class="vocab-row"><td>11</td><td>bother</td><td>打扰；使烦恼</td><td>My conscience kept bothering me.</td><td>Don't bother him while he's driving.</td><td>bother sb with sth；名词 bother</td></tr>
-      <tr class="vocab-row"><td>12</td><td>resist</td><td>抗拒</td><td>I resisted, thinking he should call first.</td><td>She couldn't resist the chocolate cake.</td><td>后接 doing；名词 resistance</td></tr>
-      <tr class="vocab-row"><td>13</td><td>fault</td><td>过错</td><td>I realized it was me who was at fault.</td><td>It's not your fault the bus was late.</td><td>at fault 固定搭配；形容词 faulty</td></tr>
-      <tr class="vocab-row"><td>14</td><td>part</td><td>分手；分开</td><td>He was unhappy over the way we had parted.</td><td>We parted at the station after dawn.</td><td>动词 part；part from sb</td></tr>
-      <tr class="vocab-row"><td>15</td><td>expression</td><td>表达；表情</td><td>His expression showed his unhappiness.</td><td>Her expression froze when she saw him.</td><td>动词 express；名词 expression</td></tr>
-      <tr class="vocab-row"><td>16</td><td>tone</td><td>语气；音调</td><td>Her tone was warm.</td><td>The teacher's tone warned us to stop.</td><td>名词；勿与 tune 混</td></tr>
-      <tr class="vocab-row"><td>17</td><td>strike</td><td>打动；突然想到</td><td>It struck me that I should apologize.</td><td>A bold idea struck her during the lecture.</td><td>过去式 struck；it strikes sb that</td></tr>
-      <tr class="vocab-row"><td>18</td><td>insight</td><td>洞察；见解</td><td>The experience gave me new insight.</td><td>Her essay offers fresh insight into the novel.</td><td>名词；形容词 insightful</td></tr>
-      <tr class="vocab-row"><td>19</td><td>comfort</td><td>安慰</td><td>I wanted to comfort my brother.</td><td>Music brings comfort on lonely nights.</td><td>动词/名词同形；形容词 comfortable</td></tr>
-      <tr class="vocab-row"><td>20</td><td>reunite</td><td>重聚</td><td>We reunited after two months of silence.</td><td>The lost dog was reunited with its owner.</td><td>前缀 re- + unite</td></tr>
-    </tbody>
-  </table>
-  <div class="feynman-tip">
-    <b>姐姐抽查话术</b>：不要问「suggest 是什么意思」。要问「suggest 和 advise 都译「建议」，哪个语气更委婉？为什么 2025 应用文里写建议信建议用 suggest 而不是 advise？」或「conscience 和 consciousness 拼写只差两个字母，意思差在哪？」——测的是<b>辨析</b>而非<b>识别</b>。
-  </div>
-</section>
-
-<section>
-  <h2>三、古诗文四件套 · 参考答案（《念奴娇·赤壁怀古》· 苏轼）</h2>
-
+  <h2>三、古诗文两件套答案（念奴娇·赤壁怀古 · 苏轼）</h2>
   <div class="piece-title">《念奴娇·赤壁怀古》 · 苏轼</div>
-  <div class="piece-meta">诗词曲 #26 · 难度 ★★★ · 历史高频篇（苏轼豪放派代表作 + 词中对比论证是高考高频考点）</div>
+  <div class="piece-meta">诗词曲 #26 · 难度 ★★★ · 历史高频篇</div>
 
   <div class="answer-block">
     <h4>原文（自批默写用）</h4>
@@ -176,54 +169,45 @@ I realized it was me who was at <span class="cloze-fill">fault</span>. With the 
     <h4>翻译要点 + 易错字（自批翻译用）</h4>
     <div class="body">上阕：长江向东奔流，浪花淘尽千古风流人物。故垒西边，人们说就是三国周瑜破曹的赤壁。乱石刺穿天空，惊涛拍打岸边，卷起千堆雪白的浪花。江山美如画，当年曾有多少豪杰在此争雄。
 
-下阕：遥想当年的周瑜，小乔刚嫁给他，英姿勃发。手持羽扇头戴纶巾，谈笑之间，曹军战船就化为灰烬消散。我的神思飞回故国战场，多情该笑我自己，头发早就白了。人生如梦一场，还是倒一杯酒洒向江上的明月吧。</div>
-    <ul class="error-list">
-      <li><b>浪「淘」尽</b>：淘读 táo，冲刷；不写「陶」</li>
-      <li><b>故「垒」西边</b>：垒读 lěi，营垒；不写「磊」</li>
-      <li><b>「穿」空</b>：穿是「刺破」，不是「穿过」</li>
-      <li><b>卷起千堆「雪」</b>：雪借代「白色浪花」，不是真雪</li>
-      <li><b>「纶」巾</b>：纶读 guān，不读 lún；不写「伦」</li>
-      <li><b>「樯橹」灰飞烟灭</b>：樯橹借代「曹军战船」（部分代整体），不写「强虏」</li>
-      <li><b>故国「神游」</b>：神游＝思绪飞驰，不是「神仙游」</li>
-      <li><b>「酹」江月</b>：酹读 lèi，洒酒祭奠；不写「酌」或「酬」</li>
-    </ul>
-  </div>
+下阕：遥想当年的周瑜，小乔刚嫁给他，英姿勃发。手持羽扇头戴纶巾，谈笑之间，曹军战船就化为灰烬消散。我的神思飞回故国战场，多情该笑我自己，头发早就白了。人生如梦一场，还是倒一杯酒洒向江上的明月吧。
 
-  <div class="answer-block">
-    <h4>改写参考（电影镜头脚本示例，情绪抓对即可，字句不必雷同）</h4>
-    <div class="body">远景：江面，晨雾。镜头缓缓推近——岸边孤舟一叶，苏轼（47 岁，鬓发斑白）立于船头，望向对岸赤壁。
-中景：他眼神恍惚。画面切——同一位置，三十岁的周瑜（英姿飒爽，小乔立于身后）正谈笑指挥。
-特写：周瑜嘴角微扬，扇子轻轻一挥。镜头切回——对岸火光冲天，曹军战船化为火海，灰烬飘落江面。
-切回苏轼：镜头从他的眼睛拉出。他低头看自己鬓角白发，苦笑。
-尾镜：他举起酒杯，缓缓将酒洒向江面。镜头跟随酒液落入水中，水面映出一轮明月。镜头定格在江月，淡出。</div>
-  </div>
+<b>「樯橹」借代什么</b>：樯是桅杆，橹是桨，借代曹军战船（水军）。不用「军舰」是因为「樯橹」是<b>部分代整体</b>的修辞，更形象——读者眼前浮现的是密密麻麻的桅杆和桨，比抽象的「军舰」有画面感。
 
-  <div class="feynman-tip">
-    <b>任务 4 费曼参考答案</b>：「早生华发」藏的是<b>壮志未酬身先老</b>的悲愤——本应像周瑜一样建功立业，却一事无成头发先白了。但最后能「一尊还酹江月」释怀，是因为苏轼想通了：周瑜再伟大，他的功业也被「浪淘尽」了，自己也终将被淘尽。既然一切都是梦，不必执念，敬江月一杯就好。这是苏轼特有的<b>「旷达」</b>——不是不悲，是悲完之后能放下。学生能讲到「周瑜和苏轼的对比」+「释怀不是因为不痛，是因为想通了」就算通过。
+<b>「酹」是什么动作</b>：把酒洒在地上祭奠。<b>为什么是「江月」不是「江水」</b>：江月代表永恒（李白"江月何年初照人"），江水代表流逝（"大江东去"）。苏轼把酒敬永恒，是对自己短暂人生的释怀——一切功业都将被江水淘尽，唯江月长存，所以不必执念。
+
+<b>关键易错字（默写必查）</b>：
+· 浪「淘」尽：淘读 táo，冲刷，不写「陶」
+· 故「垒」西边：垒读 lěi，营垒，不写「磊」
+· 「穿」空：穿是「刺破」，不写「窜」
+· 卷起千堆「雪」：雪借代「白色浪花」，不写「浪」
+· 「纶」巾：纶读 guān，不读 lún，不写「伦」
+· 「樯橹」灰飞烟灭：樯橹借代「曹军战船」，不写「强鲁」
+· 故国「神游」：神游＝思绪飞驰，不写「身游」
+· 「酹」江月：酹读 lèi，洒酒祭奠，不写「酌」或「酬」</div>
   </div>
 </section>
 
 <section>
-  <h2>四、自评反思 · 费曼复盘模板</h2>
+  <h2>四、自评反思（自批后填写）</h2>
   <div class="method">
-    <b>用法</b>：本表是作答版反思栏的参考框架，学生填完后姐姐抽查时对照判断「反思是否到位」。反思不到位本身也是一种信号——能背词但说不出自己哪不会，是「以为自己会其实不会」的典型症状。
+    <b>用法</b>：学生作答版完成后，对照本答案版自批，再回到作答版填写反思栏。下方模板与作答版一致，留空待填。
   </div>
   <table>
     <thead>
-      <tr><th>反思项</th><th>参考答案模板</th></tr>
+      <tr><th style="width:40%">反思项</th><th>回答</th></tr>
     </thead>
     <tbody>
-      <tr><td>Day 5 哪些词我以为会、其实迁移改写卡壳？</td><td>重点查 appreciate（感激/欣赏两义）/ strike（过去式 struck 易错）/ insight（名词勿作动词）。迁移改写卡壳 = 标 M，录入 MVP 触发 D1/D3/D7。</td></tr>
-      <tr><td>完形填空 20 空我错了几空？哪几空是词义辨析错？</td><td>常见错点：第 6 空 Unexpectedly（首字母大写易漏）/ 第 19 空 strikes（一般现在时 vs 过去时）/ 第 5 空 gathering（-ing 名词形式）。词义错 → 标 M；时态错 → 标 S。</td></tr>
-      <tr><td>《念奴娇》我能默写，但翻译卡壳在哪一句？</td><td>三个高频卡壳点：① 樯橹借代曹军战船（部分代整体）；② 酹是洒酒祭奠；③ 「江月」代表永恒，「江水」代表流逝——所以是敬永恒不是敬流逝。</td></tr>
-      <tr><td>讲给姐姐听「早生华发 → 一尊还酹江月」的情绪转折时，讲到一半讲不下去了？</td><td>讲不下去的常见断点：① 周瑜 34 岁破曹 vs 苏轼 47 岁被贬（对比数据记不住）；② 「释怀不是因为不痛，是因为想通了」这一层逻辑转折讲不出。讲不出 = 回 MVP 标「概念混淆」。</td></tr>
-      <tr><td>周末复习要重点攻克哪 1 个知识点？</td><td>建议二选一：① 写作功能词的「动词 + 介词」搭配（appreciate doing / suggest doing / resist doing）；② 《念奴娇》下阕的对比论证结构（周瑜 vs 苏轼，功业 vs 释怀）。不要贪多，就 1 个。</td></tr>
+      <tr><td>完形错了哪几空？分别错在词义、形式、还是语境判断？</td><td style="min-height:50px"></td></tr>
+      <tr><td>哪些词我以为会、其实造不出句（第三栏空着）？</td><td></td></tr>
+      <tr><td>哪些词我能造句但费曼讲解栏（第四栏）讲不清——证明只识不透？</td><td></td></tr>
+      <tr><td>《念奴娇》能默但翻译卡壳的，是哪一句？易错字写错了哪几个？</td><td></td></tr>
+      <tr><td>下周重点攻克 1 个知识点（不是 3 个，就 1 个）</td><td></td></tr>
     </tbody>
   </table>
 </section>
 
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 5 · 答案版 · v3 完形+四阶梯+对齐2025真题
+  Gaokao Coach 2027 · 第1周 Day 5 · 答案版 · v4 完形+四阶梯+古诗文两件套
 </div>
 
 </div>

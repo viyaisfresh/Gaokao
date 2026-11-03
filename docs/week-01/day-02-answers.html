@@ -7,21 +7,22 @@
 <style>
 :root{
   --bg:#fffefa;--ink:#242321;--muted:#77736c;--line:#e9e4da;
-  --orange:#d9912f;--green:#648b73;--red:#bd765e;--blue:#71899a;
+  --orange:#d9912f;--green:#648b73;--red:#bd765e;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.7;padding:20px}
 .wrap{max-width:860px;margin:0 auto}
-header{border-bottom:2px solid var(--blue);padding-bottom:12px;margin-bottom:20px}
-.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--blue);font-weight:800;text-transform:uppercase}
+header{border-bottom:2px solid var(--orange);padding-bottom:12px;margin-bottom:20px}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--orange);font-weight:800;text-transform:uppercase}
 h1{font-size:24px;margin:6px 0 4px}
 .sub{color:var(--muted);font-size:13px}
 section{margin:28px 0;page-break-inside:avoid}
-h2{font-size:18px;border-left:4px solid var(--blue);padding-left:10px;margin:0 0 6px}
+h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0 0 6px}
+h3{font-size:15px;margin:14px 0 6px;color:var(--ink)}
 .method{background:#eaf2eb;border-left:3px solid var(--green);padding:10px 13px;font-size:13px;border-radius:0 8px 8px 0;margin-bottom:14px}
 .method b{color:var(--green)}
 .answer-block{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:14px}
-.answer-block h4{margin:0 0 8px;font-size:14px;color:var(--blue)}
+.answer-block h4{margin:0 0 8px;font-size:14px;color:var(--orange)}
 .answer-block .body{font-size:13px;white-space:pre-wrap;line-height:1.9}
 .feynman-tip{background:#fff8eb;border-left:3px solid var(--orange);padding:8px 12px;font-size:12px;border-radius:0 6px 6px 0;margin-top:8px}
 .feynman-tip b{color:var(--orange)}
@@ -29,21 +30,22 @@ table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
 th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:11px}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
-.vocab-row td:nth-child(2){width:12%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:18%;font-weight:bold;color:var(--blue)}
-.vocab-row td:nth-child(4){width:18%}
-.vocab-row td:nth-child(5){width:24%;font-style:italic;color:#555}
-.vocab-row td:nth-child(6){width:24%}
-.vocab-row td:nth-child(7){width:14%;color:var(--red)}
+.vocab-row td:nth-child(2){width:11%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.vocab-row td:nth-child(3){width:14%}
+.vocab-row td:nth-child(4){width:20%;font-style:italic;color:#555}
+.vocab-row td:nth-child(5){width:30%}
+.vocab-row td:nth-child(6){width:21%}
+.key-row td:nth-child(1){width:5%;font-weight:bold;background:#f8f5ee;text-align:center}
+.key-row td:nth-child(2){width:14%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.key-row td:nth-child(3){width:14%;font-family:"SF Mono",Consolas,monospace;color:var(--orange);font-weight:bold}
+.key-row td:nth-child(4){width:33%}
+.key-row td:nth-child(5){width:34%}
 .piece-body{font-size:14px;white-space:pre-wrap;line-height:2;border:1px solid var(--line);border-radius:6px;padding:12px;background:#fafafa;margin:8px 0}
-.piece-body .fill{color:var(--orange);font-weight:bold}
 .piece-title{font-size:15px;font-weight:bold;margin:18px 0 4px}
 .piece-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
-.error-list{margin:8px 0 0;padding-left:18px;font-size:12px}
-.error-list li{margin:3px 0}
-.error-list b{color:var(--red)}
-.cloze-passage{font-size:14px;line-height:2.1;background:#fafafa;border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:10px 0}
-.cloze-passage .fill{color:var(--orange);font-weight:bold}
+.cloze-body{font-size:14px;line-height:2.1;border:1px solid var(--line);border-radius:6px;padding:14px 16px;background:#fafafa;margin:10px 0}
+.cloze-body p{margin:0 0 12px}
+.cloze-body p:last-child{margin-bottom:0}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 @media print{body{padding:0;font-size:11pt}section{page-break-inside:avoid}}
 </style>
@@ -52,111 +54,103 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 02 · Answers · v3 · Cloze + 4-Stage</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 02 · v4 · Answers</div>
   <h1>第1周 Day 2 · 费曼训练包 · 答案版</h1>
   <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
-  <div class="sub" style="margin-top:6px">Day 2 主题：阅读理解核心动词与形容词（教育与表达类）· 仅用于自批 + 姐姐抽查参考</div>
+  <div class="sub" style="margin-top:6px">Day 2 主题：阅读理解核心动词与形容词（教育与表达类） <span style="color:var(--muted)">· 词源：2025 英语阅读 B 篇 + 写作高频功能词</span></div>
 </header>
 
 <div class="method">
-  <b>用法</b>：作答版完成后对照本页自批。<b>四阶梯③造句 / ④迁移改写没有标准答案</b>——只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子就标 <b>M</b>。古诗文改写同理，看情绪/意象有没有抓住，不看字句是否雷同。<br>
-  <b>自批指引</b>：① 完形填空对照「答案速查」标 A/B/C/D 对错；② 四阶梯① 释义对照「中文释义」栏，词义对但拼写错标 S，词义错或写不出标 M；③ ③ 造句和④迁移改写对比你造的句子——语法错、词性错、或语义不通都标 M，全对标 C；④ 古诗文默写逐字对照「原文」，错字标在错字旁；⑤ 翻译对照「翻译要点 + 易错字」逐句核对，关键意象没译出标「曾对再错」；⑥ 改写对照「改写参考」，情绪/意象抓对即通过；⑦ 费曼提问参考答案只是「姐姐抽查时的判断依据」，不是学生的标准答案。学生用自己的话讲明白即可，不必背参考答案。
+  <b>自批顺序</b>：<br>
+  <b>① 完形先对答案</b>：错题对应的词进四阶梯<b>重测</b>——完形错说明语境里用不出，单测里大概率也写不出。<br>
+  <b>② 四阶梯造句判定</b>：第三栏造句只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子标 <b>M</b>。<br>
+  <b>③ 四阶梯费曼讲解判定</b>：第四栏最严——必须用自己的话讲清这个词的用法边界（词性、搭配、近义词区别）才算 C。只背了字面释义但讲不清「persuasive 和 convincing 差在哪」= 半会，标 <b>M</b>。<br>
+  <b>④ 古诗文两件套</b>：默写看字字准确（含易错字），翻译看字字理解。任一项卡壳录 MVP。v4 砍掉了改写和费曼参考——这两项周末口试环节当面追问效果更好。
 </div>
 
 <section>
-  <h2>一、完形填空答案 · Why Writing Matters</h2>
-  <div class="method">
-    <b>答案速查</b>：1-B  2-C  3-A  4-C  5-C  6-B  7-A  8-C  9-A  10-B  11-A  12-B  13-B  14-B  15-B  16-B  17-B  18-B  19-B  20-B
+  <h2>一、完形填空答案（20 空）</h2>
+  <h3>《Why Writing Matters》<span class="piece-meta">（改编自 2025 全国一卷英语阅读 B 篇）</span></h3>
+  <div class="cloze-body">
+    <p>In my ninth-grade writing class, I met a cowboy who saved his town, a strict father, and a <b style="color:var(--orange)">fictional</b> Juliet who died of heartbreak. I wondered how my students knew their characters so well.</p>
+    <p>But their first essay was <b style="color:var(--orange)">staggering</b>. Most filled less than one page, and few contained a <b style="color:var(--orange)">thesis</b> statement. The problem was the question itself. They could have written pages on computers, but writing didn't seem <b style="color:var(--orange)">significant</b> to them.</p>
+    <p>As a new unit started, I asked everyone to write a <b style="color:var(--orange)">persuasive</b> piece on a health topic. For the next two assignments, a personal-<b style="color:var(--orange)">narrative</b> unit followed by a creative-writing <b style="color:var(--orange)">workshop</b>, I only required that the piece meet the <b style="color:var(--orange)">specifications</b> of its <b style="color:var(--orange)">genre</b> and contain a thesis.</p>
+    <p>The students <b style="color:var(--orange)">demonstrated</b> something more important. They took on <b style="color:var(--orange)">diverse</b> topics and turned in stories that <b style="color:var(--orange)">broadened</b> my view. Writing, I realized, is a means of <b style="color:var(--orange)">communication</b> — the ability to put us in another's skin.</p>
+    <p>Some essays were <b style="color:var(--orange)">controversial</b>; others were merely <b style="color:var(--orange)">entertaining</b>. A few students were <b style="color:var(--orange)">critical</b> of reality shows, while others were <b style="color:var(--orange)">favorable</b>. But each piece <b style="color:var(--orange)">interpreted</b> a real human concern. The workshop was genuinely <b style="color:var(--orange)">educational</b>, and even the most <b style="color:var(--orange)">conventional</b> students opened up.</p>
   </div>
 
-  <p class="sub" style="font-weight:600;color:var(--ink);margin-top:10px">原文填空版（<span class="fill" style="color:var(--orange);font-weight:bold">橙色粗体</span>为正确答案）：</p>
-  <div class="cloze-passage">In my ninth-grade writing class, I met a cowboy who saved his town, a strict father, and a <span class="fill">fictional</span> Juliet who died of heartbreak. I wondered how my students knew their characters so well.
-
-But their first essay was <span class="fill">staggering</span>. Most filled less than one page, and few contained a <span class="fill">thesis</span> statement. The problem was the question itself. They could have written pages on computers, but writing didn't seem <span class="fill">significant</span> to them.
-
-As a new unit started, I asked everyone to write a <span class="fill">persuasive</span> piece on a health topic. For the next two assignments, a personal-<span class="fill">narrative</span> unit followed by a creative-writing <span class="fill">workshop</span>, I only required that the piece meet the <span class="fill">specifications</span> of its <span class="fill">genre</span> and contain a thesis.
-
-The students <span class="fill">demonstrated</span> something more important. They took on <span class="fill">diverse</span> topics and turned in stories that <span class="fill">broadened</span> my view. Writing, I realized, is a means of <span class="fill">communication</span> — the ability to put us in another's skin.
-
-Some essays were <span class="fill">controversial</span>; others were merely <span class="fill">entertaining</span>. A few students were <span class="fill">critical</span> of reality shows, while others were <span class="fill">favorable</span>. But each piece <span class="fill">interpreted</span> a real human concern. The workshop was genuinely <span class="fill">educational</span>, and even the most <span class="fill">conventional</span> students opened up.</div>
-
-  <p class="sub" style="font-weight:600;color:var(--ink);margin-top:14px">逐空答案表（20 空）：</p>
+  <div class="label-sm" style="margin-top:14px;font-size:11px;color:var(--muted);display:block"><b>答案速查表</b></div>
   <table>
     <thead>
-      <tr><th>#</th><th>Base（原文形式）</th><th>Answer（正确答案）</th><th>中文释义</th><th>错误提示</th></tr>
+      <tr><th>#</th><th>Base（词表原形）</th><th>Answer（填空形式）</th><th>中文释义</th><th>错误提示</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>fictional</td><td>fictional</td><td>虚构的；小说的</td><td>形容词 -al 后缀，不写 fiction 名词</td></tr>
-      <tr class="vocab-row"><td>2</td><td>staggering</td><td>staggering</td><td>令人惊叹的</td><td>修饰物用 -ing，修饰人用 -ed</td></tr>
-      <tr class="vocab-row"><td>3</td><td>thesis</td><td>thesis</td><td>论点；论文</td><td>单数 thesis / 复数 theses</td></tr>
-      <tr class="vocab-row"><td>4</td><td>significant</td><td>significant</td><td>重要的；显著的</td><td>形容词；勿用副词 significantly</td></tr>
-      <tr class="vocab-row"><td>5</td><td>persuasive</td><td>persuasive</td><td>有说服力的</td><td>形容词 -ive；动词 persuade</td></tr>
-      <tr class="vocab-row"><td>6</td><td>narrative</td><td>narrative</td><td>叙事；叙述</td><td>合成词 personal-narrative</td></tr>
-      <tr class="vocab-row"><td>7</td><td>workshop</td><td>workshop</td><td>研讨班；工作坊</td><td>合成词；不写 workman</td></tr>
-      <tr class="vocab-row"><td>8</td><td>specification</td><td>specifications</td><td>规格；具体要求</td><td>常复数；不写单数 specification</td></tr>
-      <tr class="vocab-row"><td>9</td><td>genre</td><td>genre</td><td>体裁；流派</td><td>法语借词，g 弱读 /ˈʒɒnrə/</td></tr>
-      <tr class="vocab-row"><td>10</td><td>demonstrate</td><td>demonstrated</td><td>证明；展示</td><td>过去时加 -ed</td></tr>
-      <tr class="vocab-row"><td>11</td><td>diverse</td><td>diverse</td><td>多样的；不同的</td><td>形容词；不写 diversed</td></tr>
-      <tr class="vocab-row"><td>12</td><td>broaden</td><td>broadened</td><td>拓宽；开阔</td><td>过去时加 -ed；broad + en</td></tr>
-      <tr class="vocab-row"><td>13</td><td>communicate</td><td>communication</td><td>交流；沟通</td><td>名词形式 -ion；不写动词</td></tr>
-      <tr class="vocab-row"><td>14</td><td>controversial</td><td>controversial</td><td>有争议的</td><td>形容词 -ial；名词 controversy</td></tr>
-      <tr class="vocab-row"><td>15</td><td>entertaining</td><td>entertaining</td><td>有趣的；娱乐的</td><td>动词 entertain + ing</td></tr>
-      <tr class="vocab-row"><td>16</td><td>critical</td><td>critical</td><td>批判的；关键的</td><td>形容词；be critical of</td></tr>
-      <tr class="vocab-row"><td>17</td><td>favorable</td><td>favorable</td><td>赞成的；有利的</td><td>形容词 -able；名词 favor</td></tr>
-      <tr class="vocab-row"><td>18</td><td>interpret</td><td>interpreted</td><td>解释；诠释</td><td>过去时加 -ed；勿与 translate 混</td></tr>
-      <tr class="vocab-row"><td>19</td><td>educational</td><td>educational</td><td>教育的；有教育意义的</td><td>形容词 -al；名词 education</td></tr>
-      <tr class="vocab-row"><td>20</td><td>conventional</td><td>conventional</td><td>常规的；传统的</td><td>形容词 -al；名词 convention</td></tr>
+      <tr class="key-row"><td>1</td><td>fictional</td><td>fictional</td><td>虚构的；小说的</td><td>形容词修饰 Juliet；勿用 fictional 的近义词 narrative</td></tr>
+      <tr class="key-row"><td>2</td><td>staggering</td><td>staggering</td><td>令人惊叹的</td><td>was + 形容词；动词 stagger + ing</td></tr>
+      <tr class="key-row"><td>3</td><td>thesis</td><td>thesis</td><td>论点；论文</td><td>a thesis statement 固定搭配；单数</td></tr>
+      <tr class="key-row"><td>4</td><td>significant</td><td>significant</td><td>重要的；显著的</td><td>seem + 形容词；勿与 gigantic 混</td></tr>
+      <tr class="key-row"><td>5</td><td>persuasive</td><td>persuasive</td><td>有说服力的</td><td>a persuasive piece 形容词修饰名词</td></tr>
+      <tr class="key-row"><td>6</td><td>narrative</td><td>narrative</td><td>叙事；叙述</td><td>personal-narrative 合成名词</td></tr>
+      <tr class="key-row"><td>7</td><td>workshop</td><td>workshop</td><td>研讨班；工作坊</td><td>creative-writing workshop 合成词</td></tr>
+      <tr class="key-row"><td>8</td><td>specification</td><td>specifications</td><td>规格；具体要求</td><td>常复数；meet the specifications of</td></tr>
+      <tr class="key-row"><td>9</td><td>genre</td><td>genre</td><td>体裁；流派</td><td>法语借词；g 弱读 /ˈʒɑːnrə/</td></tr>
+      <tr class="key-row"><td>10</td><td>demonstrate</td><td>demonstrated</td><td>证明；展示</td><td>过去时；-ed 形式</td></tr>
+      <tr class="key-row"><td>11</td><td>diverse</td><td>diverse</td><td>多样的；不同的</td><td>diverse topics 形容词修饰名词</td></tr>
+      <tr class="key-row"><td>12</td><td>broaden</td><td>broadened</td><td>拓宽；开阔</td><td>过去时；-ed 形式</td></tr>
+      <tr class="key-row"><td>13</td><td>communication</td><td>communication</td><td>交流；沟通</td><td>a means of communication 名词短语</td></tr>
+      <tr class="key-row"><td>14</td><td>controversial</td><td>controversial</td><td>有争议的</td><td>were + 形容词；勿与 contradict 混</td></tr>
+      <tr class="key-row"><td>15</td><td>entertaining</td><td>entertaining</td><td>有趣的；娱乐的</td><td>merely + 形容词；-ing 形式</td></tr>
+      <tr class="key-row"><td>16</td><td>critical</td><td>critical</td><td>批判的；关键的</td><td>be critical of 固定搭配</td></tr>
+      <tr class="key-row"><td>17</td><td>favorable</td><td>favorable</td><td>赞成的；有利的</td><td>were + 形容词；勿与 favorite 混</td></tr>
+      <tr class="key-row"><td>18</td><td>interpret</td><td>interpreted</td><td>解释；诠释</td><td>过去时；-ed 形式</td></tr>
+      <tr class="key-row"><td>19</td><td>educational</td><td>educational</td><td>教育的；有教育意义的</td><td>genuinely + 形容词</td></tr>
+      <tr class="key-row"><td>20</td><td>conventional</td><td>conventional</td><td>常规的；传统的</td><td>the most + 形容词；勿用 communication 干扰</td></tr>
     </tbody>
   </table>
+</section>
 
+<section>
+  <h2>二、四阶梯单测参考答案（20 词）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏「造句参考」用词表原 example。第四栏「费曼讲解参考」= 提问 + 1-2 句参考答案（姐姐抽查时的判断标准）。学生用自己的话讲明白即可，不必背参考答案。</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（example）</th><th>费曼讲解参考（提问 + 参考答案）</th><th>常见错误</th></tr>
+    </thead>
+    <tbody>
+      <tr class="vocab-row"><td>1</td><td>persuasive</td><td>有说服力的</td><td>I asked everyone to write a persuasive piece.</td><td><i>persuasive 的动词是？persuade sb ___ doing / to do 哪个对？</i><br>动词 persuade；persuade sb to do sth（不说 doing）。persuasive 强调「能说服人的」，convincing 强调「已被说服的」。</td><td>动词 persuade；后接 to do</td></tr>
+      <tr class="vocab-row"><td>2</td><td>narrative</td><td>叙事；叙述</td><td>A personal-narrative unit followed.</td><td><i>narrative 作名词和形容词各是什么意思？和 story 区别？</i><br>名词＝叙事/故事；形容词＝叙事体的。story 偏具体一个故事，narrative 偏叙述方式或体裁（学术语体）。</td><td>可数名词；形容词</td></tr>
+      <tr class="vocab-row"><td>3</td><td>genre</td><td>体裁；流派</td><td>The piece must meet the specifications of its genre.</td><td><i>genre 是哪国语言借词？g 发音如何？举一个 genre 的例子。</i><br>法语借词；g 弱读 /ʒ/。例：sci-fi is a film genre。注意不读 /g/。</td><td>法语借词，g 弱读</td></tr>
+      <tr class="vocab-row"><td>4</td><td>thesis</td><td>论点；论文</td><td>Few contained a thesis statement.</td><td><i>thesis 复数怎么写？thesis statement 在文章里指什么？</i><br>复数 theses（sis → ses）。thesis statement ＝文章核心论点句，通常在引言末。</td><td>复数 theses</td></tr>
+      <tr class="vocab-row"><td>5</td><td>fictional</td><td>虚构的；小说的</td><td>The cowboy was a fictional character.</td><td><i>fictional 和 fictitious 都翻「虚构的」，用法差在哪？</i><br>fictional 修饰文学创作里的人物（中性）；fictitious 偏贬义，指「编造的、虚假的」（如 fictitious name 假名）。</td><td>名词 fiction</td></tr>
+      <tr class="vocab-row"><td>6</td><td>demonstrate</td><td>证明；展示</td><td>They demonstrated how microplastics were trapped.</td><td><i>demonstrate 和 show、prove 有什么区别？名词形式？</i><br>demonstrate 偏「演示操作过程」；show 最普通「展示」；prove 强调「证据证明」。名词 demonstration。</td><td>动词；名词 demonstration</td></tr>
+      <tr class="vocab-row"><td>7</td><td>interpret</td><td>解释；诠释</td><td>Few sentences could be interpreted as a thesis.</td><td><i>interpret 和 translate 都翻「翻译」，区别在哪？</i><br>interpret 口译（口头上）；translate 笔译（书面上）。interpret 还可指「诠释、理解」。</td><td>勿与 translate 混</td></tr>
+      <tr class="vocab-row"><td>8</td><td>communicate</td><td>交流；传达</td><td>Writing is important as a means of communication.</td><td><i>communicate 后接什么介词？名词形式怎么拼？</i><br>communicate with sb（不说 to sb）；名词 communication（双 m 双 c）。</td><td>名词 communication</td></tr>
+      <tr class="vocab-row"><td>9</td><td>specification</td><td>规格；具体要求</td><td>The piece must meet the specifications of its genre.</td><td><i>specification 为什么常复数？动词形式？</i><br>因为「规格」常是一组要求不是一条；动词 specify（明确指定）。</td><td>常复数</td></tr>
+      <tr class="vocab-row"><td>10</td><td>staggering</td><td>令人惊叹的</td><td>The results were staggering.</td><td><i>staggering 和 surprising 有什么区别？动词 stagger 的本意？</i><br>staggering 程度远超 surprising（令人震惊到难以置信）。stagger 本意「蹒跚、摇晃」——惊到站不稳。</td><td>动词 stagger + ing</td></tr>
+      <tr class="vocab-row"><td>11</td><td>workshop</td><td>研讨班；工作坊</td><td>A creative-writing workshop followed.</td><td><i>workshop 是合成词，两部分是什么？和 seminar 区别？</i><br>work + shop。workshop 偏实操（动手做）；seminar 偏讨论（学术研讨）。</td><td>合成词</td></tr>
+      <tr class="vocab-row"><td>12</td><td>broaden</td><td>拓宽；开阔</td><td>Characters that broadened my view.</td><td><i>broaden 的形容词？broaden one's horizons 中文？</i><br>形容词 broad。broaden one's horizons ＝开阔眼界（固定搭配）。</td><td>形容词 broad + en</td></tr>
+      <tr class="vocab-row"><td>13</td><td>communication</td><td>交流；沟通</td><td>Writing is important as a means of communication.</td><td><i>communication 和 communicate 的关系？means of communication 指？</i><br>communication 是 communicate 的名词。means of communication ＝交流手段/工具（语言、文字、信号等）。</td><td>动词 communicate</td></tr>
+      <tr class="vocab-row"><td>14</td><td>significant</td><td>重要的；显著的</td><td>A simple measure may significantly reduce microplastics.</td><td><i>significant 和 important 区别？名词形式？</i><br>significant 偏「量上或统计上显著」；important 偏「价值上重要」。名词 significance（意义/重要性）。</td><td>名词 significance</td></tr>
+      <tr class="vocab-row"><td>15</td><td>controversial</td><td>有争议的</td><td>Reality shows remain controversial.</td><td><i>controversial 的名词？a controversial issue 中文？</i><br>名词 controversy（争议）。a controversial issue ＝有争议的问题。</td><td>名词 controversy</td></tr>
+      <tr class="vocab-row"><td>16</td><td>critical</td><td>批判的；关键的</td><td>The man is critical of reality shows.</td><td><i>critical 的两个意思分别是什么？be critical ___ sth</i><br>①批判的（be critical of sb/sth）；②关键的（a critical moment）。两个意思看语境。</td><td>名词 critic</td></tr>
+      <tr class="vocab-row"><td>17</td><td>favorable</td><td>赞成的；有利的</td><td>His attitude toward reality shows is favorable.</td><td><i>favorable 和 favorite 区别？favorable 后接什么介词？</i><br>favorable ＝赞成的/有利的（be favorable to/toward sth）；favorite ＝最喜爱的（无比较级）。</td><td>名词 favor</td></tr>
+      <tr class="vocab-row"><td>18</td><td>diverse</td><td>多样的；不同的</td><td>The woman expects TV programs to be diverse.</td><td><i>diverse 和 different 区别？名词形式？</i><br>diverse 强调「种类多、各异」（褒义）；different 中性「不一样」。名词 diversity（多样性）。</td><td>名词 diversity</td></tr>
+      <tr class="vocab-row"><td>19</td><td>educational</td><td>教育的；有教育意义的</td><td>She expects programs to be educational.</td><td><i>educational 和 educative 区别？an educational program 指？</i><br>educational 最常用「教育的/有教育意义的」；educative 偏学术「有教育作用的」。an educational program ＝教育类节目。</td><td>名词 education</td></tr>
+      <tr class="vocab-row"><td>20</td><td>entertaining</td><td>有趣的；娱乐的</td><td>Some programs are merely entertaining.</td><td><i>entertaining 和 amused 区别（修饰人还是物）？动词 entertain 后接？</i><br>entertaining 修饰物（有趣的）；amused 修饰人（被逗乐的）。动词 entertain sb（entertains guests 招待客人）。</td><td>动词 entertain</td></tr>
+    </tbody>
+  </table>
   <div class="feynman-tip">
-    <b>姐姐抽查话术</b>：不要问「fictional 是什么意思」——这是识别题。要问「fictional 和 fake 都译「假的」，但 fictional 的 Juliet 和 fake 的 smile 有什么区别？」或「specification 为什么常复数？写一篇作文时，specifications 指什么？」——这测的是<b>用法</b>而非<b>识别</b>。第 20 空的 conventional 是完形里<b>唯一一个非 20 词表内的词</b>——它来自 Day 3 词表，作为干扰项出现，提醒学生词表之间有交叉。
+    <b>姐姐抽查话术</b>：完形错题对应的词，不要问「X 是什么意思」——这是识别题，背过就答得出。要问「X 和它的近义词（比如 persuasive / convincing，critical / crucial，fictional / fictitious）有什么区别？什么场景下用 X 不用另一个？」——这测的是用法边界。第四栏费曼讲解答不上来的，进 D1 复测。
   </div>
 </section>
 
 <section>
-  <h2>二、四阶梯单测答案（20 词）</h2>
-  <p class="sub" style="font-size:12px;margin-bottom:8px">③ 造句参考取自 2025 真题语境；④ 迁移改写参考是<b>换场景</b>再造的短句（8-15 词），学生造的句子只要符合该词用法即可。</p>
-  <table>
-    <thead>
-      <tr><th>#</th><th>Word</th><th>中文释义</th><th>③ 造句参考</th><th>④ 迁移改写参考（换场景）</th><th>常见错误</th></tr>
-    </thead>
-    <tbody>
-      <tr class="vocab-row"><td>1</td><td>persuasive</td><td>有说服力的</td><td>I asked everyone to write a persuasive piece.</td><td>Her apology was persuasive enough to forgive.</td><td>动词 persuade</td></tr>
-      <tr class="vocab-row"><td>2</td><td>narrative</td><td>叙事；叙述</td><td>A personal-narrative unit followed.</td><td>The witness gave a clear narrative of events.</td><td>可数名词；形容词</td></tr>
-      <tr class="vocab-row"><td>3</td><td>genre</td><td>体裁；流派</td><td>The piece must meet the specifications of its genre.</td><td>Jazz is a genre I never fully understood.</td><td>法语借词，g 弱读</td></tr>
-      <tr class="vocab-row"><td>4</td><td>thesis</td><td>论点；论文</td><td>Few contained a thesis statement.</td><td>Her thesis on climate won the award.</td><td>复数 theses</td></tr>
-      <tr class="vocab-row"><td>5</td><td>fictional</td><td>虚构的；小说的</td><td>The cowboy was a fictional character.</td><td>The movie blends real and fictional events.</td><td>名词 fiction</td></tr>
-      <tr class="vocab-row"><td>6</td><td>demonstrate</td><td>证明；展示</td><td>They demonstrated how microplastics were trapped.</td><td>The coach demonstrated the serve three times.</td><td>名词 demonstration</td></tr>
-      <tr class="vocab-row"><td>7</td><td>interpret</td><td>解释；诠释</td><td>Few sentences could be interpreted as a thesis.</td><td>The pianist interpreted Chopin with deep emotion.</td><td>勿与 translate 混</td></tr>
-      <tr class="vocab-row"><td>8</td><td>communicate</td><td>交流；传达</td><td>Writing is important as a means of communication.</td><td>Babies communicate by crying before speaking.</td><td>名词 communication</td></tr>
-      <tr class="vocab-row"><td>9</td><td>specification</td><td>规格；具体要求</td><td>The piece must meet the specifications of its genre.</td><td>The bridge met every safety specification.</td><td>常复数</td></tr>
-      <tr class="vocab-row"><td>10</td><td>staggering</td><td>令人惊叹的</td><td>The results were staggering.</td><td>The cost of the renovation was staggering.</td><td>动词 stagger + ing</td></tr>
-      <tr class="vocab-row"><td>11</td><td>workshop</td><td>研讨班；工作坊</td><td>A creative-writing workshop followed.</td><td>She attended a weekend pottery workshop.</td><td>合成词</td></tr>
-      <tr class="vocab-row"><td>12</td><td>broaden</td><td>拓宽；开阔</td><td>Characters that broadened my view.</td><td>Traveling broadly broadens one's perspective.</td><td>形容词 broad + en</td></tr>
-      <tr class="vocab-row"><td>13</td><td>communication</td><td>交流；沟通</td><td>Writing is important as a means of communication.</td><td>Good communication prevents most conflicts.</td><td>动词 communicate</td></tr>
-      <tr class="vocab-row"><td>14</td><td>significant</td><td>重要的；显著的</td><td>A simple measure may significantly reduce microplastics.</td><td>The new policy had a significant impact.</td><td>名词 significance</td></tr>
-      <tr class="vocab-row"><td>15</td><td>controversial</td><td>有争议的</td><td>Reality shows remain controversial.</td><td>The vaccine mandate remains highly controversial.</td><td>名词 controversy</td></tr>
-      <tr class="vocab-row"><td>16</td><td>critical</td><td>批判的；关键的</td><td>The man is critical of reality shows.</td><td>Timely feedback is critical for improvement.</td><td>名词 critic</td></tr>
-      <tr class="vocab-row"><td>17</td><td>favorable</td><td>赞成的；有利的</td><td>His attitude toward reality shows is favorable.</td><td>The weather forecast looks favorable tomorrow.</td><td>名词 favor</td></tr>
-      <tr class="vocab-row"><td>18</td><td>diverse</td><td>多样的；不同的</td><td>The woman expects TV programs to be diverse.</td><td>The choir draws members from diverse backgrounds.</td><td>名词 diversity</td></tr>
-      <tr class="vocab-row"><td>19</td><td>educational</td><td>教育的；有教育意义的</td><td>She expects programs to be educational.</td><td>The museum trip was genuinely educational.</td><td>名词 education</td></tr>
-      <tr class="vocab-row"><td>20</td><td>entertaining</td><td>有趣的；娱乐的</td><td>Some programs are merely entertaining.</td><td>The magician kept the kids entertaining themselves.</td><td>动词 entertain</td></tr>
-    </tbody>
-  </table>
-  <div class="feynman-tip">
-    <b>迁移改写的判断标准</b>：学生造的④句子必须满足三条——① 用法和例句不同场景（不能照搬「写作课」「真人秀」语境）；② 词性正确（形容词不当作名词用）；③ 句子通顺、语义自洽。三条全过标 C，任一不过标 M。
-  </div>
-</section>
-
-<section>
-  <h2>三、古诗文四件套答案 · 《鹊桥仙·纤云弄巧》（秦观）</h2>
-
-  <div class="piece-title">《鹊桥仙·纤云弄巧》· 秦观</div>
-  <div class="piece-meta">必背 60 篇 · 诗词曲 #34 · 难度 ★★☆ · 2025 全国一卷默写第 (2) 题命中</div>
+  <h2>三、古诗文两件套答案（鹊桥仙 · 秦观）</h2>
+  <div class="piece-title">《鹊桥仙·纤云弄巧》 · 秦观</div>
+  <div class="piece-meta">诗词曲 #34 · 难度 ★★☆</div>
 
   <div class="answer-block">
-    <h4>任务 1 · 原文（自批默写用）</h4>
+    <h4>原文（自批默写用）</h4>
     <div class="piece-body">纤云弄巧，飞星传恨，银汉迢迢暗度。
 金风玉露一相逢，便胜却人间无数。
 柔情似水，佳期如梦，忍顾鹊桥归路。
@@ -164,53 +158,44 @@ Some essays were <span class="fill">controversial</span>; others were merely <sp
   </div>
 
   <div class="answer-block">
-    <h4>任务 2 · 翻译要点 + 易错字（自批翻译用）</h4>
+    <h4>翻译要点 + 易错字（自批翻译用）</h4>
     <div class="body">上阕：纤薄的云彩在天空中变幻出巧妙的花样，飞逝的流星传递着牛郎织女的离恨，两人悄悄渡过辽阔的银河相会。秋风白露之中一年一相逢，便胜过人间那些朝夕相伴的凡俗之情。
 
-下阕：温柔的情意如水，美好的相会如梦，怎么忍心回头看那鹊桥上回去的路？只要两人的感情长久，又何必在乎朝朝暮暮地相伴。</div>
-    <ul class="error-list">
-      <li><b>纤「云」弄巧</b>：纤是「细薄」，不写「鲜」</li>
-      <li><b>飞星「传」恨</b>：传读 chuán，不写「转」</li>
-      <li><b>银汉「迢迢」暗度</b>：迢迢是「遥远」，不写「条条」</li>
-      <li><b>「金风」玉露</b>：金风＝秋风（五行秋属金），不写「秋风」</li>
-      <li><b>「忍」顾鹊桥归路</b>：忍＝「怎忍」反问，不是「忍受」</li>
-      <li><b>又岂在「朝朝暮暮」</b>：朝读 zhāo 不读 cháo，不写「潮」</li>
-      <li><b>便「胜却」人间无数</b>：胜却是「胜过」，不写「胜去」</li>
-      <li><b>佳期「如梦」</b>：不写「入梦」</li>
-    </ul>
-  </div>
+下阕：温柔的情意如水，美好的相会如梦，怎么忍心回头看那鹊桥上回去的路？只要两人的感情长久，又何必在乎朝朝暮暮地相伴。
 
-  <div class="answer-block">
-    <h4>任务 3 · 改写参考（织女第一人称内心独白，情绪抓对即可，字句不必雷同）</h4>
-    <div class="body">金风又起，玉露沾衣。他站在桥的另一头看着我，我知道他也在算：明年还要等三百六十四天。可我不怨。人间那些夫妻日日同榻、夜夜共语，有几对真懂「相念」二字？他们因为常见，所以不见；因为不离，所以不思。我与他隔着银河，每年只见一面，可这一面胜却人间无数。两情若是久长时，又岂在朝朝暮暮——这话我对自己说了千万遍，今夜再说一遍，便也能笑着走下桥去。</div>
-  </div>
+<b>关键易错字（默写必查）</b>：
+· 纤「云」弄巧：纤是「细薄」，不是「仙」
+· 飞星「传」恨：传读 chuán，不读 zhuàn
+· 银汉「迢迢」暗度：迢迢是「遥远」，双写迢
+· 「金风」玉露：金风＝秋风（五行秋属金），不是「秋风」字面
+· 「忍」顾鹊桥归路：忍＝「怎忍」反问语气，不是「忍耐」
+· 又岂在「朝朝暮暮」：朝读 zhāo 不读 cháo，叠词
 
-  <div class="feynman-tip">
-    <b>任务 4 · 费曼参考答案</b>：「金风玉露一相逢，便胜却人间无数」是铺垫，「两情若是久长时，又岂在朝朝暮暮」是收束。前者给出结论：一次高质量的相逢胜过无数低质量的相伴。后者把这个结论推广为普遍命题：感情的「质」决定感情的「值」，不是「量」。前者是经验观察（牛郎织女的一年一见），后者是哲学提炼（普适的爱情观）。没有上阕的铺垫，下阕就成了空喊口号；没有下阕的收束，上阕只是一个浪漫感叹。秦观的高明在于：他用一个神话故事（一年一见）颠覆了世俗的常识（天天在一起才好），并且把这种颠覆推广为爱情的普遍标准。删掉上阕这两句，下阕的「又岂在朝朝暮暮」就失去了实证支撑——读者会反问：「凭什么说质比量重要？」秦观正是用上阕的牛郎织女作证据。学生能讲到「铺垫 + 收束」「质 vs 量」「神话颠覆常识」三点中任意两点就算通过。
+<b>核心情感</b>：本词打破传统七夕词「悲离别」的套路——「两情若是久长时，又岂在朝朝暮暮」把短暂相会升华为对永恒感情的肯定：质量重于数量，情深不必朝暮相伴。学生翻译时若把末句翻成「不在乎早晚在一起」就算通过；若翻成「不需要天天见面」则偏消极，未抓住「肯定久长」的正面立意。</div>
   </div>
 </section>
 
 <section>
-  <h2>四、自评反思（模板）</h2>
+  <h2>四、自评反思（自批后填写）</h2>
   <div class="method">
-    <b>用法</b>：学生作答完毕后，对照下表逐行填写。每行至少写 1 个具体词或具体诗句——空泛的「都还可以」不算反思。
+    <b>用法</b>：学生作答版完成后，对照本答案版自批，再回到作答版填写反思栏。下方模板与作答版一致，留空待填。
   </div>
   <table>
     <thead>
-      <tr><th>反思项</th><th>参考填写方向</th></tr>
+      <tr><th style="width:40%">反思项</th><th>回答</th></tr>
     </thead>
     <tbody>
-      <tr><td>Day 2 完形填空哪几空选错了？是因为词义错还是词形错？</td><td>例：第 8 空选了 A（specific）——词形错，应为复数 specifications；第 13 空选了 A（communicate）——词性错，应为名词 communication</td></tr>
-      <tr><td>Day 2 哪些词在完形里选对、但在四阶梯④迁移改写卡壳？</td><td>例：demonstrate 完形选对，但④迁移造不出「教练演示发球」的句子——只记得「写作课」语境</td></tr>
-      <tr><td>《鹊桥仙》我能默写，但翻译哪一句卡壳了？</td><td>例：「忍顾鹊桥归路」的「忍」——误译为「忍受」，实际是「怎忍」反问</td></tr>
-      <tr><td>讲给姐姐听「金风玉露」和「朝朝暮暮」的逻辑时，我讲到一半讲不下去了？</td><td>例：讲到「质 vs 量」时卡壳——能背结论，但讲不清「为什么质比量重要」的论证链</td></tr>
-      <tr><td>Day 3 要重点攻克哪 1 个知识点？（不是 3 个，就 1 个）</td><td>例：形容词词形变体（-al / -ive / -able / -ing）在完形里的辨析</td></tr>
+      <tr><td>完形错了哪几空？分别错在词义、形式、还是语境判断？</td><td style="min-height:50px"></td></tr>
+      <tr><td>哪些词我以为会、其实造不出句（第三栏空着）？</td><td></td></tr>
+      <tr><td>哪些词我能造句但费曼栏（第四栏）答不上来——证明只知字面不知用法边界？</td><td></td></tr>
+      <tr><td>《鹊桥仙》能默但翻译卡壳的，是哪一处？「金风」「忍顾」「朝朝暮暮」哪个讲不清？</td><td></td></tr>
+      <tr><td>下周重点攻克 1 个知识点（不是 3 个，就 1 个）</td><td></td></tr>
     </tbody>
   </table>
 </section>
 
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 2 · 答案版 · v3 完形+四阶梯+对齐2025真题
+  Gaokao Coach 2027 · 第1周 Day 2 · 答案版 · v4 完形+四阶梯+古诗文两件套
 </div>
 
 </div>

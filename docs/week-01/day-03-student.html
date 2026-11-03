@@ -11,13 +11,13 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.6;padding:20px}
-.wrap{max-width:820px;margin:0 auto}
-header{border-bottom:2px solid var(--orange);padding-bottom:12px;margin-bottom:20px}
-.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--orange);font-weight:800;text-transform:uppercase}
+.wrap{max-width:860px;margin:0 auto}
+header{border-bottom:2px solid var(--blue);padding-bottom:12px;margin-bottom:20px}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--blue);font-weight:800;text-transform:uppercase}
 h1{font-size:24px;margin:6px 0 4px}
 .sub{color:var(--muted);font-size:13px}
 section{margin:28px 0;page-break-inside:avoid}
-h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0 0 6px}
+h2{font-size:18px;border-left:4px solid var(--blue);padding-left:10px;margin:0 0 6px}
 .method{background:#eaf2eb;border-left:3px solid var(--green);padding:10px 13px;font-size:13px;border-radius:0 8px 8px 0;margin-bottom:14px}
 .method b{color:var(--green)}
 .task{border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:12px;background:#fff}
@@ -25,34 +25,40 @@ h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0
 .task-title{font-weight:bold;font-size:14px}
 .task-meta{font-size:11px;color:var(--muted)}
 .prompt{font-size:13px;color:#444;margin-bottom:8px}
-.prompt em{color:var(--orange);font-style:normal;font-weight:600}
+.prompt em{color:var(--blue);font-style:normal;font-weight:600}
 .answer-box{border:1px dashed var(--line);border-radius:4px;padding:8px;min-height:60px;background:#fafafa}
 .answer-box.tall{min-height:120px}
 .answer-box.short{min-height:32px}
 .label-sm{font-size:11px;color:var(--muted);margin-bottom:4px;display:block}
-.classify{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.classify{display:flex;gap:6px;margin-top:6px}
 .classify span{display:inline-block;padding:3px 8px;border:1px solid var(--line);border-radius:3px;font-size:11px;cursor:pointer;background:#fff}
-.classify span.checked{background:var(--orange);color:#fff;border-color:var(--orange)}
-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
-th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
-th{background:#f8f5ee;font-weight:600;font-size:12px}
+.classify span.checked{background:var(--blue);color:#fff;border-color:var(--blue)}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{background:#f8f5ee;font-weight:600;font-size:11px}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
 .vocab-row td:nth-child(2){width:14%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:20%}
-.vocab-row td:nth-child(4){width:20%}
-.vocab-row td:nth-child(5){width:21%}
-.vocab-row td:nth-child(6){width:21%}
-.cloze-passage{font-size:14px;line-height:2.2;white-space:pre-wrap;border:1px solid var(--line);border-radius:8px;padding:16px 18px;background:#fafafa;margin:10px 0}
-.cloze-blank{display:inline-block;border-bottom:1px solid var(--ink);min-width:120px;text-align:center;color:var(--muted);font-weight:bold;letter-spacing:.05em}
-.cloze-options{margin:14px 0 6px;font-size:12px;color:#555}
-.cloze-options .opt-line{margin:4px 0;line-height:1.7}
-.cloze-options .opt-num{display:inline-block;width:28px;font-weight:bold;color:var(--orange)}
-.cloze-options .opt{display:inline-block;margin-right:14px;padding:1px 6px;border:1px solid var(--line);border-radius:3px;background:#fff}
+.vocab-row td:nth-child(3){width:19%}
+.vocab-row td:nth-child(4){width:19%}
+.vocab-row td:nth-child(5){width:22%}
+.vocab-row td:nth-child(6){width:22%}
+.feynman-prompt{font-style:italic;color:var(--muted);font-size:11px;line-height:1.5}
+.cloze-passage{font-size:14px;line-height:2.1;background:#fafafa;border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:10px 0}
+.cloze-passage p{margin:0 0 12px}
+.cloze-passage p:last-child{margin-bottom:0}
+.cloze-blank{display:inline-block;min-width:60px;border-bottom:1.5px solid var(--blue);padding:0 4px;text-align:center;font-weight:600;color:var(--blue);margin:0 2px}
+.choice-list{font-size:12px;color:var(--muted);margin:6px 0 12px;padding-left:18px}
+.choice-list li{margin:2px 0}
+.choice-list .correct-marker{display:none}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 .feynman-checklist{background:#fff8eb;border:1px solid var(--orange);border-radius:8px;padding:12px;margin:14px 0}
 .feynman-checklist h4{margin:0 0 8px;font-size:13px;color:var(--orange)}
 .feynman-checklist ul{margin:0;padding-left:18px;font-size:12px}
 .feynman-checklist li{margin:3px 0}
+.error-hint{background:#fff4ec;border-left:3px solid var(--red);padding:8px 12px;font-size:12px;border-radius:0 6px 6px 0;margin-top:8px}
+.error-hint b{color:var(--red)}
+.error-hint ul{margin:4px 0 0;padding-left:18px}
+.error-hint li{margin:2px 0}
 @media print{
   body{padding:0;font-size:11pt}
   section{page-break-inside:avoid}
@@ -64,182 +70,177 @@ th{background:#f8f5ee;font-weight:600;font-size:12px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 03 · v3 · Cloze + 4-Stage</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 03 · v4</div>
   <h1>第1周 Day 3 · 费曼训练包 · 学生作答版</h1>
   <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
-  <div class="sub" style="margin-top:6px">Day 3 主题：Day 3 · 完形填空核心动词（情感与生活类）</div>
+  <div class="sub" style="margin-top:6px">Day 3 主题：完形填空核心动词（情感与生活类）</div>
   <div class="sub" style="font-size:11px;margin-top:2px">词源：2025 英语完形填空原文 + 七选五高频词</div>
 </header>
 
 <div class="method">
-  <b>今日方法</b>（v3 四件套，每词 5 次提取）：<br>
-  <b>① 完形填空</b>——先在语境中盲填 20 空（第 1 次提取：语境识别）。不查词表，凭语感选。<br>
-  <b>② 四阶梯单测</b>——每词「英→中 / 中→英 / 造句 / 迁移改写」四栏（第 2-5 次提取：识别 + 拼写 + 产出 + 迁移）。前 3 栏对、第 4 栏写不出，仍标 <b>M</b>。<br>
-  <b>③ 古诗文四件套</b>——默写 + 翻译 + 改写 + 费曼提问（《苏幕遮》周邦彦，2025 默写真题命中）。<br>
-  <b>④ 自评反思</b>——抓「以为自己会其实不会」的盲区。<br>
-  <b>五级分类</b>：N 完全未接触 / F 见过遗忘 / S 拼写错 / M 词义或用法错（含造不出句）/ C 完全正确。仅 C 不入 MVP。
+  <b>今日方法</b>（v4 调整 · 每词被检索 5 次）：<br>
+  <b>① 完形填空</b>——20 空选词填空，每空从 4 个选项中选出正确形式。这是<b>第 1 次检索</b>：识别词义 + 选对词形。<br>
+  <b>② 四阶梯单测</b>——每词测「①英→中 ②中→英 ③造句 ④费曼讲解」四步。这是<b>第 2-5 次检索</b>：识别→拼写→产出→讲明白。<br>
+  <b>v4 关键变化</b>：第四栏从「迁移改写」改为<b>「费曼讲解」</b>——每词给出一个费曼提问（印在栏内灰色斜体），你要用自己的话回答。讲不出 = 即使前三步对了也只能标 <b>M</b>。<br>
+  <b>③ 古诗文两件套</b>——<b>默写</b>（测记忆）+ <b>翻译</b>（测理解，含易错字提示）。任一项卡壳即标「未稳定掌握」录入 MVP。<br>
+  <b>④ 自评反思</b>——抓「以为自己会其实不会」的盲区。
 </div>
 
 <div class="feynman-checklist">
   <h4>Day 3 费曼流程（学生侧）</h4>
   <ul>
-    <li><b>第一步 · 主动回忆</b>：不查资料、不看答案版，先做完形 20 空，再做四阶梯单测。卡住超过 2 分钟就跳过，标「卡壳」。</li>
-    <li><b>第二步 · 自批</b>：对照答案版（<code>day-03-answers.html</code>）逐空逐词逐篇标 N/F/S/M/C。</li>
-    <li><b>第三步 · 讲给姐姐听</b>：周末姐姐抽查 3 个标错的/卡壳的，你用<b>自己的话</b>讲一遍。讲不明白 = 没真懂，回 MVP 标「概念混淆」。</li>
+    <li><b>第一步 · 主动回忆</b>：不查资料、不看答案版，独立完成下文所有作答。卡住超过 2 分钟就跳过，标「卡壳」。</li>
+    <li><b>第二步 · 自批</b>：对照答案版（<code>day-03-answers.html</code>）逐词逐篇标 N/F/S/M/C。</li>
+    <li><b>第三步 · 讲给姐姐听</b>：姐姐抽查 3 个标错的/卡壳的，你用<b>自己的话</b>讲一遍。讲不明白 = 没真懂，回 MVP 标「概念混淆」。</li>
     <li><b>第四步 · 录入 MVP</b>：非 C 的词和篇录入触发 D1/D3/D7 复测。</li>
   </ul>
 </div>
 
 <section>
-  <h2>一、完形填空 · 语境盲填（20 空）</h2>
+  <h2>一、完形填空 · Giving Things Away（20 空）</h2>
   <div class="method">
-    <b>测试方法</b>：阅读下面短文，在 20 个空格处填入恰当的词。每空 4 个选项，选出最佳答案。<br>
-    <b>注意</b>：本题改编自 2025 全国一卷英语完形填空原文。先盲填，再对照答案版自批。盲填时不要查词表——这一步测的是<b>语境中能不能识别词</b>，是高考完形的真考点。
+    <b>测试方法</b>：阅读下文，每空从 4 个选项中选出正确形式填入。选项已打乱，仅 1 个正确 + 3 个干扰项（形近词、近义词、词形变体）。<br>
+    这是<b>第 1 次检索</b>——识别词义 + 判断词形。选完后再进入四阶梯单测，每词再被检索 4 次。
   </div>
+  <div class="task-meta" style="margin-bottom:6px">改编自 2025 全国一卷完形填空 · 主题：二手物品转让与情感</div>
 
-  <div class="task-head">
-    <div class="task-title">Giving Things Away</div>
-    <div class="task-meta">改编自 2025 全国一卷英语完形填空 · 20 空 · Day 3 词汇 20 词</div>
-  </div>
+  <div class="cloze-passage"><p>One August afternoon, I sat in my kitchen staring at a glass vase. My husband and I had just sold our house. We had donated what we could and rented a place to store our supposedly important objects. That left a house still stuffed with things that, while not particularly <span class="cloze-blank">(1)</span>, didn't belong in a landfill.</p>
+<p>I posted the vase online for $10. One message wanted additional photos; another asked for a price cut. <span class="cloze-blank">(2)</span>, I reposted it for free. The description: 「I hate this vase. Maybe you won't.」 In an instant, a woman I had never <span class="cloze-blank">(3)</span> before arrived at my door and left happily.</p>
+<p><span class="cloze-blank">(4)</span>, I posted more. Each exchange was a chance to please a person I might not otherwise have <span class="cloze-blank">(5)</span>. My daily posts became a precious ray of light in the <span class="cloze-blank">(6)</span> of my house.</p>
+<p>Each <span class="cloze-blank">(7)</span> provided a chance to spare the landfill. I sit in my apartment today, loving each of the <span class="cloze-blank">(8)</span> that share our small space. I take comfort in knowing that someone nearby is <span class="cloze-blank">(9)</span> something that couldn't come with us.</p>
+<p>The whole experience was <span class="cloze-blank">(10)</span> — not <span class="cloze-blank">(11)</span>, not <span class="cloze-blank">(12)</span>, not even <span class="cloze-blank">(13)</span> at first. But I had <span class="cloze-blank">(14)</span> the wrong outcome. Each <span class="cloze-blank">(15)</span> felt like a small victory. I had to <span class="cloze-blank">(16)</span> this method to friends. I never <span class="cloze-blank">(17)</span> from a single exchange.</p>
+<p>If you ever feel <span class="cloze-blank">(18)</span> by the clutter in your home, try giving things away. Don't <span class="cloze-blank">(19)</span> the buyers' motives. Just <span class="cloze-blank">(20)</span> the item, post an honest description, and let it go.</p></div>
 
-  <div class="cloze-passage">One August afternoon, I sat in my kitchen staring at a glass vase. My husband and I had just sold our house. We had donated what we could and rented a place to store our supposedly important objects. That left a house still stuffed with things that, while not particularly <span class="cloze-blank">_______(1)</span>, didn't belong in a landfill.
+  <p class="sub" style="margin-top:10px;font-weight:600;color:var(--ink)">选项表（每空 4 选 1，仅 1 个正确）：</p>
+  <ul class="choice-list">
+    <li>(1) A. value  B. valuable  C. valued  D. valuing</li>
+    <li>(2) A. disappoint  B. disappointed  C. disappointing  D. disappointingly</li>
+    <li>(3) A. encounter  B. encountered  C. encountering  D. counter</li>
+    <li>(4) A. encourage  B. encouraged  C. encouraging  D. encouragement</li>
+    <li>(5) A. recognize  B. recognized  C. recognizing  D. recognition</li>
+    <li>(6) A. chaotic  B. chaotically  C. chaos  D. chaoses</li>
+    <li>(7) A. contribute  B. contribution  C. contributions  D. contributed</li>
+    <li>(8) A. belong  B. belongs  C. belonging  D. belongings</li>
+    <li>(9) A. appreciate  B. appreciating  C. appreciated  D. appreciation</li>
+    <li>(10) A. genuine  B. genuinely  C. genius  D. genious</li>
+    <li>(11) A. convention  B. conventional  C. conventionally  D. convent</li>
+    <li>(12) A. complicate  B. complicated  C. complication  D. complicating</li>
+    <li>(13) A. tolerate  B. tolerable  C. tolerant  D. toleration</li>
+    <li>(14) A. anticipate  B. anticipated  C. anticipating  D. anticipation</li>
+    <li>(15) A. deliver  B. delivery  C. deliveries  D. delivered</li>
+    <li>(16) A. recommend  B. recommended  C. recommending  D. recommendation</li>
+    <li>(17) A. withdraw  B. withdrew  C. withdrawn  D. withdrawing</li>
+    <li>(18) A. confuse  B. confused  C. confusing  D. confusion</li>
+    <li>(19) A. investigate  B. investigated  C. investigating  D. investigation</li>
+    <li>(20) A. display  B. displays  C. displayed  D. displaying</li>
+  </ul>
 
-I posted the vase online for $10. One message wanted additional photos; another asked for a price cut. <span class="cloze-blank">_______(2)</span>, I reposted it for free. The description: 「I hate this vase. Maybe you won't.」 In an instant, a woman I had never <span class="cloze-blank">_______(3)</span> before arrived at my door and left happily.
-
-<span class="cloze-blank">_______(4)</span>, I posted more. Each exchange was a chance to please a person I might not otherwise have <span class="cloze-blank">_______(5)</span>. My daily posts became a precious ray of light in the <span class="cloze-blank">_______(6)</span> of my house.
-
-Each <span class="cloze-blank">_______(7)</span> provided a chance to spare the landfill. I sit in my apartment today, loving each of the <span class="cloze-blank">_______(8)</span> that share our small space. I take comfort in knowing that someone nearby is <span class="cloze-blank">_______(9)</span> something that couldn't come with us.
-
-The whole experience was <span class="cloze-blank">_______(10)</span> — not <span class="cloze-blank">_______(11)</span>, not <span class="cloze-blank">_______(12)</span>, not even <span class="cloze-blank">_______(13)</span> at first. But I had <span class="cloze-blank">_______(14)</span> the wrong outcome. Each <span class="cloze-blank">_______(15)</span> felt like a small victory. I had to <span class="cloze-blank">_______(16)</span> this method to friends. I never <span class="cloze-blank">_______(17)</span> from a single exchange.
-
-If you ever feel <span class="cloze-blank">_______(18)</span> by the clutter in your home, try giving things away. Don't <span class="cloze-blank">_______(19)</span> the buyers' motives. Just <span class="cloze-blank">_______(20)</span> the item, post an honest description, and let it go.</div>
-
-  <div class="cloze-options">
-    <div class="opt-line"><span class="opt-num">1.</span><span class="opt">A. valuable</span><span class="opt">B. reusable</span><span class="opt">C. breakable</span><span class="opt">D. fashionable</span></div>
-    <div class="opt-line"><span class="opt-num">2.</span><span class="opt">A. Disappointed</span><span class="opt">B. Encouraged</span><span class="opt">C. Confused</span><span class="opt">D. Surprised</span></div>
-    <div class="opt-line"><span class="opt-num">3.</span><span class="opt">A. encountered</span><span class="opt">B. recognized</span><span class="opt">C. investigated</span><span class="opt">D. appreciated</span></div>
-    <div class="opt-line"><span class="opt-num">4.</span><span class="opt">A. Encouraged</span><span class="opt">B. Disappointed</span><span class="opt">C. Confused</span><span class="opt">D. Anticipated</span></div>
-    <div class="opt-line"><span class="opt-num">5.</span><span class="opt">A. recognized</span><span class="opt">B. encountered</span><span class="opt">C. recommended</span><span class="opt">D. appreciated</span></div>
-    <div class="opt-line"><span class="opt-num">6.</span><span class="opt">A. chaos</span><span class="opt">B. silence</span><span class="opt">C. emptiness</span><span class="opt">D. darkness</span></div>
-    <div class="opt-line"><span class="opt-num">7.</span><span class="opt">A. contribution</span><span class="opt">B. delivery</span><span class="opt">C. encounter</span><span class="opt">D. display</span></div>
-    <div class="opt-line"><span class="opt-num">8.</span><span class="opt">A. belongings</span><span class="opt">B. memories</span><span class="opt">C. contributions</span><span class="opt">D. deliveries</span></div>
-    <div class="opt-line"><span class="opt-num">9.</span><span class="opt">A. appreciating</span><span class="opt">B. anticipating</span><span class="opt">C. investigating</span><span class="opt">D. displaying</span></div>
-    <div class="opt-line"><span class="opt-num">10.</span><span class="opt">A. genuine</span><span class="opt">B. conventional</span><span class="opt">C. complicated</span><span class="opt">D. tolerable</span></div>
-    <div class="opt-line"><span class="opt-num">11.</span><span class="opt">A. conventional</span><span class="opt">B. genuine</span><span class="opt">C. complicated</span><span class="opt">D. tolerable</span></div>
-    <div class="opt-line"><span class="opt-num">12.</span><span class="opt">A. complicated</span><span class="opt">B. conventional</span><span class="opt">C. genuine</span><span class="opt">D. tolerable</span></div>
-    <div class="opt-line"><span class="opt-num">13.</span><span class="opt">A. tolerable</span><span class="opt">B. conventional</span><span class="opt">C. complicated</span><span class="opt">D. genuine</span></div>
-    <div class="opt-line"><span class="opt-num">14.</span><span class="opt">A. anticipated</span><span class="opt">B. encouraged</span><span class="opt">C. recognized</span><span class="opt">D. recommended</span></div>
-    <div class="opt-line"><span class="opt-num">15.</span><span class="opt">A. delivery</span><span class="opt">B. encounter</span><span class="opt">C. contribution</span><span class="opt">D. display</span></div>
-    <div class="opt-line"><span class="opt-num">16.</span><span class="opt">A. recommend</span><span class="opt">B. investigate</span><span class="opt">C. withdraw</span><span class="opt">D. anticipate</span></div>
-    <div class="opt-line"><span class="opt-num">17.</span><span class="opt">A. withdrew</span><span class="opt">B. encouraged</span><span class="opt">C. appreciated</span><span class="opt">D. recognized</span></div>
-    <div class="opt-line"><span class="opt-num">18.</span><span class="opt">A. confused</span><span class="opt">B. disappointed</span><span class="opt">C. encouraged</span><span class="opt">D. anticipated</span></div>
-    <div class="opt-line"><span class="opt-num">19.</span><span class="opt">A. investigate</span><span class="opt">B. recommend</span><span class="opt">C. withdraw</span><span class="opt">D. display</span></div>
-    <div class="opt-line"><span class="opt-num">20.</span><span class="opt">A. display</span><span class="opt">B. investigate</span><span class="opt">C. withdraw</span><span class="opt">D. recommend</span></div>
-  </div>
-
-  <p class="sub" style="margin-top:10px">盲填结束后，按以下规则给每空标分类：</p>
-  <div class="classify">
-    <span>N · 完全未接触</span>
-    <span>F · 见过遗忘</span>
-    <span>S · 拼写错</span>
-    <span>M · 词义/用法错（含选错选项）</span>
-    <span>C · 完全正确</span>
+  <div class="answer-box tall" style="margin-top:10px">
+    <span class="label-sm">我的答案（写出每空字母 A/B/C/D）：</span>
   </div>
 </section>
 
 <section>
-  <h2>二、四阶梯单测 · 主动回忆（20 词 × 4 栏）</h2>
+  <h2>二、四阶梯单测（20 词 · 每词 4 步）</h2>
   <div class="method">
-    <b>四阶梯为什么是这四个</b>：<br>
-    <b>① 英→中</b>测识别（看见就懂）；<b>② 中→英</b>测主动提取 + 拼写（能主动写出才算真记住）；<b>③ 造句</b>测产出（会用才算掌握）；<b>④ 迁移改写</b>测迁移（换个不同语境还能用 = 真内化）。<br>
-    四栏全对才算 C。前三栏对、第四栏写不出，仍标 <b>M</b>。
+    <b>四阶梯设计（v4）</b>：每词测「① 英→中（识别）→ ② 中→英（拼写）→ ③ 造句（产出）→ ④ 费曼讲解（讲明白）」四步，难度递增。<br>
+    <b>v4 关键变化</b>：第四栏不再是「迁移改写」，而是<b>费曼讲解</b>——每词给出一个费曼提问（灰色斜体印在栏内），你要用自己的话回答。讲不出 = 没真懂，标 <b>M</b>。<br>
+    <b>通关标准</b>：前三步对、第四步讲不出 = 仍标 <b>M</b>（未掌握用法逻辑）。
   </div>
   <table>
     <thead>
-      <tr><th>#</th><th>Word</th><th>① 英→中（你的释义）</th><th>② 中→英（你的拼写）</th><th>③ 造句（你的句子）</th><th>④ 迁移改写（换个语境造句）</th></tr>
+      <tr><th>#</th><th>Word</th><th>① 英→中<br>（你的释义）</th><th>② 中→英<br>（你的拼写）</th><th>③ 造句<br>（你的句子）</th><th>④ 费曼讲解<br>（你的回答）</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>encourage</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>2</td><td>appreciate</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>3</td><td>anticipate</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>4</td><td>encounter</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>5</td><td>recognize</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>6</td><td>investigate</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>7</td><td>recommend</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>8</td><td>confused</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>9</td><td>disappointed</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>10</td><td>valuable</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>11</td><td>conventional</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>12</td><td>complicated</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>13</td><td>tolerable</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>14</td><td>display</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>15</td><td>contribution</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>16</td><td>belongings</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>17</td><td>delivery</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>18</td><td>withdraw</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>19</td><td>genuine</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>20</td><td>chaos</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>1</td><td>encourage</td><td></td><td></td><td></td><td><div class="feynman-prompt">encourage sb ___ doing / to do 哪个对？名词形式？</div></td></tr>
+      <tr class="vocab-row"><td>2</td><td>appreciate</td><td></td><td></td><td></td><td><div class="feynman-prompt">appreciate doing 还是 to do？I would appreciate ___ if ...</div></td></tr>
+      <tr class="vocab-row"><td>3</td><td>anticipate</td><td></td><td></td><td></td><td><div class="feynman-prompt">anticipate 和 expect 区别？anticipate 后接？</div></td></tr>
+      <tr class="vocab-row"><td>4</td><td>encounter</td><td></td><td></td><td></td><td><div class="feynman-prompt">encounter 作名词和动词各怎么用？和 meet 区别？</div></td></tr>
+      <tr class="vocab-row"><td>5</td><td>recognize</td><td></td><td></td><td></td><td><div class="feynman-prompt">recognize 和 identify、acknowledge 区别？名词形式？</div></td></tr>
+      <tr class="vocab-row"><td>6</td><td>investigate</td><td></td><td></td><td></td><td><div class="feynman-prompt">investigate 后接什么？名词形式？和 look into 区别？</div></td></tr>
+      <tr class="vocab-row"><td>7</td><td>recommend</td><td></td><td></td><td></td><td><div class="feynman-prompt">recommend 后接 doing 还是 to do？名词形式双 m 怎么解释？</div></td></tr>
+      <tr class="vocab-row"><td>8</td><td>confused</td><td></td><td></td><td></td><td><div class="feynman-prompt">confused 和 confusing 区别（修饰人还是物）？各举一句。</div></td></tr>
+      <tr class="vocab-row"><td>9</td><td>disappointed</td><td></td><td></td><td></td><td><div class="feynman-prompt">disappointed 和 disappointing 区别？be disappointed ___ sth</div></td></tr>
+      <tr class="vocab-row"><td>10</td><td>valuable</td><td></td><td></td><td></td><td><div class="feynman-prompt">valuable 和 precious 区别？名词形式？</div></td></tr>
+      <tr class="vocab-row"><td>11</td><td>conventional</td><td></td><td></td><td></td><td><div class="feynman-prompt">conventional 和 traditional 区别？名词形式？</div></td></tr>
+      <tr class="vocab-row"><td>12</td><td>complicated</td><td></td><td></td><td></td><td><div class="feynman-prompt">complicated 和 complex 区别？动词形式？</div></td></tr>
+      <tr class="vocab-row"><td>13</td><td>tolerable</td><td></td><td></td><td></td><td><div class="feynman-prompt">tolerable 和 tolerant 区别？动词 tolerate 怎么用？</div></td></tr>
+      <tr class="vocab-row"><td>14</td><td>display</td><td></td><td></td><td></td><td><div class="feynman-prompt">display 作名词和动词各怎么用？on display 中文？</div></td></tr>
+      <tr class="vocab-row"><td>15</td><td>contribution</td><td></td><td></td><td></td><td><div class="feynman-prompt">contribution 后接什么介词？动词 contribute ___</div></td></tr>
+      <tr class="vocab-row"><td>16</td><td>belongings</td><td></td><td></td><td></td><td><div class="feynman-prompt">belongings 为什么必复数？动词 belong ___</div></td></tr>
+      <tr class="vocab-row"><td>17</td><td>delivery</td><td></td><td></td><td></td><td><div class="feynman-prompt">delivery 和 deliver 的关系？take delivery ___ sth</div></td></tr>
+      <tr class="vocab-row"><td>18</td><td>withdraw</td><td></td><td></td><td></td><td><div class="feynman-prompt">withdraw 的过去式？名词形式？withdraw ___ sth</div></td></tr>
+      <tr class="vocab-row"><td>19</td><td>genuine</td><td></td><td></td><td></td><td><div class="feynman-prompt">genuine 和 authentic 区别？副词形式怎么拼？</div></td></tr>
+      <tr class="vocab-row"><td>20</td><td>chaos</td><td></td><td></td><td></td><td><div class="feynman-prompt">chaos 是可数还是不可数？形容词形式？</div></td></tr>
     </tbody>
   </table>
-  <p class="sub" style="margin-top:10px">单测结束后，给每词标分类（与完形填空分类独立，可不同）：</p>
+  <p class="sub" style="margin-top:10px">四栏结束后，按以下规则给每词标分类（写在小方框里）：</p>
   <div class="classify">
     <span>N · 完全未接触</span>
     <span>F · 见过遗忘</span>
     <span>S · 拼写错</span>
-    <span>M · 词义/用法错（含造不出句）</span>
+    <span>M · 词义/用法错（含造不出句 / ④ 费曼讲不出）</span>
     <span>C · 完全正确</span>
   </div>
 </section>
 
 <section>
-  <h2>三、古诗文 · 默写 + 翻译 + 改写 + 费曼提问（《苏幕遮·燎沉香》）</h2>
+  <h2>三、古诗文两件套 · 《苏幕遮·燎沉香》（周邦彦）</h2>
   <div class="method">
-    <b>四件套为什么是这四个</b>：<br>
-    <b>默写</b>测记忆；<b>翻译</b>测理解（能翻译 = 真读懂每个字）；<b>改写</b>测迁移（能换成自己语言重新表达 = 真内化）；<b>费曼提问</b>测讲明白（能用自己的话讲给姐姐听 = 真懂意境）。<br>
-    四项全对才算掌握。任一项卡壳，标「曾对再错」或「未稳定掌握」录入 MVP。
+    <b>两件套为什么是这两个</b>（v4 精简）：<br>
+    <b>默写</b>测记忆——能默出每个字才算过；<b>翻译</b>测理解——能逐句翻成现代汉语才算真读懂。两件全对才算掌握。<br>
+    <b>v4 调整</b>：古诗文部分从「四件套」精简为<b>两件套</b>（默写 + 翻译），删去改写和费曼提问——把费曼精力集中到词汇栏。翻译下方给出<b>易错字提示</b>，自批时逐字对照。
   </div>
 
   <div class="task">
     <div class="task-head">
-      <div class="task-title">《苏幕遮·燎沉香》 · 周邦彦</div>
-      <div class="task-meta">诗词曲 #35 · 难度 ★★☆ · 2025 全国一卷默写真题命中（第 (3) 题）</div>
+      <div class="task-title">《苏幕遮·燎沉香》· 周邦彦</div>
+      <div class="task-meta">必背 60 篇 · 诗词曲 #35 · 难度 ★★☆ · 2025 全国一卷默写命中</div>
     </div>
 
-    <div class="prompt"><em>任务 1 · 默写</em> · 不看原文，凭记忆默写全文（上下阕）。</div>
+    <div class="prompt"><em>任务 1 · 默写</em> · 不看原文，凭记忆默写全词（上下阕）。</div>
     <div class="answer-box tall"></div>
 
-    <div class="prompt" style="margin-top:10px"><em>任务 2 · 翻译</em> · 逐句翻译成现代汉语。重点解释：「燎沉香」的「燎」读什么、是什么动作？「消溽暑」的「溽」是什么意思？「侵晓窥檐语」的「侵晓」是什么时候？「宿雨」的「宿」读什么？「一一风荷举」的「举」是什么意思？「小楫轻舟」的「楫」读什么？</div>
+    <div class="prompt" style="margin-top:10px"><em>任务 2 · 翻译</em> · 逐句翻译成现代汉语。重点：「燎沉香」的「燎」读什么、是什么动作？「消溽暑」的「溽」怎么读、什么意思？「侵晓」等于现代汉语哪个词？「宿雨」的「宿」读 sù 还是 xiǔ？「一一风荷举」的「举」是什么意思？「楫」怎么读？</div>
     <div class="answer-box tall"></div>
 
-    <div class="prompt" style="margin-top:10px"><em>任务 3 · 改写</em> · 2025 全国一卷语文默写第 (3) 题给一幅莲花图，要求写与之契合的古诗文名句，标答是「水面清圆，一一风荷举」。请用 150 字描述：周邦彦写这句时，他眼前是一个什么样的清晨？要有「初阳」「宿雨」「风」三个元素。</div>
-    <div class="answer-box tall"></div>
-
-    <div class="prompt" style="margin-top:10px"><em>任务 4 · 费曼提问</em>（周末姐姐抽查）· 2025 全国一卷语文默写第 (3) 题要求「为莲花图配古诗文名句」，标答是「水面清圆，一一风荷举」。周邦彦这一句为什么比「接天莲叶无穷碧，映日荷花别样红」更适合作为标答？两者在写荷上有何根本区别？</div>
-    <div class="answer-box" style="min-height:40px"></div>
+    <div class="error-hint">
+      <b>易错字提示</b>（默写和翻译时逐字对照，自批用）：
+      <ul>
+        <li><b>燎「沉香」</b>：燎读 liǎo，烧；不写「缭」「撩」</li>
+        <li><b>消「溽」暑</b>：溽读 rù，潮湿；不写「辱」「褥」</li>
+        <li><b>「侵」晓</b>：侵晓＝清晨；不写「亲」「清」</li>
+        <li><b>「宿」雨</b>：宿读 sù，过夜的；不读 xiǔ，不写「朽」</li>
+        <li><b>水面「清圆」</b>：清圆形容荷叶；不写「青圆」</li>
+        <li><b>一一「风荷举」</b>：举是「挺立、托起」；不写「舞」「摇」</li>
+        <li><b>小「楫」轻舟</b>：楫读 jí，船桨；不写「揖」「缉」</li>
+        <li><b>芙蓉「浦」</b>：浦是水滨；不写「埔」「蒲」</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section>
-  <h2>四、今日自评 · 费曼反思</h2>
+  <h2>四、自评反思</h2>
   <div class="method">
-    <b>费曼反思</b>：不会的不可怕，<b>以为自己会其实不会</b>才可怕。这一栏用来抓后者。
+    <b>费曼反思</b>：不会的不可怕，<b>以为自己会其实不会</b>才可怕。完形错题和四阶梯④费曼讲不出的，都是「以为会其实不会」的暴露点。
   </div>
   <table>
     <thead>
-      <tr><th>反思项</th><th>回答</th></tr>
+      <tr><th style="width:42%">反思项</th><th>回答</th></tr>
     </thead>
     <tbody>
-      <tr><td>今天完形填空哪几空我以为会、其实选错了？（列出空号）</td><td style="min-height:50px"></td></tr>
-      <tr><td>今天哪些词四阶梯前三栏对、第四栏「迁移改写」写不出？</td><td></td></tr>
-      <tr><td>《苏幕遮》我能默写，但翻译卡壳的是哪一句？</td><td></td></tr>
-      <tr><td>讲给姐姐听「水面清圆，一一风荷举」为什么是标答时，我讲到一半讲不下去了？</td><td></td></tr>
-      <tr><td>明天 Day 4 要重点攻克哪 1 个知识点？（不是 3 个，就 1 个）</td><td></td></tr>
+      <tr><td>Day 3 完形填空哪几空选错了？是因为词义错还是词形错？</td><td style="min-height:50px"></td></tr>
+      <tr><td>哪些词在完形里选对、但在四阶梯④费曼讲解时讲不出？</td><td></td></tr>
+      <tr><td>《苏幕遮》我能默写，但翻译哪一句卡壳了？</td><td></td></tr>
+      <tr><td>哪个易错字我默错了？（燎/溽/侵/宿/楫/浦——查一个最常错的）</td><td></td></tr>
+      <tr><td>Day 4 要重点攻克哪 1 个知识点？（不是 3 个，就 1 个）</td><td></td></tr>
     </tbody>
   </table>
 </section>
 
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 3 · 学生作答版 · v3 完形+四阶梯+对齐2025真题 · 2026-11-03
+  Gaokao Coach 2027 · 第1周 Day 3 · 学生作答版 · v4 完形+四阶梯+古诗文两件套 · 2026-11-03
 </div>
 
 </div>

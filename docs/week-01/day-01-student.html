@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>第1周 Day 1 费曼训练包 · 学生作答版 | Gaokao Coach 2027</title>
+<title>第1周 Day 1 · 费曼训练包 · 学生作答版 | Gaokao Coach 2027</title>
 <style>
 :root{
   --bg:#fffefa;--ink:#242321;--muted:#77736c;--line:#e9e4da;
@@ -12,13 +12,12 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.6;padding:20px}
 .wrap{max-width:860px;margin:0 auto}
-header{border-bottom:2px solid var(--orange);padding-bottom:12px;margin-bottom:20px}
-.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--orange);font-weight:800;text-transform:uppercase}
+header{border-bottom:2px solid var(--blue);padding-bottom:12px;margin-bottom:20px}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--blue);font-weight:800;text-transform:uppercase}
 h1{font-size:24px;margin:6px 0 4px}
 .sub{color:var(--muted);font-size:13px}
 section{margin:28px 0;page-break-inside:avoid}
-h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0 0 6px}
-h3{font-size:15px;margin:14px 0 6px;color:var(--ink)}
+h2{font-size:18px;border-left:4px solid var(--blue);padding-left:10px;margin:0 0 6px}
 .method{background:#eaf2eb;border-left:3px solid var(--green);padding:10px 13px;font-size:13px;border-radius:0 8px 8px 0;margin-bottom:14px}
 .method b{color:var(--green)}
 .task{border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:12px;background:#fff}
@@ -26,38 +25,33 @@ h3{font-size:15px;margin:14px 0 6px;color:var(--ink)}
 .task-title{font-weight:bold;font-size:14px}
 .task-meta{font-size:11px;color:var(--muted)}
 .prompt{font-size:13px;color:#444;margin-bottom:8px}
-.prompt em{color:var(--orange);font-style:normal;font-weight:600}
+.prompt em{color:var(--blue);font-style:normal;font-weight:600}
 .answer-box{border:1px dashed var(--line);border-radius:4px;padding:8px;min-height:60px;background:#fafafa}
-.answer-box.tall{min-height:120px}
+.answer-box.tall{min-height:160px}
 .answer-box.short{min-height:32px}
 .label-sm{font-size:11px;color:var(--muted);margin-bottom:4px;display:block}
-.classify{display:flex;gap:6px;margin-top:6px}
+.classify{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
 .classify span{display:inline-block;padding:3px 8px;border:1px solid var(--line);border-radius:3px;font-size:11px;cursor:pointer;background:#fff}
-.classify span.checked{background:var(--orange);color:#fff;border-color:var(--orange)}
+.classify span.checked{background:var(--blue);color:#fff;border-color:var(--blue)}
 table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
-th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:11px}
+.cloze-passage{font-size:14px;line-height:2.2;white-space:pre-wrap;background:#fafafa;border:1px solid var(--line);border-radius:6px;padding:14px;margin:8px 0}
+.cloze-passage .blank{display:inline-block;min-width:60px;border-bottom:1px solid var(--ink);text-align:center;color:var(--blue);font-weight:600;margin:0 4px}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
 .vocab-row td:nth-child(2){width:14%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
 .vocab-row td:nth-child(3){width:20%}
 .vocab-row td:nth-child(4){width:20%}
 .vocab-row td:nth-child(5){width:21%}
 .vocab-row td:nth-child(6){width:21%}
-.cloze-body{font-size:14px;line-height:2.1;border:1px solid var(--line);border-radius:6px;padding:14px 16px;background:#fafafa;margin:10px 0}
-.cloze-body p{margin:0 0 12px}
-.cloze-body p:last-child{margin-bottom:0}
-.blank{display:inline-block;min-width:90px;border-bottom:1.5px solid var(--ink);text-align:center;font-weight:bold;color:var(--orange);padding:0 4px}
-.option-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
-.option-table td{border:1px solid var(--line);padding:5px 7px;vertical-align:top}
-.option-table td:nth-child(1){width:6%;font-weight:bold;background:#f8f5ee;text-align:center}
-.option-table td:nth-child(2){width:94%}
-.opt{display:inline-block;margin-right:18px;white-space:nowrap}
-.opt b{color:var(--blue)}
+.feynman-q{font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;margin-bottom:4px}
+.easy-errors{background:#fff8eb;border:1px solid var(--orange);border-radius:6px;padding:10px 12px;margin-top:8px}
+.easy-errors h5{margin:0 0 6px;font-size:12px;color:var(--orange)}
+.easy-errors ul{margin:0;padding-left:18px;font-size:11px;color:#555}
+.easy-errors li{margin:3px 0}
+.option-table td{font-size:11px}
+.option-table td:nth-child(1){width:6%;font-weight:bold;text-align:center}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
-.feynman-checklist{background:#fff8eb;border:1px solid var(--orange);border-radius:8px;padding:12px;margin:14px 0}
-.feynman-checklist h4{margin:0 0 8px;font-size:13px;color:var(--orange)}
-.feynman-checklist ul{margin:0;padding-left:18px;font-size:12px}
-.feynman-checklist li{margin:3px 0}
 @media print{
   body{padding:0;font-size:11pt}
   section{page-break-inside:avoid}
@@ -69,158 +63,171 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 01 · v3 · Cloze + 4-Stage</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 01 · v4</div>
   <h1>第1周 Day 1 · 费曼训练包 · 学生作答版</h1>
   <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
-  <div class="sub" style="margin-top:6px">Day 1 主题：阅读理解核心名词（环境与科技类） <span style="color:var(--muted)">· 词源：2025 全国一卷英语阅读 A/D 篇高频词</span></div>
+  <div class="sub" style="margin-top:6px">Day 1 主题：阅读理解核心名词（环境与科技类） · 词源：2025 全国一卷英语阅读 A/D 篇高频词</div>
 </header>
 
 <div class="method">
-  <b>Day 1 为什么这样排（v3 新结构）</b><br>
-  v2 只测「识别 + 拼写 + 造句」，每词调取 3 次。v3 在前面加一道<b>完形填空</b>——先在 20 空的真题改编语境里用一遍这些词，再回到单测。这样每个词当天被调取 <b>5 次</b>：① 完形语境判断 → ② 单测识别（英→中）→ ③ 单测拼写（中→英）→ ④ 单测造句（产出）→ ⑤ 单测迁移改写（换场景再用）。<br>
-  顺序固定：<b>完形先做 → 四阶梯单测 → 古诗文四件套 → 反思</b>。完形先做是因为它测的是「语境应用」——能不能在句子里判断该填什么、填什么形式；如果单测做完了再做完形，等于先看答案再做卷子，测不出真水平。
-</div>
-
-<div class="feynman-checklist">
-  <h4>Day 1 流程（学生侧）</h4>
-  <ul>
-    <li><b>第一步 · 完形先做</b>：不查词表，独立做完形 20 空。每空 4 个选项，圈选一个。卡住超过 1.5 分钟跳过。</li>
-    <li><b>第二步 · 四阶梯单测</b>：每词四栏独立完成——① 英→中（识别）② 中→英（拼写）③ 造句（产出）④ 迁移改写（用这个词写一个<b>不属于本日主题</b>的新句子，证明能脱离「环保」语境用得上）。</li>
-    <li><b>第三步 · 古诗文四件套</b>：默写 / 翻译 / 改写 / 费曼提问。今天攻《师说》节选。</li>
-    <li><b>第四步 · 自评反思 + 录入 MVP</b>：完形错题标 N/F/S/M/C，进四阶梯重测；古诗文卡壳处录入触发 D1/D3/D7 复测。</li>
-  </ul>
+  <b>今日四件套结构</b>：<br>
+  <b>① 完形先做</b>（20 空，2025 真题改编）—— 读完形填空，<b>测语境</b>：能不能在上下文里认出该填哪个词、什么形式。<br>
+  <b>② 四阶梯单测</b>（20 词 × 4 栏）—— 每词调取 4 次：① 英→中（识别）；② 中→英（拼写）；③ 造句（产出）；④ <b>费曼讲解</b>（按提示问自己，用自己的话讲词的用法）。前三栏是「记得住」，第四栏是「讲得清」。<br>
+  <b>③ 古诗文两件套</b>（《师说》节选）—— 默写 + 翻译（含易错字提示）。改写和费曼提问已移除，专注字形与字义。<br>
+  <b>④ 自评反思</b> —— 把「以为自己会其实不会」的词抓出来。<br><br>
+  <b>费曼讲解怎么算过</b>：能用自己的话讲清这个词的用法 + 造一句不同的场景，就算过。<b>姐姐周末抽查判断</b>过不过，不背参考答案。
 </div>
 
 <section>
-  <h2>一、完形填空（2025 真题改编，20 空）</h2>
-  <h3>《The Greening of Transportation》<span class="task-meta">（改编自 2025 全国一卷英语阅读 A/D 篇）</span></h3>
-  <div class="prompt"><em>方法</em>：不查词表，独立完成。每空 4 个选项，圈选一个。每词在 20 词表中，错题进四阶梯重测。</div>
-  <div class="cloze-body">
-    <p>Moving goods and people around the world is <span class="blank">_______(1)</span> for a large part of global CO2 <span class="blank">_______(2)</span>. As the world races to <span class="blank">_______(3)</span> everything, it faces particular problems with <span class="blank">_______(4)</span> use, which accounts for about a quarter of energy-related greenhouse gases.</p>
-    <p>The <span class="blank">_______(5)</span> to green energy is global. It's <span class="blank">_______(6)</span> that the global <span class="blank">_______(7)</span> for electricity could more than double by 2050. <span class="blank">_______(8)</span> moved by rail suggests that <span class="blank">_______(9)</span> energy will be up to the task, but we must speed up development.</p>
-    <p>Each mode of transport has its <span class="blank">_______(10)</span> fuel needs. Road <span class="blank">_______(11)</span> are harder to convert than rail. <span class="blank">_______(12)</span> fuels must be not only green, but also light and <span class="blank">_______(13)</span>. Improving energy <span class="blank">_______(14)</span> is one <span class="blank">_______(15)</span>, but limiting fuel <span class="blank">_______(16)</span> alone is not enough.</p>
-    <p>We need to <span class="blank">_______(17)</span> more electricity from renewables. <span class="blank">_______(18)</span> use of <span class="blank">_______(19)</span> in water can trap microplastics when boiled — a <span class="blank">_______(20)</span> step forward.</p>
+  <h2>一、完形填空（20 空，2025 真题改编）</h2>
+  <div class="task-head">
+    <div class="task-title">The Greening of Transportation（改编自 2025 全国一卷英语阅读 A/D 篇）</div>
+    <div class="task-meta">先做后对答案 · 测语境</div>
   </div>
-  <div class="label-sm" style="margin-top:10px"><b>选项表</b>（每空 4 项，圈选 1 项）</div>
+  <p class="sub" style="font-size:12px;margin-bottom:6px">读完形，从每空 4 个选项里选出最佳答案填入。每个空格的填空形式可能在词形上跟词表原形不同（复数、过去式等）。</p>
+  <div class="cloze-passage">Moving goods and people around the world is <span class="blank">(1)</span> for a large part of global CO2 <span class="blank">(2)</span>. As the world races to <span class="blank">(3)</span> everything, it faces particular problems with <span class="blank">(4)</span> use, which accounts for about a quarter of energy-related greenhouse gases.
+
+The <span class="blank">(5)</span> to green energy is global. It's <span class="blank">(6)</span> that the global <span class="blank">(7)</span> for electricity could more than double by 2050. <span class="blank">(8)</span> moved by rail suggests that <span class="blank">(9)</span> energy will be up to the task, but we must speed up development.
+
+Each mode of transport has its <span class="blank">(10)</span> fuel needs. Road <span class="blank">(11)</span> are harder to convert than rail. <span class="blank">(12)</span> fuels must be not only green, but also light and <span class="blank">(13)</span>. Improving energy <span class="blank">(14)</span> is one <span class="blank">(15)</span>, but limiting fuel <span class="blank">(16)</span> alone is not enough.
+
+We need to <span class="blank">(17)</span> more electricity from renewables. <span class="blank">(18)</span> use of <span class="blank">(19)</span> in water can trap microplastics when boiled — a <span class="blank">(20)</span> step forward.</div>
+
   <table class="option-table">
-    <tr><td>1.</td><td><span class="opt"><b>A)</b> responsible</span><span class="opt"><b>B)</b> specific</span><span class="opt"><b>C)</b> alternative</span><span class="opt"><b>D)</b> sustainable</span></td></tr>
-    <tr><td>2.</td><td><span class="opt"><b>A)</b> emission</span><span class="opt"><b>B)</b> emissions</span><span class="opt"><b>C)</b> demand</span><span class="opt"><b>D)</b> solution</span></td></tr>
-    <tr><td>3.</td><td><span class="opt"><b>A)</b> generate</span><span class="opt"><b>B)</b> estimate</span><span class="opt"><b>C)</b> decarbonize</span><span class="opt"><b>D)</b> transition</span></td></tr>
-    <tr><td>4.</td><td><span class="opt"><b>A)</b> automobile</span><span class="opt"><b>B)</b> vehicle</span><span class="opt"><b>C)</b> freight</span><span class="opt"><b>D)</b> renewable</span></td></tr>
-    <tr><td>5.</td><td><span class="opt"><b>A)</b> solution</span><span class="opt"><b>B)</b> transition</span><span class="opt"><b>C)</b> efficiency</span><span class="opt"><b>D)</b> consumption</span></td></tr>
-    <tr><td>6.</td><td><span class="opt"><b>A)</b> estimate</span><span class="opt"><b>B)</b> estimated</span><span class="opt"><b>C)</b> estimating</span><span class="opt"><b>D)</b> estimates</span></td></tr>
-    <tr><td>7.</td><td><span class="opt"><b>A)</b> consumption</span><span class="opt"><b>B)</b> efficiency</span><span class="opt"><b>C)</b> demand</span><span class="opt"><b>D)</b> solution</span></td></tr>
-    <tr><td>8.</td><td><span class="opt"><b>A)</b> Freight</span><span class="opt"><b>B)</b> Vehicle</span><span class="opt"><b>C)</b> Carbonate</span><span class="opt"><b>D)</b> Automobile</span></td></tr>
-    <tr><td>9.</td><td><span class="opt"><b>A)</b> alternative</span><span class="opt"><b>B)</b> renewable</span><span class="opt"><b>C)</b> affordable</span><span class="opt"><b>D)</b> sustainable</span></td></tr>
-    <tr><td>10.</td><td><span class="opt"><b>A)</b> responsible</span><span class="opt"><b>B)</b> specific</span><span class="opt"><b>C)</b> efficient</span><span class="opt"><b>D)</b> adequate</span></td></tr>
-    <tr><td>11.</td><td><span class="opt"><b>A)</b> automobile</span><span class="opt"><b>B)</b> freight</span><span class="opt"><b>C)</b> vehicles</span><span class="opt"><b>D)</b> emissions</span></td></tr>
-    <tr><td>12.</td><td><span class="opt"><b>A)</b> Alternative</span><span class="opt"><b>B)</b> Specific</span><span class="opt"><b>C)</b> Efficient</span><span class="opt"><b>D)</b> Affordable</span></td></tr>
-    <tr><td>13.</td><td><span class="opt"><b>A)</b> responsible</span><span class="opt"><b>B)</b> affordable</span><span class="opt"><b>C)</b> specific</span><span class="opt"><b>D)</b> sustainable</span></td></tr>
-    <tr><td>14.</td><td><span class="opt"><b>A)</b> efficiency</span><span class="opt"><b>B)</b> solution</span><span class="opt"><b>C)</b> demand</span><span class="opt"><b>D)</b> consumption</span></td></tr>
-    <tr><td>15.</td><td><span class="opt"><b>A)</b> demand</span><span class="opt"><b>B)</b> transition</span><span class="opt"><b>C)</b> solution</span><span class="opt"><b>D)</b> emission</span></td></tr>
-    <tr><td>16.</td><td><span class="opt"><b>A)</b> consumption</span><span class="opt"><b>B)</b> efficiency</span><span class="opt"><b>C)</b> generation</span><span class="opt"><b>D)</b> demand</span></td></tr>
-    <tr><td>17.</td><td><span class="opt"><b>A)</b> generate</span><span class="opt"><b>B)</b> estimate</span><span class="opt"><b>C)</b> adjust</span><span class="opt"><b>D)</b> transition</span></td></tr>
-    <tr><td>18.</td><td><span class="opt"><b>A)</b> Efficient</span><span class="opt"><b>B)</b> Specific</span><span class="opt"><b>C)</b> Alternative</span><span class="opt"><b>D)</b> Responsible</span></td></tr>
-    <tr><td>19.</td><td><span class="opt"><b>A)</b> carbonate</span><span class="opt"><b>B)</b> emission</span><span class="opt"><b>C)</b> freight</span><span class="opt"><b>D)</b> vehicle</span></td></tr>
-    <tr><td>20.</td><td><span class="opt"><b>A)</b> specific</span><span class="opt"><b>B)</b> sustainable</span><span class="opt"><b>C)</b> alternative</span><span class="opt"><b>D)</b> responsible</span></td></tr>
-  </table>
-  <p class="sub" style="margin-top:8px">做完后对照答案版自批，错题标 <b>N/F/S/M/C</b>（N 完全未接触 / F 见过遗忘 / S 拼写错 / M 词义用法错 / C 完全正确）。</p>
-</section>
-
-<section>
-  <h2>二、四阶梯单测（每词四栏，独立完成）</h2>
-  <div class="method">
-    <b>四栏分别测什么</b>：<br>
-    <b>① 英→中（识别）</b>：看英文写中文释义，最低门槛。<br>
-    <b>② 中→英（拼写）</b>：看中文默出英文，含正确拼写。<br>
-    <b>③ 造句（产出）</b>：用该词造一个你<b>自己的</b>句子，证明会用而非只会背。<br>
-    <b>④ 迁移改写</b>：用该词写一个<b>不属于本日「环保与科技」主题</b>的新句子（比如日常生活、学校、情感场景），证明能脱离原语境调用。第四栏写不出 = 即使前三栏对了也只能标 <b>M</b>。
-  </div>
-  <table>
     <thead>
-      <tr><th>#</th><th>Word</th><th>① 英→中（识别）</th><th>② 中→英（拼写）</th><th>③ 造句（产出）</th><th>④ 迁移改写（换场景）</th></tr>
+      <tr><th>#</th><th>A</th><th>B</th><th>C</th><th>D</th><th>你的答案</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>emission</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>2</td><td>decarbonize</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>3</td><td>renewable</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>4</td><td>transition</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>5</td><td>responsible</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>6</td><td>specific</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>7</td><td>estimate</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>8</td><td>demand</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>9</td><td>carbonate</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>10</td><td>consumption</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>11</td><td>efficiency</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>12</td><td>affordable</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>13</td><td>automobile</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>14</td><td>vehicle</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>15</td><td>freight</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>16</td><td>alternative</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>17</td><td>sustainable</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>18</td><td>generate</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>19</td><td>efficient</td><td></td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>20</td><td>solution</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>1</td><td>responsible</td><td>reasonable</td><td>renewable</td><td>reachable</td><td></td></tr>
+      <tr><td>2</td><td>emission</td><td>emissions</td><td>emitting</td><td>emits</td><td></td></tr>
+      <tr><td>3</td><td>carbonize</td><td>decarbonize</td><td>recarbonate</td><td>decarbon</td><td></td></tr>
+      <tr><td>4</td><td>automobile</td><td>automation</td><td>autonomy</td><td>automated</td><td></td></tr>
+      <tr><td>5</td><td>transition</td><td>transit</td><td>translation</td><td>transmission</td><td></td></tr>
+      <tr><td>6</td><td>estimate</td><td>estimating</td><td>estimated</td><td>estimates</td><td></td></tr>
+      <tr><td>7</td><td>demand</td><td>command</td><td>recommend</td><td>dependence</td><td></td></tr>
+      <tr><td>8</td><td>Freight</td><td>Flight</td><td>Fright</td><td>Fraud</td><td></td></tr>
+      <tr><td>9</td><td>renewable</td><td>renewed</td><td>renewing</td><td>renewably</td><td></td></tr>
+      <tr><td>10</td><td>specific</td><td>special</td><td>specify</td><td>specimen</td><td></td></tr>
+      <tr><td>11</td><td>vehicle</td><td>vehicles</td><td>vehicles'</td><td>vehicular</td><td></td></tr>
+      <tr><td>12</td><td>Alternative</td><td>Alternate</td><td>Altering</td><td>Altered</td><td></td></tr>
+      <tr><td>13</td><td>affordable</td><td>afford</td><td>affording</td><td>afforded</td><td></td></tr>
+      <tr><td>14</td><td>efficiency</td><td>efficient</td><td>effort</td><td>effect</td><td></td></tr>
+      <tr><td>15</td><td>solution</td><td>solve</td><td>solving</td><td>resolution</td><td></td></tr>
+      <tr><td>16</td><td>consumption</td><td>consuming</td><td>consumer</td><td>consume</td><td></td></tr>
+      <tr><td>17</td><td>generate</td><td>generous</td><td>generation</td><td>generative</td><td></td></tr>
+      <tr><td>18</td><td>Efficient</td><td>Effective</td><td>Affected</td><td>Sufficient</td><td></td></tr>
+      <tr><td>19</td><td>carbon</td><td>carbonate</td><td>carbonated</td><td>carbonic</td><td></td></tr>
+      <tr><td>20</td><td>sustainable</td><td>sustained</td><td>sustain</td><td>sustaining</td><td></td></tr>
     </tbody>
   </table>
-  <p class="sub" style="margin-top:10px">四栏结束后，给每词标分类：</p>
+  <p class="sub" style="margin-top:8px;font-size:11px">做完后对照答案版（<code>day-01-answers.html</code>）自批，错题按分类标 <b>N/F/S/M/C</b>。</p>
   <div class="classify">
     <span>N · 完全未接触</span>
     <span>F · 见过遗忘</span>
     <span>S · 拼写错</span>
-    <span>M · 词义/用法错（含造不出句、迁移栏空）</span>
+    <span>M · 词义/用法错</span>
     <span>C · 完全正确</span>
   </div>
 </section>
 
 <section>
-  <h2>三、古诗文四件套（师说 · 韩愈）</h2>
-  <div class="method">
-    <b>四件套为什么是这四个</b>：<br>
-    <b>默写</b>测记忆；<b>翻译</b>测字字理解；<b>改写</b>测迁移内化；<b>费曼提问</b>测能不能讲清逻辑。四项全对才算掌握，任一项卡壳都要录 MVP。
+  <h2>二、四阶梯单测（每词四栏，独立完成）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:6px">每词调取 4 次。第三栏造不出句 = 即使前两栏对了，也只能标 <b>M</b>。第四栏费曼讲解按灰色提示问自己，用自己的话在下方作答。</p>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Word</th>
+        <th>① 英→中（识别）</th>
+        <th>② 中→英（拼写）</th>
+        <th>③ 造句（产出）</th>
+        <th>④ 费曼讲解（按提示问自己，用自己的话讲）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="vocab-row"><td>1</td><td>emission</td><td></td><td></td><td></td><td><div class="feynman-q">Q: emission 和 emissions 何时用单数、何时用复数？动词 emit 怎么变化？</div></td></tr>
+      <tr class="vocab-row"><td>2</td><td>decarbonize</td><td></td><td></td><td></td><td><div class="feynman-q">Q: decarbonize 的前缀 de- 表什么？举一个同前缀的词。</div></td></tr>
+      <tr class="vocab-row"><td>3</td><td>renewable</td><td></td><td></td><td></td><td><div class="feynman-q">Q: renewable 和 new 有什么关系？为什么常修饰 energy？</div></td></tr>
+      <tr class="vocab-row"><td>4</td><td>transition</td><td></td><td></td><td></td><td><div class="feynman-q">Q: transition 和 transit 是同一个词吗？意思差在哪？</div></td></tr>
+      <tr class="vocab-row"><td>5</td><td>responsible</td><td></td><td></td><td></td><td><div class="feynman-q">Q: be responsible for 后接什么？和 the cause of 有什么区别？</div></td></tr>
+      <tr class="vocab-row"><td>6</td><td>specific</td><td></td><td></td><td></td><td><div class="feynman-q">Q: specific 和 special 都翻成「特别的」，用法差在哪？</div></td></tr>
+      <tr class="vocab-row"><td>7</td><td>estimate</td><td></td><td></td><td></td><td><div class="feynman-q">Q: estimate 可作动词也可作名词，读音和搭配有何不同？</div></td></tr>
+      <tr class="vocab-row"><td>8</td><td>demand</td><td></td><td></td><td></td><td><div class="feynman-q">Q: demand 作名词和动词时用法分别是什么？可以说 demand of sth 吗？</div></td></tr>
+      <tr class="vocab-row"><td>9</td><td>carbonate</td><td></td><td></td><td></td><td><div class="feynman-q">Q: carbonate 是什么离子？钙的碳酸盐英文怎么说？</div></td></tr>
+      <tr class="vocab-row"><td>10</td><td>consumption</td><td></td><td></td><td></td><td><div class="feynman-q">Q: consumption 和 consume 词性分别是什么？fuel consumption 怎么理解？</div></td></tr>
+      <tr class="vocab-row"><td>11</td><td>efficiency</td><td></td><td></td><td></td><td><div class="feynman-q">Q: efficiency 和 efficient 词性？efficient 的反义词？</div></td></tr>
+      <tr class="vocab-row"><td>12</td><td>affordable</td><td></td><td></td><td></td><td><div class="feynman-q">Q: affordable 的动词原形？为什么有 af- 前缀？</div></td></tr>
+      <tr class="vocab-row"><td>13</td><td>automobile</td><td></td><td></td><td></td><td><div class="feynman-q">Q: automobile 和 car、vehicle 有什么区别？auto- 前缀表什么？</div></td></tr>
+      <tr class="vocab-row"><td>14</td><td>vehicle</td><td></td><td></td><td></td><td><div class="feynman-q">Q: vehicle 的 h 发音吗？和 car 在语体上有何差别？</div></td></tr>
+      <tr class="vocab-row"><td>15</td><td>freight</td><td></td><td></td><td></td><td><div class="feynman-q">Q: freight 和 goods、cargo 有什么区别？</div></td></tr>
+      <tr class="vocab-row"><td>16</td><td>alternative</td><td></td><td></td><td></td><td><div class="feynman-q">Q: alternative 和 alternate 长得像，意思差在哪？</div></td></tr>
+      <tr class="vocab-row"><td>17</td><td>sustainable</td><td></td><td></td><td></td><td><div class="feynman-q">Q: sustainable 的动词原形？sustainable development 中文怎么说？</div></td></tr>
+      <tr class="vocab-row"><td>18</td><td>generate</td><td></td><td></td><td></td><td><div class="feynman-q">Q: generate 和 produce、create 有什么区别？generation 是什么意思？</div></td></tr>
+      <tr class="vocab-row"><td>19</td><td>efficient</td><td></td><td></td><td></td><td><div class="feynman-q">Q: efficient 和 effective 有什么区别？各举一例。</div></td></tr>
+      <tr class="vocab-row"><td>20</td><td>solution</td><td></td><td></td><td></td><td><div class="feynman-q">Q: solution 后接什么介词？a solution ___ the problem</div></td></tr>
+    </tbody>
+  </table>
+  <p class="sub" style="margin-top:10px;font-size:12px">每词标分类（写在小方框里）：</p>
+  <div class="classify">
+    <span>N · 完全未接触</span>
+    <span>F · 见过遗忘</span>
+    <span>S · 拼写错</span>
+    <span>M · 词义/用法错（含造不出句/讲不清用法）</span>
+    <span>C · 完全正确</span>
+  </div>
+</section>
+
+<section>
+  <h2>三、古诗文两件套（《师说》节选 · 韩愈）</h2>
+  <div class="task-head">
+    <div class="task-title">《师说》（节选）· 韩愈</div>
+    <div class="task-meta">文言文 · 必修 #5 · 难度 ★★★</div>
+  </div>
+  <div class="method" style="margin-bottom:8px">
+    <b>两件套为什么是这两个</b>：默写测<b>字形记忆</b>（哪个字不能写错）；翻译测<b>字义理解</b>（每个字什么意思）。任一项卡壳，标「未稳定掌握」录入 MVP。本日只做这两件，不做改写和费曼提问。
   </div>
 
   <div class="task">
-    <div class="task-head">
-      <div class="task-title">《师说》（节选） · 韩愈</div>
-      <div class="task-meta">文言文·必修 #5 · 难度 ★★★ · 2025 全国一卷默写命中</div>
+    <div class="prompt"><em>任务 1 · 默写</em> · 不看原文，凭记忆默写全文（三段节选）。</div>
+    <div class="answer-box tall"></div>
+
+    <div class="prompt" style="margin-top:14px"><em>任务 2 · 翻译 + 易错字提示</em> · 逐句翻译成现代汉语。下方易错字提示告诉你翻译时要重点想清楚的几个字，不要写错、不要译错。</div>
+    <div class="answer-box tall"></div>
+    <div class="easy-errors">
+      <h5>易错字提示（翻译时重点想清楚每个字的本义）</h5>
+      <ul>
+        <li>传道「受」业：受通「授」，不写「授」</li>
+        <li>孰能无惑：孰是疑问代词「谁」</li>
+        <li>夫庸知：庸是「岂、哪用得着」</li>
+        <li>从而「师」之：师是意动用法「以…为师」</li>
+        <li>弟子不必「不如」师：不必＝不一定，不是「不需要」</li>
+        <li>术业有专攻：攻是「学习、研究」</li>
+      </ul>
     </div>
-
-    <div class="prompt"><em>任务 1 · 默写</em> · 不看原文，凭记忆默写全文（含省略号位置可以只写首尾两段）。</div>
-    <div class="answer-box tall"></div>
-
-    <div class="prompt" style="margin-top:10px"><em>任务 2 · 翻译</em> · 逐句翻译成现代汉语。重点：「传道受业」的「受」为什么这么写？「夫庸知其年之先后生于吾乎」整句怎么翻？「师不必贤于弟子」为什么不必？</div>
-    <div class="answer-box tall"></div>
-
-    <div class="prompt" style="margin-top:10px"><em>任务 3 · 改写</em> · 假设你是韩愈，给李蟠写一封短信（150 字），讲清楚为什么「道之所存，师之所存」——你为何不在乎老师的年龄和身份？</div>
-    <div class="answer-box tall"></div>
-
-    <div class="prompt" style="margin-top:10px"><em>任务 4 · 费曼提问</em>（周末姐姐抽查）· 准备用自己的话回答：2025 真题考了「弟子不必不如师，师不必贤于弟子」。韩愈为什么必须说这句话？整篇文章如果不写这一句，逻辑上少掉了什么？</div>
-    <div class="answer-box" style="min-height:60px"></div>
   </div>
 </section>
 
 <section>
   <h2>四、自评反思</h2>
   <div class="method">
-    <b>反思抓什么</b>：不会的不可怕，<b>以为自己会其实不会</b>才可怕。完形错题和四阶梯迁移栏空着的，都是「以为会其实不会」的暴露点。
+    <b>费曼反思</b>：不会的不可怕，<b>以为自己会其实不会</b>才可怕。这一栏用来抓后者。
   </div>
   <table>
     <thead>
-      <tr><th style="width:40%">反思项</th><th>回答</th></tr>
+      <tr><th style="width:38%">反思项</th><th>回答</th></tr>
     </thead>
     <tbody>
-      <tr><td>完形错了哪几空？分别错在词义、形式、还是语境判断？</td><td style="min-height:50px"></td></tr>
-      <tr><td>哪些词我以为会、其实造不出句（第三栏空着）？</td><td></td></tr>
-      <tr><td>哪些词我能造句但迁移栏（第四栏）写不出——证明只会在环保语境用？</td><td></td></tr>
-      <tr><td>《师说》能默但翻译/改写/费曼讲到一半讲不下去的，是哪一处？</td><td></td></tr>
+      <tr><td>完形错了哪几空？是哪几个词？</td><td style="min-height:50px"></td></tr>
+      <tr><td>哪些词造不出句或讲不清用法（费曼讲解卡壳）？</td><td></td></tr>
+      <tr><td>哪些词费曼讲解讲到一半讲不下去了？为什么？</td><td></td></tr>
+      <tr><td>《师说》翻译卡壳在哪几个字？默写有没有写错字？</td><td></td></tr>
       <tr><td>下周重点攻克 1 个知识点（不是 3 个，就 1 个）</td><td></td></tr>
     </tbody>
   </table>
 </section>
 
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 1 · 学生作答版 · v3 完形+四阶梯+对齐2025真题 · 2026-11-03
+  Gaokao Coach 2027 · 第1周 Day 1 · 学生作答版 · v4 完形+四阶梯+古诗文两件套 · 2026-11-03
 </div>
 
 </div>

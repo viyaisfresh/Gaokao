@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>第1周 Day 1 费曼训练包 · 答案版 | Gaokao Coach 2027</title>
+<title>第1周 Day 1 · 费曼训练包 · 答案版 | Gaokao Coach 2027</title>
 <style>
 :root{
   --bg:#fffefa;--ink:#242321;--muted:#77736c;--line:#e9e4da;
-  --orange:#d9912f;--green:#648b73;--red:#bd765e;
+  --orange:#d9912f;--green:#648b73;--red:#bd765e;--blue:#71899a;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.7;padding:20px}
@@ -18,7 +18,6 @@ h1{font-size:24px;margin:6px 0 4px}
 .sub{color:var(--muted);font-size:13px}
 section{margin:28px 0;page-break-inside:avoid}
 h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0 0 6px}
-h3{font-size:15px;margin:14px 0 6px;color:var(--ink)}
 .method{background:#eaf2eb;border-left:3px solid var(--green);padding:10px 13px;font-size:13px;border-radius:0 8px 8px 0;margin-bottom:14px}
 .method b{color:var(--green)}
 .answer-block{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:14px}
@@ -26,26 +25,32 @@ h3{font-size:15px;margin:14px 0 6px;color:var(--ink)}
 .answer-block .body{font-size:13px;white-space:pre-wrap;line-height:1.9}
 .feynman-tip{background:#fff8eb;border-left:3px solid var(--orange);padding:8px 12px;font-size:12px;border-radius:0 6px 6px 0;margin-top:8px}
 .feynman-tip b{color:var(--orange)}
-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
-th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+table{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:8px}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:11px}
+.cloze-passage{font-size:14px;line-height:2.2;white-space:pre-wrap;background:#fafafa;border:1px solid var(--line);border-radius:6px;padding:14px;margin:8px 0}
+.cloze-passage b{color:var(--orange)}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
-.vocab-row td:nth-child(2){width:13%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:18%;font-style:italic;color:#555}
-.vocab-row td:nth-child(4){width:24%}
-.vocab-row td:nth-child(5){width:24%}
-.vocab-row td:nth-child(6){width:17%}
-.key-row td:nth-child(1){width:5%;font-weight:bold;background:#f8f5ee;text-align:center}
-.key-row td:nth-child(2){width:16%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.key-row td:nth-child(3){width:16%;font-family:"SF Mono",Consolas,monospace;color:var(--orange);font-weight:bold}
+.vocab-row td:nth-child(2){width:12%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.vocab-row td:nth-child(3){width:16%}
+.vocab-row td:nth-child(4){width:24%;font-style:italic;color:#555}
+.vocab-row td:nth-child(5){width:26%}
+.vocab-row td:nth-child(6){width:18%}
+.key-row td:nth-child(1){width:5%;font-weight:bold;text-align:center}
+.key-row td:nth-child(2){width:18%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.key-row td:nth-child(3){width:18%;font-family:"SF Mono",Consolas,monospace;color:var(--orange);font-weight:bold}
 .key-row td:nth-child(4){width:30%}
-.key-row td:nth-child(5){width:33%}
+.key-row td:nth-child(5){width:29%}
+.feynman-q{font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;margin-bottom:4px}
+.feynman-ref{font-size:11.5px;color:#444;line-height:1.5}
 .piece-body{font-size:14px;white-space:pre-wrap;line-height:2;border:1px solid var(--line);border-radius:6px;padding:12px;background:#fafafa;margin:8px 0}
 .piece-title{font-size:15px;font-weight:bold;margin:18px 0 4px}
 .piece-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
-.cloze-body{font-size:14px;line-height:2.1;border:1px solid var(--line);border-radius:6px;padding:14px 16px;background:#fafafa;margin:10px 0}
-.cloze-body p{margin:0 0 12px}
-.cloze-body p:last-child{margin-bottom:0}
+.easy-errors{background:#fff8eb;border:1px solid var(--orange);border-radius:6px;padding:10px 12px;margin-top:8px}
+.easy-errors h5{margin:0 0 6px;font-size:12px;color:var(--orange)}
+.easy-errors ul{margin:0;padding-left:18px;font-size:12px;color:#555}
+.easy-errors li{margin:3px 0}
+.easy-errors b{color:var(--orange)}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 @media print{body{padding:0;font-size:11pt}section{page-break-inside:avoid}}
 </style>
@@ -54,99 +59,105 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 01 · v3 · Cloze + 4-Stage · Answers</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 01 · v4 · Answers</div>
   <h1>第1周 Day 1 · 费曼训练包 · 答案版</h1>
   <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
-  <div class="sub" style="margin-top:6px">Day 1 主题：阅读理解核心名词（环境与科技类） <span style="color:var(--muted)">· 词源：2025 全国一卷英语阅读 A/D 篇高频词</span></div>
+  <div class="sub" style="margin-top:6px">Day 1 主题：阅读理解核心名词（环境与科技类） · 词源：2025 全国一卷英语阅读 A/D 篇高频词</div>
 </header>
 
 <div class="method">
-  <b>自批顺序</b>：<br>
-  <b>① 完形先对答案</b>：错题对应的词进四阶梯<b>重测</b>——完形错说明语境里用不出，单测里大概率也写不出。<br>
-  <b>② 四阶梯造句判定</b>：第三栏造句只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子标 <b>M</b>。<br>
-  <b>③ 四阶梯迁移改写判定</b>：第四栏最严——必须能脱离「环保」主题用这个词造句才算 C。只能造环保语境句子 = 半会，标 <b>M</b>。<br>
-  <b>④ 古诗文四件套</b>：默写看字、翻译看字字理解、改写看情绪意象是否抓住、费曼看能否讲清逻辑——任一项卡壳录 MVP。
+  <b>用法</b>：作答版完成后对照本页自批。<br>
+  <b>完形</b>：先对答案，错的词进四阶梯单测重测——是认不出形式还是不知道词义，决定标 N/F/S/M。<br>
+  <b>四阶梯单测</b>：第三栏造句没有标准答案，只要语法对、词义对、句子通顺就算通过；造不出句或语义错就标 M。<b>第四栏费曼讲解由姐姐抽查判断</b>——学生能用自己的话讲清词的用法 + 造一句不同的场景，就算过。下方「费曼讲解参考」是姐姐的判断标准，不是学生要背的答案。<br>
+  <b>古诗文</b>：默写逐字对照原文；翻译逐字对照「翻译要点」，重点看易错字有没有译对。
 </div>
 
 <section>
   <h2>一、完形填空答案（20 空）</h2>
-  <h3>《The Greening of Transportation》<span class="piece-meta">（改编自 2025 全国一卷英语阅读 A/D 篇）</span></h3>
-  <div class="cloze-body">
-    <p>Moving goods and people around the world is <b style="color:var(--orange)">responsible</b> for a large part of global CO2 <b style="color:var(--orange)">emissions</b>. As the world races to <b style="color:var(--orange)">decarbonize</b> everything, it faces particular problems with <b style="color:var(--orange)">automobile</b> use, which accounts for about a quarter of energy-related greenhouse gases.</p>
-    <p>The <b style="color:var(--orange)">transition</b> to green energy is global. It's <b style="color:var(--orange)">estimated</b> that the global <b style="color:var(--orange)">demand</b> for electricity could more than double by 2050. <b style="color:var(--orange)">Freight</b> moved by rail suggests that <b style="color:var(--orange)">renewable</b> energy will be up to the task, but we must speed up development.</p>
-    <p>Each mode of transport has its <b style="color:var(--orange)">specific</b> fuel needs. Road <b style="color:var(--orange)">vehicles</b> are harder to convert than rail. <b style="color:var(--orange)">Alternative</b> fuels must be not only green, but also light and <b style="color:var(--orange)">affordable</b>. Improving energy <b style="color:var(--orange)">efficiency</b> is one <b style="color:var(--orange)">solution</b>, but limiting fuel <b style="color:var(--orange)">consumption</b> alone is not enough.</p>
-    <p>We need to <b style="color:var(--orange)">generate</b> more electricity from renewables. <b style="color:var(--orange)">Efficient</b> use of <b style="color:var(--orange)">carbonate</b> in water can trap microplastics when boiled — a <b style="color:var(--orange)">sustainable</b> step forward.</p>
-  </div>
+  <p class="sub" style="font-size:12px;margin-bottom:6px">空格处填入正确答案（橙色加粗）。注意部分空格的填空形式与词表原形不同（复数、过去式、首字母大写等）。</p>
+  <div class="cloze-passage">Moving goods and people around the world is <b>responsible</b> for a large part of global CO2 <b>emissions</b>. As the world races to <b>decarbonize</b> everything, it faces particular problems with <b>automobile</b> use, which accounts for about a quarter of energy-related greenhouse gases.
 
-  <div class="label-sm" style="margin-top:14px;font-size:11px;color:var(--muted);display:block"><b>答案速查表</b></div>
+The <b>transition</b> to green energy is global. It's <b>estimated</b> that the global <b>demand</b> for electricity could more than double by 2050. <b>Freight</b> moved by rail suggests that <b>renewable</b> energy will be up to the task, but we must speed up development.
+
+Each mode of transport has its <b>specific</b> fuel needs. Road <b>vehicles</b> are harder to convert than rail. <b>Alternative</b> fuels must be not only green, but also light and <b>affordable</b>. Improving energy <b>efficiency</b> is one <b>solution</b>, but limiting fuel <b>consumption</b> alone is not enough.
+
+We need to <b>generate</b> more electricity from renewables. <b>Efficient</b> use of <b>carbonate</b> in water can trap microplastics when boiled — a <b>sustainable</b> step forward.</div>
+
   <table>
     <thead>
       <tr><th>#</th><th>Base（词表原形）</th><th>Answer（填空形式）</th><th>中文释义</th><th>错误提示</th></tr>
     </thead>
     <tbody>
-      <tr class="key-row"><td>1</td><td>responsible</td><td>responsible</td><td>负责的；是…的原因</td><td>be responsible for，固定搭配</td></tr>
-      <tr class="key-row"><td>2</td><td>emission</td><td>emissions</td><td>排放；排放物</td><td>CO2 emissions 常复数形式</td></tr>
-      <tr class="key-row"><td>3</td><td>decarbonize</td><td>decarbonize</td><td>脱碳；低碳化</td><td>race to + 动词原形</td></tr>
-      <tr class="key-row"><td>4</td><td>automobile</td><td>automobile</td><td>汽车</td><td>automobile use 名词修饰名词，勿用 vehicle</td></tr>
-      <tr class="key-row"><td>5</td><td>transition</td><td>transition</td><td>过渡；转变</td><td>the transition to + 名词</td></tr>
-      <tr class="key-row"><td>6</td><td>estimate</td><td>estimated</td><td>估计；估算</td><td>It's estimated that... 被动结构</td></tr>
-      <tr class="key-row"><td>7</td><td>demand</td><td>demand</td><td>需求；要求</td><td>demand for 固定搭配</td></tr>
-      <tr class="key-row"><td>8</td><td>freight</td><td>Freight</td><td>货物；货运</td><td>句首大写；不可数名词</td></tr>
-      <tr class="key-row"><td>9</td><td>renewable</td><td>renewable</td><td>可再生的</td><td>renewable energy 修饰 energy</td></tr>
-      <tr class="key-row"><td>10</td><td>specific</td><td>specific</td><td>特定的；具体的</td><td>its specific fuel needs</td></tr>
-      <tr class="key-row"><td>11</td><td>vehicle</td><td>vehicles</td><td>车辆；交通工具</td><td>Road vehicles 复数，h 不发音</td></tr>
-      <tr class="key-row"><td>12</td><td>alternative</td><td>Alternative</td><td>替代的</td><td>句首大写；勿与 alternate 混</td></tr>
-      <tr class="key-row"><td>13</td><td>affordable</td><td>affordable</td><td>负担得起的</td><td>light and affordable 并列形容词</td></tr>
-      <tr class="key-row"><td>14</td><td>efficiency</td><td>efficiency</td><td>效率</td><td>energy efficiency 名词短语</td></tr>
-      <tr class="key-row"><td>15</td><td>solution</td><td>solution</td><td>解决方案</td><td>one solution 单数</td></tr>
-      <tr class="key-row"><td>16</td><td>consumption</td><td>consumption</td><td>消耗；消费</td><td>fuel consumption 名词短语</td></tr>
+      <tr class="key-row"><td>1</td><td>responsible</td><td>responsible</td><td>负责的；是…的原因</td><td>be responsible for，原形不变形</td></tr>
+      <tr class="key-row"><td>2</td><td>emission</td><td>emissions</td><td>排放；排放物</td><td>CO2 emissions 用复数，指总排放量</td></tr>
+      <tr class="key-row"><td>3</td><td>decarbonize</td><td>decarbonize</td><td>脱碳；低碳化</td><td>动词原形，race to + do</td></tr>
+      <tr class="key-row"><td>4</td><td>automobile</td><td>automobile</td><td>汽车</td><td>名词修饰名词，用单数</td></tr>
+      <tr class="key-row"><td>5</td><td>transition</td><td>transition</td><td>过渡；转变</td><td>the transition to green energy，名词</td></tr>
+      <tr class="key-row"><td>6</td><td>estimate</td><td>estimated</td><td>估计；估算</td><td>It's estimated that… 用过去分词</td></tr>
+      <tr class="key-row"><td>7</td><td>demand</td><td>demand</td><td>需求；要求</td><td>the demand for electricity，名词</td></tr>
+      <tr class="key-row"><td>8</td><td>freight</td><td>Freight</td><td>货物；货运</td><td>句首首字母大写 F；勿与 Flight/Fright 混</td></tr>
+      <tr class="key-row"><td>9</td><td>renewable</td><td>renewable</td><td>可再生的</td><td>renewable energy 固定搭配</td></tr>
+      <tr class="key-row"><td>10</td><td>specific</td><td>specific</td><td>特定的；具体的</td><td>勿选 special（侧重「特殊」非「特定」）</td></tr>
+      <tr class="key-row"><td>11</td><td>vehicle</td><td>vehicles</td><td>车辆；交通工具</td><td>road vehicles 复数，与 rail 对举</td></tr>
+      <tr class="key-row"><td>12</td><td>alternative</td><td>Alternative</td><td>替代的；可供选择的</td><td>句首大写 A；勿选 Alternate（交替的）</td></tr>
+      <tr class="key-row"><td>13</td><td>affordable</td><td>affordable</td><td>负担得起的</td><td>形容词并列 light and affordable</td></tr>
+      <tr class="key-row"><td>14</td><td>efficiency</td><td>efficiency</td><td>效率</td><td>名词，improving energy efficiency</td></tr>
+      <tr class="key-row"><td>15</td><td>solution</td><td>solution</td><td>解决方案；溶液</td><td>one solution，单数可数</td></tr>
+      <tr class="key-row"><td>16</td><td>consumption</td><td>consumption</td><td>消耗；消费</td><td>fuel consumption 名词搭配</td></tr>
       <tr class="key-row"><td>17</td><td>generate</td><td>generate</td><td>产生；发电</td><td>need to + 动词原形</td></tr>
-      <tr class="key-row"><td>18</td><td>efficient</td><td>Efficient</td><td>高效的</td><td>句首大写；形容词修饰 use</td></tr>
-      <tr class="key-row"><td>19</td><td>carbonate</td><td>carbonate</td><td>碳酸盐</td><td>calcium carbonate 钙化合物</td></tr>
-      <tr class="key-row"><td>20</td><td>sustainable</td><td>sustainable</td><td>可持续的</td><td>a sustainable step 形容词修饰名词</td></tr>
+      <tr class="key-row"><td>18</td><td>efficient</td><td>Efficient</td><td>高效的</td><td>句首大写 E；勿选 Effective（有效的）</td></tr>
+      <tr class="key-row"><td>19</td><td>carbonate</td><td>carbonate</td><td>碳酸盐</td><td>calcium carbonate 钙的碳酸盐</td></tr>
+      <tr class="key-row"><td>20</td><td>sustainable</td><td>sustainable</td><td>可持续的</td><td>a sustainable step，形容词修饰名词</td></tr>
     </tbody>
   </table>
 </section>
 
 <section>
-  <h2>二、四阶梯单测参考答案（20 词）</h2>
-  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏「造句参考」用词表原 example；第四栏「迁移改写参考」是脱离环保主题的新句子。学生造的句子只要语法对、词义对、不属于环保主题即算通过。</p>
+  <h2>二、四阶梯单测答案（20 词）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:6px">第三栏给出一个造句参考，学生造的句子只要符合该词用法即可。第五栏「费曼讲解参考」是姐姐抽查的判断标准，不是学生要背的答案——学生用自己的话讲明白即可。</p>
   <table>
     <thead>
-      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（example）</th><th>迁移改写参考（换场景）</th><th>常见错误</th></tr>
+      <tr>
+        <th>#</th>
+        <th>Word</th>
+        <th>中文释义</th>
+        <th>造句参考</th>
+        <th>费曼讲解参考（姐姐判断标准）</th>
+        <th>常见错误</th>
+      </tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>emission</td><td>排放；排放物</td><td>Transportation accounts for a large part of global CO2 emissions.</td><td>The factory was fined for its chemical emissions last year.</td><td>可数名词，常复；动词 emit</td></tr>
-      <tr class="vocab-row"><td>2</td><td>decarbonize</td><td>脱碳；低碳化</td><td>The world races to decarbonize everything.</td><td>Many airlines plan to decarbonize their fleets by 2050.</td><td>前缀 de- + carbon</td></tr>
-      <tr class="vocab-row"><td>3</td><td>renewable</td><td>可再生的；可更新的</td><td>Renewable energy will be up to the task.</td><td>My library card is renewable every two years.</td><td>形容词，常修饰 energy</td></tr>
-      <tr class="vocab-row"><td>4</td><td>transition</td><td>过渡；转变</td><td>This energy transition is global.</td><td>The school made a smooth transition to online classes.</td><td>名词；transit 是另一种词</td></tr>
-      <tr class="vocab-row"><td>5</td><td>responsible</td><td>负责的；是…的原因</td><td>Moving goods is responsible for a large part of emissions.</td><td>She is responsible for organizing the class party.</td><td>be responsible for</td></tr>
-      <tr class="vocab-row"><td>6</td><td>specific</td><td>特定的；具体的</td><td>Each mode of transport has its specific fuel needs.</td><td>Can you give me a specific time for our meeting?</td><td>勿与 special 混</td></tr>
-      <tr class="vocab-row"><td>7</td><td>estimate</td><td>估计；估算</td><td>It's estimated that electricity demand could double by 2050.</td><td>I estimate the homework will take about two hours.</td><td>动词/名词同形</td></tr>
-      <tr class="vocab-row"><td>8</td><td>demand</td><td>需求；要求</td><td>The global demand for electricity could more than double.</td><td>The teacher demanded that we finish the essay by Friday.</td><td>可数/不可数均可</td></tr>
-      <tr class="vocab-row"><td>9</td><td>carbonate</td><td>碳酸盐</td><td>Crucially, this process relies on water containing enough calcium carbonate.</td><td>Baking powder contains sodium carbonate as a key ingredient.</td><td>名词；钙化合物</td></tr>
-      <tr class="vocab-row"><td>10</td><td>consumption</td><td>消耗；消费</td><td>Limiting fuel consumption is not enough.</td><td>The country's meat consumption has dropped this year.</td><td>名词；动词 consume</td></tr>
-      <tr class="vocab-row"><td>11</td><td>efficiency</td><td>效率</td><td>Improving energy efficiency is one solution.</td><td>The new manager improved the team's work efficiency.</td><td>形容词 efficient</td></tr>
-      <tr class="vocab-row"><td>12</td><td>affordable</td><td>负担得起的</td><td>Making electricity more affordable helps transition.</td><td>This restaurant offers affordable lunch sets for students.</td><td>前缀 af- + ford</td></tr>
-      <tr class="vocab-row"><td>13</td><td>automobile</td><td>汽车</td><td>The greening of planes, trains and automobiles.</td><td>My uncle has worked in the automobile industry for twenty years.</td><td>美式汽车总称</td></tr>
-      <tr class="vocab-row"><td>14</td><td>vehicle</td><td>车辆；交通工具</td><td>Road vehicles accounted for 74.5% of emissions.</td><td>The police stopped the vehicle at the checkpoint.</td><td>h 不发音</td></tr>
-      <tr class="vocab-row"><td>15</td><td>freight</td><td>货物；货运</td><td>Much freight is moved by truck.</td><td>The shipping company handles freight between two cities.</td><td>名词；weight 同结构</td></tr>
-      <tr class="vocab-row"><td>16</td><td>alternative</td><td>替代的；可供选择的</td><td>We need alternative fuel sources.</td><td>Is there an alternative route to avoid the traffic?</td><td>勿与 alternate 混</td></tr>
-      <tr class="vocab-row"><td>17</td><td>sustainable</td><td>可持续的</td><td>Sustainable transport is the goal.</td><td>Small daily habits build a sustainable reading habit.</td><td>前缀 sustain + able</td></tr>
-      <tr class="vocab-row"><td>18</td><td>generate</td><td>产生；发电</td><td>Renewables can generate enough electricity.</td><td>The story generated a lot of discussion in class.</td><td>动词；名词 generation</td></tr>
-      <tr class="vocab-row"><td>19</td><td>efficient</td><td>高效的</td><td>Improving energy efficiency is one solution.</td><td>She is an efficient student who finishes tasks early.</td><td>名词 efficiency</td></tr>
-      <tr class="vocab-row"><td>20</td><td>solution</td><td>解决方案；溶液</td><td>Here are some solutions to get us going green.</td><td>We finally found a solution to the math problem.</td><td>常接 to + 名词</td></tr>
+      <tr class="vocab-row"><td>1</td><td>emission</td><td>排放；排放物</td><td>Transportation accounts for a large part of global CO2 emissions.</td><td><div class="feynman-q">Q: emission 和 emissions 何时用单数、何时用复数？动词 emit 怎么变化？</div><div class="feynman-ref">emission 单数指一次排放行为，emissions 复数指总排放量，常用于环境语境。动词 emit，过去式 emitted，现在分词 emitting。</div></td><td>可数名词，常复</td></tr>
+      <tr class="vocab-row"><td>2</td><td>decarbonize</td><td>脱碳；低碳化</td><td>The world races to decarbonize everything.</td><td><div class="feynman-q">Q: decarbonize 的前缀 de- 表什么？举一个同前缀的词。</div><div class="feynman-ref">de- 表「去除、反向」，如 decarbonize = de + carbon + ize（去碳化）。同类：decompose（分解）、dehydrate（脱水）。</div></td><td>前缀 de- + carbon</td></tr>
+      <tr class="vocab-row"><td>3</td><td>renewable</td><td>可再生的；可更新的</td><td>Renewable energy will be up to the task.</td><td><div class="feynman-q">Q: renewable 和 new 有什么关系？为什么常修饰 energy？</div><div class="feynman-ref">renew = re（再）+ new（更新），renewable 指「可不断补充的」。能源类（太阳能、风能）不会用完，所以常修饰 energy。</div></td><td>形容词，常修饰 energy</td></tr>
+      <tr class="vocab-row"><td>4</td><td>transition</td><td>过渡；转变</td><td>This energy transition is global.</td><td><div class="feynman-q">Q: transition 和 transit 是同一个词吗？意思差在哪？</div><div class="feynman-ref">不是。transition 是「转变、过渡」（抽象），transit 是「运送、过境」（具体动作，如 in transit）。词根同，词义不同。</div></td><td>名词；transit 是另一种词</td></tr>
+      <tr class="vocab-row"><td>5</td><td>responsible</td><td>负责的；是…的原因</td><td>Moving goods is responsible for a large part of emissions.</td><td><div class="feynman-q">Q: be responsible for 后接什么？和 the cause of 有什么区别？</div><div class="feynman-ref">be responsible for + 名词/doing，指「对…负责/是…的原因」。the cause of 偏「根本原因」，responsible 偏「承担责任的一方」。</div></td><td>be responsible for</td></tr>
+      <tr class="vocab-row"><td>6</td><td>specific</td><td>特定的；具体的</td><td>Each mode of transport has its specific fuel needs.</td><td><div class="feynman-q">Q: specific 和 special 都翻成「特别的」，用法差在哪？</div><div class="feynman-ref">specific 侧重「特定的、明确的」（a specific time），special 侧重「特殊的、特别的」（a special occasion）。前者指向唯一性，后者指向与众不同。</div></td><td>勿与 special 混</td></tr>
+      <tr class="vocab-row"><td>7</td><td>estimate</td><td>估计；估算</td><td>It's estimated that electricity demand could double by 2050.</td><td><div class="feynman-q">Q: estimate 可作动词也可作名词，读音和搭配有何不同？</div><div class="feynman-ref">动词 /ˈestɪmeɪt/（尾音 aɪt），名词 /ˈestɪmət/（尾音 mət）。搭配：estimate the cost（动）；a rough estimate of（名）。</div></td><td>动词/名词同形</td></tr>
+      <tr class="vocab-row"><td>8</td><td>demand</td><td>需求；要求</td><td>The global demand for electricity could more than double.</td><td><div class="feynman-q">Q: demand 作名词和动词时用法分别是什么？可以说 demand of sth 吗？</div><div class="feynman-ref">名词：the demand for sth（不能 demand of）。动词：demand sth / demand to do / demand that…（从句用虚拟语气）。</div></td><td>可数/不可数均可</td></tr>
+      <tr class="vocab-row"><td>9</td><td>carbonate</td><td>碳酸盐</td><td>This process relies on water containing enough calcium carbonate.</td><td><div class="feynman-q">Q: carbonate 是什么离子？钙的碳酸盐英文怎么说？</div><div class="feynman-ref">carbonate 是碳酸根离子 CO3²⁻。钙的碳酸盐是 calcium carbonate（CaCO3），碳酸钠是 sodium carbonate。</div></td><td>名词；钙化合物</td></tr>
+      <tr class="vocab-row"><td>10</td><td>consumption</td><td>消耗；消费</td><td>Limiting fuel consumption is not enough.</td><td><div class="feynman-q">Q: consumption 和 consume 词性分别是什么？fuel consumption 怎么理解？</div><div class="feynman-ref">consumption 是名词，consume 是动词。fuel consumption = 燃料消耗量，名词修饰名词结构。</div></td><td>名词；动词 consume</td></tr>
+      <tr class="vocab-row"><td>11</td><td>efficiency</td><td>效率</td><td>Improving energy efficiency is one solution.</td><td><div class="feynman-q">Q: efficiency 和 efficient 词性？efficient 的反义词？</div><div class="feynman-ref">efficiency 是名词，efficient 是形容词。efficient 反义词 inefficient（不是 inefficient 拼写要双 i 开头）。</div></td><td>形容词 efficient</td></tr>
+      <tr class="vocab-row"><td>12</td><td>affordable</td><td>负担得起的</td><td>Making electricity more affordable helps transition.</td><td><div class="feynman-q">Q: affordable 的动词原形？为什么有 af- 前缀？</div><div class="feynman-ref">动词原形 afford。af- 是 ad- 在 f 前的同化形式（ad- → af-），如表「朝向」，如 affect、afford。</div></td><td>前缀 af- + ford</td></tr>
+      <tr class="vocab-row"><td>13</td><td>automobile</td><td>汽车</td><td>The greening of planes, trains and automobiles.</td><td><div class="feynman-q">Q: automobile 和 car、vehicle 有什么区别？auto- 前缀表什么？</div><div class="feynman-ref">automobile 是较正式的总称（美式），car 是日常口语，vehicle 是最广义的「交通工具」（含卡车、摩托）。auto- 表「自己」（自动）。</div></td><td>美式汽车总称</td></tr>
+      <tr class="vocab-row"><td>14</td><td>vehicle</td><td>车辆；交通工具</td><td>Road vehicles accounted for 74.5% of emissions.</td><td><div class="feynman-q">Q: vehicle 的 h 发音吗？和 car 在语体上有何差别？</div><div class="feynman-ref">h 不发音，读 /ˈviːəkl/。vehicle 是正式/技术语体，car 是日常口语。legal/技术文本用 vehicle。</div></td><td>h 不发音</td></tr>
+      <tr class="vocab-row"><td>15</td><td>freight</td><td>货物；货运</td><td>Much freight is moved by truck.</td><td><div class="feynman-q">Q: freight 和 goods、cargo 有什么区别？</div><div class="feynman-ref">freight 偏「货运」（陆运/铁路），goods 偏「商品货物」（常用复数），cargo 偏「船/飞机货运」。三个都指货物，但运输方式侧重不同。</div></td><td>名词；weight 同结构</td></tr>
+      <tr class="vocab-row"><td>16</td><td>alternative</td><td>替代的；可供选择的</td><td>We need alternative fuel sources.</td><td><div class="feynman-q">Q: alternative 和 alternate 长得像，意思差在哪？</div><div class="feynman-ref">alternative 是「替代的、可供选择的」（alternative fuel），alternate 是「交替的、轮流的」（alternate days）。美式 alternate 也作名词「替代者」。</div></td><td>勿与 alternate 混</td></tr>
+      <tr class="vocab-row"><td>17</td><td>sustainable</td><td>可持续的</td><td>Sustainable transport is the goal.</td><td><div class="feynman-q">Q: sustainable 的动词原形？sustainable development 中文怎么说？</div><div class="feynman-ref">动词原形 sustain（维持、支撑）。sustainable development = 可持续发展，是固定术语。</div></td><td>前缀 sustain + able</td></tr>
+      <tr class="vocab-row"><td>18</td><td>generate</td><td>产生；发电</td><td>Renewables can generate enough electricity.</td><td><div class="feynman-q">Q: generate 和 produce、create 有什么区别？generation 是什么意思？</div><div class="feynman-ref">generate 偏「产生（电/能量/想法）」，produce 偏「生产（产品）」，create 偏「创造（从无到有）」。generation 是名词，指「一代人/产生」。</div></td><td>动词；名词 generation</td></tr>
+      <tr class="vocab-row"><td>19</td><td>efficient</td><td>高效的</td><td>Improving energy efficiency is one solution.</td><td><div class="feynman-q">Q: efficient 和 effective 有什么区别？各举一例。</div><div class="feynman-ref">efficient 侧重「效率高、省资源」（an efficient engine 高效引擎），effective 侧重「达到效果」（an effective method 有效方法）。前者问「快不快」，后者问「管不管用」。</div></td><td>名词 efficiency</td></tr>
+      <tr class="vocab-row"><td>20</td><td>solution</td><td>解决方案；溶液</td><td>Here are some solutions to get us going green.</td><td><div class="feynman-q">Q: solution 后接什么介词？a solution ___ the problem</div><div class="feynman-ref">a solution <b>to</b> the problem，固定搭配 to + 名词。同样搭配：the key to、the answer to。</div></td><td>常接 to + 名词</td></tr>
     </tbody>
   </table>
   <div class="feynman-tip">
-    <b>姐姐抽查话术</b>：完形错题对应的词，不要问「X 是什么意思」——这是识别题，背过就答得出。要问「X 和它的近义词（比如 responsible / specific / sustainable）有什么区别？什么场景下用 X 不用另一个？」——这测的是用法。第四栏迁移改写造不出的，问「你能用 X 造一个跟环保无关的句子吗？」造不出 = 半会，标 M，进 D1 复测。
+    <b>姐姐抽查话术</b>：不要问「X 是什么意思」——这是识别题，背过就答得出。要问「X 和 Y 的区别 + 让她造一句不同的场景」——这测的是用法，造不出句的学生答不上来。例如不要问「efficient 什么意思」，要问「efficient 和 effective 区别 + 各造一句」，看学生能不能讲出前者快不快、后者管不管用。
   </div>
 </section>
 
 <section>
-  <h2>三、古诗文四件套答案（师说 · 韩愈）</h2>
-  <div class="piece-title">《师说》（节选） · 韩愈</div>
-  <div class="piece-meta">文言文·必修 #5 · 难度 ★★★ · 2025 全国一卷默写命中</div>
+  <h2>三、古诗文答案（《师说》节选 · 韩愈）</h2>
+  <div class="piece-title">《师说》（节选）· 韩愈</div>
+  <div class="piece-meta">文言文 · 必修 #5 · 难度 ★★★</div>
 
   <div class="answer-block">
     <h4>原文（自批默写用）</h4>
@@ -162,49 +173,42 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 
 第二段：出生在我之前的人，他懂得道理本来就比我早，我跟从他把他当作老师；出生在我之后的人，他懂得道理如果也比我早，我也跟从他学习。我学的是道理，哪里用得着计较他比我大还是小呢？所以无论地位高低、无论年龄大小，道理存在的地方，就是老师存在的地方。
 
-末段：所以学生不一定不如老师，老师也不一定比学生贤能。听到的道理有先后，技能学业各有专门研究，如此罢了。
-
-<b>关键易错字（默写必查）</b>：
-· 传道「受」业：受通「授」，不写「授」——这是最常考的通假字
-· 「孰」能无惑：孰是疑问代词「谁」
-· 夫「庸」知：庸是「岂、哪用得着」
-· 从而「师」之：师是意动用法「以…为师」
-· 弟子不必「不如」师：不必＝不一定，不是「不需要」
-· 术业有专「攻」：攻是「学习、研究」</div>
-  </div>
-
-  <div class="answer-block">
-    <h4>改写参考（情绪/逻辑抓对即可，字句不必雷同）</h4>
-    <div class="body">李蟠，你问我为何求师不计较年龄贵贱，我答你一句：我所求的是道，不是人。道在哪里，老师就在哪里。二十岁的人若先闻道，我拜他为师；五十岁的人若未闻道，他拜我为师。我学的是道理，不是身份。世人耻于学师，是因他们分不清「求道」和「求名」。道比年龄长一岁、地位高一阶，都重要得多。你既好古文、通六艺，便该懂这一层。</div>
-  </div>
-
-  <div class="feynman-tip">
-    <b>任务 4 费曼参考答案</b>：「弟子不必不如师，师不必贤于弟子」是《师说》的论证终点，也是韩愈反击世俗「耻学于师」的最后武器。前文已说「闻道有先后」——先闻道者为师，与身份年龄无关。但世俗反驳会是：「老师怎能不如学生？」韩愈用这句话封死反驳：老师确实可能不如学生，因为「术业有专攻」——每个人专攻方向不同，学生在他专攻的方向上超过老师是正常的。这句话一立，逻辑闭环：师非因贤而为师，因闻道先而为师；学生非因落后而为生，因闻道后而为生。师生关系被还原为「闻道先后」这一单一变量。删掉这一句，文章能立论但反不掉「老师必须比学生强」的世俗偏见，论证不闭环。<br>
-    <b>判定标准</b>：学生能讲到「这句话是逻辑闭环的最后一步」+「删掉就反不掉世俗偏见」就算通过；只背「老师不一定比学生强」而讲不清为什么必须说这句话，标「未稳定掌握」。
+第三段：所以学生不一定不如老师，老师也不一定比学生贤能。听到的道理有先后，技能学业各有专门研究，如此罢了。</div>
+    <div class="easy-errors">
+      <h5>关键易错字（默写/翻译都要盯紧）</h5>
+      <ul>
+        <li>传道<b>「受」</b>业：受通「授」，不写「授」（原文用通假字，写「授」算错）</li>
+        <li><b>孰</b>能无惑：孰是疑问代词「谁」，不是「熟」</li>
+        <li>夫<b>庸</b>知：庸是「岂、哪用得着」，不是「庸俗」的庸</li>
+        <li>从而<b>「师」</b>之：师是意动用法「以…为师」，不是名词「老师」</li>
+        <li>弟子不必<b>「不如」</b>师：不必＝不一定，不是「不需要」</li>
+        <li>术业有专<b>攻</b>：攻是「学习、研究」，不是「攻击」</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section>
-  <h2>四、自评反思（自批后填写）</h2>
+  <h2>四、自评反思</h2>
   <div class="method">
-    <b>用法</b>：学生作答版完成后，对照本答案版自批，再回到作答版填写反思栏。下方模板与作答版一致，留空待填。
+    <b>费曼反思</b>：不会的不可怕，<b>以为自己会其实不会</b>才可怕。这一栏用来抓后者。
   </div>
   <table>
     <thead>
-      <tr><th style="width:40%">反思项</th><th>回答</th></tr>
+      <tr><th style="width:38%">反思项</th><th>回答</th></tr>
     </thead>
     <tbody>
-      <tr><td>完形错了哪几空？分别错在词义、形式、还是语境判断？</td><td style="min-height:50px"></td></tr>
-      <tr><td>哪些词我以为会、其实造不出句（第三栏空着）？</td><td></td></tr>
-      <tr><td>哪些词我能造句但迁移栏（第四栏）写不出——证明只会在环保语境用？</td><td></td></tr>
-      <tr><td>《师说》能默但翻译/改写/费曼讲到一半讲不下去的，是哪一处？</td><td></td></tr>
+      <tr><td>完形错了哪几空？是哪几个词？</td><td style="min-height:50px"></td></tr>
+      <tr><td>哪些词造不出句或讲不清用法（费曼讲解卡壳）？</td><td></td></tr>
+      <tr><td>哪些词费曼讲解讲到一半讲不下去了？为什么？</td><td></td></tr>
+      <tr><td>《师说》翻译卡壳在哪几个字？默写有没有写错字？</td><td></td></tr>
       <tr><td>下周重点攻克 1 个知识点（不是 3 个，就 1 个）</td><td></td></tr>
     </tbody>
   </table>
 </section>
 
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 1 · 答案版 · v3 完形+四阶梯+对齐2025真题 · 2026-11-03
+  Gaokao Coach 2027 · 第1周 Day 1 · 答案版 · v4 完形+四阶梯+古诗文两件套 · 2026-11-03
 </div>
 
 </div>
