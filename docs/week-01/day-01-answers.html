@@ -7,17 +7,18 @@
 <style>
 :root{
   --bg:#fffefa;--ink:#242321;--muted:#77736c;--line:#e9e4da;
-  --orange:#d9912f;--green:#648b73;--red:#bd765e;--blue:#71899a;
+  --orange:#d9912f;--green:#648b73;--red:#bd765e;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.7;padding:20px}
-.wrap{max-width:820px;margin:0 auto}
+.wrap{max-width:860px;margin:0 auto}
 header{border-bottom:2px solid var(--orange);padding-bottom:12px;margin-bottom:20px}
 .eyebrow{font-size:11px;letter-spacing:.16em;color:var(--orange);font-weight:800;text-transform:uppercase}
 h1{font-size:24px;margin:6px 0 4px}
 .sub{color:var(--muted);font-size:13px}
 section{margin:28px 0;page-break-inside:avoid}
 h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0 0 6px}
+h3{font-size:15px;margin:14px 0 6px;color:var(--ink)}
 .method{background:#eaf2eb;border-left:3px solid var(--green);padding:10px 13px;font-size:13px;border-radius:0 8px 8px 0;margin-bottom:14px}
 .method b{color:var(--green)}
 .answer-block{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:14px}
@@ -30,12 +31,21 @@ th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-alig
 th{background:#f8f5ee;font-weight:600;font-size:11px}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
 .vocab-row td:nth-child(2){width:13%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:24%}
-.vocab-row td:nth-child(4){width:30%;font-style:italic;color:#555}
-.vocab-row td:nth-child(5){width:29%}
+.vocab-row td:nth-child(3){width:18%;font-style:italic;color:#555}
+.vocab-row td:nth-child(4){width:24%}
+.vocab-row td:nth-child(5){width:24%}
+.vocab-row td:nth-child(6){width:17%}
+.key-row td:nth-child(1){width:5%;font-weight:bold;background:#f8f5ee;text-align:center}
+.key-row td:nth-child(2){width:16%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.key-row td:nth-child(3){width:16%;font-family:"SF Mono",Consolas,monospace;color:var(--orange);font-weight:bold}
+.key-row td:nth-child(4){width:30%}
+.key-row td:nth-child(5){width:33%}
 .piece-body{font-size:14px;white-space:pre-wrap;line-height:2;border:1px solid var(--line);border-radius:6px;padding:12px;background:#fafafa;margin:8px 0}
 .piece-title{font-size:15px;font-weight:bold;margin:18px 0 4px}
 .piece-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.cloze-body{font-size:14px;line-height:2.1;border:1px solid var(--line);border-radius:6px;padding:14px 16px;background:#fafafa;margin:10px 0}
+.cloze-body p{margin:0 0 12px}
+.cloze-body p:last-child{margin-bottom:0}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 @media print{body{padding:0;font-size:11pt}section{page-break-inside:avoid}}
 </style>
@@ -44,87 +54,157 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 01 · Answers</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 01 · v3 · Cloze + 4-Stage · Answers</div>
   <h1>第1周 Day 1 · 费曼训练包 · 答案版</h1>
-  <div class="sub">仅用于自批 + 姐姐抽查参考。学生作答完毕后再打开。</div>
+  <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
+  <div class="sub" style="margin-top:6px">Day 1 主题：阅读理解核心名词（环境与科技类） <span style="color:var(--muted)">· 词源：2025 全国一卷英语阅读 A/D 篇高频词</span></div>
 </header>
 
 <div class="method">
-  <b>用法</b>：作答版完成后对照本页自批。第三栏造句没有「标准答案」——只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子就标 M。古诗文改写同理，看情绪/意象有没有抓住，不看字句是否雷同。<br>
-  <b>费曼提问</b>的参考答案只是「姐姐抽查时的判断依据」，不是学生的标准答案。学生用自己的话讲明白即可，不必背参考答案。<br>
-  <b>自批规则</b>：造句只要语法对、词义对、句子通顺就过，卡壳标 M。古诗文默写看字形（重点查易错字），翻译看每字是否落实，改写看情绪/意象有没有抓住，不看字句是否雷同。
+  <b>自批顺序</b>：<br>
+  <b>① 完形先对答案</b>：错题对应的词进四阶梯<b>重测</b>——完形错说明语境里用不出，单测里大概率也写不出。<br>
+  <b>② 四阶梯造句判定</b>：第三栏造句只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子标 <b>M</b>。<br>
+  <b>③ 四阶梯迁移改写判定</b>：第四栏最严——必须能脱离「环保」主题用这个词造句才算 C。只能造环保语境句子 = 半会，标 <b>M</b>。<br>
+  <b>④ 古诗文四件套</b>：默写看字、翻译看字字理解、改写看情绪意象是否抓住、费曼看能否讲清逻辑——任一项卡壳录 MVP。
 </div>
 
 <section>
-  <h2>一、英语词汇 · 参考答案（20 词）</h2>
-  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏给出一个例句参考，学生造的句子只要符合该词用法即可。</p>
+  <h2>一、完形填空答案（20 空）</h2>
+  <h3>《The Greening of Transportation》<span class="piece-meta">（改编自 2025 全国一卷英语阅读 A/D 篇）</span></h3>
+  <div class="cloze-body">
+    <p>Moving goods and people around the world is <b style="color:var(--orange)">responsible</b> for a large part of global CO2 <b style="color:var(--orange)">emissions</b>. As the world races to <b style="color:var(--orange)">decarbonize</b> everything, it faces particular problems with <b style="color:var(--orange)">automobile</b> use, which accounts for about a quarter of energy-related greenhouse gases.</p>
+    <p>The <b style="color:var(--orange)">transition</b> to green energy is global. It's <b style="color:var(--orange)">estimated</b> that the global <b style="color:var(--orange)">demand</b> for electricity could more than double by 2050. <b style="color:var(--orange)">Freight</b> moved by rail suggests that <b style="color:var(--orange)">renewable</b> energy will be up to the task, but we must speed up development.</p>
+    <p>Each mode of transport has its <b style="color:var(--orange)">specific</b> fuel needs. Road <b style="color:var(--orange)">vehicles</b> are harder to convert than rail. <b style="color:var(--orange)">Alternative</b> fuels must be not only green, but also light and <b style="color:var(--orange)">affordable</b>. Improving energy <b style="color:var(--orange)">efficiency</b> is one <b style="color:var(--orange)">solution</b>, but limiting fuel <b style="color:var(--orange)">consumption</b> alone is not enough.</p>
+    <p>We need to <b style="color:var(--orange)">generate</b> more electricity from renewables. <b style="color:var(--orange)">Efficient</b> use of <b style="color:var(--orange)">carbonate</b> in water can trap microplastics when boiled — a <b style="color:var(--orange)">sustainable</b> step forward.</p>
+  </div>
+
+  <div class="label-sm" style="margin-top:14px;font-size:11px;color:var(--muted);display:block"><b>答案速查表</b></div>
   <table>
     <thead>
-      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（学生自造句对比）</th><th>常见错误</th></tr>
+      <tr><th>#</th><th>Base（词表原形）</th><th>Answer（填空形式）</th><th>中文释义</th><th>错误提示</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>abandon</td><td>放弃；遗弃</td><td>He abandoned his plan to study abroad.</td><td>及物动词，不加 in</td></tr>
-      <tr class="vocab-row"><td>2</td><td>ability</td><td>能力；才能</td><td>She has the ability to solve complex problems.</td><td>可数/不可数均可</td></tr>
-      <tr class="vocab-row"><td>3</td><td>able</td><td>能够的；有能力的</td><td>He is able to swim across the river.</td><td>be able to do</td></tr>
-      <tr class="vocab-row"><td>4</td><td>abnormal</td><td>反常的；不正常的</td><td>The abnormal weather worried the farmers.</td><td>ab- 前缀表偏离</td></tr>
-      <tr class="vocab-row"><td>5</td><td>abroad</td><td>在国外；到国外</td><td>She plans to study abroad next year.</td><td>副词，不加 to</td></tr>
-      <tr class="vocab-row"><td>6</td><td>absence</td><td>缺席；缺乏</td><td>His absence from school was due to illness.</td><td>from 表缺席场合</td></tr>
-      <tr class="vocab-row"><td>7</td><td>absolute</td><td>绝对的；完全的</td><td>I have absolute confidence in her.</td><td>形容词，勿与 absorb 混淆</td></tr>
-      <tr class="vocab-row"><td>8</td><td>absorb</td><td>吸收；吸引</td><td>Plants absorb sunlight for energy.</td><td>及物，be absorbed in</td></tr>
-      <tr class="vocab-row"><td>9</td><td>abstract</td><td>抽象的</td><td>Beauty is an abstract concept.</td><td>形容词/名词/动词</td></tr>
-      <tr class="vocab-row"><td>10</td><td>absurd</td><td>荒谬的</td><td>His suggestion was completely absurd.</td><td>形容词，反义词 rational</td></tr>
-      <tr class="vocab-row"><td>11</td><td>abundant</td><td>丰富的；大量的</td><td>The region has abundant natural resources.</td><td>常接 in</td></tr>
-      <tr class="vocab-row"><td>12</td><td>abuse</td><td>滥用；虐待</td><td>He abused his power as a manager.</td><td>名词/动词</td></tr>
-      <tr class="vocab-row"><td>13</td><td>academic</td><td>学术的；学院的</td><td>She has an academic background in physics.</td><td>重音第三音节</td></tr>
-      <tr class="vocab-row"><td>14</td><td>accelerate</td><td>加速</td><td>The car accelerated to overtake the truck.</td><td>反义词 decelerate</td></tr>
-      <tr class="vocab-row"><td>15</td><td>accent</td><td>口音；重音</td><td>She speaks English with a French accent.</td><td>名词</td></tr>
-      <tr class="vocab-row"><td>16</td><td>accept</td><td>接受；认可</td><td>I accept your apology.</td><td>及物，反义词 refuse</td></tr>
-      <tr class="vocab-row"><td>17</td><td>access</td><td>接近；进入；访问</td><td>Students have access to the library.</td><td>have access to</td></tr>
-      <tr class="vocab-row"><td>18</td><td>accident</td><td>事故；意外</td><td>He was injured in a car accident.</td><td>by accident 偶然</td></tr>
-      <tr class="vocab-row"><td>19</td><td>accommodation</td><td>住处；膳宿</td><td>We found cheap accommodation near the school.</td><td>英式不可数，美式可数</td></tr>
-      <tr class="vocab-row"><td>20</td><td>accompany</td><td>陪伴；伴随</td><td>She accompanied her friend to the hospital.</td><td>及物，常接 to</td></tr>
+      <tr class="key-row"><td>1</td><td>responsible</td><td>responsible</td><td>负责的；是…的原因</td><td>be responsible for，固定搭配</td></tr>
+      <tr class="key-row"><td>2</td><td>emission</td><td>emissions</td><td>排放；排放物</td><td>CO2 emissions 常复数形式</td></tr>
+      <tr class="key-row"><td>3</td><td>decarbonize</td><td>decarbonize</td><td>脱碳；低碳化</td><td>race to + 动词原形</td></tr>
+      <tr class="key-row"><td>4</td><td>automobile</td><td>automobile</td><td>汽车</td><td>automobile use 名词修饰名词，勿用 vehicle</td></tr>
+      <tr class="key-row"><td>5</td><td>transition</td><td>transition</td><td>过渡；转变</td><td>the transition to + 名词</td></tr>
+      <tr class="key-row"><td>6</td><td>estimate</td><td>estimated</td><td>估计；估算</td><td>It's estimated that... 被动结构</td></tr>
+      <tr class="key-row"><td>7</td><td>demand</td><td>demand</td><td>需求；要求</td><td>demand for 固定搭配</td></tr>
+      <tr class="key-row"><td>8</td><td>freight</td><td>Freight</td><td>货物；货运</td><td>句首大写；不可数名词</td></tr>
+      <tr class="key-row"><td>9</td><td>renewable</td><td>renewable</td><td>可再生的</td><td>renewable energy 修饰 energy</td></tr>
+      <tr class="key-row"><td>10</td><td>specific</td><td>specific</td><td>特定的；具体的</td><td>its specific fuel needs</td></tr>
+      <tr class="key-row"><td>11</td><td>vehicle</td><td>vehicles</td><td>车辆；交通工具</td><td>Road vehicles 复数，h 不发音</td></tr>
+      <tr class="key-row"><td>12</td><td>alternative</td><td>Alternative</td><td>替代的</td><td>句首大写；勿与 alternate 混</td></tr>
+      <tr class="key-row"><td>13</td><td>affordable</td><td>affordable</td><td>负担得起的</td><td>light and affordable 并列形容词</td></tr>
+      <tr class="key-row"><td>14</td><td>efficiency</td><td>efficiency</td><td>效率</td><td>energy efficiency 名词短语</td></tr>
+      <tr class="key-row"><td>15</td><td>solution</td><td>solution</td><td>解决方案</td><td>one solution 单数</td></tr>
+      <tr class="key-row"><td>16</td><td>consumption</td><td>consumption</td><td>消耗；消费</td><td>fuel consumption 名词短语</td></tr>
+      <tr class="key-row"><td>17</td><td>generate</td><td>generate</td><td>产生；发电</td><td>need to + 动词原形</td></tr>
+      <tr class="key-row"><td>18</td><td>efficient</td><td>Efficient</td><td>高效的</td><td>句首大写；形容词修饰 use</td></tr>
+      <tr class="key-row"><td>19</td><td>carbonate</td><td>carbonate</td><td>碳酸盐</td><td>calcium carbonate 钙化合物</td></tr>
+      <tr class="key-row"><td>20</td><td>sustainable</td><td>sustainable</td><td>可持续的</td><td>a sustainable step 形容词修饰名词</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>二、四阶梯单测参考答案（20 词）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏「造句参考」用词表原 example；第四栏「迁移改写参考」是脱离环保主题的新句子。学生造的句子只要语法对、词义对、不属于环保主题即算通过。</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（example）</th><th>迁移改写参考（换场景）</th><th>常见错误</th></tr>
+    </thead>
+    <tbody>
+      <tr class="vocab-row"><td>1</td><td>emission</td><td>排放；排放物</td><td>Transportation accounts for a large part of global CO2 emissions.</td><td>The factory was fined for its chemical emissions last year.</td><td>可数名词，常复；动词 emit</td></tr>
+      <tr class="vocab-row"><td>2</td><td>decarbonize</td><td>脱碳；低碳化</td><td>The world races to decarbonize everything.</td><td>Many airlines plan to decarbonize their fleets by 2050.</td><td>前缀 de- + carbon</td></tr>
+      <tr class="vocab-row"><td>3</td><td>renewable</td><td>可再生的；可更新的</td><td>Renewable energy will be up to the task.</td><td>My library card is renewable every two years.</td><td>形容词，常修饰 energy</td></tr>
+      <tr class="vocab-row"><td>4</td><td>transition</td><td>过渡；转变</td><td>This energy transition is global.</td><td>The school made a smooth transition to online classes.</td><td>名词；transit 是另一种词</td></tr>
+      <tr class="vocab-row"><td>5</td><td>responsible</td><td>负责的；是…的原因</td><td>Moving goods is responsible for a large part of emissions.</td><td>She is responsible for organizing the class party.</td><td>be responsible for</td></tr>
+      <tr class="vocab-row"><td>6</td><td>specific</td><td>特定的；具体的</td><td>Each mode of transport has its specific fuel needs.</td><td>Can you give me a specific time for our meeting?</td><td>勿与 special 混</td></tr>
+      <tr class="vocab-row"><td>7</td><td>estimate</td><td>估计；估算</td><td>It's estimated that electricity demand could double by 2050.</td><td>I estimate the homework will take about two hours.</td><td>动词/名词同形</td></tr>
+      <tr class="vocab-row"><td>8</td><td>demand</td><td>需求；要求</td><td>The global demand for electricity could more than double.</td><td>The teacher demanded that we finish the essay by Friday.</td><td>可数/不可数均可</td></tr>
+      <tr class="vocab-row"><td>9</td><td>carbonate</td><td>碳酸盐</td><td>Crucially, this process relies on water containing enough calcium carbonate.</td><td>Baking powder contains sodium carbonate as a key ingredient.</td><td>名词；钙化合物</td></tr>
+      <tr class="vocab-row"><td>10</td><td>consumption</td><td>消耗；消费</td><td>Limiting fuel consumption is not enough.</td><td>The country's meat consumption has dropped this year.</td><td>名词；动词 consume</td></tr>
+      <tr class="vocab-row"><td>11</td><td>efficiency</td><td>效率</td><td>Improving energy efficiency is one solution.</td><td>The new manager improved the team's work efficiency.</td><td>形容词 efficient</td></tr>
+      <tr class="vocab-row"><td>12</td><td>affordable</td><td>负担得起的</td><td>Making electricity more affordable helps transition.</td><td>This restaurant offers affordable lunch sets for students.</td><td>前缀 af- + ford</td></tr>
+      <tr class="vocab-row"><td>13</td><td>automobile</td><td>汽车</td><td>The greening of planes, trains and automobiles.</td><td>My uncle has worked in the automobile industry for twenty years.</td><td>美式汽车总称</td></tr>
+      <tr class="vocab-row"><td>14</td><td>vehicle</td><td>车辆；交通工具</td><td>Road vehicles accounted for 74.5% of emissions.</td><td>The police stopped the vehicle at the checkpoint.</td><td>h 不发音</td></tr>
+      <tr class="vocab-row"><td>15</td><td>freight</td><td>货物；货运</td><td>Much freight is moved by truck.</td><td>The shipping company handles freight between two cities.</td><td>名词；weight 同结构</td></tr>
+      <tr class="vocab-row"><td>16</td><td>alternative</td><td>替代的；可供选择的</td><td>We need alternative fuel sources.</td><td>Is there an alternative route to avoid the traffic?</td><td>勿与 alternate 混</td></tr>
+      <tr class="vocab-row"><td>17</td><td>sustainable</td><td>可持续的</td><td>Sustainable transport is the goal.</td><td>Small daily habits build a sustainable reading habit.</td><td>前缀 sustain + able</td></tr>
+      <tr class="vocab-row"><td>18</td><td>generate</td><td>产生；发电</td><td>Renewables can generate enough electricity.</td><td>The story generated a lot of discussion in class.</td><td>动词；名词 generation</td></tr>
+      <tr class="vocab-row"><td>19</td><td>efficient</td><td>高效的</td><td>Improving energy efficiency is one solution.</td><td>She is an efficient student who finishes tasks early.</td><td>名词 efficiency</td></tr>
+      <tr class="vocab-row"><td>20</td><td>solution</td><td>解决方案；溶液</td><td>Here are some solutions to get us going green.</td><td>We finally found a solution to the math problem.</td><td>常接 to + 名词</td></tr>
     </tbody>
   </table>
   <div class="feynman-tip">
-    <b>姐姐抽查话术</b>：不要问「abandon 是什么意思」——这是识别题，背过就答得出。要问「abandon 和 quit 有什么区别？什么场景下用 abandon 不用 quit？」——这测的是用法，造不出句的学生答不上来。
+    <b>姐姐抽查话术</b>：完形错题对应的词，不要问「X 是什么意思」——这是识别题，背过就答得出。要问「X 和它的近义词（比如 responsible / specific / sustainable）有什么区别？什么场景下用 X 不用另一个？」——这测的是用法。第四栏迁移改写造不出的，问「你能用 X 造一个跟环保无关的句子吗？」造不出 = 半会，标 M，进 D1 复测。
   </div>
 </section>
 
 <section>
-  <h2>二、古诗文 · 原文 + 翻译要点 + 费曼参考</h2>
-
-  <!-- 篇一 静女 -->
-  <div class="piece-title">篇一 · 《静女》（《诗经·邶风》）</div>
-  <div class="piece-meta">必背 60 篇 · 诗词曲 #1</div>
+  <h2>三、古诗文四件套答案（师说 · 韩愈）</h2>
+  <div class="piece-title">《师说》（节选） · 韩愈</div>
+  <div class="piece-meta">文言文·必修 #5 · 难度 ★★★ · 2025 全国一卷默写命中</div>
 
   <div class="answer-block">
     <h4>原文（自批默写用）</h4>
-    <div class="piece-body">静女其姝，俟我于城隅。爱而不见，搔首踟蹰。
-静女其娈，贻我彤管。彤管有炜，说怿女美。
-自牧归荑，洵美且异。匪女之为美，美人之贻。</div>
+    <div class="piece-body">古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。
+生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾后，其闻道也亦先乎吾，吾从而师之。吾师道也，夫庸知其年之先后生于吾乎？是故无贵无贱，无长无少，道之所存，师之所存也。
+……
+是故弟子不必不如师，师不必贤于弟子。闻道有先后，术业有专攻，如是而已。</div>
   </div>
 
   <div class="answer-block">
     <h4>翻译要点（自批翻译用）</h4>
-    <div class="body">第一章：姑娘美丽文静，约我在城墙角见面。她藏起来看不见，我急得挠头徘徊。
-第二章：姑娘美好，送我一支红管。红管闪闪发光，我喜爱它的美丽（「女」通「汝」，指彤管）。
-第三章：从郊外采来茅草芽送我，确实美得奇特。不是你这草本身美（「女」通「汝」指荑），是因为美人送的。
+    <div class="body">第一段：古代求学的人一定有老师。老师，是用来传授道理、教授学业、解答疑惑的人。人不是生下来就懂得道理的，谁能没有疑惑？有疑惑却不跟从老师学习，那些疑惑终究无法解开。
 
-<b>关键易错字</b>：姝（不是「姝」写成「株」）、踟蹰（双足字旁）、贻（贝字旁，不是「怡」）、彤（丹字旁）、炜（火字旁）、说怿（「说」通「悦」）、归荑（「归」通「馈」，荑是茅草芽）、匪（通「非」）。</div>
+第二段：出生在我之前的人，他懂得道理本来就比我早，我跟从他把他当作老师；出生在我之后的人，他懂得道理如果也比我早，我也跟从他学习。我学的是道理，哪里用得着计较他比我大还是小呢？所以无论地位高低、无论年龄大小，道理存在的地方，就是老师存在的地方。
+
+末段：所以学生不一定不如老师，老师也不一定比学生贤能。听到的道理有先后，技能学业各有专门研究，如此罢了。
+
+<b>关键易错字（默写必查）</b>：
+· 传道「受」业：受通「授」，不写「授」——这是最常考的通假字
+· 「孰」能无惑：孰是疑问代词「谁」
+· 夫「庸」知：庸是「岂、哪用得着」
+· 从而「师」之：师是意动用法「以…为师」
+· 弟子不必「不如」师：不必＝不一定，不是「不需要」
+· 术业有专「攻」：攻是「学习、研究」</div>
   </div>
 
   <div class="answer-block">
-    <h4>改写参考（情绪抓对即可，字句不必雷同）</h4>
-    <div class="body">我在城墙根下等她。她躲在角楼里不露面，我急得直挠头，来回踱步。等她终于跳出来，递给我一根亮闪闪的红管子，我又乐坏了，翻来覆去地看，觉得它好看得不得了。后来她又从郊外带回来一把茅草嫩芽，我捧在手心里，心想：这草算什么呀，可这是她亲手采的，那就是天底下最金贵的东西。</div>
+    <h4>改写参考（情绪/逻辑抓对即可，字句不必雷同）</h4>
+    <div class="body">李蟠，你问我为何求师不计较年龄贵贱，我答你一句：我所求的是道，不是人。道在哪里，老师就在哪里。二十岁的人若先闻道，我拜他为师；五十岁的人若未闻道，他拜我为师。我学的是道理，不是身份。世人耻于学师，是因他们分不清「求道」和「求名」。道比年龄长一岁、地位高一阶，都重要得多。你既好古文、通六艺，便该懂这一层。</div>
   </div>
 
   <div class="feynman-tip">
-    <b>任务 4 费曼参考答案</b>：第三章突然写「荑」（茅草芽）是为了层层递进——第一章见面焦躁（情绪未定），第二章得彤管欢喜（贵物），第三章得荑更欢喜（贱物但情重）。彤管贵而荑贱，但诗人说「匪女之为美，美人之贽」——重要的不是礼物本身的价值，是送礼物的人。这是「以物写情、以贱衬贵」的手法。学生能讲到「彤管和荑哪个不重要——美人之贽才重要」就算通过。
+    <b>任务 4 费曼参考答案</b>：「弟子不必不如师，师不必贤于弟子」是《师说》的论证终点，也是韩愈反击世俗「耻学于师」的最后武器。前文已说「闻道有先后」——先闻道者为师，与身份年龄无关。但世俗反驳会是：「老师怎能不如学生？」韩愈用这句话封死反驳：老师确实可能不如学生，因为「术业有专攻」——每个人专攻方向不同，学生在他专攻的方向上超过老师是正常的。这句话一立，逻辑闭环：师非因贤而为师，因闻道先而为师；学生非因落后而为生，因闻道后而为生。师生关系被还原为「闻道先后」这一单一变量。删掉这一句，文章能立论但反不掉「老师必须比学生强」的世俗偏见，论证不闭环。<br>
+    <b>判定标准</b>：学生能讲到「这句话是逻辑闭环的最后一步」+「删掉就反不掉世俗偏见」就算通过；只背「老师不一定比学生强」而讲不清为什么必须说这句话，标「未稳定掌握」。
   </div>
 </section>
 
+<section>
+  <h2>四、自评反思（自批后填写）</h2>
+  <div class="method">
+    <b>用法</b>：学生作答版完成后，对照本答案版自批，再回到作答版填写反思栏。下方模板与作答版一致，留空待填。
+  </div>
+  <table>
+    <thead>
+      <tr><th style="width:40%">反思项</th><th>回答</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>完形错了哪几空？分别错在词义、形式、还是语境判断？</td><td style="min-height:50px"></td></tr>
+      <tr><td>哪些词我以为会、其实造不出句（第三栏空着）？</td><td></td></tr>
+      <tr><td>哪些词我能造句但迁移栏（第四栏）写不出——证明只会在环保语境用？</td><td></td></tr>
+      <tr><td>《师说》能默但翻译/改写/费曼讲到一半讲不下去的，是哪一处？</td><td></td></tr>
+      <tr><td>下周重点攻克 1 个知识点（不是 3 个，就 1 个）</td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 1 · 答案版 · 仅用于自批 + 姐姐抽查参考 · 错题周末录入 MVP 触发 D1/D3/D7 复测
+  Gaokao Coach 2027 · 第1周 Day 1 · 答案版 · v3 完形+四阶梯+对齐2025真题 · 2026-11-03
 </div>
 
 </div>

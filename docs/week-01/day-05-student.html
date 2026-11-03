@@ -11,13 +11,13 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.6;padding:20px}
-.wrap{max-width:820px;margin:0 auto}
-header{border-bottom:2px solid var(--orange);padding-bottom:12px;margin-bottom:20px}
-.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--orange);font-weight:800;text-transform:uppercase}
+.wrap{max-width:860px;margin:0 auto}
+header{border-bottom:2px solid var(--blue);padding-bottom:12px;margin-bottom:20px}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--blue);font-weight:800;text-transform:uppercase}
 h1{font-size:24px;margin:6px 0 4px}
 .sub{color:var(--muted);font-size:13px}
 section{margin:28px 0;page-break-inside:avoid}
-h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0 0 6px}
+h2{font-size:18px;border-left:4px solid var(--blue);padding-left:10px;margin:0 0 6px}
 .method{background:#eaf2eb;border-left:3px solid var(--green);padding:10px 13px;font-size:13px;border-radius:0 8px 8px 0;margin-bottom:14px}
 .method b{color:var(--green)}
 .task{border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:12px;background:#fff}
@@ -25,25 +25,32 @@ h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0
 .task-title{font-weight:bold;font-size:14px}
 .task-meta{font-size:11px;color:var(--muted)}
 .prompt{font-size:13px;color:#444;margin-bottom:8px}
-.prompt em{color:var(--orange);font-style:normal;font-weight:600}
+.prompt em{color:var(--blue);font-style:normal;font-weight:600}
 .answer-box{border:1px dashed var(--line);border-radius:4px;padding:8px;min-height:60px;background:#fafafa}
 .answer-box.tall{min-height:120px}
 .answer-box.short{min-height:32px}
 .label-sm{font-size:11px;color:var(--muted);margin-bottom:4px;display:block}
-.classify{display:flex;gap:6px;margin-top:6px}
+.classify{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
 .classify span{display:inline-block;padding:3px 8px;border:1px solid var(--line);border-radius:3px;font-size:11px;cursor:pointer;background:#fff}
-.classify span.checked{background:var(--orange);color:#fff;border-color:var(--orange)}
+.classify span.checked{background:var(--blue);color:#fff;border-color:var(--blue)}
 table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:12px}
-.vocab-row td:nth-child(1){width:5%;font-weight:bold}
-.vocab-row td:nth-child(2){width:18%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:30%}
-.vocab-row td:nth-child(4){width:30%}
-.vocab-row td:nth-child(5){width:17%}
+.vocab-row td:nth-child(1){width:4%;font-weight:bold}
+.vocab-row td:nth-child(2){width:14%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.vocab-row td:nth-child(3){width:22%}
+.vocab-row td:nth-child(4){width:22%}
+.vocab-row td:nth-child(5){width:22%}
+.vocab-row td:nth-child(6){width:16%}
+.cloze-passage{font-size:14px;line-height:2;border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:#fafafa;margin:10px 0;white-space:pre-wrap}
+.cloze-blank{display:inline-block;min-width:90px;border-bottom:1px solid var(--blue);color:var(--blue);font-weight:600;text-align:center;margin:0 2px}
+.option-list{font-size:12px;line-height:1.9;margin:10px 0;padding:10px 14px;background:#fff;border:1px solid var(--line);border-radius:6px}
+.option-list ol{margin:0;padding-left:22px}
+.option-list li{margin:4px 0}
+.option-list b{color:var(--blue)}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
-.feynman-checklist{background:#fff8eb;border:1px solid var(--orange);border-radius:8px;padding:12px;margin:14px 0}
-.feynman-checklist h4{margin:0 0 8px;font-size:13px;color:var(--orange)}
+.feynman-checklist{background:#eef2f7;border:1px solid var(--blue);border-radius:8px;padding:12px;margin:14px 0}
+.feynman-checklist h4{margin:0 0 8px;font-size:13px;color:var(--blue)}
 .feynman-checklist ul{margin:0;padding-left:18px;font-size:12px}
 .feynman-checklist li{margin:3px 0}
 @media print{
@@ -57,59 +64,117 @@ th{background:#f8f5ee;font-weight:600;font-size:12px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 05 · Feynman</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 05 · v3 · Cloze + 4-Stage</div>
   <h1>第1周 Day 5 · 费曼训练包 · 学生作答版</h1>
   <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
-  <div class="sub" style="margin-top:6px">Day 5 主题：A 字头 alarm–approach 类</div>
+  <div class="sub" style="margin-top:6px">Day 5 主题：Day 5 · 高考写作高频功能词（应用文 + 续写）</div>
+  <div class="sub" style="font-size:11px;margin-top:2px">词源：2025 英语应用文写作 + 续写高频功能词</div>
 </header>
 
 <div class="method">
-  <b>为什么不是纯默写？</b><br>
-  纯默写只能测「记不记得字形」，测不出「懂不懂」。能默写《琵琶行》不代表能讲清白居易为什么用「大珠小珠落玉盘」比喻琴声。<br>
-  本周训练采用<b>主动回忆</b>（不看着材料回忆）+ <b>费曼讲解</b>（用自己的话讲给姐姐听）+ <b>迁移改写</b>（换个场景用得上）三件套，每项都暴露不同的理解盲区。
+  <b>今日方法</b>（五次回忆 + 完形 + 四阶梯 + 古诗文四件套）：<br>
+  <b>① 五次回忆法</b>——每个词在 5 个不同语境里被你主动回忆过，才算「记住了」。今天 20 词分别在「完形填空 / 四阶梯单测 / 古诗文改写 / 自评反思」4 个场景里复现，加上你昨晚的错词本共 5 次。<br>
+  <b>② 完形填空</b>——20 空四选一，每空 1 个正确答案 + 3 个干扰项。干扰项全部来自本日 20 词内部，测的是「词义辨析」而非「猜题」。<br>
+  <b>③ 四阶梯单测</b>——① 英→中（识别）/ ② 中→英（主动提取+拼写）/ ③ 造句（产出）/ ④ 迁移改写（换语境用）。前 3 梯对、第 4 梯卡壳 = 标 M。<br>
+  <b>④ 古诗文四件套</b>——默写 + 翻译 + 改写（电影镜头脚本）+ 费曼提问。<br>
+  <b>⑤ 五级分类</b>——N / F / S / M / C，仅 C 不入 MVP。
 </div>
 
 <div class="feynman-checklist">
-  <h4>本周费曼流程（学生侧）</h4>
+  <h4>Day 5 费曼流程（学生侧）</h4>
   <ul>
-    <li><b>第一步 · 主动回忆</b>：不查资料，独立完成下文所有作答。卡住超过 2 分钟就跳过，标「卡壳」。</li>
-    <li><b>第二步 · 自批</b>：对照答案版（<code>day-05-answers.html</code>）标出错的、卡壳的、写不出例句的。</li>
+    <li><b>第一步 · 主动回忆</b>：不查资料、不看答案版，独立完成下文所有作答。卡住超过 2 分钟就跳过，标「卡壳」。</li>
+    <li><b>第二步 · 自批</b>：对照答案版（<code>day-05-answers.html</code>）逐词逐篇标 N/F/S/M/C。</li>
     <li><b>第三步 · 讲给姐姐听</b>：周末姐姐抽查 3 个标错的/卡壳的，你用<b>自己的话</b>讲一遍。讲不明白 = 没真懂，回 MVP 标「概念混淆」。</li>
-    <li><b>第四步 · 录入 MVP</b>：错词和错篇录入触发 D1/D3/D7 复测。</li>
+    <li><b>第四步 · 录入 MVP</b>：非 C 的词和篇录入触发 D1/D3/D7 复测。</li>
   </ul>
 </div>
 
 <section>
-  <h2>一、英语词汇 · 主动回忆测试（20 词）</h2>
+  <h2>一、完形填空 · 20 空（A Letter to Jenny and a Brother's Visit）</h2>
   <div class="method">
-    <b>测试方法</b>：每词三栏——① 看英文写中文（识别）；② 看中文写英文（主动提取+拼写）；③ 用这个词造一个<b>你自己的</b>句子（产出，证明会用）。<br>
-    第三栏写不出 = 即使前两栏对了，这个词也只能标 <b>M</b>（词义错误，未掌握用法）。
+    <b>用法</b>：本篇改编自 2025 全国一卷写作第一节 + 续写。20 空全部使用本日 20 词作答，每空四选一（1 正确 + 3 干扰）。先读全文，再逐空作答。词形变化（如 -ed / -ing / 复数）按语境需要调整。<br>
+    <b>计分</b>：每空 1 分，共 20 分。15 分以下标「完形未达标」录入 MVP。
+  </div>
+
+  <div class="task">
+    <div class="task-head">
+      <div class="task-title">A Letter to Jenny and a Brother's Visit</div>
+      <div class="task-meta">改编自 2025 全国一卷写作第一节 + 续写 · 20 空 · 词源：本日 20 词</div>
+    </div>
+
+    <div class="cloze-passage">Dear Jenny,
+
+I really like the idea of adding a new _______(1) to our English newspaper. Between the two options, I would choose 「Fun at my school」. The _______(2) of our paper has been too serious lately, and students will _______(3) a lighter section.
+
+Now, a different story. My wife and I wanted to _______(4) a small _______(5) in early summer. My brother brought his dog Toby. Though friendly, he could easily knock over my granddaughter, so I asked my brother to keep him outside.
+
+_______(6), after supper, the weather changed. It started to rain and everyone went indoors. It was an _______(7) moment. My brother decided to leave rather than force the issue. His reply came as a surprise: 「Not a chance.」
+
+Two months passed. My wife _______(8) I get in touch, but I _______(9). However, my _______(10) kept bothering me. I tried to put myself in my brother's shoes. Toby was his constant _______(11), the one who kept him going after his wife's passing.
+
+I realized it was me who was at _______(12). With the biscuits my wife had made, I arrived at my brother's door. His _______(13) softened. I wanted to _______(14) him, not to _______(15) him with excuses. The _______(16) came suddenly: family doesn't _______(17) over small things. We _______(18) that afternoon. It _______(19) me now that pride is the cheapest thing to lose. _______(20), my brother smiled first.</div>
+  </div>
+
+  <div class="option-list">
+    <b>四选一选项清单</b>（每空 1 个正确答案 + 3 个干扰项，全部来自本日 20 词）：
+    <ol>
+      <li>① column　② tone　③ host　④ companion</li>
+      <li>① tone　② column　③ conscience　④ insight</li>
+      <li>① appreciate　② bother　③ resist　④ strike</li>
+      <li>① host　② gather　③ part　④ reunite</li>
+      <li>① gather　② host　③ column　④ tone</li>
+      <li>① Unexpectedly　② Awkward　③ Comfort　④ Fault</li>
+      <li>① awkward　② unexpected　③ guilty　④ decent</li>
+      <li>① suggested　② resisted　③ bothered　④ struck</li>
+      <li>① resisted　② suggested　③ appreciated　④ hosted</li>
+      <li>① conscience　② companion　③ insight　④ expression</li>
+      <li>① companion　② conscience　③ tone　④ fault</li>
+      <li>① fault　② part　③ strike　④ insight</li>
+      <li>① expression　② tone　③ insight　④ companion</li>
+      <li>① comfort　② bother　③ resist　④ strike</li>
+      <li>① bother　② comfort　③ reunite　④ part</li>
+      <li>① insight　② conscience　③ expression　④ tone</li>
+      <li>① part　② reunite　③ strike　④ gather</li>
+      <li>① reunited　② parted　③ resisted　④ struck</li>
+      <li>① strikes　② bothers　③ resists　④ gathers</li>
+      <li>① Unexpectedly　② Awkward　③ Companion　④ Conscience</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>二、四阶梯单测（20 词 · 识别 / 拼写 / 造句 / 迁移改写）</h2>
+  <div class="method">
+    <b>四阶梯为什么是这四个</b>：<br>
+    <b>① 英→中</b>测识别（认识）；<b>② 中→英</b>测主动提取 + 拼写；<b>③ 造句</b>测产出（会用）；<b>④ 迁移改写</b>测跨语境应用——换一个完全不同的场景，这个词还能用对才算真懂。<br>
+    前 3 梯对、第 4 梯卡壳 = 标 M。本日 20 词全部来自 2025 写作高频功能词，能造出句、能改写出来，才能在高考应用文/续写里主动用出来。
   </div>
   <table>
     <thead>
-      <tr><th>#</th><th>Word</th><th>① 英→中（你的释义）</th><th>② 中→英（你的拼写）</th><th>③ 造句（你的句子）</th></tr>
+      <tr><th>#</th><th>Word</th><th>① 英→中</th><th>② 中→英</th><th>③ 造句</th><th>④ 迁移改写</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>alarm</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>2</td><td>album</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>3</td><td>alcohol</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>4</td><td>alike</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>5</td><td>alive</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>6</td><td>all</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>7</td><td>allow</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>8</td><td>almost</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>9</td><td>alone</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>10</td><td>along</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>11</td><td>aloud</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>12</td><td>already</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>13</td><td>also</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>14</td><td>alternative</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>15</td><td>although</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>16</td><td>altogether</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>17</td><td>amaze</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>18</td><td>ambition</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>19</td><td>ambulance</td><td></td><td></td><td></td></tr>
-      <tr class="vocab-row"><td>20</td><td>analyze</td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>1</td><td>column</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>2</td><td>suggest</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>3</td><td>appreciate</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>4</td><td>gather</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>5</td><td>host</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>6</td><td>unexpected</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>7</td><td>unexpectedly</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>8</td><td>awkward</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>9</td><td>companion</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>10</td><td>conscience</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>11</td><td>bother</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>12</td><td>resist</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>13</td><td>fault</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>14</td><td>part</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>15</td><td>expression</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>16</td><td>tone</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>17</td><td>strike</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>18</td><td>insight</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>19</td><td>comfort</td><td></td><td></td><td></td><td></td></tr>
+      <tr class="vocab-row"><td>20</td><td>reunite</td><td></td><td></td><td></td><td></td></tr>
     </tbody>
   </table>
   <p class="sub" style="margin-top:10px">本栏结束后，按以下规则给每词标分类（写在小方框里）：</p>
@@ -117,41 +182,42 @@ th{background:#f8f5ee;font-weight:600;font-size:12px}
     <span>N · 完全未接触</span>
     <span>F · 见过遗忘</span>
     <span>S · 拼写错</span>
-    <span>M · 词义/用法错（含造不出句）</span>
+    <span>M · 词义/用法错（含造不出句、迁移改写卡壳）</span>
     <span>C · 完全正确</span>
   </div>
 </section>
 
 <section>
-  <h2>二、古诗文 · 默写 + 翻译 + 改写三件套（1 篇）</h2>
+  <h2>三、古诗文四件套（《念奴娇·赤壁怀古》· 苏轼）</h2>
   <div class="method">
-    <b>三件套为什么是这三个</b>：<br>
-    <b>默写</b>测记忆；<b>翻译</b>测理解（能翻译 = 真读懂每个字）；<b>改写</b>测迁移（能换成自己语言重新表达 = 真内化）。<br>
-    三项全对才算掌握。任一项卡壳，标「曾对再错」或「未稳定掌握」录入 MVP。
+    <b>四件套为什么是这四个</b>：<br>
+    <b>默写</b>测记忆；<b>翻译</b>测理解；<b>改写</b>测迁移（电影镜头脚本——把诗词语言转译成画面语言）；<b>费曼提问</b>测讲明白（能讲清「早生华发」藏着什么情绪、为什么最后能释怀）。<br>
+    四项全对才算掌握。任一项卡壳即标「未稳定掌握」录入 MVP。<br>
+    <b>篇目说明</b>：《念奴娇·赤壁怀古》为历史高频篇，未直接命中 2025 默写真题（2025 已命《师说》《鹊桥仙》《苏幕遮》），但苏轼豪放派代表作 + 词中对比论证（周瑜 vs 苏轼）是高考高频考点。
   </div>
 
   <div class="task">
     <div class="task-head">
-      <div class="task-title">《师说》（节选）· 韩愈</div>
-      <div class="task-meta">文言文·必修 #5 · 难度 ★★★</div>
+      <div class="task-title">《念奴娇·赤壁怀古》 · 苏轼</div>
+      <div class="task-meta">诗词曲 #26 · 难度 ★★★ · 历史高频篇</div>
     </div>
 
-    <div class="prompt"><em>任务 1 · 默写</em> · 不看原文，凭记忆默写全文。</div>
+    <div class="prompt"><em>任务 1 · 默写</em> · 不看原文，凭记忆默写全文（上下阕）。</div>
     <div class="answer-box tall"></div>
 
-    <div class="prompt" style="margin-top:10px"><em>任务 2 · 翻译</em> · 逐句翻译成现代汉语。重点：「师者，所以传道受业解惑也」的「受」通什么字？「孰能无惑」的「孰」是什么意思？「吾从而师之」的「师」是什么用法？</div>
+    <div class="prompt" style="margin-top:10px"><em>任务 2 · 翻译</em> · 逐句翻译成现代汉语。重点解释：「樯橹灰飞烟灭」的「樯橹」借代什么？为什么不用「军舰」？「一尊还酹江月」的「酹」是什么动作？为什么是「江月」不是「江水」？</div>
     <div class="answer-box tall"></div>
 
-    <div class="prompt" style="margin-top:10px"><em>任务 3 · 改写</em> · 韩愈这篇《师说》写于中唐，当时士大夫阶层耻于学师（觉得拜师丢人）。把这段论证改写成 200 字的「对当代家长的辩护词」——假设今天有家长质疑「我孩子自学不行吗，为什么要找老师？」，用韩愈的逻辑回答。</div>
+    <div class="prompt" style="margin-top:10px"><em>任务 3 · 改写</em>（电影镜头脚本）· 把下阕「遥想公瑾当年……一尊还酹江月」改写成 200 字的电影镜头脚本：远景→中景→特写镜头切换；周瑜与苏轼的对比；最后镜头落在「江月」上。</div>
     <div class="answer-box tall"></div>
 
-    <div class="prompt" style="margin-top:10px"><em>任务 4 · 费曼提问</em>（周末姐姐抽查）· 准备用自己的话回答：韩愈说「道之所存，师之所存也」——只要谁懂道谁就是老师。但他自己又是当朝大官、文坛领袖，他拜师吗？这篇《师说》到底是为谁写的？</div>
+    <div class="prompt" style="margin-top:10px"><em>任务 4 · 费曼提问</em>（周末姐姐抽查）· 苏轼写这首词时被贬黄州、47 岁、一事无成；周瑜 34 岁破曹、功业鼎盛。词里「早生华发」四个字藏着什么情绪？为什么最后又能「一尊还酹江月」释怀？</div>
     <div class="answer-box" style="min-height:40px"></div>
   </div>
 </section>
 
 <section>
-  <h2>三、本周自评 · 费曼反思</h2>
+  <h2>四、自评反思 · 费曼复盘</h2>
   <div class="method">
     <b>费曼反思</b>：不会的不可怕，<b>以为自己会其实不会</b>才可怕。这一栏用来抓后者。
   </div>
@@ -160,17 +226,17 @@ th{background:#f8f5ee;font-weight:600;font-size:12px}
       <tr><th>反思项</th><th>回答</th></tr>
     </thead>
     <tbody>
-      <tr><td>本周哪些词我以为会、其实造不出句？</td><td style="min-height:50px"></td></tr>
-      <tr><td>本周哪首诗我能默写但翻译卡壳了？</td><td></td></tr>
-      <tr><td>本周哪首诗我能翻译但改写不出？</td><td></td></tr>
-      <tr><td>讲给姐姐听时，哪个问题我讲到一半讲不下去了？</td><td></td></tr>
-      <tr><td>下周要重点攻克哪 1 个知识点？（不是 3 个，就 1 个）</td><td></td></tr>
+      <tr><td>Day 5 哪些词我以为会、其实迁移改写卡壳？（写作功能词，特别是 appreciate / strike / insight 这种动词名词两用）</td><td style="min-height:50px"></td></tr>
+      <tr><td>完形填空 20 空我错了几空？哪几空是因为「词义辨析」错（不是语法错）？</td><td></td></tr>
+      <tr><td>《念奴娇》我能默写，但翻译卡壳在哪一句？（特别检查「樯橹」「酹」「纶巾」三个易错点）</td><td></td></tr>
+      <tr><td>讲给姐姐听「早生华发 → 一尊还酹江月」的情绪转折时，我讲到一半讲不下去了吗？</td><td></td></tr>
+      <tr><td>周末复习要重点攻克哪 1 个知识点？（不是 3 个，就 1 个）</td><td></td></tr>
     </tbody>
   </table>
 </section>
 
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 5 · 学生作答版 · 2026-11-02
+  Gaokao Coach 2027 · 第1周 Day 5 · 学生作答版 · v3 完形+四阶梯+对齐2025真题 · 2026-11-03
 </div>
 
 </div>

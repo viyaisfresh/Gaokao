@@ -8,3 +8,9 @@ build/
 .vercel
 next-env.d.ts.bak
 tsconfig.tsbuildinfo
+
+# 2025 真题 PDFs（外链下载，不入仓库）
+docs/exam-papers-2025/*.pdf
+docs/exam-papers-2025/*.png
+docs/exam-papers-2025/*.txt
+docs/week-01/data.json.v1-backup

@@ -7,7 +7,7 @@
 <style>
 :root{
   --bg:#fffefa;--ink:#242321;--muted:#77736c;--line:#e9e4da;
-  --orange:#d9912f;--green:#648b73;--red:#bd765e;--blue:#71899a;
+  --orange:#d9912f;--green:#648b73;--red:#bd765e;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.7;padding:20px}
@@ -29,13 +29,19 @@ table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
 th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:11px}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
-.vocab-row td:nth-child(2){width:13%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:24%}
-.vocab-row td:nth-child(4){width:30%;font-style:italic;color:#555}
-.vocab-row td:nth-child(5){width:29%}
+.vocab-row td:nth-child(2){width:11%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.vocab-row td:nth-child(3){width:16%}
+.vocab-row td:nth-child(4){width:22%;font-style:italic;color:#555}
+.vocab-row td:nth-child(5){width:24%;color:#444}
+.vocab-row td:nth-child(6){width:23%}
+.cloze-body{font-size:14px;line-height:2;white-space:pre-wrap;border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:#fafafa;margin:10px 0}
+.cloze-body .filled{color:var(--orange);font-weight:bold}
 .piece-body{font-size:14px;white-space:pre-wrap;line-height:2;border:1px solid var(--line);border-radius:6px;padding:12px;background:#fafafa;margin:8px 0}
 .piece-title{font-size:15px;font-weight:bold;margin:18px 0 4px}
 .piece-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.error-list{margin:8px 0 0;padding-left:18px;font-size:12px}
+.error-list li{margin:3px 0}
+.error-list b{color:var(--red)}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 @media print{body{padding:0;font-size:11pt}section{page-break-inside:avoid}}
 </style>
@@ -44,89 +50,165 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 04 · Answers</div>
-  <h1>第1周 Day 4 费曼训练包 · 答案版</h1>
-  <div class="sub">仅用于自批 + 姐姐抽查参考。学生作答完毕后再打开。</div>
-  <div class="sub" style="margin-top:6px">Day 4 主题：A 字头年龄/同意/前进类</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 04 · v3 · Cloze + 4-Stage · Answers</div>
+  <h1>第1周 Day 4 · 费曼训练包 · 答案版</h1>
+  <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
+  <div class="sub" style="margin-top:6px">Day 4 主题：Day 4 · 语法填空核心词（围棋展览文本） · 仅用于自批 + 姐姐抽查参考</div>
 </header>
 
 <div class="method">
-  <b>用法</b>：作答版完成后对照本页自批。第三栏造句没有「标准答案」——只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子就标 M。古诗文改写同理，看情绪/意象/逻辑有没有抓住，不看字句是否雷同。<br>
+  <b>用法</b>：作答版完成后对照本页自批。<b>四阶梯第 ③ 造句和第 ④ 迁移改写没有唯一标准答案</b>——只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子就标 <b>M</b>。古诗文改写同理，看情绪/意象有没有抓住，不看字句是否雷同。<br>
   <b>费曼提问</b>的参考答案只是「姐姐抽查时的判断依据」，不是学生的标准答案。学生用自己的话讲明白即可，不必背参考答案。
 </div>
 
 <section>
-  <h2>一、英语词汇 · 参考答案（20 词）</h2>
-  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏给出一个例句参考，学生造的句子只要符合该词用法即可。</p>
+  <h2>一、完形填空 · 参考答案（20 空）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:8px">下方先给出填空后的完整原文（正确词以橙色加粗标注），再给出 20 空的答案速查表。</p>
+
+  <div class="answer-block">
+    <h4>填空后原文（自批用）</h4>
+    <div class="cloze-body">An <span class="filled">exhibition</span> at the Jiushi Art Museum in Shanghai <span class="filled">features</span> artwork inspired by Go, or weiqi in Chinese, which <span class="filled">originated</span> in China more than 4,000 years ago.
+
+Go is one of the earliest <span class="filled">binary</span>-based games. The movements of the black and white pieces <span class="filled">reflect</span> the basic ideas of Eastern <span class="filled">philosophy</span>, according to Tu Ningning, who is in charge of the <span class="filled">contemporary</span> art display.
+
+「We hope to present the rather <span class="filled">abstract</span> Go game and AI in a <span class="filled">visual</span> context, and initiate dialogues with <span class="filled">minimalist</span> art, <span class="filled">conceptual</span> art and <span class="filled">expressionism</span>,」 says Tu.
+
+In a Go game, each move should serve a long-term <span class="filled">strategy</span>. You try to lead the <span class="filled">opponent</span> into your trap. The players' personalities are <span class="filled">revealed</span> during the game, and one's <span class="filled">weakness</span> is exposed.
+
+A <span class="filled">decent</span> winner always tries to beat the opponent by no more than one or two points as a <span class="filled">gesture</span> of respect. The beauty in the <span class="filled">placement</span> of pieces inspired artists to create oil paintings and <span class="filled">sculptures</span> for the show.</div>
+  </div>
+
   <table>
     <thead>
-      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（学生自造句对比）</th><th>常见错误</th></tr>
+      <tr><th>#</th><th>Base</th><th>Answer</th><th>中文释义</th><th>错误提示</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>afraid</td><td>害怕的；担心的</td><td>She is afraid of spiders.</td><td>be afraid of</td></tr>
-      <tr class="vocab-row"><td>2</td><td>after</td><td>在…之后</td><td>I'll call you after lunch.</td><td>介词/连词</td></tr>
-      <tr class="vocab-row"><td>3</td><td>afternoon</td><td>下午</td><td>We met in the afternoon.</td><td>名词</td></tr>
-      <tr class="vocab-row"><td>4</td><td>afterward</td><td>以后；后来</td><td>We had dinner and went home afterward.</td><td>副词</td></tr>
-      <tr class="vocab-row"><td>5</td><td>again</td><td>又；再</td><td>Please say it again.</td><td>again and again</td></tr>
-      <tr class="vocab-row"><td>6</td><td>against</td><td>反对；逆</td><td>She leaned against the wall.</td><td>介词</td></tr>
-      <tr class="vocab-row"><td>7</td><td>age</td><td>年龄；时代</td><td>What is your age?</td><td>at the age of</td></tr>
-      <tr class="vocab-row"><td>8</td><td>agency</td><td>代理处；机构</td><td>She works at an advertising agency.</td><td>可数名词</td></tr>
-      <tr class="vocab-row"><td>9</td><td>agent</td><td>代理人；间谍</td><td>Our agent in Paris handled the deal.</td><td>名词</td></tr>
-      <tr class="vocab-row"><td>10</td><td>aggressive</td><td>好斗的；有进取心的</td><td>He is an aggressive salesman.</td><td>形容词，可褒可贬</td></tr>
-      <tr class="vocab-row"><td>11</td><td>ago</td><td>以前</td><td>I saw him two days ago.</td><td>用于过去时</td></tr>
-      <tr class="vocab-row"><td>12</td><td>agree</td><td>同意</td><td>I agree with you.</td><td>agree with sb / agree on sth</td></tr>
-      <tr class="vocab-row"><td>13</td><td>agreement</td><td>同意；协议</td><td>They reached an agreement.</td><td>reach an agreement</td></tr>
-      <tr class="vocab-row"><td>14</td><td>agricultural</td><td>农业的</td><td>Agricultural exports increased.</td><td>形容词</td></tr>
-      <tr class="vocab-row"><td>15</td><td>ahead</td><td>在前；向前</td><td>The road ahead is clear.</td><td>ahead of</td></tr>
-      <tr class="vocab-row"><td>16</td><td>aid</td><td>帮助；援助</td><td>She came to my aid.</td><td>first aid 急救</td></tr>
-      <tr class="vocab-row"><td>17</td><td>AIDS</td><td>艾滋病</td><td>AIDS research has made progress.</td><td>专有名词</td></tr>
-      <tr class="vocab-row"><td>18</td><td>aim</td><td>瞄准；目标</td><td>He aimed the gun carefully.</td><td>aim at / aim to</td></tr>
-      <tr class="vocab-row"><td>19</td><td>air</td><td>空气；外貌</td><td>Open the window for fresh air.</td><td>by air 乘飞机</td></tr>
-      <tr class="vocab-row"><td>20</td><td>aircraft</td><td>飞行器</td><td>The aircraft landed safely.</td><td>单复数同形</td></tr>
+      <tr class="vocab-row"><td>1</td><td>exhibition</td><td>exhibition</td><td>展览</td><td>collection 是「收藏」非展览活动；gallery / museum 是场所不是活动</td></tr>
+      <tr class="vocab-row"><td>2</td><td>feature</td><td>features</td><td>以…为特色</td><td>主语 exhibition 单数，动词加 -s；presents / displays 语法对但不如 feature 贴切「以…为特色」</td></tr>
+      <tr class="vocab-row"><td>3</td><td>origin</td><td>originated</td><td>起源</td><td>需过去式 -ed；invented 强调「发明人」，围棋无单一发明者</td></tr>
+      <tr class="vocab-row"><td>4</td><td>binary</td><td>binary</td><td>二元的；二进制的</td><td>dual / double / pair 是「双」但无「二进制」的数学/计算义</td></tr>
+      <tr class="vocab-row"><td>5</td><td>reflect</td><td>reflect</td><td>反映</td><td>express 偏「表达情感」；reflect 强调「映射、体现」更贴哲学语境</td></tr>
+      <tr class="vocab-row"><td>6</td><td>philosophy</td><td>philosophy</td><td>哲学</td><td>religion 是「宗教」；culture 太宽泛；thought 是「思想」非学科名</td></tr>
+      <tr class="vocab-row"><td>7</td><td>contemporary</td><td>contemporary</td><td>当代的</td><td>modern 偏「现代（时期）」；current 是「当前的」无艺术史义</td></tr>
+      <tr class="vocab-row"><td>8</td><td>abstract</td><td>abstract</td><td>抽象的</td><td>complex 是「复杂」；abstract 与下文 visual 对应「难以具象呈现」</td></tr>
+      <tr class="vocab-row"><td>9</td><td>visual</td><td>visual</td><td>视觉的</td><td>visible 是「可见的」；vivid 是「生动的」；graphic 偏「图形的」</td></tr>
+      <tr class="vocab-row"><td>10</td><td>minimalist</td><td>minimalist</td><td>极简主义的</td><td>minimum / minimal 是「最小的」无艺术流派义；miniature 是「微型的」</td></tr>
+      <tr class="vocab-row"><td>11</td><td>conceptual</td><td>conceptual</td><td>概念的</td><td>ideal / theoretical / mental 均无艺术流派「观念艺术」义</td></tr>
+      <tr class="vocab-row"><td>12</td><td>expressionism</td><td>expressionism</td><td>表现主义</td><td>impressionism / realism / romanticism 是其他流派，原文唯一对应 expressionism</td></tr>
+      <tr class="vocab-row"><td>13</td><td>strategy</td><td>strategy</td><td>策略</td><td>plan 太泛；tactic 是「战术（局部）」；strategy 强调「长期战略」</td></tr>
+      <tr class="vocab-row"><td>14</td><td>opponent</td><td>opponent</td><td>对手</td><td>enemy 是「敌人」带敌意；rival / competitor 偏竞争而非博弈对手</td></tr>
+      <tr class="vocab-row"><td>15</td><td>reveal</td><td>revealed</td><td>揭示</td><td>需被动语态 -ed；exposed 偏「暴露（负面）」；revealed 中性「显现」</td></tr>
+      <tr class="vocab-row"><td>16</td><td>weakness</td><td>weakness</td><td>弱点</td><td>shortcoming / fault / flaw 是「缺点/缺陷」；weakness 偏「薄弱环节」</td></tr>
+      <tr class="vocab-row"><td>17</td><td>decent</td><td>decent</td><td>体面的；正派的</td><td>polite / kind / gentle 偏「礼貌/善良」；decent 含「有风度」义</td></tr>
+      <tr class="vocab-row"><td>18</td><td>gesture</td><td>gesture</td><td>姿态；手势</td><td>sign / symbol / mark 是「标志/符号」；gesture 强调「表示心意的动作」</td></tr>
+      <tr class="vocab-row"><td>19</td><td>placement</td><td>placement</td><td>放置；布置</td><td>position / location 是「位置」；placement 强调「放置的行为/布局」</td></tr>
+      <tr class="vocab-row"><td>20</td><td>sculpture</td><td>sculptures</td><td>雕塑</td><td>需复数与 oil paintings 并列；statues 偏「雕像（人像）」；sculptures 更宽</td></tr>
     </tbody>
   </table>
   <div class="feynman-tip">
-    <b>姐姐抽查话术</b>：不要问「against 是什么意思」——这是识别题，背过就答得出。要问「against 和 opposite 有什么区别？什么时候用 lean against the wall、什么时候用 opposite the wall？」——这测的是用法，造不出句的学生答不上来。再比如「agree with me 和 agree on the plan 区别在哪？」——一个同意人，一个对事达成共识，混了就标 M。
+    <b>姐姐抽查话术</b>：不要只问「第 5 空填什么」——这是识别题。要问「reflect 和 express 都译『表达/反映』，为什么第 5 空选 reflect 不选 express？」或「opponent 和 enemy 都是『对手/敌人』，围棋语境下为什么必须用 opponent？」——这测的是<b>语境辨析</b>而非<b>词义识别</b>。
   </div>
 </section>
 
 <section>
-  <h2>二、古诗文 · 原文 + 翻译要点 + 费曼参考</h2>
+  <h2>二、四阶梯单测 · 参考答案（20 词）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:8px">第 ③ 造句参考取自原文语境；第 ④ 迁移改写参考是换场景的 8-15 词短句，证明这个词脱离原文也能用。学生造的句子只要符合该词用法即可。</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（原文语境）</th><th>迁移改写参考（换场景）</th><th>常见错误</th></tr>
+    </thead>
+    <tbody>
+      <tr class="vocab-row"><td>1</td><td>exhibition</td><td>展览</td><td>An exhibition at the museum features Go-inspired artwork.</td><td>The science exhibition opens next Monday morning.</td><td>动词 exhibit；勿与 exhibit（展品）混</td></tr>
+      <tr class="vocab-row"><td>2</td><td>feature</td><td>以…为特色；特色</td><td>The exhibition features artwork inspired by Go.</td><td>This phone features a fast new camera.</td><td>动词/名词同形；作动词时主语单数加 -s</td></tr>
+      <tr class="vocab-row"><td>3</td><td>origin</td><td>起源</td><td>Go originated in China more than 4,000 years ago.</td><td>The word's origin traces back to Latin.</td><td>动词 originate；origin 是名词</td></tr>
+      <tr class="vocab-row"><td>4</td><td>binary</td><td>二元的；二进制的</td><td>Go is one of the earliest binary-based games.</td><td>Computers use binary code to store data.</td><td>名词/形容词；bi- 前缀表「二」</td></tr>
+      <tr class="vocab-row"><td>5</td><td>reflect</td><td>反映；反射</td><td>The movements reflect the basic ideas of Eastern philosophy.</td><td>His grades reflect his hard work daily.</td><td>名词 reflection；勿与 flex 混</td></tr>
+      <tr class="vocab-row"><td>6</td><td>philosophy</td><td>哲学</td><td>Eastern philosophy emphasizes balance.</td><td>Her teaching philosophy centers on students.</td><td>形容词 philosophical；重音第二音节</td></tr>
+      <tr class="vocab-row"><td>7</td><td>contemporary</td><td>当代的；同时代的</td><td>It brings together Go culture and contemporary art.</td><td>I love contemporary music from the 2000s.</td><td>前缀 con- + temporary；勿与 temporary 混</td></tr>
+      <tr class="vocab-row"><td>8</td><td>abstract</td><td>抽象的</td><td>We hope to present the abstract Go game visually.</td><td>Math uses abstract symbols to represent ideas.</td><td>名词 abstraction；重音第一音节</td></tr>
+      <tr class="vocab-row"><td>9</td><td>visual</td><td>视觉的</td><td>Present it in a visual context.</td><td>The film has stunning visual effects throughout.</td><td>名词 visuals；勿与 visible（可见的）混</td></tr>
+      <tr class="vocab-row"><td>10</td><td>minimalist</td><td>极简主义的</td><td>Dialogues with minimalist art.</td><td>Her apartment has a minimalist design style.</td><td>名词 minimalism；minimalist 是流派/风格</td></tr>
+      <tr class="vocab-row"><td>11</td><td>conceptual</td><td>概念的</td><td>Conceptual art challenges viewers.</td><td>The plan remains at a conceptual stage now.</td><td>名词 concept；勿与 theoretical 混</td></tr>
+      <tr class="vocab-row"><td>12</td><td>expressionism</td><td>表现主义</td><td>Expressionism emphasizes emotion over form.</td><td>Munch's The Scream reflects expressionism clearly.</td><td>动词 express；-ism 后缀表「主义」</td></tr>
+      <tr class="vocab-row"><td>13</td><td>opponent</td><td>对手</td><td>Lead the opponent into your trap.</td><td>The debate opponent raised a strong argument.</td><td>op- 前缀表「反方」；勿与 component 混</td></tr>
+      <tr class="vocab-row"><td>14</td><td>strategy</td><td>策略</td><td>The beauty in the strategic placement.</td><td>Our marketing strategy boosted sales significantly.</td><td>形容词 strategic；勿与 tactic（战术）混</td></tr>
+      <tr class="vocab-row"><td>15</td><td>placement</td><td>放置；布置</td><td>Strategic placement of the pieces.</td><td>Job placement services help graduates find work.</td><td>动词 place；-ment 后缀表「行为/结果」</td></tr>
+      <tr class="vocab-row"><td>16</td><td>reveal</td><td>揭示；暴露</td><td>The players' personalities are revealed during the game.</td><td>The investigation revealed surprising new facts.</td><td>名词 revelation；勿与 review 混</td></tr>
+      <tr class="vocab-row"><td>17</td><td>weakness</td><td>弱点</td><td>One's weaknesses are exposed.</td><td>Her only weakness is chocolate ice cream.</td><td>形容词 weak + ness；复数 weaknesses</td></tr>
+      <tr class="vocab-row"><td>18</td><td>decent</td><td>体面的；正派的</td><td>A decent winner respects the opponent.</td><td>He earns a decent salary at the firm.</td><td>勿与 descent（下降/血统）混</td></tr>
+      <tr class="vocab-row"><td>19</td><td>gesture</td><td>姿态；手势</td><td>Beating by one or two points is a gesture of respect.</td><td>She made a kind gesture toward the stranger.</td><td>名词/动词同形；重音第一音节</td></tr>
+      <tr class="vocab-row"><td>20</td><td>sculpture</td><td>雕塑</td><td>Artists created oil paintings, sculptures, silk-screen prints.</td><td>The park features a bronze sculpture of horses.</td><td>动词 sculpt；勿与 statue（雕像）混</td></tr>
+    </tbody>
+  </table>
+  <div class="feynman-tip">
+    <b>迁移改写参考说明</b>：第 ④ 栏的 8-15 词短句是<b>脱离围棋展览语境</b>的新场景例句——「feature」从「展览以…为特色」迁移到「手机以…为特色」，「opponent」从「围棋对手」迁移到「辩论对手」。学生能造出类似的新场景句子才算 C；只能背原文例句、换不了场景的，仍标 M。
+  </div>
+</section>
 
-  <!-- 篇一 -->
-  <div class="piece-title">篇一 · 《劝学》（节选）（荀子）</div>
+<section>
+  <h2>三、古诗文 · 原文 + 翻译要点 + 改写参考 + 费曼参考（《劝学》节选）</h2>
+
+  <div class="piece-title">《劝学》（节选） · 荀子</div>
   <div class="piece-meta">文言文·必修 #2 · 难度 ★★☆</div>
 
   <div class="answer-block">
     <h4>原文（自批默写用）</h4>
     <div class="piece-body">君子曰：学不可以已。
 青，取之于蓝，而青于蓝；冰，水为之，而寒于水。
-木直中绳，輮以为轮，其曲中规。虽有槁暴，不复挺者，輮使之然也。
-故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</div>
+木直中绳，輮以为轮，其曲中规。虽有槁暴，不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。
+……
+积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得，圣心备焉。故不积跬步，无以至千里；不积小流，无以成江海。骐骥一跃，不能十步；驽马十驾，功在不舍。锲而舍之，朽木不折；锲而不舍，金石可镂。</div>
   </div>
 
   <div class="answer-block">
     <h4>翻译要点（自批翻译用）</h4>
-    <div class="body">君子说：学习不可以停止。
-靛青（染料），是从蓝草中提取的，却比蓝草颜色更深；冰，是水凝结成的，却比水更冷。
-木材直得合乎墨线，（用火烤）把它弯成车轮，它的弯曲度合乎圆规。即使又晒干了，也不再挺直，是火烤使它这样。
-所以木材经墨线量过就能取直，金属刀剑拿到磨刀石上磨就能锋利，君子广泛地学习并且每天检验反省自己，那么就智慧明达并且行为没有过错了。
-
-<b>关键易错字</b>：已（停止，不是「已经」）、中（zhòng，合乎）、輮（火字旁通「煣」）、槁暴（「暴」通「曝」，晒）、参省（「参」通「三」，反省）、知（通「智」）。</div>
+    <div class="body">第一段：君子说，学习不可以停止。
+第二段：靛青是从蓼蓝中提取的，却比蓼蓝更青；冰是水凝结成的，却比水更冷。
+第三段：木材直得合乎墨线，把它烤弯做成车轮，它的弯曲度就合乎圆规。即使又晒干了，也不再挺直，是因为烤弯使它这样。所以木材经墨线量过就能取直，金属刀剑拿到磨刀石上磨就锋利，君子广泛地学习并且每天反省自己，就能智慧明达并且行为无过了。
+末段：堆积泥土成山，风雨就在那里兴起；积聚水流成渊，蛟龙就在那里生长；积累善行养成高尚品德，非凡的智慧自然就获得，圣人的心境就具备了。所以不积累半步一步，无法到达千里之外；不积累细小水流，无法汇成江海。骏马一跃，不能跳出十步；劣马走十天，能走得很远，功效在于不放弃。雕刻一下就放弃，腐朽的木头也刻不断；雕刻不停，金石也能雕刻。</div>
+    <ul class="error-list">
+      <li><b>学不可以「已」</b>：已是「停止」，不是「已经」</li>
+      <li><b>「青」取之于蓝</b>：青是靛青（染料），不是颜色形容词</li>
+      <li><b>「輮」以为轮</b>：輮通「煣」，火烤使弯，不是「揉」</li>
+      <li><b>虽有「槁暴」</b>：槁暴＝晒干；暴通「曝」，不写「曝」</li>
+      <li><b>「参省」乎己</b>：参省＝检验反省，不是「参与」</li>
+      <li><b>不积「跬」步</b>：跬读 kuǐ，半步，不是「步」</li>
+      <li><b>驽马「十驾」</b>：十驾＝十天的路程，不是「十匹马」</li>
+      <li><b>「锲」而不舍</b>：锲读 qiè，刻，不是「契」</li>
+    </ul>
   </div>
 
   <div class="answer-block">
-    <h4>改写参考（逻辑抓对即可，字句不必雷同）</h4>
-    <div class="body">你想打好篮球，光靠天赋不行。强如科比，也得每天在篮下投 1000 次——肌肉记不住的动作，比赛中根本做不出来。这就像荀子说的：青取之于蓝而青于蓝，冰水为之而寒于水——你能比教会你的人更强，前提是你真的被「练」过。你的运球姿势本来挺丑的，被教练纠正 100 次之后，那丑姿势就定型了，再想改回简单都不行了——「虽有槁暴，不复挺者，輮使之然也」。练琴、编程都是一回事：你的肌肉记忆、思维路径，是被反复训练「煣」出来的，不是天生的。</div>
+    <h4>改写参考（给高三学生的劝告，情绪抓对即可，字句不必雷同）</h4>
+    <div class="body">你天赋好，跳一步能跳出别人三步——但只跳一步，永远到不了千里之外。你天赋差，一步只走半米——但你天天走、月月走、年年走，十天后你已经走出了别人的视野。高考这场长跑，从不奖励跳得高的人，只奖励走得久的人。骐骥的悲剧是一跃之后疲倦，驽马的胜利是十驾之后不停。你是哪种，由你自己决定。</div>
   </div>
 
   <div class="feynman-tip">
-    <b>任务 4 费曼参考答案</b>：荀子的逻辑是：学习是「改造本性」的过程，本性改造不能停。木被輮成轮子之后「虽有槁暴不复挺」，前提是被反复烤反复煣，没煣透就停手，木头会弹回原状。学习同理：今天学明天不学，本性就把今天那点改造弹回去。「不可以已」不是说不能休息，是说改造过程必须连续到本性被定型为止。学生能讲到「学习是改造本性，改造必须到定型才能停」就算通过。
+    <b>任务 4 费曼参考答案</b>：这是对比论证，但荀子选的对比物有讲究。「朽木」是最容易刻的材质，「金石」是最难刻的材质。逻辑链是：如果你「舍」（半途而废），连最容易的事（刻朽木）也做不成；如果你「不舍」（坚持），连最难的事（刻金石）也能做成。这两个极端一立，中间所有难度都被覆盖——不存在「太难所以做不到」的借口，也不存在「太简单所以不需要坚持」的轻视。如果换成「木头」和「铁」这种中间材质对比，论证力会下降：木头没那么软，铁没那么硬，对比的张力就弱了。荀子选材质的极致化，是为了把「坚持与否」从变量里独立出来——成败只取决于坚持，不取决于难度。学生能讲到「朽木最易 + 金石最难 + 两极端覆盖所有难度」+「换成中间材质对比张力会弱」就算通过。
   </div>
 </section>
 
+<section>
+  <h2>四、自评反思 · 模板</h2>
+  <div class="method">
+    <b>反思用法</b>：学生作答版完成后，对照本表逐条填写。反思项不是「打分」，是「抓盲区」——以为自己会其实不会的，比明摆着不会的更危险。填完本表后，把标 M 的词、标「曾对再错」的篇录入 MVP 触发 D1/D3/D7 复测。
+  </div>
+  <table>
+    <thead>
+      <tr><th>反思项</th><th>参考回答方向</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>今天完形填空我选错的是哪几空？错因是词义混 / 词形混 / 语境误判？</td><td>逐空归类：如「第 5 空选 express 是词义混（reflect vs express）」「第 10 空选 minimal 是词形混（minimalist 流派 vs minimal 形容词）」</td></tr>
+      <tr><td>今天哪些词我以为会、其实造不出句或迁移改写不出？</td><td>列出具体词：如「contemporary 我能译但造不出新场景句」「gesture 我以为是『手势』但不知道有『姿态（抽象）』义」</td></tr>
+      <tr><td>《劝学》我能默写，但翻译卡壳的是哪一句？</td><td>具体到句：如「虽有槁暴，不复挺者，輮使之然也」整句翻不顺，卡在「虽」「暴」「輮」三个字</td></tr>
+      <tr><td>讲给姐姐听「锲而不舍」对比论证时，我讲到一半讲不下去了？</td><td>卡在哪一层：如「能讲到朽木最容易、金石最难，但讲不出『为什么选两极端而不是中间材质』这一层」</td></tr>
+      <tr><td>明天 Day 5 要重点攻克哪 1 个知识点？（不是 3 个，就 1 个）</td><td>只挑 1 个：如「把今天标 M 的 5 个词全部造新场景句」或「把《劝学》末段翻译默写 3 遍直到零错字」</td></tr>
+    </tbody>
+  </table>
+</section>
+
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 4 · 答案版 · 仅用于自批 + 姐姐抽查参考 · 错题周末录入 MVP 触发 D1/D3/D7 复测
+  Gaokao Coach 2027 · 第1周 Day 4 · 答案版 · v3 完形+四阶梯+对齐2025真题
 </div>
 
 </div>

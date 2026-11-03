@@ -11,7 +11,7 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.7;padding:20px}
-.wrap{max-width:820px;margin:0 auto}
+.wrap{max-width:860px;margin:0 auto}
 header{border-bottom:2px solid var(--orange);padding-bottom:12px;margin-bottom:20px}
 .eyebrow{font-size:11px;letter-spacing:.16em;color:var(--orange);font-weight:800;text-transform:uppercase}
 h1{font-size:24px;margin:6px 0 4px}
@@ -28,14 +28,25 @@ h2{font-size:18px;border-left:4px solid var(--orange);padding-left:10px;margin:0
 table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
 th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
 th{background:#f8f5ee;font-weight:600;font-size:11px}
+.cloze-row td:nth-child(1){width:4%;font-weight:bold}
+.cloze-row td:nth-child(2){width:14%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.cloze-row td:nth-child(3){width:14%;font-family:"SF Mono",Consolas,monospace;font-weight:bold;color:var(--orange)}
+.cloze-row td:nth-child(4){width:24%}
+.cloze-row td:nth-child(5){width:44%}
 .vocab-row td:nth-child(1){width:4%;font-weight:bold}
-.vocab-row td:nth-child(2){width:13%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
-.vocab-row td:nth-child(3){width:24%}
-.vocab-row td:nth-child(4){width:30%;font-style:italic;color:#555}
-.vocab-row td:nth-child(5){width:29%}
+.vocab-row td:nth-child(2){width:12%;font-family:"SF Mono",Consolas,monospace;font-weight:bold}
+.vocab-row td:nth-child(3){width:16%}
+.vocab-row td:nth-child(4){width:24%;font-style:italic;color:#555}
+.vocab-row td:nth-child(5){width:24%;color:#444}
+.vocab-row td:nth-child(6){width:20%}
 .piece-body{font-size:14px;white-space:pre-wrap;line-height:2;border:1px solid var(--line);border-radius:6px;padding:12px;background:#fafafa;margin:8px 0}
 .piece-title{font-size:15px;font-weight:bold;margin:18px 0 4px}
 .piece-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.error-list{margin:8px 0 0;padding-left:18px;font-size:12px}
+.error-list li{margin:3px 0}
+.error-list b{color:var(--red)}
+.cloze-passage{font-size:14px;line-height:2.2;white-space:pre-wrap;border:1px solid var(--line);border-radius:8px;padding:16px 18px;background:#fafafa;margin:10px 0}
+.cloze-answer{color:var(--orange);font-weight:bold}
 .footer{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);text-align:center}
 @media print{body{padding:0;font-size:11pt}section{page-break-inside:avoid}}
 </style>
@@ -44,97 +55,167 @@ th{background:#f8f5ee;font-weight:600;font-size:11px}
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Gaokao Coach · Week 01 · Day 03 · Answers</div>
-  <h1>第1周 Day 3 费曼训练包 · 答案版</h1>
-  <div class="sub">仅用于自批 + 姐姐抽查参考。学生作答完毕后再打开。Day 3 主题：A 字头充分/适当/调整类。</div>
+  <div class="eyebrow">Gaokao Coach · Week 01 · Day 03 · v3 · Cloze + 4-Stage · Answers</div>
+  <h1>第1周 Day 3 · 费曼训练包 · 答案版</h1>
+  <div class="sub">2027 届广东新高考 · 物化生 · 基线 358.77 / 目标 480 / 挑战 550</div>
+  <div class="sub" style="margin-top:6px">Day 3 主题：Day 3 · 完形填空核心动词（情感与生活类） · 仅用于自批 + 姐姐抽查参考</div>
 </header>
 
 <div class="method">
-  <b>用法</b>：作答版完成后对照本页自批。第三栏造句没有「标准答案」——只要语法对、词义对、句子通顺就算通过；卡壳或造出语义错的句子就标 M。古诗文改写同理，看情绪/意象有没有抓住，不看字句是否雷同。<br>
+  <b>用法</b>：作答版完成后对照本页自批。<b>四阶梯第四栏「迁移改写」没有标准答案</b>——只要语法对、词义对、句子通顺、语境与原文不同就算通过；卡壳或造出语义错的句子就标 <b>M</b>。古诗文改写同理，看情绪/意象有没有抓住，不看字句是否雷同。<br>
   <b>费曼提问</b>的参考答案只是「姐姐抽查时的判断依据」，不是学生的标准答案。学生用自己的话讲明白即可，不必背参考答案。
 </div>
 
 <section>
-  <h2>一、英语词汇 · 参考答案（20 词）</h2>
-  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏给出一个例句参考，学生造的句子只要符合该词用法即可。</p>
+  <h2>一、完形填空 · 答案（20 空）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:8px">下方先给原文（答案嵌入<b style="color:var(--orange)">橙色加粗</b>），再给 20 空答案速查表。</p>
+
+  <div class="piece-title">Giving Things Away</div>
+  <div class="piece-meta">改编自 2025 全国一卷英语完形填空 · 20 空</div>
+
+  <div class="cloze-passage">One August afternoon, I sat in my kitchen staring at a glass vase. My husband and I had just sold our house. We had donated what we could and rented a place to store our supposedly important objects. That left a house still stuffed with things that, while not particularly <span class="cloze-answer">valuable</span>, didn't belong in a landfill.
+
+I posted the vase online for $10. One message wanted additional photos; another asked for a price cut. <span class="cloze-answer">Disappointed</span>, I reposted it for free. The description: 「I hate this vase. Maybe you won't.」 In an instant, a woman I had never <span class="cloze-answer">encountered</span> before arrived at my door and left happily.
+
+<span class="cloze-answer">Encouraged</span>, I posted more. Each exchange was a chance to please a person I might not otherwise have <span class="cloze-answer">recognized</span>. My daily posts became a precious ray of light in the <span class="cloze-answer">chaos</span> of my house.
+
+Each <span class="cloze-answer">contribution</span> provided a chance to spare the landfill. I sit in my apartment today, loving each of the <span class="cloze-answer">belongings</span> that share our small space. I take comfort in knowing that someone nearby is <span class="cloze-answer">appreciating</span> something that couldn't come with us.
+
+The whole experience was <span class="cloze-answer">genuine</span> — not <span class="cloze-answer">conventional</span>, not <span class="cloze-answer">complicated</span>, not even <span class="cloze-answer">tolerable</span> at first. But I had <span class="cloze-answer">anticipated</span> the wrong outcome. Each <span class="cloze-answer">delivery</span> felt like a small victory. I had to <span class="cloze-answer">recommend</span> this method to friends. I never <span class="cloze-answer">withdrew</span> from a single exchange.
+
+If you ever feel <span class="cloze-answer">confused</span> by the clutter in your home, try giving things away. Don't <span class="cloze-answer">investigate</span> the buyers' motives. Just <span class="cloze-answer">display</span> the item, post an honest description, and let it go.</div>
+
   <table>
     <thead>
-      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（学生自造句对比）</th><th>常见错误</th></tr>
+      <tr><th>#</th><th>Base（原文词干）</th><th>Answer（正确形式）</th><th>中文释义</th><th>错误提示</th></tr>
     </thead>
     <tbody>
-      <tr class="vocab-row"><td>1</td><td>additional</td><td>附加的；额外的</td><td>We need additional information.</td><td>形容词，-al 后缀</td></tr>
-      <tr class="vocab-row"><td>2</td><td>address</td><td>地址；演讲</td><td>What is your home address?</td><td>名词/动词双用</td></tr>
-      <tr class="vocab-row"><td>3</td><td>adequate</td><td>足够的；胜任的</td><td>The food supply is adequate for the winter.</td><td>常接 for/to</td></tr>
-      <tr class="vocab-row"><td>4</td><td>adjust</td><td>调整；适应</td><td>She adjusted the chair to a comfortable height.</td><td>常接 to + 名词</td></tr>
-      <tr class="vocab-row"><td>5</td><td>administration</td><td>管理；行政</td><td>The new administration took office in January.</td><td>长词，重音第四音节</td></tr>
-      <tr class="vocab-row"><td>6</td><td>admire</td><td>钦佩；赞赏</td><td>I admire her courage in speaking out.</td><td>及物，常接 for</td></tr>
-      <tr class="vocab-row"><td>7</td><td>admit</td><td>承认；准许进入</td><td>He admitted making a mistake.</td><td>双 t → admitted；接 doing</td></tr>
-      <tr class="vocab-row"><td>8</td><td>adolescent</td><td>青少年</td><td>Adolescents often face identity issues.</td><td>名词/形容词；勿与 adult 混</td></tr>
-      <tr class="vocab-row"><td>9</td><td>adopt</td><td>采取；收养</td><td>The school adopted a new teaching method.</td><td>及物，不接 to</td></tr>
-      <tr class="vocab-row"><td>10</td><td>adult</td><td>成年人</td><td>This movie is for adults only.</td><td>名词/形容词</td></tr>
-      <tr class="vocab-row"><td>11</td><td>advance</td><td>前进；提前</td><td>The army advanced toward the city.</td><td>in advance 提前</td></tr>
-      <tr class="vocab-row"><td>12</td><td>advanced</td><td>先进的；高级的</td><td>She takes an advanced math class.</td><td>形容词，-ed 形式</td></tr>
-      <tr class="vocab-row"><td>13</td><td>advantage</td><td>优势；好处</td><td>Speaking English is an advantage in job hunting.</td><td>take advantage of</td></tr>
-      <tr class="vocab-row"><td>14</td><td>adventure</td><td>冒险</td><td>He loves reading adventure stories.</td><td>名词</td></tr>
-      <tr class="vocab-row"><td>15</td><td>advertise</td><td>做广告</td><td>They advertised their product on TV.</td><td>动词</td></tr>
-      <tr class="vocab-row"><td>16</td><td>advice</td><td>建议</td><td>She gave me good advice.</td><td>不可数名词，不加 s</td></tr>
-      <tr class="vocab-row"><td>17</td><td>advise</td><td>建议；劝告</td><td>I advise you to rest.</td><td>advise doing / advise sb to do</td></tr>
-      <tr class="vocab-row"><td>18</td><td>affair</td><td>事务；事件</td><td>Foreign affairs are handled by the ministry.</td><td>current affairs 时事</td></tr>
-      <tr class="vocab-row"><td>19</td><td>affect</td><td>影响</td><td>The weather affects my mood.</td><td>及物动词，勿与 effect 混</td></tr>
-      <tr class="vocab-row"><td>20</td><td>afford</td><td>买得起；承担得起</td><td>I can't afford a new car.</td><td>常接 can/can't</td></tr>
+      <tr class="cloze-row"><td>1</td><td>valuable</td><td>valuable</td><td>有价值的</td><td>形容词，修饰 things；勿用 value 的动词形式</td></tr>
+      <tr class="cloze-row"><td>2</td><td>disappointed</td><td>Disappointed</td><td>失望的</td><td>句首大写；过去分词作状语，修饰 I</td></tr>
+      <tr class="cloze-row"><td>3</td><td>encounter</td><td>encountered</td><td>遇见；邂逅</td><td>过去完成时 had + 过去分词 -ed</td></tr>
+      <tr class="cloze-row"><td>4</td><td>encourage</td><td>Encouraged</td><td>鼓励</td><td>句首大写；过去分词作状语</td></tr>
+      <tr class="cloze-row"><td>5</td><td>recognize</td><td>recognized</td><td>认出；识别</td><td>might have + 过去分词；勿与 encounter 混</td></tr>
+      <tr class="cloze-row"><td>6</td><td>chaos</td><td>chaos</td><td>混乱</td><td>名词，不可数；the chaos of</td></tr>
+      <tr class="cloze-row"><td>7</td><td>contribution</td><td>contribution</td><td>贡献；捐赠</td><td>可数名词，each + 单数</td></tr>
+      <tr class="cloze-row"><td>8</td><td>belongings</td><td>belongings</td><td>物品；所有物</td><td>必复数；each of the + 复数</td></tr>
+      <tr class="cloze-row"><td>9</td><td>appreciate</td><td>appreciating</td><td>欣赏；感激</td><td>进行时 is + doing；勿用 appreciated（被动不合语境）</td></tr>
+      <tr class="cloze-row"><td>10</td><td>genuine</td><td>genuine</td><td>真诚的；真正的</td><td>形容词作表语；勿用 genuinely（副词）</td></tr>
+      <tr class="cloze-row"><td>11</td><td>conventional</td><td>conventional</td><td>常规的；传统的</td><td>形容词，与 genuine 并列否定</td></tr>
+      <tr class="cloze-row"><td>12</td><td>complicated</td><td>complicated</td><td>复杂的</td><td>-ed 形容词，并列否定</td></tr>
+      <tr class="cloze-row"><td>13</td><td>tolerable</td><td>tolerable</td><td>可容忍的</td><td>动词 tolerate + able</td></tr>
+      <tr class="cloze-row"><td>14</td><td>anticipate</td><td>anticipated</td><td>期待；预期</td><td>过去完成时 had + -ed；勿用 anticipate（原形）</td></tr>
+      <tr class="cloze-row"><td>15</td><td>delivery</td><td>delivery</td><td>交付；递送</td><td>可数名词，each + 单数；勿用 deliver（动词）</td></tr>
+      <tr class="cloze-row"><td>16</td><td>recommend</td><td>recommend</td><td>推荐</td><td>双 m；had to + 动词原形</td></tr>
+      <tr class="cloze-row"><td>17</td><td>withdraw</td><td>withdrew</td><td>撤回；提取</td><td>过去式 withdrew，不是 withdrawed</td></tr>
+      <tr class="cloze-row"><td>18</td><td>confused</td><td>confused</td><td>困惑的</td><td>-ed 修饰人；feel + 形容词</td></tr>
+      <tr class="cloze-row"><td>19</td><td>investigate</td><td>investigate</td><td>调查</td><td>Don't + 动词原形</td></tr>
+      <tr class="cloze-row"><td>20</td><td>display</td><td>display</td><td>展示；陈列</td><td>Just + 动词原形；名词/动词同形</td></tr>
     </tbody>
   </table>
+
   <div class="feynman-tip">
-    <b>姐姐抽查话术</b>：本日有几个易混对子值得追问——① <b>adequate</b> vs <b>enough</b>：adequate 偏「刚好够、胜任」，enough 偏「足够多」；② <b>adopt</b> vs <b>adapt</b> vs <b>adjust</b>：adopt 是「采纳/收养」、adapt 是「适应新环境」、adjust 是「微调到合适」；③ <b>advice</b>（不可数名词，不加 s）vs <b>advise</b>（动词）；④ <b>affect</b>（动词，影响）vs <b>effect</b>（名词，效果）。不要问「affect 是什么意思」——要问「affect 和 effect 你给我分清楚，造两个句子」。
+    <b>姐姐抽查话术</b>：不要问「valuable 是什么意思」——这是识别题。要问「第 1 空为什么不选 reusable？两个词都表示「有价值」，语境区别在哪？」或「第 9 空为什么是 appreciating 不是 appreciated？被动行不行？」——这测的是<b>语境中的用法</b>而非<b>词义识别</b>，完形填空的真考点就在这里。
   </div>
 </section>
 
 <section>
-  <h2>二、古诗文 · 原文 + 翻译要点 + 改写参考 + 费曼参考</h2>
-
-  <div class="piece-title">今日篇 · 《念奴娇·赤壁怀古》（苏轼）</div>
-  <div class="piece-meta">必背 60 篇 · 诗词曲 #26 · 难度 ★★★</div>
-
-  <div class="answer-block">
-    <h4>原文（自批默写用）</h4>
-    <div class="piece-body">大江东去，浪淘尽，千古风流人物。
-故垒西边，人道是，三国周郎赤壁。
-乱石穿空，惊涛拍岸，卷起千堆雪。
-江山如画，一时多少豪杰。
-
-遥想公瑾当年，小乔初嫁了，雄姿英发。
-羽扇纶巾，谈笑间，樯橹灰飞烟灭。
-故国神游，多情应笑我，早生华发。
-人生如梦，一尊还酹江月。</div>
-  </div>
-
-  <div class="answer-block">
-    <h4>翻译要点 + 易错字（自批翻译用）</h4>
-    <div class="body">上阕：长江向东奔流，浪花淘尽千古风流人物。故垒西边，人们说就是三国周瑜破曹的赤壁。乱石刺穿天空，惊涛拍打岸边，卷起千堆雪白的浪花。江山美如画，当年曾有多少豪杰在此争雄。
-
-下阕：遥想当年的周瑜，小乔刚嫁给他，英姿勃发。手持羽扇头戴纶巾，谈笑之间，曹军的战船就化为灰烬消散。我的神思飞回故国战场，多情该笑我自己，头发早就白了。人生如梦一场，还是倒一杯酒洒向江上的明月吧。
-
-<b>「樯橹」借代什么</b>：樯是桅杆，橹是桨，借代曹军战船（水军）。不用「军舰」是因为「樯橹」是<b>部分代整体</b>的修辞，更形象——读者眼前浮现的是密密麻麻的桅杆和桨，比抽象的「军舰」有画面感。<b>「酹」是什么动作</b>：把酒洒在地上祭奠。<b>为什么是「江月」不是「江水」</b>：江月代表永恒（李白「江月何年初照人」），江水代表流逝（「大江东去」）。苏轼把酒敬永恒，是对自己短暂人生的释怀——一切功业都将被江水淘尽，唯江月长存，所以不必执念。
-
-<b>关键易错字</b>：淘（水字旁，不是「陶」）、垒（上下结构）、樯橹（「樯」木字旁桅杆，「橹」木字旁桨）、酹（酉字旁，把酒洒地）。一尊（「尊」通「樽」，酒器）。</div>
-  </div>
-
-  <div class="answer-block">
-    <h4>改写参考（电影镜头脚本示例，情绪抓对即可，字句不必雷同）</h4>
-    <div class="body">远景：江面，晨雾。镜头缓缓推近——岸边孤舟一叶，苏轼（47 岁，鬓发斑白）立于船头，手持羽扇，望向对岸赤壁。
-中景：他眼神恍惚。画面切——同一位置，三十岁的周瑜（英姿飒爽，小乔立于身后）正谈笑指挥。
-特写：周瑜嘴角微扬，扇子轻轻一挥。镜头切回——对岸火光冲天，曹军战船化为火海，灰烬飘落江面。
-切回苏轼：镜头从他的眼睛拉出。他低头看自己鬓角白发，苦笑。
-尾镜：他举起酒杯，缓缓将酒洒向江面。镜头跟随酒液落入水中，水面映出一轮明月。镜头定格在江月，淡出。</div>
-  </div>
+  <h2>二、四阶梯单测 · 参考答案（20 词 × 5 栏）</h2>
+  <p class="sub" style="font-size:12px;margin-bottom:8px">第三栏「造句参考」取自 2025 完形填空原文语境；第四栏「迁移改写参考」是换个不同语境的例句（8-15 词），学生造的句子只要语境不同、用法正确即可。</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Word</th><th>中文释义</th><th>造句参考（原文语境）</th><th>迁移改写参考（不同语境）</th><th>常见错误</th></tr>
+    </thead>
+    <tbody>
+      <tr class="vocab-row"><td>1</td><td>encourage</td><td>鼓励</td><td>Encouraged, I posted more items online.</td><td>My teacher encouraged me to join the speech contest.</td><td>名词 encouragement；被动 -ed 作状语</td></tr>
+      <tr class="vocab-row"><td>2</td><td>appreciate</td><td>欣赏；感激</td><td>Someone is appreciating something that couldn't come with us.</td><td>I really appreciate your patience during my recovery.</td><td>及物动词；后接 doing</td></tr>
+      <tr class="vocab-row"><td>3</td><td>anticipate</td><td>期待；预期</td><td>I wasn't anticipating such a reply.</td><td>The team anticipated a tough match but won easily.</td><td>前缀 anti- 提前；后接 doing</td></tr>
+      <tr class="vocab-row"><td>4</td><td>encounter</td><td>遇见；邂逅</td><td>A woman I had never encountered before arrived.</td><td>She encountered an old friend on the subway today.</td><td>名词/动词同形；勿与 counter 混</td></tr>
+      <tr class="vocab-row"><td>5</td><td>recognize</td><td>认出；识别</td><td>A person I might not otherwise have recognized.</td><td>I didn't recognize her after ten years apart.</td><td>名词 recognition；勿与 realize 混</td></tr>
+      <tr class="vocab-row"><td>6</td><td>investigate</td><td>调查</td><td>Don't investigate the buyers' motives.</td><td>The police investigated the theft for three weeks.</td><td>名词 investigation；后接 into</td></tr>
+      <tr class="vocab-row"><td>7</td><td>recommend</td><td>推荐</td><td>I had to recommend this method to friends.</td><td>Can you recommend a good Spanish restaurant nearby?</td><td>双 m；名词 recommendation；后接 doing</td></tr>
+      <tr class="vocab-row"><td>8</td><td>confused</td><td>困惑的</td><td>If you ever feel confused by the clutter.</td><td>The instructions were so vague that I felt confused.</td><td>-ed 修饰人；-ing 修饰物</td></tr>
+      <tr class="vocab-row"><td>9</td><td>disappointed</td><td>失望的</td><td>Disappointed, I reposted it for free.</td><td>He was disappointed with his exam results.</td><td>动词 disappoint；后接 with/about</td></tr>
+      <tr class="vocab-row"><td>10</td><td>valuable</td><td>有价值的</td><td>Things not particularly valuable.</td><td>She gave me some valuable advice on career planning.</td><td>名词 value；勿用 valued（已估价的）</td></tr>
+      <tr class="vocab-row"><td>11</td><td>conventional</td><td>常规的；传统的</td><td>Not conventional objects.</td><td>His conventional approach to teaching bored the students.</td><td>名词 convention；勿与 traditional 宷淆</td></tr>
+      <tr class="vocab-row"><td>12</td><td>complicated</td><td>复杂的</td><td>Not complicated at first.</td><td>The tax system here is incredibly complicated.</td><td>动词 complicate；-ed 形容词</td></tr>
+      <tr class="vocab-row"><td>13</td><td>tolerable</td><td>可容忍的</td><td>Not even tolerable at first.</td><td>The noise from construction is barely tolerable.</td><td>动词 tolerate；勿用 tolerant（宽容的）</td></tr>
+      <tr class="vocab-row"><td>14</td><td>display</td><td>展示；陈列</td><td>Just display the item, post an honest description.</td><td>The museum displays ancient pottery from the Tang dynasty.</td><td>名词/动词同形；勿与 deploy 混</td></tr>
+      <tr class="vocab-row"><td>15</td><td>contribution</td><td>贡献；捐赠</td><td>Each contribution provided a chance to spare the landfill.</td><td>Her contribution to the charity was widely praised.</td><td>动词 contribute；后接 to</td></tr>
+      <tr class="vocab-row"><td>16</td><td>belongings</td><td>物品；所有物</td><td>Loving each of the belongings that share our space.</td><td>She packed all her belongings into one small suitcase.</td><td>必复数；勿用 belonging（单数）</td></tr>
+      <tr class="vocab-row"><td>17</td><td>delivery</td><td>交付；递送</td><td>Each delivery felt like a small victory.</td><td>The delivery arrived two hours later than expected.</td><td>动词 deliver；复数 deliveries</td></tr>
+      <tr class="vocab-row"><td>18</td><td>withdraw</td><td>撤回；提取</td><td>I never withdrew from a single exchange.</td><td>He withdrew some cash from the ATM before leaving.</td><td>过去式 withdrew；过去分词 withdrawn</td></tr>
+      <tr class="vocab-row"><td>19</td><td>genuine</td><td>真诚的；真正的</td><td>The whole experience was genuine.</td><td>Her apology sounded genuine, not forced at all.</td><td>副词 genuinely；勿用 genius（天才）</td></tr>
+      <tr class="vocab-row"><td>20</td><td>chaos</td><td>混乱</td><td>A ray of light in the chaos of my house.</td><td>The classroom was in complete chaos after the teacher left.</td><td>形容词 chaotic；不可数名词</td></tr>
+    </tbody>
+  </table>
 
   <div class="feynman-tip">
-    <b>任务 4 费曼参考答案</b>：苏轼写这首词时 47 岁，被贬黄州，无权无职；周瑜 34 岁破曹，功业鼎盛。「早生华发」四个字藏的是<b>壮志未酬身先老</b>的悲愤——本应像周瑜一样建功立业，却一事无成头发先白了。但最后能「一尊还酹江月」释怀，是因为他想通了：周瑜再伟大，他的功业也被「浪淘尽」了，自己也终将被淘尽。既然一切都是梦，不必执念，敬江月一杯就好。这是苏轼特有的<b>「旷达」</b>——不是不悲，是悲完之后能放下。学生能讲到「周瑜和苏轼的对比」+「释怀不是因为不痛，是因为想通了」就算通过。
+    <b>姐姐抽查话术</b>：完形填空 + 四阶梯双测后，姐姐抽查要问<b>迁移类问题</b>：「appreciate 和 thank 都译「感激」，用法有什么不同？」「confused 和 confusing 什么时候用哪个？」——这测的是<b>用法辨析</b>，是高考完形和七选五的真正难点。
   </div>
 </section>
 
+<section>
+  <h2>三、古诗文 · 原文 + 翻译要点 + 改写参考 + 费曼参考（《苏幕遮·燎沉香》）</h2>
+
+  <div class="piece-title">《苏幕遮·燎沉香》 · 周邦彦</div>
+  <div class="piece-meta">诗词曲 #35 · 难度 ★★☆ · 2025 全国一卷默写真题命中（第 (3) 题）</div>
+
+  <div class="answer-block">
+    <h4>原文（自批默写用）</h4>
+    <div class="piece-body">燎沉香，消溽暑。鸟雀呼晴，侵晓窥檐语。
+叶上初阳干宿雨，水面清圆，一一风荷举。
+故乡遥，何日去？家住吴门，久作长安旅。
+五月渔郎相忆否？小楫轻舟，梦入芙蓉浦。</div>
+  </div>
+
+  <div class="answer-block">
+    <h4>翻译要点（自批翻译用）</h4>
+    <div class="body">上阕：点燃沉香，消除潮湿的暑气。鸟雀在呼唤晴天，清晨就在檐下窥视着鸣叫。初升的阳光晒干了荷叶上昨夜的雨珠，水面上的荷花清润圆润，一朵一朵在风中挺立举起。
+
+下阕：故乡遥远，何时才能回去？我家在苏州，却长久地客居在长安。五月的渔翁老友是否还记得我？我划着小桨、驾着轻舟，在梦里回到了长满荷花的水乡。</div>
+    <ul class="error-list">
+      <li><b>燎「沉香」</b>：燎读 liǎo，烧；沉香是一种香料</li>
+      <li><b>消「溽」暑</b>：溽读 rù，潮湿；勿写成「辱」</li>
+      <li><b>「侵」晓</b>：侵晓＝清晨；侵不是「侵犯」</li>
+      <li><b>「宿」雨</b>：宿读 sù，过夜的；勿读 xiǔ</li>
+      <li><b>水面「清圆」</b>：清圆形容荷叶（清润圆润），不是「清楚的圆」</li>
+      <li><b>一一「风荷举」</b>：举是「挺立、托起」；风荷＝风中的荷花</li>
+      <li><b>小「楫」轻舟</b>：楫读 jí，船桨；勿写成「揖」或「缉」</li>
+      <li><b>芙蓉「浦」</b>：浦是水滨、水边；芙蓉＝荷花</li>
+    </ul>
+  </div>
+
+  <div class="answer-block">
+    <h4>改写参考（清晨场景描述，情绪抓对即可，字句不必雷同）</h4>
+    <div class="body">天刚亮，昨夜一场雨还没干透。他推开窗，院子里鸟雀在檐下叫——是雨后初晴那种清亮的叫声。阳光斜斜地照到池面上，荷叶上还滚着昨夜的雨珠，被阳光一照，亮得像珠子。风一来，荷叶轻轻一摇，雨珠滑下去，叶面却挺得更高——一朵一朵，从水面举起来，干净、圆润、精神。这不是盛夏荷花的浓艳，是雨后清晨的荷花的清气。他看了一会儿，想起家乡苏州的荷塘，写下「水面清圆，一一风荷举」。</div>
+  </div>
+
+  <div class="feynman-tip">
+    <b>任务 4 费曼参考答案</b>：「水面清圆，一一风荷举」写的是荷的<b>「态」</b>——叶面上的雨珠在初阳下滚落，风一来，荷叶一朵一朵从水面挺举起来，是一个动态、有方向的画面。「接天莲叶无穷碧，映日荷花别样红」写的是荷的<b>「势」</b>——连天接日的碧色、映日浓烈的红色，是一个铺满整幅画面的色彩场面。前者是工笔画，单朵特写，时间精确到「雨后初晴」；后者是泼墨写意，远镜头全景，时间是盛夏正午。2025 真题给的是「以莲花为主题的图画」，标答选前者，因为画面是静态的、特写式的——若图画是远景大场面，标答就可能选后者。这也提示学生：默写题不是死记，是先看题干给的画面气质，再匹配诗的气质。学生能讲到「前者写态、后者写势」+「画面气质决定选句」就算通过。
+  </div>
+</section>
+
+<section>
+  <h2>四、自评反思 · 费曼反思模板</h2>
+  <div class="method">
+    <b>用法</b>：学生在作答版填完后，对照本模板自检。下面给出每行的<b>判断依据</b>，姐姐抽查时可据此快速定位学生盲区。
+  </div>
+  <table>
+    <thead>
+      <tr><th>反思项</th><th>姐姐抽查判断依据</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>今天完形填空哪几空我以为会、其实选错了？</td><td>看学生有没有列出具体空号。空号越多说明「以为自己会」的盲区越大。重点抓<b>第 2、9、13、17 空</b>——这 4 空涉及词形变化（disappointed/appreciating/tolerable/withdrew），是高考完形最高频考点。</td></tr>
+      <tr><td>今天哪些词四阶梯前三栏对、第四栏「迁移改写」写不出？</td><td>这些词标 <b>M</b>（词义对但用法未掌握）。常见重灾区：<b>appreciate / tolerate / withdraw / genuine</b>——学生认识但换语境就不会用。</td></tr>
+      <tr><td>《苏幕遮》我能默写，但翻译卡壳的是哪一句？</td><td>最常卡壳的是「一一风荷举」和「小楫轻舟，梦入芙蓉浦」。前者「举」≠举起，是「挺立」；后者「楫」读 jí，学生易读错。</td></tr>
+      <tr><td>讲给姐姐听「水面清圆，一一风荷举」为什么是标答时，我讲到一半讲不下去了？</td><td>学生能讲到「这句写得好」但讲不到<b>「态 vs 势」</b>的对比。讲不下去 = 没建立诗的画面分析框架，回 MVP 标「意境分析未掌握」。</td></tr>
+      <tr><td>明天 Day 4 要重点攻克哪 1 个知识点？</td><td>不是 3 个，就 1 个。姐姐可追问「为什么是这个」——答得出说明学生已开始自我诊断，答不出说明反思流于形式。</td></tr>
+    </tbody>
+  </table>
+</section>
+
 <div class="footer">
-  Gaokao Coach 2027 · 第1周 Day 3 · 答案版 · 仅用于自批 + 姐姐抽查参考 · 错题周末录入 MVP 触发 D1/D3/D7 复测
+  Gaokao Coach 2027 · 第1周 Day 3 · 答案版 · v3 完形+四阶梯+对齐2025真题 · 2026-11-03
 </div>
 
 </div>

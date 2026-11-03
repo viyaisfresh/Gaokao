@@ -1,710 +1,777 @@
 {
   "_meta": {
-    "week": 1,
-    "generatedAt": "2026-11-02",
-    "studentBaseline": 358.77,
-    "vocabDesign": "5 天 × 20 词 = 100 词。每词三栏：识别(英→中) + 拼写(中→英) + 造句(产出)。",
-    "classicalDesign": "5 篇/周。每篇四件套：默写 + 翻译 + 改写 + 费曼提问。",
-    "difficultyNote": "词汇按字母顺序，A 字头 100 词。古诗文难度递进：3 篇诗词曲 + 2 篇文言文。",
-    "source": "高考高频词 + 教育部 60 篇必背清单"
+    "version": "v3-cloze-2025-aligned",
+    "generated": "2026-11-03",
+    "alignment": "基于 2025 全国一卷真题调整：词汇来自 2025 英语试卷文本核心词；古诗文 3/5 命中 2025 默写真题（师说/鹊桥仙/苏幕遮），2/5 为历史高频篇（劝学/念奴娇）",
+    "sources": [
+      "https://jhcee.cn/pc/gk_information/consultation_detail-d6278da9-0614-42f2-b955-956d684bd64c.html",
+      "https://zhuanlan.zhihu.com/p/1916248728714588524"
+    ],
+    "structure": "完形填空（20 空，2025 真题改编）+ 四阶梯单测（识别/拼写/造句/迁移）+ 古诗文四件套 + 自评反思"
   },
   "vocab": {
     "day1": {
-      "theme": "A 字头基础动词与形容词",
+      "theme": "Day 1 · 阅读理解核心名词（环境与科技类）",
       "words": [
         {
-          "en": "abandon",
-          "zh": "放弃；遗弃",
-          "example": "He abandoned his plan to study abroad.",
-          "tip": "及物动词，不加 in"
+          "en": "emission",
+          "zh": "排放；排放物",
+          "example": "Transportation accounts for a large part of global CO2 emissions.",
+          "tip": "可数名词，常复；动词 emit"
         },
         {
-          "en": "ability",
-          "zh": "能力；才能",
-          "example": "She has the ability to solve complex problems.",
+          "en": "decarbonize",
+          "zh": "脱碳；低碳化",
+          "example": "The world races to decarbonize everything.",
+          "tip": "前缀 de- + carbon"
+        },
+        {
+          "en": "renewable",
+          "zh": "可再生的；可更新的",
+          "example": "Renewable energy will be up to the task.",
+          "tip": "形容词，常修饰 energy"
+        },
+        {
+          "en": "transition",
+          "zh": "过渡；转变",
+          "example": "This energy transition is global.",
+          "tip": "名词；transit 是另一种词"
+        },
+        {
+          "en": "responsible",
+          "zh": "负责的；是…的原因",
+          "example": "Moving goods is responsible for a large part of emissions.",
+          "tip": "be responsible for"
+        },
+        {
+          "en": "specific",
+          "zh": "特定的；具体的",
+          "example": "Each mode of transport has its specific fuel needs.",
+          "tip": "勿与 special 混"
+        },
+        {
+          "en": "estimate",
+          "zh": "估计；估算",
+          "example": "It's estimated that electricity demand could double by 2050.",
+          "tip": "动词/名词同形"
+        },
+        {
+          "en": "demand",
+          "zh": "需求；要求",
+          "example": "The global demand for electricity could more than double.",
           "tip": "可数/不可数均可"
         },
         {
-          "en": "able",
-          "zh": "能够的；有能力的",
-          "example": "He is able to swim across the river.",
-          "tip": "be able to do"
+          "en": "carbonate",
+          "zh": "碳酸盐",
+          "example": "Crucially, this process relies on water containing enough calcium carbonate.",
+          "tip": "名词；钙化合物"
         },
         {
-          "en": "abnormal",
-          "zh": "反常的；不正常的",
-          "example": "The abnormal weather worried the farmers.",
-          "tip": "ab- 前缀表偏离"
+          "en": "consumption",
+          "zh": "消耗；消费",
+          "example": "Limiting fuel consumption is not enough.",
+          "tip": "名词；动词 consume"
         },
         {
-          "en": "abroad",
-          "zh": "在国外；到国外",
-          "example": "She plans to study abroad next year.",
-          "tip": "副词，不加 to"
+          "en": "efficiency",
+          "zh": "效率",
+          "example": "Improving energy efficiency is one solution.",
+          "tip": "形容词 efficient"
         },
         {
-          "en": "absence",
-          "zh": "缺席；缺乏",
-          "example": "His absence from school was due to illness.",
-          "tip": "from 表缺席场合"
+          "en": "affordable",
+          "zh": "负担得起的",
+          "example": "Making electricity more affordable helps transition.",
+          "tip": "前缀 af- + ford"
         },
         {
-          "en": "absolute",
-          "zh": "绝对的；完全的",
-          "example": "I have absolute confidence in her.",
-          "tip": "形容词，勿与 absorb 混淆"
+          "en": "automobile",
+          "zh": "汽车",
+          "example": "The greening of planes, trains and automobiles.",
+          "tip": "美式汽车总称"
         },
         {
-          "en": "absorb",
-          "zh": "吸收；吸引",
-          "example": "Plants absorb sunlight for energy.",
-          "tip": "及物，be absorbed in"
+          "en": "vehicle",
+          "zh": "车辆；交通工具",
+          "example": "Road vehicles accounted for 74.5% of emissions.",
+          "tip": "h 不发音"
+        },
+        {
+          "en": "freight",
+          "zh": "货物；货运",
+          "example": "Much freight is moved by truck.",
+          "tip": "名词；weight 同结构"
+        },
+        {
+          "en": "alternative",
+          "zh": "替代的；可供选择的",
+          "example": "We need alternative fuel sources.",
+          "tip": "勿与 alternate 混"
+        },
+        {
+          "en": "sustainable",
+          "zh": "可持续的",
+          "example": "Sustainable transport is the goal.",
+          "tip": "前缀 sustain + able"
+        },
+        {
+          "en": "generate",
+          "zh": "产生；发电",
+          "example": "Renewables can generate enough electricity.",
+          "tip": "动词；名词 generation"
+        },
+        {
+          "en": "efficient",
+          "zh": "高效的",
+          "example": "Improving energy efficiency is one solution.",
+          "tip": "名词 efficiency"
+        },
+        {
+          "en": "solution",
+          "zh": "解决方案；溶液",
+          "example": "Here are some solutions to get us going green.",
+          "tip": "常接 to + 名词"
+        }
+      ],
+      "cloze": {
+        "title": "The Greening of Transportation",
+        "source": "改编自 2025 全国一卷英语阅读 A/D 篇",
+        "passage": "Moving goods and people around the world is {{1:responsible|responsible}} for a large part of global CO2 {{2:emission|emissions}}. As the world races to {{3:decarbonize|decarbonize}} everything, it faces particular problems with {{4:automobile|automobile}} use, which accounts for about a quarter of energy-related greenhouse gases.\n\nThe {{5:transition|transition}} to green energy is global. It's {{6:estimate|estimated}} that the global {{7:demand|demand}} for electricity could more than double by 2050. {{8:freight|Freight}} moved by rail suggests that {{9:renewable|renewable}} energy will be up to the task, but we must speed up development.\n\nEach mode of transport has its {{10:specific|specific}} fuel needs. Road {{11:vehicle|vehicles}} are harder to convert than rail. {{12:alternative|Alternative}} fuels must be not only green, but also light and {{13:affordable|affordable}}. Improving energy {{14:efficiency|efficiency}} is one {{15:solution|solution}}, but limiting fuel {{16:consumption|consumption}} alone is not enough.\n\nWe need to {{17:generate|generate}} more electricity from renewables. {{18:efficient|Efficient}} use of {{19:carbonate|carbonate}} in water can trap microplastics when boiled — a {{20:sustainable|sustainable}} step forward."
+      }
+    },
+    "day2": {
+      "theme": "Day 2 · 阅读理解核心动词与形容词（教育与表达类）",
+      "words": [
+        {
+          "en": "persuasive",
+          "zh": "有说服力的",
+          "example": "I asked everyone to write a persuasive piece.",
+          "tip": "动词 persuade"
+        },
+        {
+          "en": "narrative",
+          "zh": "叙事；叙述",
+          "example": "A personal-narrative unit followed.",
+          "tip": "可数名词；形容词"
+        },
+        {
+          "en": "genre",
+          "zh": "体裁；流派",
+          "example": "The piece must meet the specifications of its genre.",
+          "tip": "法语借词，g 弱读"
+        },
+        {
+          "en": "thesis",
+          "zh": "论点；论文",
+          "example": "Few contained a thesis statement.",
+          "tip": "复数 theses"
+        },
+        {
+          "en": "fictional",
+          "zh": "虚构的；小说的",
+          "example": "The cowboy was a fictional character.",
+          "tip": "名词 fiction"
+        },
+        {
+          "en": "demonstrate",
+          "zh": "证明；展示",
+          "example": "They demonstrated how microplastics were trapped.",
+          "tip": "动词；名词 demonstration"
+        },
+        {
+          "en": "interpret",
+          "zh": "解释；诠释",
+          "example": "Few sentences could be interpreted as a thesis.",
+          "tip": "勿与 translate 混"
+        },
+        {
+          "en": "communicate",
+          "zh": "交流；传达",
+          "example": "Writing is important as a means of communication.",
+          "tip": "名词 communication"
+        },
+        {
+          "en": "specification",
+          "zh": "规格；具体要求",
+          "example": "The piece must meet the specifications of its genre.",
+          "tip": "常复数"
+        },
+        {
+          "en": "staggering",
+          "zh": "令人惊叹的",
+          "example": "The results were staggering.",
+          "tip": "动词 stagger + ing"
+        },
+        {
+          "en": "workshop",
+          "zh": "研讨班；工作坊",
+          "example": "A creative-writing workshop followed.",
+          "tip": "合成词"
+        },
+        {
+          "en": "broaden",
+          "zh": "拓宽；开阔",
+          "example": "Characters that broadened my view.",
+          "tip": "形容词 broad + en"
+        },
+        {
+          "en": "communication",
+          "zh": "交流；沟通",
+          "example": "Writing is important as a means of communication.",
+          "tip": "动词 communicate"
+        },
+        {
+          "en": "significant",
+          "zh": "重要的；显著的",
+          "example": "A simple measure may significantly reduce microplastics.",
+          "tip": "名词 significance"
+        },
+        {
+          "en": "controversial",
+          "zh": "有争议的",
+          "example": "Reality shows remain controversial.",
+          "tip": "名词 controversy"
+        },
+        {
+          "en": "critical",
+          "zh": "批判的；关键的",
+          "example": "The man is critical of reality shows.",
+          "tip": "名词 critic"
+        },
+        {
+          "en": "favorable",
+          "zh": "赞成的；有利的",
+          "example": "His attitude toward reality shows is favorable.",
+          "tip": "名词 favor"
+        },
+        {
+          "en": "diverse",
+          "zh": "多样的；不同的",
+          "example": "The woman expects TV programs to be diverse.",
+          "tip": "名词 diversity"
+        },
+        {
+          "en": "educational",
+          "zh": "教育的；有教育意义的",
+          "example": "She expects programs to be educational.",
+          "tip": "名词 education"
+        },
+        {
+          "en": "entertaining",
+          "zh": "有趣的；娱乐的",
+          "example": "Some programs are merely entertaining.",
+          "tip": "动词 entertain"
+        }
+      ],
+      "cloze": {
+        "title": "Why Writing Matters",
+        "source": "改编自 2025 全国一卷英语阅读 B 篇",
+        "passage": "In my ninth-grade writing class, I met a cowboy who saved his town, a strict father, and a {{1:fictional|fictional}} Juliet who died of heartbreak. I wondered how my students knew their characters so well.\n\nBut their first essay was {{2:staggering|staggering}}. Most filled less than one page, and few contained a {{3:thesis|thesis}} statement. The problem was the question itself. They could have written pages on computers, but writing didn't seem {{4:significant|significant}} to them.\n\nAs a new unit started, I asked everyone to write a {{5:persuasive|persuasive}} piece on a health topic. For the next two assignments, a personal-{{6:narrative|narrative}} unit followed by a creative-writing {{7:workshop|workshop}}, I only required that the piece meet the {{8:specification|specifications}} of its {{9:genre|genre}} and contain a thesis.\n\nThe students {{10:demonstrate|demonstrated}} something more important. They took on {{11:diverse|diverse}} topics and turned in stories that {{12:broaden|broadened}} my view. Writing, I realized, is a means of {{13:communicate|communication}} — the ability to put us in another's skin.\n\nSome essays were {{14:controversial|controversial}}; others were merely {{15:entertaining|entertaining}}. A few students were {{16:critical|critical}} of reality shows, while others were {{17:favorable|favorable}}. But each piece {{18:interpret|interpreted}} a real human concern. The workshop was genuinely {{19:educational|educational}}, and even the most {{20:communication|conventional}} students opened up."
+      }
+    },
+    "day3": {
+      "theme": "Day 3 · 完形填空核心动词（情感与生活类）",
+      "words": [
+        {
+          "en": "encourage",
+          "zh": "鼓励",
+          "example": "Encouraged, I posted more items online.",
+          "tip": "名词 encouragement"
+        },
+        {
+          "en": "appreciate",
+          "zh": "欣赏；感激",
+          "example": "Someone is appreciating something that couldn't come with us.",
+          "tip": "及物动词"
+        },
+        {
+          "en": "anticipate",
+          "zh": "期待；预期",
+          "example": "I wasn't anticipating such a reply.",
+          "tip": "前缀 anti- 提前"
+        },
+        {
+          "en": "encounter",
+          "zh": "遇见；邂逅",
+          "example": "Each exchange was a chance to please a person I might not otherwise have encountered.",
+          "tip": "名词/动词同形"
+        },
+        {
+          "en": "recognize",
+          "zh": "认出；识别",
+          "example": "I might not otherwise have recognized them.",
+          "tip": "名词 recognition"
+        },
+        {
+          "en": "investigate",
+          "zh": "调查",
+          "example": "I investigated the buyer's background.",
+          "tip": "名词 investigation"
+        },
+        {
+          "en": "recommend",
+          "zh": "推荐",
+          "example": "A friend recommended the vase to me.",
+          "tip": "双 m；名词 recommendation"
+        },
+        {
+          "en": "confused",
+          "zh": "困惑的",
+          "example": "Confused, I read the message again.",
+          "tip": "修饰人；-ing 修饰物"
+        },
+        {
+          "en": "disappointed",
+          "zh": "失望的",
+          "example": "Disappointed, she left without buying.",
+          "tip": "动词 disappoint"
+        },
+        {
+          "en": "valuable",
+          "zh": "有价值的",
+          "example": "Some objects weren't particularly valuable.",
+          "tip": "名词 value"
+        },
+        {
+          "en": "conventional",
+          "zh": "常规的；传统的",
+          "example": "These weren't conventional objects.",
+          "tip": "名词 convention"
+        },
+        {
+          "en": "complicated",
+          "zh": "复杂的",
+          "example": "The situation was more complicated than expected.",
+          "tip": "动词 complicate"
+        },
+        {
+          "en": "tolerable",
+          "zh": "可容忍的",
+          "example": "The noise was barely tolerable.",
+          "tip": "动词 tolerate"
+        },
+        {
+          "en": "display",
+          "zh": "展示；陈列",
+          "example": "She wanted to display the vase.",
+          "tip": "名词/动词同形"
+        },
+        {
+          "en": "contribution",
+          "zh": "贡献；捐赠",
+          "example": "Each exchange was a contribution to the community.",
+          "tip": "动词 contribute"
+        },
+        {
+          "en": "belongings",
+          "zh": "物品；所有物",
+          "example": "I sit in my apartment today, loving each of the belongings.",
+          "tip": "必复数"
+        },
+        {
+          "en": "delivery",
+          "zh": "交付；递送",
+          "example": "I arranged delivery for the next day.",
+          "tip": "动词 deliver"
+        },
+        {
+          "en": "withdraw",
+          "zh": "撤回；提取",
+          "example": "She was withdrawing her offer.",
+          "tip": "过去式 withdrew"
+        },
+        {
+          "en": "genuine",
+          "zh": "真诚的；真正的",
+          "example": "Her smile was genuine, not forced.",
+          "tip": "副词 genuinely"
+        },
+        {
+          "en": "chaos",
+          "zh": "混乱",
+          "example": "Posts became a ray of light in the chaos of my house.",
+          "tip": "形容词 chaotic"
+        }
+      ],
+      "cloze": {
+        "title": "Giving Things Away",
+        "source": "改编自 2025 全国一卷完形填空",
+        "passage": "One August afternoon, I sat in my kitchen staring at a glass vase. My husband and I had just sold our house. We had donated what we could and rented a place to store our supposedly important objects. That left a house still stuffed with things that, while not particularly {{1:valuable|valuable}}, didn't belong in a landfill.\n\nI posted the vase online for $10. One message wanted additional photos; another asked for a price cut. {{2:disappointed|Disappointed}}, I reposted it for free. The description: 「I hate this vase. Maybe you won't.」 In an instant, a woman I had never {{3:encounter|encountered}} before arrived at my door and left happily.\n\n{{4:encourage|Encouraged}}, I posted more. Each exchange was a chance to please a person I might not otherwise have {{5:recognize|recognized}}. My daily posts became a precious ray of light in the {{6:chaos|chaos}} of my house.\n\nEach {{7:contribution|contribution}} provided a chance to spare the landfill. I sit in my apartment today, loving each of the {{8:belongings|belongings}} that share our small space. I take comfort in knowing that someone nearby is {{9:appreciate|appreciating}} something that couldn't come with us.\n\nThe whole experience was {{10:genuine|genuine}} — not {{11:conventional|conventional}}, not {{12:complicated|complicated}}, not even {{13:tolerable|tolerable}} at first. But I had {{14:anticipate|anticipated}} the wrong outcome. Each {{15:delivery|delivery}} felt like a small victory. I had to {{16:recommend|recommend}} this method to friends. I never {{17:withdraw|withdrew}} from a single exchange.\n\nIf you ever feel {{18:confused|confused}} by the clutter in your home, try giving things away. Don't {{19:investigate|investigate}} the buyers' motives. Just {{20:display|display}} the item, post an honest description, and let it go."
+      }
+    },
+    "day4": {
+      "theme": "Day 4 · 语法填空核心词（围棋展览文本）",
+      "words": [
+        {
+          "en": "exhibition",
+          "zh": "展览",
+          "example": "An exhibition at the museum features Go-inspired artwork.",
+          "tip": "动词 exhibit"
+        },
+        {
+          "en": "feature",
+          "zh": "以…为特色；特色",
+          "example": "The exhibition features artwork inspired by Go.",
+          "tip": "动词/名词同形"
+        },
+        {
+          "en": "origin",
+          "zh": "起源",
+          "example": "Go originated in China over 4,000 years ago.",
+          "tip": "动词 originate"
+        },
+        {
+          "en": "binary",
+          "zh": "二元的；二进制的",
+          "example": "Go is one of the earliest binary-based games.",
+          "tip": "名词/形容词"
+        },
+        {
+          "en": "reflect",
+          "zh": "反映；反射",
+          "example": "The movements reflect the basic ideas of Eastern philosophy.",
+          "tip": "名词 reflection"
+        },
+        {
+          "en": "philosophy",
+          "zh": "哲学",
+          "example": "Eastern philosophy emphasizes balance.",
+          "tip": "形容词 philosophical"
+        },
+        {
+          "en": "contemporary",
+          "zh": "当代的；同时代的",
+          "example": "It brings together Go culture and contemporary art.",
+          "tip": "前缀 con- + temporary"
         },
         {
           "en": "abstract",
           "zh": "抽象的",
-          "example": "Beauty is an abstract concept.",
-          "tip": "形容词/名词/动词"
+          "example": "We hope to present the abstract Go game visually.",
+          "tip": "名词 abstraction"
         },
         {
-          "en": "absurd",
-          "zh": "荒谬的",
-          "example": "His suggestion was completely absurd.",
-          "tip": "形容词，反义词 rational"
+          "en": "visual",
+          "zh": "视觉的",
+          "example": "Present it in a visual context.",
+          "tip": "名词 visuals"
         },
         {
-          "en": "abundant",
-          "zh": "丰富的；大量的",
-          "example": "The region has abundant natural resources.",
-          "tip": "常接 in"
+          "en": "minimalist",
+          "zh": "极简主义的",
+          "example": "Dialogues with minimalist art.",
+          "tip": "名词 minimalism"
         },
         {
-          "en": "abuse",
-          "zh": "滥用；虐待",
-          "example": "He abused his power as a manager.",
-          "tip": "名词/动词"
+          "en": "conceptual",
+          "zh": "概念的",
+          "example": "Conceptual art challenges viewers.",
+          "tip": "名词 concept"
         },
         {
-          "en": "academic",
-          "zh": "学术的；学院的",
-          "example": "She has an academic background in physics.",
-          "tip": "重音第三音节"
+          "en": "expressionism",
+          "zh": "表现主义",
+          "example": "Expressionism emphasizes emotion over form.",
+          "tip": "动词 express"
         },
         {
-          "en": "accelerate",
-          "zh": "加速",
-          "example": "The car accelerated to overtake the truck.",
-          "tip": "反义词 decelerate"
+          "en": "opponent",
+          "zh": "对手",
+          "example": "Lead the opponent into your trap.",
+          "tip": "op- 反方"
         },
         {
-          "en": "accent",
-          "zh": "口音；重音",
-          "example": "She speaks English with a French accent.",
-          "tip": "名词"
+          "en": "strategy",
+          "zh": "策略",
+          "example": "The beauty in the strategic placement.",
+          "tip": "形容词 strategic"
         },
         {
-          "en": "accept",
-          "zh": "接受；认可",
-          "example": "I accept your apology.",
-          "tip": "及物，反义词 refuse"
+          "en": "placement",
+          "zh": "放置；布置",
+          "example": "Strategic placement of the pieces.",
+          "tip": "动词 place"
         },
         {
-          "en": "access",
-          "zh": "接近；进入；访问",
-          "example": "Students have access to the library.",
-          "tip": "have access to"
+          "en": "reveal",
+          "zh": "揭示；暴露",
+          "example": "The players' personalities are revealed during the game.",
+          "tip": "名词 revelation"
         },
         {
-          "en": "accident",
-          "zh": "事故；意外",
-          "example": "He was injured in a car accident.",
-          "tip": "by accident 偶然"
+          "en": "weakness",
+          "zh": "弱点",
+          "example": "One's weaknesses are exposed.",
+          "tip": "形容词 weak + ness"
         },
         {
-          "en": "accommodation",
-          "zh": "住处；膳宿",
-          "example": "We found cheap accommodation near the school.",
-          "tip": "英式不可数，美式可数"
+          "en": "decent",
+          "zh": "体面的；正派的",
+          "example": "A decent winner respects the opponent.",
+          "tip": "勿与 descent 混"
         },
         {
-          "en": "accompany",
-          "zh": "陪伴；伴随",
-          "example": "She accompanied her friend to the hospital.",
-          "tip": "及物，常接 to"
+          "en": "gesture",
+          "zh": "姿态；手势",
+          "example": "Beating by one or two points is a gesture of respect.",
+          "tip": "名词/动词同形"
+        },
+        {
+          "en": "sculpture",
+          "zh": "雕塑",
+          "example": "Artists created oil paintings, sculptures, silk-screen prints.",
+          "tip": "动词 sculpt"
         }
-      ]
-    },
-    "day2": {
-      "theme": "A 字头达成类动词与抽象名词",
-      "words": [
-        {
-          "en": "accomplish",
-          "zh": "完成；实现",
-          "example": "We accomplished the task ahead of schedule.",
-          "tip": "双 c 双 p"
-        },
-        {
-          "en": "account",
-          "zh": "账户；叙述",
-          "example": "He gave a detailed account of the event.",
-          "tip": "account for 解释"
-        },
-        {
-          "en": "accurate",
-          "zh": "准确的",
-          "example": "The report is accurate in every detail.",
-          "tip": "双 c 双 r"
-        },
-        {
-          "en": "accuse",
-          "zh": "指控；指责",
-          "example": "He was accused of theft.",
-          "tip": "accuse sb of sth"
-        },
-        {
-          "en": "accustomed",
-          "zh": "习惯的",
-          "example": "She is accustomed to getting up early.",
-          "tip": "be accustomed to doing"
-        },
-        {
-          "en": "achieve",
-          "zh": "实现；达到",
-          "example": "He achieved his goal through hard work.",
-          "tip": "ie 顺序"
-        },
-        {
-          "en": "achievement",
-          "zh": "成就；成绩",
-          "example": "Winning the prize was her greatest achievement.",
-          "tip": "名词"
-        },
-        {
-          "en": "acid",
-          "zh": "酸；酸的",
-          "example": "Lemons contain citric acid.",
-          "tip": "名词/形容词"
-        },
-        {
-          "en": "acknowledge",
-          "zh": "承认；答谢",
-          "example": "He acknowledged his mistake publicly.",
-          "tip": "及物动词"
-        },
-        {
-          "en": "acquire",
-          "zh": "获得；学到",
-          "example": "She acquired fluent Spanish in two years.",
-          "tip": "及物动词"
-        },
-        {
-          "en": "acre",
-          "zh": "英亩",
-          "example": "The farm covers 50 acres.",
-          "tip": "面积单位"
-        },
-        {
-          "en": "across",
-          "zh": "横过；在对面",
-          "example": "She walked across the street.",
-          "tip": "介词，区别 cross"
-        },
-        {
-          "en": "act",
-          "zh": "行动；扮演",
-          "example": "He acted quickly in the emergency.",
-          "tip": "名词/动词"
-        },
-        {
-          "en": "action",
-          "zh": "行动；动作",
-          "example": "We need immediate action.",
-          "tip": "take action"
-        },
-        {
-          "en": "active",
-          "zh": "积极的；活跃的",
-          "example": "She is active in community work.",
-          "tip": "be active in"
-        },
-        {
-          "en": "activity",
-          "zh": "活动",
-          "example": "Reading is my favorite activity.",
-          "tip": "可数名词"
-        },
-        {
-          "en": "actual",
-          "zh": "实际的；真实的",
-          "example": "The actual cost was higher than expected.",
-          "tip": "actually 实际上"
-        },
-        {
-          "en": "adapt",
-          "zh": "适应；改编",
-          "example": "She adapted quickly to the new environment.",
-          "tip": "adapt to"
-        },
-        {
-          "en": "add",
-          "zh": "增加；加上",
-          "example": "Please add some sugar to my coffee.",
-          "tip": "add to"
-        },
-        {
-          "en": "addition",
-          "zh": "加法；增加物",
-          "example": "In addition to reading, she also writes.",
-          "tip": "in addition to"
-        }
-      ]
-    },
-    "day3": {
-      "theme": "A 字头充分/适当/调整类",
-      "words": [
-        {
-          "en": "additional",
-          "zh": "附加的；额外的",
-          "example": "We need additional information.",
-          "tip": "形容词"
-        },
-        {
-          "en": "address",
-          "zh": "地址；演讲",
-          "example": "What is your home address?",
-          "tip": "名词/动词"
-        },
-        {
-          "en": "adequate",
-          "zh": "足够的；胜任的",
-          "example": "The food supply is adequate for the winter.",
-          "tip": "常接 for/to"
-        },
-        {
-          "en": "adjust",
-          "zh": "调整；适应",
-          "example": "She adjusted the chair to a comfortable height.",
-          "tip": "常接 to + 名词"
-        },
-        {
-          "en": "administration",
-          "zh": "管理；行政",
-          "example": "The new administration took office in January.",
-          "tip": "长词，重音第四音节"
-        },
-        {
-          "en": "admire",
-          "zh": "钦佩；赞赏",
-          "example": "I admire her courage in speaking out.",
-          "tip": "及物，常接 for"
-        },
-        {
-          "en": "admit",
-          "zh": "承认；准许进入",
-          "example": "He admitted making a mistake.",
-          "tip": "双 t → admitted；接 doing"
-        },
-        {
-          "en": "adolescent",
-          "zh": "青少年",
-          "example": "Adolescents often face identity issues.",
-          "tip": "名词/形容词"
-        },
-        {
-          "en": "adopt",
-          "zh": "采取；收养",
-          "example": "The school adopted a new teaching method.",
-          "tip": "及物，不接 to"
-        },
-        {
-          "en": "adult",
-          "zh": "成年人",
-          "example": "This movie is for adults only.",
-          "tip": "名词/形容词"
-        },
-        {
-          "en": "advance",
-          "zh": "前进；提前",
-          "example": "The army advanced toward the city.",
-          "tip": "in advance 提前"
-        },
-        {
-          "en": "advanced",
-          "zh": "先进的；高级的",
-          "example": "She takes an advanced math class.",
-          "tip": "形容词，-ed 形式"
-        },
-        {
-          "en": "advantage",
-          "zh": "优势；好处",
-          "example": "Speaking English is an advantage in job hunting.",
-          "tip": "take advantage of"
-        },
-        {
-          "en": "adventure",
-          "zh": "冒险",
-          "example": "He loves reading adventure stories.",
-          "tip": "名词"
-        },
-        {
-          "en": "advertise",
-          "zh": "做广告",
-          "example": "They advertised their product on TV.",
-          "tip": "动词"
-        },
-        {
-          "en": "advice",
-          "zh": "建议",
-          "example": "She gave me good advice.",
-          "tip": "不可数名词"
-        },
-        {
-          "en": "advise",
-          "zh": "建议；劝告",
-          "example": "I advise you to rest.",
-          "tip": "advise doing / advise sb to do"
-        },
-        {
-          "en": "affair",
-          "zh": "事务；事件",
-          "example": "Foreign affairs are handled by the ministry.",
-          "tip": "current affairs 时事"
-        },
-        {
-          "en": "affect",
-          "zh": "影响",
-          "example": "The weather affects my mood.",
-          "tip": "及物动词，勿与 effect 混"
-        },
-        {
-          "en": "afford",
-          "zh": "买得起；承担得起",
-          "example": "I can't afford a new car.",
-          "tip": "常接 can/can't"
-        }
-      ]
-    },
-    "day4": {
-      "theme": "A 字头年龄/同意/前进类",
-      "words": [
-        {
-          "en": "afraid",
-          "zh": "害怕的；担心的",
-          "example": "She is afraid of spiders.",
-          "tip": "be afraid of"
-        },
-        {
-          "en": "after",
-          "zh": "在…之后",
-          "example": "I'll call you after lunch.",
-          "tip": "介词/连词"
-        },
-        {
-          "en": "afternoon",
-          "zh": "下午",
-          "example": "We met in the afternoon.",
-          "tip": "名词"
-        },
-        {
-          "en": "afterward",
-          "zh": "以后；后来",
-          "example": "We had dinner and went home afterward.",
-          "tip": "副词"
-        },
-        {
-          "en": "again",
-          "zh": "又；再",
-          "example": "Please say it again.",
-          "tip": "again and again"
-        },
-        {
-          "en": "against",
-          "zh": "反对；逆",
-          "example": "She leaned against the wall.",
-          "tip": "介词"
-        },
-        {
-          "en": "age",
-          "zh": "年龄；时代",
-          "example": "What is your age?",
-          "tip": "at the age of"
-        },
-        {
-          "en": "agency",
-          "zh": "代理处；机构",
-          "example": "She works at an advertising agency.",
-          "tip": "可数名词"
-        },
-        {
-          "en": "agent",
-          "zh": "代理人；间谍",
-          "example": "Our agent in Paris handled the deal.",
-          "tip": "名词"
-        },
-        {
-          "en": "aggressive",
-          "zh": "好斗的；有进取心的",
-          "example": "He is an aggressive salesman.",
-          "tip": "形容词，可褒可贬"
-        },
-        {
-          "en": "ago",
-          "zh": "以前",
-          "example": "I saw him two days ago.",
-          "tip": "用于过去时"
-        },
-        {
-          "en": "agree",
-          "zh": "同意",
-          "example": "I agree with you.",
-          "tip": "agree with sb / agree on sth"
-        },
-        {
-          "en": "agreement",
-          "zh": "同意；协议",
-          "example": "They reached an agreement.",
-          "tip": "reach an agreement"
-        },
-        {
-          "en": "agricultural",
-          "zh": "农业的",
-          "example": "Agricultural exports increased.",
-          "tip": "形容词"
-        },
-        {
-          "en": "ahead",
-          "zh": "在前；向前",
-          "example": "The road ahead is clear.",
-          "tip": "ahead of"
-        },
-        {
-          "en": "aid",
-          "zh": "帮助；援助",
-          "example": "She came to my aid.",
-          "tip": "first aid 急救"
-        },
-        {
-          "en": "AIDS",
-          "zh": "艾滋病",
-          "example": "AIDS research has made progress.",
-          "tip": "专有名词"
-        },
-        {
-          "en": "aim",
-          "zh": "瞄准；目标",
-          "example": "He aimed the gun carefully.",
-          "tip": "aim at / aim to"
-        },
-        {
-          "en": "air",
-          "zh": "空气；外貌",
-          "example": "Open the window for fresh air.",
-          "tip": "by air 乘飞机"
-        },
-        {
-          "en": "aircraft",
-          "zh": "飞行器",
-          "example": "The aircraft landed safely.",
-          "tip": "单复数同形"
-        }
-      ]
+      ],
+      "cloze": {
+        "title": "Go: An Exhibition of Art and Philosophy",
+        "source": "改编自 2025 全国一卷语法填空",
+        "passage": "An {{1:exhibition|exhibition}} at the Jiushi Art Museum in Shanghai {{2:feature|features}} artwork inspired by Go, or weiqi in Chinese, which {{3:origin|originated}} in China more than 4,000 years ago.\n\nGo is one of the earliest {{4:binary|binary}}-based games. The movements of the black and white pieces {{5:reflect|reflect}} the basic ideas of Eastern {{6:philosophy|philosophy}}, according to Tu Ningning, who is in charge of the {{7:contemporary|contemporary}} art display.\n\n「We hope to present the rather {{8:abstract|abstract}} Go game and AI in a {{9:visual|visual}} context, and initiate dialogues with {{10:minimalist|minimalist}} art, {{11:conceptual|conceptual}} art and {{12:expressionism|expressionism}},」 says Tu.\n\nIn a Go game, each move should serve a long-term {{13:strategy|strategy}}. You try to lead the {{14:opponent|opponent}} into your trap. The players' personalities are {{15:reveal|revealed}} during the game, and one's {{16:weakness|weakness}} is exposed.\n\nA {{17:decent|decent}} winner always tries to beat the opponent by no more than one or two points as a {{18:gesture|gesture}} of respect. The beauty in the {{19:placement|placement}} of pieces inspired artists to create oil paintings and {{20:sculpture|sculptures}} for the show."
+      }
     },
     "day5": {
-      "theme": "A 字头 alarm–approach 类",
+      "theme": "Day 5 · 高考写作高频功能词（应用文 + 续写）",
       "words": [
         {
-          "en": "alarm",
-          "zh": "警报；闹钟",
-          "example": "The fire alarm rang.",
-          "tip": "名词/动词"
+          "en": "column",
+          "zh": "栏目",
+          "example": "I really like the idea of adding a new column.",
+          "tip": "名词；列"
         },
         {
-          "en": "album",
-          "zh": "相册；专辑",
-          "example": "She showed me her photo album.",
-          "tip": "名词"
+          "en": "suggest",
+          "zh": "建议；暗示",
+          "example": "My wife suggested I get in touch with my brother.",
+          "tip": "后接 doing"
         },
         {
-          "en": "alcohol",
-          "zh": "酒精",
-          "example": "He doesn't drink alcohol.",
-          "tip": "不可数名词"
+          "en": "appreciate",
+          "zh": "感激；欣赏",
+          "example": "I appreciate your help.",
+          "tip": "后接 doing"
         },
         {
-          "en": "alike",
-          "zh": "相似的；同样地",
-          "example": "The twins look alike.",
-          "tip": "形容词/副词"
+          "en": "gather",
+          "zh": "聚集；收集",
+          "example": "Hosting a small gathering in early summer.",
+          "tip": "名词 gathering"
         },
         {
-          "en": "alive",
-          "zh": "活着的",
-          "example": "The fish is still alive.",
-          "tip": "表语形容词"
+          "en": "host",
+          "zh": "主办；主人",
+          "example": "We wanted to host a small gathering.",
+          "tip": "名词/动词同形"
         },
         {
-          "en": "all",
-          "zh": "全部的",
-          "example": "All students must attend.",
-          "tip": "all over"
+          "en": "unexpected",
+          "zh": "出乎意料的",
+          "example": "Unexpectedly, the weather changed.",
+          "tip": "前缀 un- + expected"
         },
         {
-          "en": "allow",
-          "zh": "允许",
-          "example": "Smoking is not allowed here.",
-          "tip": "allow doing / allow sb to do"
-        },
-        {
-          "en": "almost",
-          "zh": "几乎",
-          "example": "I almost missed the bus.",
+          "en": "unexpectedly",
+          "zh": "出乎意料地",
+          "example": "Unexpectedly, after supper, the weather changed.",
           "tip": "副词"
         },
         {
-          "en": "alone",
-          "zh": "独自的",
-          "example": "She lives alone.",
-          "tip": "let alone 更不用说"
+          "en": "awkward",
+          "zh": "尴尬的",
+          "example": "It was an awkward moment.",
+          "tip": "副词 awkwardly"
         },
         {
-          "en": "along",
-          "zh": "沿着",
-          "example": "We walked along the river.",
-          "tip": "along with"
+          "en": "companion",
+          "zh": "同伴；陪伴",
+          "example": "Toby was his constant companion.",
+          "tip": "勿与 company 混"
         },
         {
-          "en": "aloud",
-          "zh": "出声地",
-          "example": "Please read aloud.",
-          "tip": "区别 loud/loudly"
+          "en": "conscience",
+          "zh": "良心",
+          "example": "My conscience kept bothering me.",
+          "tip": "形容词 conscientious"
         },
         {
-          "en": "already",
-          "zh": "已经",
-          "example": "I have already finished.",
-          "tip": "用于完成时"
+          "en": "bother",
+          "zh": "打扰；使烦恼",
+          "example": "My conscience kept bothering me.",
+          "tip": "名词 bother"
         },
         {
-          "en": "also",
-          "zh": "也",
-          "example": "She also speaks French.",
-          "tip": "副词"
+          "en": "resist",
+          "zh": "抗拒",
+          "example": "I resisted, thinking he should call first.",
+          "tip": "名词 resistance"
         },
         {
-          "en": "alternative",
-          "zh": "替代的；选择",
-          "example": "We have no alternative.",
-          "tip": "名词/形容词"
+          "en": "fault",
+          "zh": "过错",
+          "example": "I realized it was me who was at fault.",
+          "tip": "形容词 faulty"
         },
         {
-          "en": "although",
-          "zh": "虽然",
-          "example": "Although it rained, we went out.",
-          "tip": "不与 but 连用"
+          "en": "part",
+          "zh": "分手；分开",
+          "example": "He was unhappy over the way we had parted.",
+          "tip": "动词 part"
         },
         {
-          "en": "altogether",
-          "zh": "完全；总共",
-          "example": "That's altogether wrong.",
-          "tip": "副词"
+          "en": "expression",
+          "zh": "表达；表情",
+          "example": "His expression showed his unhappiness.",
+          "tip": "动词 express"
         },
         {
-          "en": "amaze",
-          "zh": "使惊奇",
-          "example": "Her progress amazed us.",
-          "tip": "及物动词"
-        },
-        {
-          "en": "ambition",
-          "zh": "雄心；野心",
-          "example": "He has great ambition.",
+          "en": "tone",
+          "zh": "语气；音调",
+          "example": "Her tone was warm.",
           "tip": "名词"
         },
         {
-          "en": "ambulance",
-          "zh": "救护车",
-          "example": "Call an ambulance!",
-          "tip": "名词"
+          "en": "strike",
+          "zh": "打动；突然想到",
+          "example": "It struck me that I should apologize.",
+          "tip": "过去式 struck"
         },
         {
-          "en": "analyze",
-          "zh": "分析",
-          "example": "Scientists analyzed the data carefully.",
-          "tip": "美式 -yze / 英式 -yse"
+          "en": "insight",
+          "zh": "洞察；见解",
+          "example": "The experience gave me new insight.",
+          "tip": "名词；形容词 insightful"
+        },
+        {
+          "en": "comfort",
+          "zh": "安慰",
+          "example": "I wanted to comfort my brother.",
+          "tip": "形容词 comfortable"
+        },
+        {
+          "en": "reunite",
+          "zh": "重聚",
+          "example": "We reunited after two months of silence.",
+          "tip": "前缀 re- + unite"
         }
-      ]
+      ],
+      "cloze": {
+        "title": "A Letter to Jenny and a Brother's Visit",
+        "source": "改编自 2025 全国一卷写作第一节 + 续写",
+        "passage": "Dear Jenny,\n\nI really like the idea of adding a new {{1:column|column}} to our English newspaper. Between the two options, I would choose 「Fun at my school」. The {{2:tone|tone}} of our paper has been too serious lately, and students will {{3:appreciate|appreciate}} a lighter section.\n\nNow, a different story. My wife and I wanted to {{4:host|host}} a small {{5:gather|gathering}} in early summer. My brother brought his dog Toby. Though friendly, he could easily knock over my granddaughter, so I asked my brother to keep him outside.\n\n{{6:unexpected|Unexpectedly}}, after supper, the weather changed. It started to rain and everyone went indoors. It was an {{7:awkward|awkward}} moment. My brother decided to leave rather than force the issue. His reply came as a surprise: 「Not a chance.」\n\nTwo months passed. My wife {{8:suggest|suggested}} I get in touch, but I {{9:resist|resisted}}. However, my {{10:conscience|conscience}} kept bothering me. I tried to put myself in my brother's shoes. Toby was his constant {{11:companion|companion}}, the one who kept him going after his wife's passing.\n\nI realized it was me who was at {{12:fault|fault}}. With the biscuits my wife had made, I arrived at my brother's door. His {{13:expression|expression}} softened. I wanted to {{14:comfort|comfort}} him, not to {{15:bother|bother}} him with excuses. The {{16:insight|insight}} came suddenly: family doesn't {{17:part|part}} over small things. We {{18:reunite|reunited}} that afternoon. It {{19:strike|strikes}} me now that pride is the cheapest thing to lose. {{20:unexpectedly|Unexpectedly}}, my brother smiled first."
+      }
     }
   },
   "classical": [
     {
-      "id": "p1",
-      "title": "《静女》",
-      "author": "《诗经·邶风》",
-      "category": "诗词曲 #1",
-      "difficulty": "★☆☆",
-      "original": "静女其姝，俟我于城隅。爱而不见，搔首踟蹰。\n静女其娈，贻我彤管。彤管有炜，说怿女美。\n自牧归荑，洵美且异。匪女之为美，美人之贻。",
-      "translation": "第一章：姑娘美丽文静，约我在城墙角见面。她藏起来看不见，我急得挠头徘徊。\n第二章：姑娘美好，送我一支红管。红管闪闪发光，我喜爱它的美丽（「女」通「汝」，指彤管）。\n第三章：从郊外采来茅草芽送我，确实美得奇特。不是你这草本身美（「女」通「汝」指荑），是因为美人送的。",
-      "easyErrors": "姝（不是「姝」写成「株」）、踟蹰（双足字旁）、贻（贝字旁，不是「怡」）、彤（丹字旁）、炜（火字旁）、说怿（「说」通「悦」）、归荑（「归」通「馈」，荑是茅草芽）、匪（通「非」）。",
-      "rewritePrompt": "用 100 字以内，把这首诗改写成一段现代白话散文。保留「等不到人时的焦躁」和「收到礼物的欢喜」两层情绪。",
-      "rewriteReference": "我在城墙根下等她。她躲在角楼里不露面，我急得直挠头，来回踱步。等她终于跳出来，递给我一根亮闪闪的红管子，我又乐坏了，翻来覆去地看，觉得它好看得不得了。后来她又从郊外带回来一把茅草嫩芽，我捧在手心里，心想：这草算什么呀，可这是她亲手采的，那就是天底下最金贵的东西。",
-      "feynmanQuestion": "为什么第三章突然写到「荑」（茅草芽）？彤管和荑哪个更重要？为什么？",
-      "feynmanAnswer": "第三章突然写「荑」（茅草芽）是为了层层递进——第一章见面焦躁（情绪未定），第二章得彤管欢喜（贵物），第三章得荑更欢喜（贱物但情重）。彤管贵而荑贱，但诗人说「匪女之为美，美人之贽」——重要的不是礼物本身的价值，是送礼物的人。这是「以物写情、以贱衬贵」的手法。学生能讲到「彤管和荑哪个不重要——美人之贽才重要」就算通过。"
+      "id": "shishuo",
+      "title": "《师说》（节选）",
+      "author": "韩愈",
+      "category": "文言文·必修 #5",
+      "difficulty": "★★★",
+      "original": "古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。\n生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾后，其闻道也亦先乎吾，吾从而师之。吾师道也，夫庸知其年之先后生于吾乎？是故无贵无贱，无长无少，道之所存，师之所存也。\n……\n是故弟子不必不如师，师不必贤于弟子。闻道有先后，术业有专攻，如是而已。",
+      "translation": "古代求学的人一定有老师。老师，是用来传授道理、教授学业、解答疑惑的人。人不是生下来就懂得道理的，谁能没有疑惑？有疑惑却不跟从老师学习，那些疑惑终究无法解开。\n出生在我之前的人，他懂得道理本来就比我早，我跟从他把他当作老师；出生在我之后的人，他懂得道理如果也比我早，我也跟从他学习。我学的是道理，哪里用得着计较他比我大还是小呢？所以无论地位高低、无论年龄大小，道理存在的地方，就是老师存在的地方。\n……\n所以学生不一定不如老师，老师也不一定比学生贤能。听到的道理有先后，技能学业各有专门研究，如此罢了。",
+      "easyErrors": [
+        "传道「受」业：受通「授」，不写「授」",
+        "孰能无惑：孰是疑问代词「谁」",
+        "夫庸知：庸是「岂、哪用得着」",
+        "从而「师」之：师是意动用法「以…为师」",
+        "弟子不必「不如」师：不必＝不一定，不是「不需要」",
+        "术业有专攻：攻是「学习、研究」"
+      ],
+      "rewritePrompt": "假设你是韩愈，给李蟠写一封短信（150 字），讲清楚为什么「道之所存，师之所存」——你为何不在乎老师的年龄和身份？",
+      "rewriteReference": "李蟠，你问我为何求师不计较年龄贵贱，我答你一句：我所求的是道，不是人。道在哪里，老师就在哪里。二十岁的人若先闻道，我拜他为师；五十岁的人若未闻道，他拜我为师。我学的是道理，不是身份。世人耻于学师，是因他们分不清「求道」和「求名」。道比年龄长一岁、地位高一阶，都重要得多。你既好古文、通六艺，便该懂这一层。",
+      "feynmanQuestion": "2025 全国一卷语文默写第 (1) 题考了「弟子不必不如师，师不必贤于弟子」。韩愈为什么必须说这句话？整篇文章如果不写这一句，逻辑上少掉了什么？",
+      "feynmanAnswer": "「弟子不必不如师，师不必贤于弟子」是《师说》的论证终点，也是韩愈反击世俗「耻学于师」的最后武器。前文已说「闻道有先后」——先闻道者为师，与身份年龄无关。但世俗反驳会是：「老师怎能不如学生？」韩愈用这句话封死反驳：老师确实可能不如学生，因为「术业有专攻」——每个人专攻方向不同，学生在他专攻的方向上超过老师是正常的。这句话一立，逻辑闭环：师非因贤而为师，因闻道先而为师；学生非因落后而为生，因闻道后而为生。师生关系被还原为「闻道先后」这一单一变量。删掉这一句，文章能立论但反不掉「老师必须比学生强」的世俗偏见，论证不闭环。"
     },
     {
-      "id": "p2",
-      "title": "《登高》",
-      "author": "杜甫",
-      "category": "诗词曲 #16",
+      "id": "queqiaoxian",
+      "title": "《鹊桥仙·纤云弄巧》",
+      "author": "秦观",
+      "category": "诗词曲 #34",
       "difficulty": "★★☆",
-      "original": "风急天高猿啸哀，渚清沙白鸟飞回。\n无边落木萧萧下，不尽长江滚滚来。\n万里悲秋常作客，百年多病独登台。\n艰难苦恨繁霜鬓，潦倒新停浊酒杯。",
-      "translation": "首联：风急天高，猿啸声悲凉；水清沙白，鸟儿盘旋飞回。\n颔联：无边落叶萧萧而下，不尽长江滚滚奔来。\n颈联：离家万里，又逢悲秋，常年漂泊作客他乡；一生多病，独自登临高台。\n尾联：艰难苦恨让双鬓添了白发，潦倒中又新近停了浊酒（因病不能饮）。",
-      "easyErrors": "渚（三点水，不是「者」）、萧（草字头）、鬓（髟字头）、潦倒（「潦」三点水）。萧萧（形容落叶声）、滚滚（形容水势）。",
-      "rewritePrompt": "假设你是杜甫本人，站在登高台上。用第一人称写一段 150 字的内心独白，要包含诗中至少 4 个意象。",
-      "rewriteReference": "风从高处灌下来，又急又冷，吹得天都高了，连猿猴的叫声都带哭腔。我站在江边高台上，看清水白沙之间鸟儿来回飞，飞不出个去处。叶子一片片落，江水一滚滚来，没有尽头——像我这一辈子。万里之外是家，秋深时节是客，活了快六十岁，一身病，独自站在这里。霜已经把头发染白了，杯里的浊酒也不能再喝。我能做什么？看江水东去。",
-      "feynmanQuestion": "这首诗的「对仗」为什么被后人称「古今七律第一」？你能指出至少 3 处对仗吗？",
-      "feynmanAnswer": "本诗被称「古今七律第一」主要因为八句皆对仗。一般律诗只颔联、颈联对仗，本诗连首联、尾联都对仗。三处对仗示例：① 首联「风急天高」对「渚清沙白」（景物对）；② 颔联「无边落木」对「不尽长江」（时空对）；③ 颈联「万里悲秋常作客」对「百年多病独登台」（情境对）。学生能指出任意 3 处对仗 + 解释一处为什么对得工整就算通过。"
+      "original": "纤云弄巧，飞星传恨，银汉迢迢暗度。\n金风玉露一相逢，便胜却人间无数。\n柔情似水，佳期如梦，忍顾鹊桥归路。\n两情若是久长时，又岂在朝朝暮暮。",
+      "translation": "纤薄的云彩在天空中变幻出巧妙的花样，飞逝的流星传递着牛郎织女的离恨，两人悄悄渡过辽阔的银河相会。\n秋风白露之中一年一相逢，便胜过人间那些朝夕相伴的凡俗之情。\n温柔的情意如水，美好的相会如梦，怎么忍心回头看那鹊桥上回去的路？\n只要两人的感情长久，又何必在乎朝朝暮暮地相伴。",
+      "easyErrors": [
+        "纤「云」弄巧：纤是「细薄」",
+        "飞星「传」恨：传读 chuán",
+        "银汉「迢迢」暗度：迢迢是「遥远」",
+        "「金风」玉露：金风＝秋风（五行秋属金）",
+        "「忍」顾鹊桥归路：忍＝「怎忍」反问",
+        "又岂在「朝朝暮暮」：朝读 zhāo 不读 cháo"
+      ],
+      "rewritePrompt": "假设你是织女，相会结束、踏上鹊桥归路的那一刻，用第一人称写 120 字的内心独白。必须包含「金风玉露」「胜却人间」「朝朝暮暮」三个意象。",
+      "rewriteReference": "金风又起，玉露沾衣。他站在桥的另一头看着我，我知道他也在算：明年还要等三百六十四天。可我不怨。人间那些夫妻日日同榻、夜夜共语，有几对真懂「相念」二字？他们因为常见，所以不见；因为不离，所以不思。我与他隔着银河，每年只见一面，可这一面盛过他们一年。两情若是久长时，又岂在朝朝暮暮——这话我对自己说了千万遍，今夜再说一遍，便也能笑着走下桥去。",
+      "feynmanQuestion": "2025 全国一卷语文默写第 (2) 题考了「两情若是久长时，又岂在朝朝暮暮」。秦观为什么用「金风玉露一相逢，便胜却人间无数」作上阕结尾？这两句和最后两句是什么关系？",
+      "feynmanAnswer": "「金风玉露一相逢，便胜却人间无数」是铺垫，「两情若是久长时，又岂在朝朝暮暮」是收束。前者给出结论：一次高质量的相逢胜过无数低质量的相伴。后者把这个结论推广为普遍命题：感情的「质」决定感情的「值」，不是「量」。前者是经验观察（牛郎织女的一年一见），后者是哲学提炼（普适的爱情观）。没有上阕的铺垫，下阕就成了空喊口号；没有下阕的收束，上阕只是一个浪漫感叹。秦观的高明在于：他用一个神话故事（一年一见）颠覆了世俗的常识（天天在一起才好），并且把这种颠覆推广为爱情的普遍标准。"
     },
     {
-      "id": "p3",
+      "id": "sumuzhe",
+      "title": "《苏幕遮·燎沉香》",
+      "author": "周邦彦",
+      "category": "诗词曲 #35",
+      "difficulty": "★★☆",
+      "original": "燎沉香，消溽暑。鸟雀呼晴，侵晓窥檐语。\n叶上初阳干宿雨，水面清圆，一一风荷举。\n故乡遥，何日去？家住吴门，久作长安旅。\n五月渔郎相忆否？小楫轻舟，梦入芙蓉浦。",
+      "translation": "点燃沉香，消除潮湿的暑气。鸟雀在呼唤晴天，清晨就在檐下窥视着鸣叫。\n初升的阳光晒干了荷叶上昨夜的雨珠，水面上的荷花清润圆润，一朵一朵在风中挺立举起。\n故乡遥远，何时才能回去？我家在苏州，却长久地客居在长安。\n五月的渔翁老友是否还记得我？我划着小桨、驾着轻舟，在梦里回到了长满荷花的水乡。",
+      "easyErrors": [
+        "燎「沉香」：燎读 liǎo，烧",
+        "消「溽」暑：溽读 rù，潮湿",
+        "「侵」晓：侵晓＝清晨",
+        "「宿」雨：宿读 sù，过夜的",
+        "水面「清圆」：清圆形容荷叶",
+        "一一「风荷举」：举是「挺立、托起」",
+        "小「楫」轻舟：楫读 jí，船桨",
+        "芙蓉「浦」：浦是水滨"
+      ],
+      "rewritePrompt": "2025 全国一卷语文默写第 (3) 题给一幅莲花图，要求写与之契合的古诗文名句，标答是「水面清圆，一一风荷举」。请用 150 字描述：周邦彦写这句时，他眼前是一个什么样的清晨？要有「初阳」「宿雨」「风」三个元素。",
+      "rewriteReference": "天刚亮，昨夜一场雨还没干透。他推开窗，院子里鸟雀在檐下叫——是雨后初晴那种清亮的叫声。阳光斜斜地照到池面上，荷叶上还滚着昨夜的雨珠，被阳光一照，亮得像珠子。风一来，荷叶轻轻一摇，雨珠滑下去，叶面却挺得更高——一朵一朵，从水面举起来，干净、圆润、精神。这不是盛夏荷花的浓艳，是雨后清晨的荷花的清气。他看了一会儿，想起家乡苏州的荷塘，写下「水面清圆，一一风荷举」。",
+      "feynmanQuestion": "2025 全国一卷语文默写第 (3) 题要求「为莲花图配古诗文名句」，标答是「水面清圆，一一风荷举」。周邦彦这一句为什么比「接天莲叶无穷碧，映日荷花别样红」更适合作为标答？两者在写荷上有何根本区别？",
+      "feynmanAnswer": "「水面清圆，一一风荷举」写的是荷的「态」——叶面上的雨珠在初阳下滚落，风一来，荷叶一朵一朵从水面挺举起来，是一个动态、有方向的画面。「接天莲叶无穷碧，映日荷花别样红」写的是荷的「势」——连天接日的碧色、映日浓烈的红色，是一个铺满整幅画面的色彩场面。前者是工笔画，单朵特写，时间精确到「雨后初晴」；后者是泼墨写意，远镜头全景，时间是盛夏正午。2025 真题给的是「以莲花为主题的图画」，标答选前者，因为画面是静态的、特写式的——若图画是远景大场面，标答就可能选后者。这也提示学生：默写题不是死记，是先看题干给的画面气质，再匹配诗的气质。"
+    },
+    {
+      "id": "quanxue",
+      "title": "《劝学》（节选）",
+      "author": "荀子",
+      "category": "文言文·必修 #2",
+      "difficulty": "★★☆",
+      "original": "君子曰：学不可以已。\n青，取之于蓝，而青于蓝；冰，水为之，而寒于水。\n木直中绳，輮以为轮，其曲中规。虽有槁暴，不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。\n……\n积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得，圣心备焉。故不积跬步，无以至千里；不积小流，无以成江海。骐骥一跃，不能十步；驽马十驾，功在不舍。锲而舍之，朽木不折；锲而不舍，金石可镂。",
+      "translation": "君子说：学习不可以停止。\n靛青是从蓼蓝中提取的，却比蓼蓝更青；冰是水凝结成的，却比水更冷。\n木材直得合乎墨线，把它烤弯做成车轮，它的弯曲度就合乎圆规。即使又晒干了，也不再挺直，是因为烤弯使它这样。所以木材经墨线量过就能取直，金属刀剑拿到磨刀石上磨就锋利，君子广泛地学习并且每天反省自己，就能智慧明达并且行为无过了。\n……\n堆积泥土成山，风雨就在那里兴起；积聚水流成渊，蛟龙就在那里生长；积累善行养成高尚品德，非凡的智慧自然就获得，圣人的心境就具备了。所以不积累半步一步，无法到达千里之外；不积累细小水流，无法汇成江海。骏马一跃，不能跳出十步；劣马走十天，能走得很远，功效在于不放弃。雕刻一下就放弃，腐朽的木头也刻不断；雕刻不停，金石也能雕刻。",
+      "easyErrors": [
+        "学不可以「已」：已是「停止」，不是「已经」",
+        "「青」取之于蓝：青是靛青，不是颜色形容词",
+        "「輮」以为轮：輮通「煣」，火烤使弯",
+        "虽有「槁暴」：槁暴＝晒干；暴通「曝」",
+        "「参省」乎己：参省＝检验反省",
+        "不积「跬」步：跬读 kuǐ，半步",
+        "驽马「十驾」：十驾＝十天的路程",
+        "「锲」而不舍：锲读 qiè，刻"
+      ],
+      "rewritePrompt": "用 150 字改写「骐骥一跃，不能十步；驽马十驾，功在不舍」一段，写成给一个高三学生的劝告。要用「天赋」和「坚持」两个现代词，但不能丢掉「劣马走十天也能到千里」的意象。",
+      "rewriteReference": "你天赋好，跳一步能跳出别人三步——但只跳一步，永远到不了千里之外。你天赋差，一步只走半米——但你天天走、月月走、年年走，十天后你已经走出了别人的视野。高考这场长跑，从不奖励跳得高的人，只奖励走得久的人。骐骥的悲剧是一跃之后疲倦，驽马的胜利是十驾之后不停。你是哪种，由你自己决定。",
+      "feynmanQuestion": "「锲而舍之，朽木不折；锲而不舍，金石可镂」用了什么论证手法？为什么荀子要举「朽木」和「金石」这一组对比，而不是举别的对比（比如「木头」和「铁」）？",
+      "feynmanAnswer": "这是对比论证，但荀子选的对比物有讲究。「朽木」是最容易刻的材质，「金石」是最难刻的材质。逻辑链是：如果你「舍」（半途而废），连最容易的事（刻朽木）也做不成；如果你「不舍」（坚持），连最难的事（刻金石）也能做成。这两个极端一立，中间所有难度都被覆盖——不存在「太难所以做不到」的借口，也不存在「太简单所以不需要坚持」的轻视。如果换成「木头」和「铁」这种中间材质对比，论证力会下降：木头没那么软，铁没那么硬，对比的张力就弱了。荀子选材质的极致化，是为了把「坚持与否」从变量里独立出来——成败只取决于坚持，不取决于难度。"
+    },
+    {
+      "id": "chibi",
       "title": "《念奴娇·赤壁怀古》",
       "author": "苏轼",
       "category": "诗词曲 #26",
       "difficulty": "★★★",
       "original": "大江东去，浪淘尽，千古风流人物。\n故垒西边，人道是，三国周郎赤壁。\n乱石穿空，惊涛拍岸，卷起千堆雪。\n江山如画，一时多少豪杰。\n\n遥想公瑾当年，小乔初嫁了，雄姿英发。\n羽扇纶巾，谈笑间，樯橹灰飞烟灭。\n故国神游，多情应笑我，早生华发。\n人生如梦，一尊还酹江月。",
-      "translation": "上阕：长江向东奔流，浪花淘尽千古风流人物。故垒西边，人们说就是三国周瑜破曹的赤壁。乱石刺穿天空，惊涛拍打岸边，卷起千堆雪白的浪花。江山美如画，当年曾有多少豪杰在此争雄。\n下阕：遥想当年的周瑜，小乔刚嫁给他，英姿勃发。手持羽扇头戴纶巾，谈笑之间，曹军的战船就化为灰烬消散。我的神思飞回故国战场，多情该笑我自己，头发早就白了。人生如梦一场，还是倒一杯酒洒向江上的明月吧。",
-      "easyErrors": "淘（水字旁，不是「陶」）、垒（上下结构）、樯橹（「樯」木字旁桅杆，「橹」木字旁桨）、酹（酉字旁，把酒洒地）。一尊（「尊」通「樽」，酒器）。",
-      "rewritePrompt": "把下阕「遥想公瑾当年...一尊还酹江月」改写成一段 200 字的电影镜头脚本：谁出场、做什么动作、什么表情、最后镜头落在哪？",
-      "rewriteReference": "远景：江面，晨雾。镜头缓缓推近——岸边孤舟一叶，苏轼（47 岁，鬓发斑白）立于船头，手持羽扇，望向对岸赤壁。\n中景：他眼神恍惚。画面切——同一位置，三十岁的周瑜（英姿飒爽，小乔立于身后）正谈笑指挥。\n特写：周瑜嘴角微扬，扇子轻轻一挥。镜头切回——对岸火光冲天，曹军战船化为火海，灰烬飘落江面。\n切回苏轼：镜头从他的眼睛拉出。他低头看自己鬓角白发，苦笑。\n尾镜：他举起酒杯，缓缓将酒洒向江面。镜头跟随酒液落入水中，水面映出一轮明月。镜头定格在江月，淡出。",
-      "feynmanQuestion": "苏轼写这首词时被贬黄州，周瑜 34 岁破曹，苏轼当时 47 岁一事无成。词里「早生华发」四个字藏着什么情绪？为什么最后又能「一尊还酹江月」释怀？",
-      "feynmanAnswer": "苏轼写这首词时 47 岁，被贬黄州，无权无职；周瑜 34 岁破曹，功业鼎盛。「早生华发」四个字藏的是壮志未酬身先老的悲愤——本应像周瑜一样建功立业，却一事无成头发先白了。但最后能「一尊还酹江月」释怀，是因为他想通了：周瑜再伟大，他的功业也被「浪淘尽」了，自己也终将被淘尽。既然一切都是梦，不必执念，敬江月一杯就好。这是苏轼特有的「旷达」——不是不悲，是悲完之后能放下。学生能讲到「周瑜和苏轼的对比」+「释怀不是因为不痛，是因为想通了」就算通过。"
-    },
-    {
-      "id": "p4",
-      "title": "《劝学》（节选）",
-      "author": "荀子",
-      "category": "文言文·必修 #2",
-      "difficulty": "★★☆",
-      "original": "君子曰：学不可以已。\n青，取之于蓝，而青于蓝；冰，水为之，而寒于水。\n木直中绳，輮以为轮，其曲中规。虽有槁暴，不复挺者，輮使之然也。\n故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。",
-      "translation": "君子说：学习不可以停止。\n靛青（染料），是从蓝草中提取的，却比蓝草颜色更深；冰，是水凝结成的，却比水更冷。\n木材直得合乎墨线，（用火烤）把它弯成车轮，它的弯曲度合乎圆规。即使又晒干了，也不再挺直，是火烤使它这样。\n所以木材经墨线量过就能取直，金属刀剑拿到磨刀石上磨就能锋利，君子广泛地学习并且每天检验反省自己，那么就智慧明达并且行为没有过错了。",
-      "easyErrors": "已（停止，不是「已经」）、中（zhòng，合乎）、輮（火字旁通「煣」）、槁暴（「暴」通「曝」，晒）、参省（「参」通「三」，反省）、知（通「智」）。",
-      "rewritePrompt": "荀子用青/蓝、冰/水、木/绳、金/砺四个比喻论证学习。把这四个比喻改写成 200 字的现代类比，主题换成「练习篮球/弹琴/编程任选其一」，要保留「通过外力改造才能突破本能」的逻辑。",
-      "rewriteReference": "你想打好篮球，光靠天赋不行。强如科比，也得每天在篮下投 1000 次——肌肉记不住的动作，比赛中根本做不出来。这就像荀子说的：青取之于蓝而青于蓝，冰水为之而寒于水——你能比教会你的人更强，前提是你真的被「练」过。你的运球姿势本来挺丑的，被教练纠正 100 次之后，那丑姿势就定型了，再想改回简单都不行了——「虽有槁暴，不复挺者，輮使之然也」。练琴、编程都是一回事：你的肌肉记忆、思维路径，是被反复训练「煣」出来的，不是天生的。",
-      "feynmanQuestion": "荀子说「学不可以已」，为什么非要「不可以已」（不能停下来）？停一会再学不行吗？用他自己的比喻解释。",
-      "feynmanAnswer": "荀子的逻辑是：学习是「改造本性」的过程，本性改造不能停。木被輮成轮子之后「虽有槁暴不复挺」，前提是被反复烤反复煣，没煣透就停手，木头会弹回原状。学习同理：今天学明天不学，本性就把今天那点改造弹回去。「不可以已」不是说不能休息，是说改造过程必须连续到本性被定型为止。学生能讲到「学习是改造本性，改造必须到定型才能停」就算通过。"
-    },
-    {
-      "id": "p5",
-      "title": "《师说》（节选）",
-      "author": "韩愈",
-      "category": "文言文·必修 #5",
-      "difficulty": "★★★",
-      "original": "古之学者必有师。师者，所以传道受业解惑也。\n人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。\n生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾后，其闻道也亦先乎吾，吾从而师之。\n吾师道也，夫庸知其年之先后生于吾乎？是故无贵无贱，无长无少，道之所存，师之所存也。",
-      "translation": "古代求学的人一定有老师。老师，是用来传授道理、教授学业、解答疑惑的人。\n人不是生下来就懂得道理的，谁能没有疑惑？有疑惑却不跟从老师学习，那些疑惑，最终都不会解开。\n生在我前面的人，他懂得道理本来就比我早，我跟从他拜他为师；生在我后面的人，他懂得道理如果也比我早，我也跟从他拜他为师。\n我学习的是道理，哪里管他比我年长还是年少？所以无论地位高低、无论年纪大小，道理存在的地方，就是老师存在的地方。",
-      "easyErrors": "受（通「授」，传授）、孰（谁）、庸（岂、哪里，反问）、师之（意动用法，「以…为师」）。乎（介词，相当于「于」）。「师」在文中多次出现，名词/动词/意动用法三种身份都有。",
-      "rewritePrompt": "韩愈这篇《师说》写于中唐，当时士大夫阶层耻于学师（觉得拜师丢人）。把这段论证改写成 200 字的「对当代家长的辩护词」——假设今天有家长质疑「我孩子自学不行吗，为什么要找老师？」，用韩愈的逻辑回答。",
-      "rewriteReference": "您说孩子自学就行，这话听着独立自主，但请您想想：孩子是「生而知之者」吗？——一生下来就懂数学、物理、英语吗？如果不懂，那他就是有「惑」。有惑不从师，您指望他怎么解开？自己悟？韩愈一千多年前就说过这个理：惑而不从师，终不解矣。您看您孩子自学了三年，进步有多少？那些他卡住没解开的题，是不是三年了还卡着？这就是「其为惑也终不解矣」的实证。再说现在这个时代，知识更新比唐朝快多了，孩子不靠老师能跟上？找老师不丢人，道之所存，师之所存也——有真学问的地方就该有老师带孩子学。",
-      "feynmanQuestion": "韩愈说「道之所存，师之所存也」——只要谁懂道谁就是老师。但他自己又是当朝大官、文坛领袖，他拜师吗？这篇《师说》到底是为谁写的？",
-      "feynmanAnswer": "韩愈写《师说》不是说自己要拜师，是为学生李蟠写的——李蟠 17 岁，拜韩愈为师学古文，被当时士大夫嘲笑（觉得韩愈「好为人师」丢份）。韩愈写这篇是替学生撑腰、也是替自己辩护：士大夫耻于学师是因为他们把「师」看作身份标签，而不是「闻道先后」的功能关系。韩愈的论证核心是把「师」从身份变成功能——谁懂道谁是师，无贵无贱无长无少。学生能讲到「师不是身份是功能」+「这篇是韩愈为自己的学生李蟠辩护写的」就算通过。"
+      "translation": "长江向东奔流，浪花淘尽千古风流人物。故垒西边，人们说就是三国周瑜破曹的赤壁。乱石刺穿天空，惊涛拍打岸边，卷起千堆雪白的浪花。江山美如画，当年曾有多少豪杰在此争雄。\n遥想当年的周瑜，小乔刚嫁给他，英姿勃发。手持羽扇头戴纶巾，谈笑之间，曹军战船就化为灰烬消散。我的神思飞回故国战场，多情该笑我自己，头发早就白了。人生如梦一场，还是倒一杯酒洒向江上的明月吧。",
+      "easyErrors": [
+        "浪「淘」尽：淘读 táo，冲刷",
+        "故「垒」西边：垒读 lěi，营垒",
+        "「穿」空：穿是「刺破」",
+        "卷起千堆「雪」：雪借代「白色浪花」",
+        "「纶」巾：纶读 guān，不读 lún",
+        "「樯橹」灰飞烟灭：樯橹借代「曹军战船」",
+        "故国「神游」：神游＝思绪飞驰",
+        "「酹」江月：酹读 lèi，洒酒祭奠"
+      ],
+      "rewritePrompt": "把下阕「遥想公瑾当年……一尊还酹江月」改写成 200 字的电影镜头脚本。要有：远景→中景→特写镜头切换；周瑜与苏轼的对比；最后镜头落在「江月」上。",
+      "rewriteReference": "远景：江面晨雾。镜头缓缓推近——岸边孤舟一叶，苏轼（47 岁，鬓发斑白）立于船头，望向对岸赤壁。\n中景：他眼神恍惚。画面切——同一位置，三十岁的周瑜（英姿飒爽，小乔立于身后）正谈笑指挥。\n特写：周瑜嘴角微扬，羽扇轻挥。镜头切回——对岸火光冲天，曹军战船化为火海，灰烬飘落江面。\n切回苏轼：镜头从他的眼睛拉出。他低头看自己鬓角白发，苦笑。\n尾镜：他举杯，缓缓将酒洒向江面。镜头跟随酒液落入水中，水面映出一轮明月。镜头定格在江月，淡出。",
+      "feynmanQuestion": "苏轼写这首词时被贬黄州、47 岁、一事无成；周瑜 34 岁破曹、功业鼎盛。词里「早生华发」四个字藏着什么情绪？为什么最后又能「一尊还酹江月」释怀？",
+      "feynmanAnswer": "「早生华发」藏的是壮志未酬身先老的悲愤——本应像周瑜一样建功立业，却一事无成头发先白了。但最后能释怀，是因为苏轼想通了：周瑜再伟大，他的功业也被「浪淘尽」了，自己也终将被淘尽。既然一切都是梦，不必执念，敬江月一杯就好。这是苏轼特有的「旷达」——不是不悲，是悲完之后能放下。学生讲到「周瑜和苏轼的对比」+「释怀不是因为不痛，是因为想通了」就算通过。"
     }
   ]
 }
