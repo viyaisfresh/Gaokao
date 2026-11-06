@@ -123,6 +123,7 @@ export default function SettingsPage() {
           exam_name?: string;
           exam_date?: string | null;
           date_note?: string;
+          is_baseline?: boolean;
           total?: { score?: number; score_type?: string };
           subjects?: Record<
             string,
@@ -166,7 +167,7 @@ export default function SettingsPage() {
           id: genId(),
           date,
           examType,
-          isBaseline: false,
+          isBaseline: record.is_baseline === true,
           isArchived: false,
           totalScore: parseFloat(Number(record.total?.score ?? 0).toFixed(2)),
           totalScoreType,

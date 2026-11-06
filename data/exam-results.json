@@ -2,11 +2,42 @@
   "schema_version": "1.0.0",
   "student_exam_records": [
     {
+      "exam_id": "grade_11_final",
+      "exam_name": "高二下期末",
+      "exam_stage": "grade_11_final_exam",
+      "exam_date": "2026-06-30",
+      "date_note": "高二下学期期末考试，作为进步评分与预测校准的唯一基线锚点",
+      "is_baseline": true,
+      "total": {
+        "score": 358.77,
+        "school_rank": null,
+        "class_rank": null,
+        "score_type": "总分"
+      },
+      "subjects": {
+        "chinese": {"name": "语文", "score": 65.5, "score_type": "科目分数"},
+        "math": {"name": "数学", "score": 52, "score_type": "科目分数"},
+        "english": {"name": "英语", "score": 74.27, "score_type": "折算分"},
+        "physics": {"name": "物理", "score": 42, "score_type": "科目分数"},
+        "chemistry": {"name": "化学", "score": 65, "score_type": "科目分数"},
+        "biology": {"name": "生物", "score": 60, "score_type": "科目分数"}
+      },
+      "source": {
+        "type": "user_uploaded_screenshot",
+        "transcribed": true
+      },
+      "verification": {
+        "subject_score_sum": 358.77,
+        "sum_matches_total": true,
+        "notes": "六科分数相加为 358.77，与基线总分一致。此为进步评分唯一锚点，324 那次成绩不参与计算。"
+      }
+    },
+    {
       "exam_id": "mock_exam_1",
       "exam_name": "一模",
       "exam_stage": "first_mock_exam",
-      "exam_date": null,
-      "date_note": "成绩截图未显示考试日期，待补充",
+      "exam_date": "2026-10-20",
+      "date_note": "高三第一次模拟考试，距基线约 16 周",
       "total": {
         "score": 363,
         "school_rank": 608,
@@ -81,8 +112,8 @@
       "exam_id": "mock_exam_2",
       "exam_name": "二模",
       "exam_stage": "second_mock_exam",
-      "exam_date": null,
-      "date_note": "成绩截图未显示考试日期，待补充",
+      "exam_date": "2026-11-03",
+      "date_note": "高三第二次模拟考试，距一模约 2 周",
       "total": {
         "score": 353.76,
         "school_rank": 625,

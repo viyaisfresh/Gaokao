@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f5f0">
+<title>Gaokao Coach｜2027高考学情与预测报告 v3</title>
+<style>
+:root{
+  --bg:#f7f5f0;--paper:#fffefa;--ink:#242321;--muted:#77736c;--line:#e9e4da;
+  --orange:#d9912f;--orange2:#f2c879;--green:#648b73;--red:#bd765e;--blue:#71899a;
+  --shadow:0 8px 28px rgba(45,38,25,.06);--radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:22px 16px 56px}
+header{padding:24px 4px 20px}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--orange);font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(27px,6vw,42px);line-height:1.15;margin:10px 0 9px;letter-spacing:-.04em}
+.sub{color:var(--muted);font-size:14px;max-width:650px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:99px;background:#fff2dc;color:#875b1d;font-size:11px;font-weight:700}
+.pill.green{background:#eaf2eb;color:#50745b}
+.pill.red{background:#f7ebe6;color:#a35e49}
+.pill.blue{background:#eaf0f5;color:#4d6577}
+.grid{display:grid;gap:14px}
+.metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin:14px 0}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.metric .label{font-size:12px;color:var(--muted)}
+.metric .value{font-size:clamp(22px,4vw,31px);font-weight:800;letter-spacing:-.04em;margin:5px 0}
+.metric .hint{font-size:11px;color:var(--muted)}
+.metric .delta{font-size:11px;font-weight:700;margin-top:3px}
+.metric .delta.down{color:var(--red)}
+.metric .delta.up{color:var(--green)}
+.section{margin-top:24px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 2px 12px}
+h2{font-size:20px;margin:0;letter-spacing:-.025em}
+h3{font-size:15px;margin:0 0 10px}
+.note{font-size:11px;color:var(--muted)}
+.two{grid-template-columns:1.15fr .85fr}
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.score-row{display:grid;grid-template-columns:60px 1fr 110px;gap:10px;align-items:center;margin:10px 0;font-size:13px}
+.score-row .rank{font-size:10px;color:var(--muted);display:block;margin-top:2px}
+.track{height:9px;background:#eeeae2;border-radius:99px;overflow:hidden}
+.fill{height:100%;border-radius:99px;background:var(--orange)}
+.score{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.stat-big{font-size:34px;font-weight:850;letter-spacing:-.05em}
+.muted{color:var(--muted)}
+.bar-row{display:grid;grid-template-columns:82px 1fr 38px;gap:9px;align-items:center;margin:12px 0;font-size:12px}
+.bar{height:13px;background:#eeeae2;border-radius:4px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--orange);border-radius:4px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:11px}
+td:last-child,th:last-child{text-align:right}
+.tag{display:inline-block;border-radius:7px;padding:3px 7px;font-size:10px;background:#f4eee2;color:#80612f;white-space:nowrap}
+.tag.green{background:#eaf2eb;color:#50745b}
+.tag.red{background:#f7ebe6;color:#a35e49}
+.tag.blue{background:#eaf0f5;color:#4d6577}
+.callout{border-left:3px solid var(--orange);padding:10px 13px;background:#fff8eb;border-radius:0 12px 12px 0;font-size:13px}
+.callout.red{border-color:var(--red);background:#f7ebe6;font-size:12px}
+.callout.green{border-color:var(--green);background:#eaf2eb;font-size:12px}
+.callout.blue{border-color:var(--blue);background:#eaf0f5;font-size:12px}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.phase{background:#f8f5ee;border:1px solid var(--line);border-radius:14px;padding:13px}
+.phase b{font-size:13px}
+.phase small{display:block;color:var(--muted);margin:5px 0;font-size:11px}
+.phase p{font-size:12px;margin:0}
+.phase.active{border-color:var(--orange);background:#fff8eb}
+ul{padding-left:18px;margin:8px 0}
+li{margin:5px 0;font-size:13px}
+.footer{margin-top:28px;padding:16px 4px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:5;background:rgba(247,245,240,.92);backdrop-filter:blur(12px);padding:8px 0;display:flex;gap:7px;overflow:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:#625e56;border:1px solid var(--line);background:var(--paper);padding:7px 11px;border-radius:99px;font-size:11px}
+.nav a:active{background:#fff0d7}
+.disclaimer{background:#f3f0e9;border-radius:12px;padding:12px;font-size:11px;color:#6d675d}
+.snapshot{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}
+.snapshot div{background:#f8f5ee;border-radius:8px;padding:7px 9px;font-size:11px}
+.snapshot b{display:block;font-size:14px;color:var(--ink)}
+.subject-trend{display:grid;grid-template-columns:60px 1fr 70px 70px 70px;gap:6px;align-items:center;margin:8px 0;font-size:12px;padding:6px 8px;border-radius:8px;background:#f8f5ee}
+.subject-trend.baseline{background:#fff2dc}
+.subject-trend .delta-up{color:var(--green);font-weight:700}
+.subject-trend .delta-down{color:var(--red);font-weight:700}
+.subject-trend .delta-flat{color:var(--muted)}
+@media(max-width:680px){
+ .wrap{padding:12px 12px 38px}
+ header{padding:18px 3px 12px}
+ .metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .card{padding:15px;border-radius:17px}
+ .two,.three{grid-template-columns:1fr}
+ .timeline{grid-template-columns:1fr}
+ .section{margin-top:21px}
+ .score-row{grid-template-columns:50px 1fr 90px;gap:7px}
+ table{font-size:11px}
+ th,td{padding:9px 5px}
+ .snapshot{grid-template-columns:repeat(2,1fr)}
+ .subject-trend{grid-template-columns:50px 1fr 60px 60px 60px;font-size:11px}
+}
+@media print{
+ body{background:white}.nav{display:none}.card{box-shadow:none;break-inside:avoid}.wrap{max-width:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">GAOKAO COACH / STUDENT REPORT · V3</div>
+  <h1>2027 广东高考<br>学情与成绩预测</h1>
+  <div class="sub">学生阶段性诊断 · 三次考试序列 · 预测 V0.2（3 次可比，置信度 medium）· 报告日期：2026年11月6日</div>
+  <p style="margin:14px 0 0">
+    <span class="pill">物理 / 化学 / 生物</span>
+    <span class="pill green">含 3 次可比考试</span>
+    <span class="pill blue">置信度 medium</span>
+  </p>
+</header>
+
+<nav class="nav">
+  <a href="#overview">成绩概览</a><a href="#trend">三次考试趋势</a><a href="#forecast">分数预测</a><a href="#time">备考时间</a><a href="#subjects">学科策略</a><a href="#actions">执行方案</a><a href="#model">模型说明</a>
+</nav>
+
+<section id="overview">
+<div class="grid metrics">
+  <div class="card metric">
+    <div class="label">高二下期末（基线）</div>
+    <div class="value">358.77</div>
+    <div class="hint">进步评分唯一锚点</div>
+    <div class="delta muted">2026-06-30</div>
+  </div>
+  <div class="card metric">
+    <div class="label">一模</div>
+    <div class="value">363</div>
+    <div class="hint">校排 608 · 班排 26</div>
+    <div class="delta up">↑ 4.23 vs 基线</div>
+  </div>
+  <div class="card metric">
+    <div class="label">二模（最新）</div>
+    <div class="value">353.76</div>
+    <div class="hint">校排 625</div>
+    <div class="delta down">↓ 9.24 vs 一模</div>
+  </div>
+  <div class="card metric">
+    <div class="label">距高考</div>
+    <div class="value">约30周</div>
+    <div class="hint">2027-06-07</div>
+  </div>
+</div>
+
+<div class="grid two">
+ <div class="card">
+  <h3>三次考试学情对照（六科分数）</h3>
+  <div class="note">高二下期末为基线锚点 · 一模 2026-10-20 · 二模 2026-11-03</div>
+
+  <div class="subject-trend baseline">
+    <b>语文</b>
+    <span>基线 65.5 → 一模 78.5 → 二模 74.5</span>
+    <span class="delta-up">+13↑</span>
+    <span class="delta-up">+9.0↑</span>
+    <span class="delta-flat">先升后稳</span>
+  </div>
+  <div class="subject-trend">
+    <b>数学</b>
+    <span>基线 52 → 一模 69 → 二模 40</span>
+    <span class="delta-up">+17↑</span>
+    <span class="delta-down">-29↓</span>
+    <span class="delta-down">暴跌警示</span>
+  </div>
+  <div class="subject-trend">
+    <b>英语</b>
+    <span>基线 74.27 → 一模 62.5 → 二模 53.26</span>
+    <span class="delta-down">-11.8↓</span>
+    <span class="delta-down">-9.2↓</span>
+    <span class="delta-down">持续下滑</span>
+  </div>
+  <div class="subject-trend">
+    <b>物理</b>
+    <span>基线 42 → 一模 36 → 二模 49</span>
+    <span class="delta-down">-6↓</span>
+    <span class="delta-up">+13↑</span>
+    <span class="delta-up">触底反弹</span>
+  </div>
+  <div class="subject-trend">
+    <b>化学</b>
+    <span>基线 65 → 一模 57 → 二模 71</span>
+    <span class="delta-down">-8↓</span>
+    <span class="delta-up">+14↑</span>
+    <span class="delta-up">已进入赋分稳分</span>
+  </div>
+  <div class="subject-trend">
+    <b>生物</b>
+    <span>基线 60 → 一模 60 → 二模 66</span>
+    <span class="delta-flat">±0</span>
+    <span class="delta-up">+6↑</span>
+    <span class="delta-up">稳步上升</span>
+  </div>
+
+  <div class="callout red">
+    <b>三次考试最大信号</b>：数学一模→二模暴跌 29 分（69 → 40），是全部学科中最大的单次波动。
+    英语连续两次下滑（74.27 → 62.5 → 53.26），是<b>持续塌陷</b>而非偶然失误。
+    物理化学一模触底后二模大幅反弹，赋分优势已在二模显现（化学校排 334 / 生物 304）。
+  </div>
+ </div>
+
+ <div class="card">
+  <h3>目前已知学习条件</h3>
+  <table>
+   <tr><th>维度</th><th>当前情况</th></tr>
+   <tr><td>就读城市</td><td>深圳</td></tr>
+   <tr><td>选科</td><td>物理、化学、生物</td></tr>
+   <tr><td>工作日自主学习</td><td>基本没有</td></tr>
+   <tr><td>周末课外辅导</td><td>4–6小时 / 周</td></tr>
+   <tr><td>寒假自主学习</td><td>2–3小时 / 天</td></tr>
+   <tr><td>已记录可比考试</td><td>3 次（基线 / 一模 / 二模）</td></tr>
+   <tr><td>最近大考</td><td>二模 353.76（2026-11-03）</td></tr>
+   <tr><td>进步评分基线</td><td>358.77（高二下期末，唯一锚点）</td></tr>
+   <tr><td>历史存档</td><td>324 那次成绩不参与计算</td></tr>
+  </table>
+  <p class="note">324 那次原始分成绩仅存档，不参与进步评分与预测校准。</p>
+ </div>
+</div>
+</section>
+
+<section class="section" id="trend">
+<div class="section-head"><h2>三次考试趋势分析</h2><span class="tag blue">核心信号</span></div>
+<div class="card">
+ <h3>总分轨迹</h3>
+ <div class="grid three">
+   <div style="background:#fff2dc;border-radius:12px;padding:12px"><div class="note">高二下期末</div><div class="stat-big">358.77</div><div class="note">基线锚点</div></div>
+   <div style="background:#eaf2eb;border-radius:12px;padding:12px"><div class="note">一模</div><div class="stat-big">363</div><div class="note" style="color:var(--green)">↑ 4.23（+1.2%）</div></div>
+   <div style="background:#f7ebe6;border-radius:12px;padding:12px"><div class="note">二模</div><div class="stat-big">353.76</div><div class="note" style="color:var(--red)">↓ 9.24（-2.5%）</div></div>
+ </div>
+ <p class="note" style="margin-top:10px">总分在 353–363 区间波动，幅度 ±2.5%。三次考试均稳定在 400 分以下，距 480 底线目标仍有 117–126 分差距。</p>
+
+ <h3 style="margin-top:18px">学科位移矩阵（基线 → 一模 → 二模）</h3>
+ <table>
+   <tr><th>学科</th><th>基线</th><th>一模</th><th>二模</th><th>趋势</th><th>策略标签</th></tr>
+   <tr><td>语文</td><td>65.5</td><td>78.5</td><td>74.5</td><td>先升后稳</td><td><span class="tag green">稳分</span></td></tr>
+   <tr><td>数学</td><td>52</td><td>69</td><td>40</td><td><span style="color:var(--red);font-weight:700">⚠ 暴跌</span></td><td><span class="tag red">第一优先</span></td></tr>
+   <tr><td>英语</td><td>74.27</td><td>62.5</td><td>53.26</td><td><span style="color:var(--red);font-weight:700">⚠ 持续下滑</span></td><td><span class="tag red">第一优先</span></td></tr>
+   <tr><td>物理</td><td>42</td><td>36</td><td>49</td><td>触底反弹</td><td><span class="tag">维持</span></td></tr>
+   <tr><td>化学</td><td>65</td><td>57</td><td>71</td><td>已修复</td><td><span class="tag green">停止加码</span></td></tr>
+   <tr><td>生物</td><td>60</td><td>60</td><td>66</td><td>稳步上升</td><td><span class="tag green">停止加码</span></td></tr>
+ </table>
+
+ <div class="callout blue" style="margin-top:14px">
+   <b>趋势核心结论</b>：
+   三次考试总分稳定在 355–363 区间（波动 ≤ 2.5%），但<b>学科内部位移剧烈</b>。
+   化学从基线 65 降到一模 57 再回升到二模 71，已超过基线；生物单调上升；
+   物理一模触底后反弹。这三科合计算「修复完成」。
+   <br><br>
+   主科塌陷同步发生：英语三连降（74.27 → 62.5 → 53.26），数学二模暴跌。
+   <b>主科塌陷的速度快于副科修复的速度</b>，因此总分呈微降趋势。
+ </div>
+</div>
+</section>
+
+<section class="section" id="forecast">
+<div class="section-head"><h2>2027高考分数预测</h2><span class="tag">V0.2 · 3 次可比 · 置信度 medium</span></div>
+<div class="card">
+ <div class="callout">
+   V0.2（3 次可比）在 V0.2（2 次可比）基础上引入一模数据。
+   先验权重从 70% 降到 55%，趋势证据权重 45%。
+   最近考试仍是二模 353.76，趋势 -1.4%，projectedMean = 353.76。
+   样本量从 2 → 3，置信度从 low 升级到 <b>medium</b>。
+ </div>
+
+ <div style="margin-top:17px">
+  <div class="bar-row"><span>400分以下</span><div class="bar"><i style="width:7%;background:#b7b1a6"></i></div><b>7%</b></div>
+  <div class="bar-row"><span>400–449</span><div class="bar"><i style="width:60%;background:#c7a36a"></i></div><b>60%</b></div>
+  <div class="bar-row"><span>450–479</span><div class="bar"><i style="width:17%;background:#d9912f"></i></div><b>17%</b></div>
+  <div class="bar-row"><span>480–499</span><div class="bar"><i style="width:9%;background:#8e9b79"></i></div><b>9%</b></div>
+  <div class="bar-row"><span>500–519</span><div class="bar"><i style="width:4%;background:#648b73"></i></div><b>4%</b></div>
+  <div class="bar-row"><span>520–549</span><div class="bar"><i style="width:2%;background:#71899a"></i></div><b>2%</b></div>
+  <div class="bar-row"><span>550及以上</span><div class="bar"><i style="width:1%;background:#8a789f"></i></div><b>1%</b></div>
+ </div>
+
+ <div class="grid three" style="margin-top:16px">
+  <div style="background:#f8f5ee;border-radius:12px;padding:12px"><div class="note">450分及以上</div><div class="stat-big">33%</div></div>
+  <div style="background:#f8f5ee;border-radius:12px;padding:12px"><div class="note">480分及以上</div><div class="stat-big">16%</div></div>
+  <div style="background:#f8f5ee;border-radius:12px;padding:12px"><div class="note">500分及以上</div><div class="stat-big">7%</div></div>
+ </div>
+
+ <div class="callout red" style="margin-top:14px">
+   <b>算法局限提示</b>：
+   V0.2 算法用「最近一次可比考试」作为趋势锚点，二模 353.76 拉低了 projectedMean，
+   导致 400–449 区间概率从 V0.1 的 30% 跳到 60%。
+   但三次考试分数（358.77 / 363 / 353.76）实际波动仅 ±2.5%，<b>稳定在 355–363 区间</b>，
+   算法的尖锐分布与现实稳定性存在偏差。
+   <br>
+   此问题在 5+ 次可比考试、置信度 high 时会通过更小的 projectedStd 自我修正。
+   当前结果仅供规划讨论，不应作为「成绩要崩」的判断依据。
+ </div>
+
+ <h3 style="margin-top:18px">预测快照历史</h3>
+ <div class="snapshot">
+  <div><span class="note">V0.1</span><b>358.77</b>1 次可比 · 100% 先验 · low</div>
+  <div><span class="note">V0.2（2次）</span><b>353.76</b>2 次可比 · 70% 先验 · low</div>
+  <div><span class="note">V0.2（3次，当前）</span><b>353.76</b>3 次可比 · 55% 先验 · <span style="color:var(--green);font-weight:700">medium</span></div>
+  <div><span class="note">V0.3 待出</span><b>—</b>4 次可比 · 40% 先验</div>
+ </div>
+</div>
+
+<div class="grid two" style="margin-top:14px">
+ <div class="card">
+  <h3>条件情景：学习执行水平</h3>
+  <table>
+   <tr><th>情景</th><th>表现</th><th>规划区间</th></tr>
+   <tr><td>A 保守</td><td>主科塌陷持续、周末任务断续</td><td>400–440</td></tr>
+   <tr><td>B 正常</td><td>主科修复、周末稳定辅导</td><td>440–480</td></tr>
+   <tr><td>C 高效</td><td>数学/英语专题突破、寒假高强度</td><td>480–510</td></tr>
+   <tr><td>D 超预期</td><td>主科快速修复、学校学习效率提升</td><td>510–550+</td></tr>
+  </table>
+ </div>
+ <div class="card">
+  <h3>目标定位</h3>
+  <div style="margin:10px 0"><span class="tag green">阶段性主攻</span><div style="font-size:26px;font-weight:800;margin-top:5px">450–479分</div></div>
+  <div style="margin:13px 0"><span class="tag">需要全力争取</span><div style="font-size:22px;font-weight:750;margin-top:5px">480分</div></div>
+  <div style="margin:13px 0"><span class="tag red">挑战目标</span><div style="font-size:22px;font-weight:750;margin-top:5px">550分</div></div>
+  <p class="note">距 480 底线目标差 126 分，30 周内月均需修复约 4.2 分。考虑主科修复空间（数学 +30 / 英语 +40 即可补 70 分），节奏可行。</p>
+ </div>
+</div>
+</section>
+
+<section class="section" id="time">
+<div class="section-head"><h2>剩余备考时间与投入</h2><span class="note">按约30周估算</span></div>
+<div class="card">
+ <div class="timeline">
+  <div class="phase active"><b>阶段一｜秋季学期后半程</b><small>2026.11.06 – 2027.01.29</small><p>约12周（进行中）。主攻数学/英语修复，物化生维持稳分。建立周末稳定训练节奏。</p></div>
+  <div class="phase"><b>阶段二｜寒假</b><small>约3周，具体以校历为准</small><p>集中突破数学基础模块 + 英语词汇阅读。每天 2–3 小时自主学习，建议主攻 2 个专题。</p></div>
+  <div class="phase"><b>阶段三｜春季学期</b><small>开学至2027年高考</small><p>约15周。知识整合、真题训练、限时考试。物化生赋分稳分，主科进入综合训练。</p></div>
+ </div>
+ <div class="grid three" style="margin-top:15px">
+  <div><div class="note">周末辅导总量</div><div class="stat-big">120–180h</div></div>
+  <div><div class="note">寒假学习估算</div><div class="stat-big">40–60h</div></div>
+  <div><div class="note">额外学习合计</div><div class="stat-big">160–240h</div></div>
+ </div>
+</div>
+</section>
+
+<section class="section" id="subjects">
+<div class="section-head"><h2>六科学科策略（三次考试后定稿）</h2><span class="note">阶段目标草案</span></div>
+<div class="card">
+ <table>
+  <tr><th>学科</th><th>基线</th><th>一模</th><th>二模</th><th>趋势</th><th>目标区间</th><th>主要策略</th></tr>
+  <tr><td>语文</td><td>65.5</td><td>78.5</td><td>74.5</td><td>先升后稳</td><td>85–95</td><td>稳分·基础题 + 古诗文默写</td></tr>
+  <tr><td>数学</td><td>52</td><td>69</td><td>40</td><td><span style="color:var(--red)">⚠暴跌</span></td><td>75–90</td><td><b>第一优先</b>·基础模块 + 计算稳定性</td></tr>
+  <tr><td>英语</td><td>74.27</td><td>62.5</td><td>53.26</td><td><span style="color:var(--red)">⚠三连降</span></td><td>85–100</td><td><b>第一优先</b>·词汇 + 阅读 + 基础语法</td></tr>
+  <tr><td>物理</td><td>42</td><td>36</td><td>49</td><td>反弹</td><td>55–65</td><td>维持·基础模型 + 实验题</td></tr>
+  <tr><td>化学</td><td>65</td><td>57</td><td>71</td><td>已修复</td><td>75–82</td><td>停止加码·仅学校跟进</td></tr>
+  <tr><td>生物</td><td>60</td><td>60</td><td>66</td><td>稳步上升</td><td>70–78</td><td>停止加码·仅学校跟进</td></tr>
+ </table>
+
+ <div class="callout green" style="margin-top:14px">
+   <b>策略定稿</b>：
+   化学二模 71 分（赋分，校排 334）、生物 66 分（赋分，校排 304）已超过基线，
+   <b>停止周末主动训练</b>，仅学校正常跟进。
+   物理从一模 36 反弹到 49，趋势向好，维持现有节奏。
+   腾出的全部周末时间转入<b>数学 + 英语</b>。
+ </div>
+
+ <div class="callout red" style="margin-top:10px">
+   <b>主科修复空间测算</b>：
+   数学若恢复到一模水平（69）+ 英语若恢复到基线水平（74.27），
+   总分即可增加 49 分（40→69 + 53.26→74.27），达到 403 分。
+   这是<b>不依赖任何新能力、仅修复到历史最高水平</b>就能拿到的分数。
+   再加上语文稳分到 85+、物化生赋分小幅提升，480 底线目标可达。
+ </div>
+</div>
+</section>
+
+<section class="section" id="actions">
+<div class="section-head"><h2>每周执行闭环</h2><span class="tag green">三次考试后调整</span></div>
+<div class="grid two">
+ <div class="card">
+  <h3>周末5小时分配（V3 · 主科优先）</h3>
+  <div class="bar-row"><span>复盘诊断</span><div class="bar"><i style="width:10%"></i></div><b>30m</b></div>
+  <div class="bar-row"><span>数学（第一优先）</span><div class="bar"><i style="width:43%;background:var(--red)"></i></div><b>130m</b></div>
+  <div class="bar-row"><span>英语（第一优先）</span><div class="bar"><i style="width:30%;background:var(--red)"></i></div><b>90m</b></div>
+  <div class="bar-row"><span>语文（稳分）</span><div class="bar"><i style="width:10%;background:var(--green)"></i></div><b>30m</b></div>
+  <div class="bar-row"><span>独立复测</span><div class="bar"><i style="width:7%"></i></div><b>20m</b></div>
+  <p class="note">化学/生物本周不安排主动训练。物理按需加入独立复测。每周根据下次考试失分动态调整。</p>
+ </div>
+ <div class="card">
+  <h3>每周数据闭环</h3>
+  <ol style="padding-left:18px;margin:0">
+   <li>上传周测试卷、答题卡、标准答案和得分。</li>
+   <li>AI识别题目、知识点和失分原因；不确定项人工确认。</li>
+   <li>关联历史错题，识别重复错误。</li>
+   <li>选出下周最值得攻克的 3–5 个问题。</li>
+   <li>生成周末辅导计划和纸质任务包。</li>
+   <li>复测并记录独立作答、提示次数和迁移表现。</li>
+   <li>更新学情、预测和下周策略。</li>
+  </ol>
+ </div>
+</div>
+<div class="card" style="margin-top:14px">
+ <h3>接下来最重要的行动（按优先级）</h3>
+ <ul>
+  <li><b>本周（立即）</b>：取得<b>数学二模试卷</b>，分析 40 分丢在哪——基础题失分还是大题空白？决定是补基础模块还是补题型训练。</li>
+  <li><b>本周</b>：取得<b>英语二模试卷</b>，确认 53.26 分（折算）的折算前原始分，判断塌陷在词汇、阅读还是语法。</li>
+  <li><b>本周</b>：完成 Week 01 Day 1–5 费曼训练包（词汇 100 + 古诗文 5 篇）。</li>
+  <li><b>本月</b>：补充 1–2 次可比月考/周测六科成绩，将预测样本量推至 4–5，置信度提升至 high。</li>
+  <li><b>本学期</b>：寒假前完成数学基础模块（函数、三角、数列）专题突破，目标一模水平 69+。</li>
+  <li><b>本学期</b>：英语词汇量补到高考 3500 词的 80%，目标寒假前英语折算分回到 70+。</li>
+ </ul>
+</div>
+</section>
+
+<section class="section" id="model">
+<div class="section-head"><h2>预测模型说明与边界</h2></div>
+<div class="card">
+ <h3>当前模型版本：V0.2（3 次可比）｜先验 + 趋势证据加权</h3>
+ <ul>
+  <li>已纳入 3 次可比考试：高二下期末 358.77（基线）、一模 363、二模 353.76。</li>
+  <li>先验权重 55%，趋势证据权重 45%。</li>
+  <li>最近考试（二模 353.76）较基线 -1.4%，projectedMean = 353.76。</li>
+  <li>样本量 3，置信度升级为 <b>medium</b>（仍非 high，需 5+ 次才能 high）。</li>
+  <li><b>算法局限</b>：当前用「最近考试」作趋势锚点，对单次波动敏感。三次实际分数稳定在 355–363 区间，但算法输出 60% 集中在 400–449，与现实稳定性有偏差。5+ 次后通过更小 projectedStd 自我修正。</li>
+ </ul>
+ <h3 style="margin-top:18px">后续如何校准</h3>
+ <ul>
+  <li>每次可比考试录入即触发预测重算；不可比考试仅存档。</li>
+  <li>4 次可比 → V0.3，先验权重 40%，置信度 medium。</li>
+  <li>5 次及以上 → V0.3，先验权重 ≤ 20%，置信度 <b>high</b>，进入统计校准区间。</li>
+  <li>每月更新分数段概率、目标达成概率和预测误差。</li>
+ </ul>
+ <div class="disclaimer">
+   重要：此页面是教学规划和讨论工具，不构成对高考成绩的保证。
+   三次考试总分稳定在 355–363 区间（波动 ±2.5%），<b>不应将二模单次下滑解释为能力崩塌</b>。
+   真正需要关注的是<b>主科内部位移</b>——数学暴跌 29 分、英语三连降——这是结构性问题，不是噪声。
+   预测随新数据滚动更新；不得把单次模拟考的波动直接解释为真实能力变化。
+ </div>
+</div>
+</section>
+
+<div class="footer">
+  GAOKAO COACH · 2027届广东新高考学情管理 · 报告 v3<br>
+  数据基线：高二下期末 358.77 + 一模 363 + 二模 353.76（3 次可比）· 报告生成：2026-11-06<br>
+  预测模型 V0.2（3次）· 先验权重 55% / 趋势证据 45% · 置信度 medium<br>
+  建议保存此HTML文件，手机浏览器打开即可查看；也可通过浏览器「打印/分享」保存为PDF。
+</div>
+</div>
+</body>
+</html>
