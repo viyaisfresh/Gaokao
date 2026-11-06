@@ -36,26 +36,37 @@ const INTERVAL_BOUNDS: IntervalBound[] = [
   { min: 550, max: 800 },
 ];
 
-function clamp(p: number): number {
-  return Math.max(0, Math.min(1, p));
-}
-
 function normalize(intervals: ForecastInterval[]): ForecastInterval[] {
   const total = intervals.reduce((s, i) => s + i.probability, 0);
   if (total === 0) return intervals;
   return intervals.map((i) => ({ ...i, probability: i.probability / total }));
 }
 
-// 把一个总分映射到所在区间，给该区间加权重
-function scoreToIntervalIdx(score: number): number {
-  for (let i = 0; i < INTERVAL_BOUNDS.length; i++) {
-    if (score >= INTERVAL_BOUNDS[i].min && score < INTERVAL_BOUNDS[i].max) return i;
-  }
-  return INTERVAL_BOUNDS.length - 1;
+// 标准正态累积分布函数 Φ(x) — Abramowitz & Stegun 近似
+function normalCdf(x: number, mean: number, std: number): number {
+  const z = (x - mean) / (std * Math.SQRT2);
+  // erf 近似公式
+  const t = 1 / (1 + 0.3275911 * Math.abs(z));
+  const erf = 1 - (((((0.254829592 * t + 0.284496736) * t) - 0.3275911) * t + 0.818523416) * t + 0.363784637) * t * Math.exp(-z * z);
+  const phi = z >= 0 ? erf : 1 - erf;
+  return Math.max(0, Math.min(1, phi));
+}
+
+// 计算样本标准差（无偏估计）
+function sampleStd(values: number[]): number {
+  if (values.length < 2) return 0;
+  const mean = values.reduce((s, v) => s + v, 0) / values.length;
+  const variance =
+    values.reduce((s, v) => s + Math.pow(v - mean, 2), 0) / (values.length - 1);
+  return Math.sqrt(variance);
 }
 
 // 经验贝叶斯更新：先验 + 观察到的考试趋势
-// 简化模型：根据最近可比考试相对基线的变化，调整各区间概率
+// 算法 v2（2026-11-06 优化）：
+//   ① 锚点用「最近 2 次考试加权平均」（权重 0.6/0.4）+ 趋势外推 1 步
+//   ② std 用实际样本标准差 × 1.5，下限 25（防过尖，防过宽）
+//   ③ 区间概率用正态累积概率 Φ(max) - Φ(min)，不再用中点密度
+//   ④ 置信度双因子：样本量 + 实际波动幅度（波动小则置信度更高）
 export function recomputeForecast(
   comparableExams: Exam[],
   prior: ForecastInterval[] = PRIOR_INTERVALS
@@ -90,37 +101,40 @@ export function recomputeForecast(
     };
   }
 
-  // 2 次以上：用趋势更新
+  // 按时间排序
+  const sorted = [...comparableExams].sort((a, b) =>
+    a.date.localeCompare(b.date)
+  );
+  const scores = sorted.map((e) => e.totalScore);
+  const latest = sorted[sorted.length - 1];
+  const prev = sorted[sorted.length - 2];
+
+  // ① 锚点：最近 2 次考试加权平均（0.6 / 0.4），再叠加趋势外推 1 步
+  const recentWeightedMean = latest.totalScore * 0.6 + prev.totalScore * 0.4;
+  // 趋势：最近 2 次的斜率（每步变化）
+  const trendStep = latest.totalScore - prev.totalScore;
+  // 外推 1 步（半个步长，避免过度外推）
+  const projectedMean = recentWeightedMean + trendStep * 0.3;
+
+  // ② 标准差：实际样本标准差 × 1.5，下限 25
+  const empiricalStd = sampleStd(scores);
+  const projectedStd = Math.max(25, empiricalStd * 1.5);
+
+  // ③ 区间概率：正态累积概率 Φ(max) - Φ(min)
+  const evidenceIntervals: ForecastInterval[] = INTERVAL_BOUNDS.map((b, idx) => ({
+    range: prior[idx].range,
+    probability: normalCdf(b.max, projectedMean, projectedStd) -
+                 normalCdf(b.min, projectedMean, projectedStd),
+  }));
+  const normalizedEvidence = normalize(evidenceIntervals);
+
   // 先验权重随样本量递减
   const priorWeight = Math.max(0.2, 1 - sampleSize * 0.15);
   const evidenceWeight = 1 - priorWeight;
 
-  // 计算最近考试相对基线的平均变化和趋势方向
-  const sorted = [...comparableExams].sort((a, b) =>
-    a.date.localeCompare(b.date)
-  );
-  const latest = sorted[sorted.length - 1];
-  const changePct = (latest.totalScore - BASELINE_SCORE) / BASELINE_SCORE;
-
-  // 把趋势转化为各区间权重
-  // 假设成绩服从以"基线 + 趋势"为中心的正态分布
-  const projectedMean = BASELINE_SCORE * (1 + changePct);
-  const projectedStd = 30 + Math.max(0, 10 - sampleSize * 2); // 样本少则方差大
-
-  const evidenceIntervals: ForecastInterval[] = PRIOR_INTERVALS.map((iv, idx) => {
-    const b = INTERVAL_BOUNDS[idx];
-    const mid = (b.min + b.max) / 2;
-    // 正态分布概率密度（简化）
-    const density = Math.exp(
-      -Math.pow(mid - projectedMean, 2) / (2 * projectedStd * projectedStd)
-    );
-    return { range: iv.range, probability: density };
-  });
-  const normalizedEvidence = normalize(evidenceIntervals);
-
   // 融合
   const blended = normalize(
-    PRIOR_INTERVALS.map((iv, idx) => ({
+    prior.map((iv, idx) => ({
       range: iv.range,
       probability:
         iv.probability * priorWeight +
@@ -137,8 +151,23 @@ export function recomputeForecast(
     breakout: [Math.round(base + 50), Math.round(base + 90)] as [number, number],
   };
 
-  const confidenceLevel: ScoreForecast["confidenceLevel"] =
-    sampleSize >= 5 ? "high" : sampleSize >= 3 ? "medium" : "low";
+  // ④ 置信度双因子：样本量 + 实际波动幅度
+  // 波动幅度 = empiricalStd / BASELINE_SCORE，越小越稳定
+  const volatilityRatio = empiricalStd / BASELINE_SCORE;
+  const stableByVolatility = volatilityRatio < 0.05; // 波动 < 5% 视为稳定
+  let confidenceLevel: ScoreForecast["confidenceLevel"];
+  if (sampleSize >= 5 && stableByVolatility) {
+    confidenceLevel = "high";
+  } else if (sampleSize >= 3 && volatilityRatio < 0.10) {
+    confidenceLevel = "medium";
+  } else if (sampleSize >= 3) {
+    confidenceLevel = "low"; // 样本够但波动大，仍 low
+  } else {
+    confidenceLevel = "low";
+  }
+
+  const changePct = (latest.totalScore - BASELINE_SCORE) / BASELINE_SCORE;
+  const trendDirection = trendStep > 0 ? "上行" : trendStep < 0 ? "下行" : "持平";
 
   return {
     id: genId(),
@@ -148,7 +177,7 @@ export function recomputeForecast(
     confidenceLevel,
     intervals: blended,
     scenarios,
-    notes: `基于 ${sampleSize} 次可比考试校准。最近考试 ${latest.totalScore}（基线 ${BASELINE_SCORE}，变化 ${changePct > 0 ? "+" : ""}${(changePct * 100).toFixed(1)}%）。先验权重 ${(priorWeight * 100).toFixed(0)}%。置信度 ${confidenceLevel}。`,
+    notes: `算法 v2 · 基于 ${sampleSize} 次可比考试。最近 2 次加权均值 ${recentWeightedMean.toFixed(2)}，趋势 ${trendDirection}（${trendStep > 0 ? "+" : ""}${trendStep.toFixed(2)} / 步），projectedMean ${projectedMean.toFixed(2)}。样本标准差 ${empiricalStd.toFixed(2)}（波动率 ${(volatilityRatio * 100).toFixed(1)}%）。先验权重 ${(priorWeight * 100).toFixed(0)}%。置信度 ${confidenceLevel}。`,
   };
 }
 
@@ -159,3 +188,4 @@ export function shouldTriggerRecompute(exam: Exam): boolean {
     exam.subjectScores.some((s) => s.comparability === "comparable")
   );
 }
+
