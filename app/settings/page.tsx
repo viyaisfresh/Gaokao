@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
-import { getDB } from "@/lib/db";
+import { getDB, genId } from "@/lib/db";
 import { WEIGHTS, LE_SUB_WEIGHTS, PROGRESS_SUB_WEIGHTS } from "@/lib/scoring";
+import { recomputeForecast, shouldTriggerRecompute } from "@/lib/forecast";
+import type { Exam, Subject } from "@/types/schema";
 import { Card, SectionHead } from "@/components/ui/Card";
 import scoringConfig from "@/config/scoring.json";
 import classicalList from "@/data/classical-list.json";
+import examResultsData from "@/data/exam-results.json";
 
 export default function SettingsPage() {
   const [importing, setImporting] = useState(false);
@@ -110,6 +113,97 @@ export default function SettingsPage() {
     }
   }
 
+  async function handleImportFromRepo() {
+    setImporting(true);
+    setMessage("");
+    try {
+      const data = examResultsData as {
+        student_exam_records?: Array<{
+          exam_id: string;
+          exam_name?: string;
+          exam_date?: string | null;
+          date_note?: string;
+          total?: { score?: number; score_type?: string };
+          subjects?: Record<
+            string,
+            { score: number; score_type?: string }
+          >;
+          source?: { type?: string };
+        }>;
+      };
+      const records = data.student_exam_records ?? [];
+      if (records.length === 0) {
+        setMessage("仓库中未找到考试记录");
+        return;
+      }
+      const db = getDB();
+      const existing = await db.exams.toArray();
+      const existingKeys = new Set(
+        existing.map((e) => `${e.examType}__${e.date}`)
+      );
+      const toAdd: Exam[] = [];
+      for (const record of records) {
+        const date = record.exam_date || new Date().toISOString().slice(0, 10);
+        const examType = record.exam_name || record.exam_id || "未命名考试";
+        const key = `${examType}__${date}`;
+        if (existingKeys.has(key)) continue;
+        const subjectScores: Exam["subjectScores"] = [];
+        for (const subj of ["chinese", "math", "english", "physics", "chemistry", "biology"] as Subject[]) {
+          const s = record.subjects?.[subj];
+          if (!s) continue;
+          const isRanked = s.score_type === "赋分成绩";
+          subjectScores.push({
+            subject: subj,
+            rawScore: isRanked ? 0 : s.score,
+            rankedScore: isRanked ? s.score : undefined,
+            scoreType: isRanked ? "ranked" : "raw",
+            comparability: "comparable",
+          });
+        }
+        const totalScoreType =
+          record.total?.score_type === "总分赋分成绩" ? "ranked" : "raw";
+        const exam: Exam = {
+          id: genId(),
+          date,
+          examType,
+          isBaseline: false,
+          isArchived: false,
+          totalScore: parseFloat(Number(record.total?.score ?? 0).toFixed(2)),
+          totalScoreType,
+          subjectScores,
+          notes: `${record.date_note ?? ""} · 来源：${record.source?.type ?? "unknown"}`.trim(),
+        };
+        toAdd.push(exam);
+        existingKeys.add(key);
+      }
+      if (toAdd.length === 0) {
+        setMessage("仓库中所有考试记录已存在，未导入新数据");
+        return;
+      }
+      await db.exams.bulkAdd(toAdd);
+      // 触发预测重算（与 ExamForm 一致）
+      const comparableExams = (
+        await db.exams.where("isArchived").notEqual(1 as never).toArray()
+      ).filter((e) =>
+        e.subjectScores.some((s) => s.comparability === "comparable")
+      );
+      const triggered = toAdd.some((e) => shouldTriggerRecompute(e));
+      if (triggered && comparableExams.length >= 1) {
+        const forecast = recomputeForecast(comparableExams);
+        await db.forecasts.add(forecast);
+        setMessage(
+          `已导入 ${toAdd.length} 次考试并重算预测（V${forecast.version}，样本 ${forecast.sampleSize}）`
+        );
+      } else {
+        setMessage(`已导入 ${toAdd.length} 次考试（未触发预测重算）`);
+      }
+    } catch (err) {
+      setMessage(`导入失败：${err instanceof Error ? err.message : "未知错误"}`);
+    } finally {
+      setImporting(false);
+    }
+  }
+
   async function markAllClassicalVerified() {
     const db = getDB();
     const all = await db.classicalRecords.toArray();
@@ -144,8 +238,19 @@ export default function SettingsPage() {
               disabled={importing}
             />
           </label>
+          <button
+            className="btn text-sm"
+            onClick={handleImportFromRepo}
+            disabled={importing}
+          >
+            {importing ? "拉取中…" : "从仓库导入最新大考"}
+          </button>
           {message && <span className="text-xs text-muted">{message}</span>}
         </div>
+        <p className="text-[11px] text-muted mt-2">
+          「从仓库导入最新大考」会读取仓库内的 <code>data/exam-results.json</code>，
+          自动写入历史分数库并触发分数预测重算。重复记录（考试名+日期相同）会跳过。
+        </p>
         {stats && (
           <div className="grid grid-cols-4 gap-2 mt-4 text-xs">
             {Object.entries(stats).map(([k, v]) => (
