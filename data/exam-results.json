@@ -2,6 +2,82 @@
   "schema_version": "1.0.0",
   "student_exam_records": [
     {
+      "exam_id": "mock_exam_1",
+      "exam_name": "一模",
+      "exam_stage": "first_mock_exam",
+      "exam_date": null,
+      "date_note": "成绩截图未显示考试日期，待补充",
+      "total": {
+        "score": 363,
+        "school_rank": 608,
+        "class_rank": 26,
+        "score_type": "总分"
+      },
+      "subjects": {
+        "chinese": {
+          "name": "语文",
+          "score": 78.5,
+          "score_type": "科目分数",
+          "school_rank": 649,
+          "class_rank": 30
+        },
+        "math": {
+          "name": "数学",
+          "score": 69,
+          "score_type": "科目分数",
+          "school_rank": 526,
+          "class_rank": 21
+        },
+        "english": {
+          "name": "英语",
+          "score": 62.5,
+          "score_type": "折算分",
+          "school_rank": 558,
+          "class_rank": 23
+        },
+        "physics": {
+          "name": "物理",
+          "score": 36,
+          "score_type": "科目分数",
+          "school_rank": 521,
+          "class_rank": 19
+        },
+        "chemistry": {
+          "name": "化学",
+          "score": 57,
+          "score_type": "科目分数",
+          "school_rank": 565,
+          "class_rank": 20
+        },
+        "biology": {
+          "name": "生物",
+          "score": 60,
+          "score_type": "科目分数",
+          "school_rank": 369,
+          "class_rank": 18
+        }
+      },
+      "source": {
+        "type": "user_uploaded_screenshot",
+        "transcribed": true
+      },
+      "verification": {
+        "subject_score_sum": 363,
+        "sum_matches_total": true,
+        "notes": "六科分数相加为 363，与截图总分一致。"
+      },
+      "observations": {
+        "relative_strengths": ["语文 78.5", "数学 69", "生物 60"],
+        "priority_attention": ["物理 36", "英语折算分 62.5"],
+        "highlights": "生物学校排名 369，是六科中排名最靠前的科目",
+        "gaps_to_targets": {
+          "to_480_baseline": 117,
+          "to_550_challenge": 187
+        },
+        "next_action": "将一模六科试卷和标准答案归档，优先分析物理和英语的失分原因"
+      }
+    },
+    {
       "exam_id": "mock_exam_2",
       "exam_name": "二模",
       "exam_stage": "second_mock_exam",
